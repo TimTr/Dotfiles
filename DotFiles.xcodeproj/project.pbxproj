@@ -6,11 +6,56 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXFileReference section */
+		BA462B91256EF61800BEC226 /* dot-test.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-test.sh"; sourceTree = "<group>"; };
+		BA462B92256EF61800BEC226 /* dot-update.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-update.sh"; sourceTree = "<group>"; };
+		BA462B93256EF61800BEC226 /* dot-install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-install.sh"; sourceTree = "<group>"; };
+		BA462B94256EF61800BEC226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BA462B95256EF61800BEC226 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		BA462B8A256EF60500BEC226 = {
 			isa = PBXGroup;
 			children = (
+				BA462B94256EF61800BEC226 /* README.md */,
+				BA462B99256EF66400BEC226 /* macos-settings */,
+				BA462B98256EF64500BEC226 /* macos-homebrew */,
+				BA462B97256EF63600BEC226 /* macos-tools */,
+				BA462B96256EF62A00BEC226 /* macos-system */,
+				BA462B95256EF61800BEC226 /* LICENSE.md */,
+				BA462B93256EF61800BEC226 /* dot-install.sh */,
+				BA462B91256EF61800BEC226 /* dot-test.sh */,
+				BA462B92256EF61800BEC226 /* dot-update.sh */,
 			);
+			sourceTree = "<group>";
+		};
+		BA462B96256EF62A00BEC226 /* macos-system */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "macos-system";
+			sourceTree = "<group>";
+		};
+		BA462B97256EF63600BEC226 /* macos-tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "macos-tools";
+			sourceTree = "<group>";
+		};
+		BA462B98256EF64500BEC226 /* macos-homebrew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "macos-homebrew";
+			sourceTree = "<group>";
+		};
+		BA462B99256EF66400BEC226 /* macos-settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "macos-settings";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
