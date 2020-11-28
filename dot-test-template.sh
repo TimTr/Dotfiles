@@ -1,6 +1,16 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 #
-# dot-test.sh  -- tests code before putting it in the main script
+# dot-test-template.sh
+
+# Functions to make output attractive when running the script
+message () { printf "\r  [\033[00;32m $1\033[0m ] $2\n"
+}
+status () { printf "\r  [\033[00;34m $1\033[0m ] $2\n"
+}
+error () { printf "\r  [\033[00;31m $1\033[0m ] $2\n"
+}
+
+
 
 ## cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
