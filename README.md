@@ -1,4 +1,31 @@
-# TimTr .dotfiles
+# .dotfiles for Tim Triemstra
+
+This my the personal collection of dotfiles, settings, and setup scripts for macOS. The scripts are primarily qualified to work in ZSH, although they rarely use advanced features and are likely portable to other shells.
+
+The  `dot-install.sh` and `dot-update.sh` files at the root of this project are the primary files with which to interact. Note that these files drive files named `install.sh` in the subfolders for each topic.
+
+This creates a folder in the user home folder called `~/Developer/bin` that is added to the path. Other folders may be added to `~/Developer` but only the `bin` folder should be in the path.
+
+There is also a file named `dot-test.sh` designed to test ideas before they move into the install or update workflows.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# OLD VERSION OF THIS FILE
 
 This is the personal collection of Tim Triemstra's configuration files and scripts (dotfiles) for running macOS (and Linux, in early testing). This script puts some scripts into `/usr/local/bin` as a way to put things into the PATH.
 

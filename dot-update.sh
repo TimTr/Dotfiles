@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# dot-update
+# dot-update.sh
 #
 # This script handles installation and updates. Run it periodically
 # to make sure you're on the latest and to fix any broken settings.

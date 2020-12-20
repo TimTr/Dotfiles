@@ -8,41 +8,76 @@
 
 /* Begin PBXFileReference section */
 		BA0D7AE92571F5220057E271 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
-		BA462B91256EF61800BEC226 /* dot-test-template.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-test-template.sh"; sourceTree = "<group>"; };
+		BA1E9B25258FE775005D5A65 /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
+		BA1E9B26258FE775005D5A65 /* aliases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = aliases.sh; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
+		BA1E9B27258FE775005D5A65 /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
+		BA1E9B28258FE775005D5A65 /* zprofile.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zprofile.sh; sourceTree = "<group>"; };
+		BA1E9B2A258FE781005D5A65 /* gitconfig.dotfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = gitconfig.dotfile; sourceTree = "<group>"; };
+		BA1E9B2B258FE781005D5A65 /* gitignore.dotfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = gitignore.dotfile; sourceTree = "<group>"; };
+		BA1E9B2C258FE781005D5A65 /* com.apple.Terminal.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.apple.Terminal.plist; sourceTree = "<group>"; };
+		BA1E9B2D258FE781005D5A65 /* gitconfig.local.dotfile.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = gitconfig.local.dotfile.example; sourceTree = "<group>"; };
+		BA1E9B35258FE814005D5A65 /* TimTr Toothpaste.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Toothpaste.xccolortheme"; sourceTree = "<group>"; };
+		BA1E9B36258FE814005D5A65 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
+		BA1E9B37258FE814005D5A65 /* TimTr Grey.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Grey.xccolortheme"; sourceTree = "<group>"; };
+		BA1E9B38258FE814005D5A65 /* TimTr (Dark Default).xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr (Dark Default).xccolortheme"; sourceTree = "<group>"; };
+		BA1E9B39258FE814005D5A65 /* aliases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = aliases.sh; sourceTree = "<group>"; };
+		BA1E9B3A258FE814005D5A65 /* TimTr Dark.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Dark.xccolortheme"; sourceTree = "<group>"; };
+		BA462B91256EF61800BEC226 /* dot-test.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-test.sh"; sourceTree = "<group>"; };
 		BA462B92256EF61800BEC226 /* dot-update.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-update.sh"; sourceTree = "<group>"; };
 		BA462B93256EF61800BEC226 /* dot-install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-install.sh"; sourceTree = "<group>"; };
 		BA462B94256EF61800BEC226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA462B95256EF61800BEC226 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		BA48D5DC258FE4C60024A8C2 /* dot-source.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-source.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		BA0D7AE82571F4DC0057E271 /* template-setup */ = {
+		BA0D7AE82571F4DC0057E271 /* template */ = {
 			isa = PBXGroup;
 			children = (
+				BA48D5DC258FE4C60024A8C2 /* dot-source.sh */,
 				BA0D7AE92571F5220057E271 /* install.sh */,
 			);
-			path = "template-setup";
+			path = template;
+			sourceTree = "<group>";
+		};
+		BA1E9B2E258FE7D9005D5A65 /* macos-xcode */ = {
+			isa = PBXGroup;
+			children = (
+				BA1E9B39258FE814005D5A65 /* aliases.sh */,
+				BA1E9B36258FE814005D5A65 /* install.sh */,
+				BA1E9B38258FE814005D5A65 /* TimTr (Dark Default).xccolortheme */,
+				BA1E9B3A258FE814005D5A65 /* TimTr Dark.xccolortheme */,
+				BA1E9B37258FE814005D5A65 /* TimTr Grey.xccolortheme */,
+				BA1E9B35258FE814005D5A65 /* TimTr Toothpaste.xccolortheme */,
+			);
+			path = "macos-xcode";
 			sourceTree = "<group>";
 		};
 		BA462B8A256EF60500BEC226 = {
 			isa = PBXGroup;
 			children = (
 				BA462B94256EF61800BEC226 /* README.md */,
-				BA462B99256EF66400BEC226 /* macos-settings */,
-				BA462B98256EF64500BEC226 /* macos-homebrew */,
-				BA462B97256EF63600BEC226 /* macos-tools */,
-				BA462B96256EF62A00BEC226 /* macos-system */,
-				BA0D7AE82571F4DC0057E271 /* template-setup */,
 				BA462B95256EF61800BEC226 /* LICENSE.md */,
+				BA462B96256EF62A00BEC226 /* macos-system */,
+				BA462B99256EF66400BEC226 /* macos-settings */,
+				BA1E9B2E258FE7D9005D5A65 /* macos-xcode */,
+				BA462B97256EF63600BEC226 /* macos-tools */,
+				BA462B98256EF64500BEC226 /* macos-homebrew */,
+				BA48D5DB258ECA0D0024A8C2 /* linux-system */,
+				BA0D7AE82571F4DC0057E271 /* template */,
 				BA462B93256EF61800BEC226 /* dot-install.sh */,
-				BA462B91256EF61800BEC226 /* dot-test-template.sh */,
 				BA462B92256EF61800BEC226 /* dot-update.sh */,
+				BA462B91256EF61800BEC226 /* dot-test.sh */,
 			);
 			sourceTree = "<group>";
 		};
 		BA462B96256EF62A00BEC226 /* macos-system */ = {
 			isa = PBXGroup;
 			children = (
+				BA1E9B26258FE775005D5A65 /* aliases.sh */,
+				BA1E9B27258FE775005D5A65 /* functions.sh */,
+				BA1E9B28258FE775005D5A65 /* zprofile.sh */,
+				BA1E9B25258FE775005D5A65 /* zshrc.sh */,
 			);
 			path = "macos-system";
 			sourceTree = "<group>";
@@ -64,8 +99,19 @@
 		BA462B99256EF66400BEC226 /* macos-settings */ = {
 			isa = PBXGroup;
 			children = (
+				BA1E9B2C258FE781005D5A65 /* com.apple.Terminal.plist */,
+				BA1E9B2A258FE781005D5A65 /* gitconfig.dotfile */,
+				BA1E9B2D258FE781005D5A65 /* gitconfig.local.dotfile.example */,
+				BA1E9B2B258FE781005D5A65 /* gitignore.dotfile */,
 			);
 			path = "macos-settings";
+			sourceTree = "<group>";
+		};
+		BA48D5DB258ECA0D0024A8C2 /* linux-system */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "linux-system";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +120,9 @@
 		BA462B8B256EF60500BEC226 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1230;
 			};
-			buildConfigurationList = BA462B8E256EF60500BEC226 /* Build configuration list for PBXProject "dotfiles" */;
+			buildConfigurationList = BA462B8E256EF60500BEC226 /* Build configuration list for PBXProject "DotFiles" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -96,19 +142,73 @@
 		BA462B8F256EF60500BEC226 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
 		BA462B90256EF60500BEC226 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BA462B8E256EF60500BEC226 /* Build configuration list for PBXProject "dotfiles" */ = {
+		BA462B8E256EF60500BEC226 /* Build configuration list for PBXProject "DotFiles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA462B8F256EF60500BEC226 /* Debug */,
