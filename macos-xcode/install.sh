@@ -1,15 +1,19 @@
-# check the current folder location, then copy the .plist files
+#!/bin/zsh
+#
+# macos-xcode.sh
 
-# Gets the name of the folder containing where this script was run
-CONTAIN_DIR="$( cd "$( dirname "$0" )" && pwd )"
-
-# This style will give the relative path name (not sure how reliable)
-# CONTAIN_DIR=$(dirname "$0")
-
-echo "Installing Xcode settings from: " ${CONTAIN_DIR}
-cp ${CONTAIN_DIR}/*.xccolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+# Import the default functions used in these scripts
+source ${DOTFILES_ROOT}/template/dot-source.sh
 
 
 
+## This sets up the proper color themes folder if doesn't already exist
+mkdir -p ${HOME}/Library/Developer/Xcode/UserData/FontAndColorThemes 2> /dev/null
 
+
+
+
+
+# ==============================================================================
+status "macos-xcode.sh - done." "Returning to parent script."
 exit 0

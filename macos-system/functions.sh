@@ -7,23 +7,22 @@ export C_GLOW2="$fg[yellow]"
 export C_END="$fg[default]"
 
 
-#### Function to find all files recursively under current folder
-#### NOTE: some characters in the comment will break the function, e.g. "!"
-comment () {
-    echo -e "\n$C_GLOW1=============================="
-    for var in "$@"
-    do
-        echo -e "==$C_GLOW2 $var $C_GLOW1"
-    done
-    echo -e "==============================$C_END\n"
+# Functions to make output attractive when running the script
+# NOTE: some characters in the comment will break the function, e.g. "!"
+message () { printf "\r  [\033[00;32m $1\033[0m ] $2\n"
+}
+status () { printf "\r  [\033[00;34m $1\033[0m ] $2\n"
+}
+error () { printf "\r  [\033[00;31m $1\033[0m ] $2\n"
 }
 
-#### Function to find all files recursively under current folder
+
+# Function to find all files recursively under current folder
 findall () {
     find ./ -name $1 -print 2> /dev/null
 }
 
-# Create a new directory and enter it
-function md() {
+# Function to create a new directory and enter it
+md() {
 	mkdir -p "$@" && cd "$@"
 }

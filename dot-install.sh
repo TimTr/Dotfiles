@@ -1,55 +1,39 @@
 #!/bin/zsh
 #
 # dot-install.sh
+echo
+message "./dot-install.sh" "!! Be sure you ran this file within \"dotfiles\" home"
 
-# Functions to make output attractive when running the script
-message () { printf "\r  [\033[00;32m $1\033[0m ] $2\n"
-}
-status () { printf "\r  [\033[00;34m $1\033[0m ] $2\n"
-}
-error () { printf "\r  [\033[00;31m $1\033[0m ] $2\n"
-}
+# export the source folders
+export DOTFILES_ROOT=$(pwd -P)
+# Source (import) in functions such as message, status, and error
+source ${DOTFILES_ROOT}/template/dot-source.sh
 
-# Do a test if this is macOS or Linux, then run the appropriate set
+# Create the ~/Developer folder, just in case
+export DEVELOPER_HOME=$HOME/Developer
+export DEVELOPER_BIN=${DEVELOPER_HOME}/Bin
+mkdir -p ${DEVELOPER_HOME} 2> /dev/null
+mkdir -p ${DEVELOPER_BIN} 2> /dev/null
 
-# =========================================================================
-# macOS
-
-export DEVELOPER_HOME
-
-
-cd "$(dirname "$0")/.."
-DOTFILES_ROOT=$(pwd -P)
-
-export SETUP_HOME="${PWD}"
-export SETUP_FILEPATH="$0"
-export SETUP_FILENAME=`basename "$0"`
-export SETUP_BINPATH="/usr/local/bin"
-export SETUP_BINFILE="/usr/local/bin/setup-new-mac.sh"
-export SETUP_SETTINGS="${SETUP_BINPATH}/Settings"
-export SETUP_SETTINGS_SOURCE="${SETUP_HOME}/Settings"
-
-message "${DOTFILES_ROOT}" "Root of the dotfiles folder (install home)#"
-message "${SETUP_FILEPATH}" "Current location - Setting up your environment"
-message "${SETUP_HOME}" "Script and config source folder"
-message "${SETUP_BINPATH}" "Destination for global PATH access"
-message "$SHELL" "Current shell"
-
-
-## Install `zsh`
+## Report that we are in the right source folder for the dotfiles
+status "Source folder is DOTFILE_ROOT:" ${DOTFILES_ROOT}
+status "Destination in PATH is DEVELOPER_BIN:" ${DEVELOPER_BIN}
 
 
 
-# Install homebrew
-# $ZSH/homebrew/install.sh 2>&1
+# ==============================================================================
+# Install each of the sub-sections
+${DOTFILES_ROOT}/macos-system/macos-system.sh
+${DOTFILES_ROOT}/macos-settings/macos-settings.sh
+${DOTFILES_ROOT}/macos-xcode/macos-xcode.sh
+${DOTFILES_ROOT}/macos-homebrew/macos-homebrew.sh
 
 
-#### Switch to`zsh` if not already using it
-if [ "$SHELL" != "/bin/zsh" ]; then
-  echo -e "    - Switching shell to $C_GLOW1 zsh $C_END -- needs authentication."
-  chsh -s $(which zsh)
-  echo -e "    - Shell is now set to zsh next time you run Terminal."
-fi
+
+
+
+
+
 
 #### ==========================================================================
 # First this script needs to see if it is being run from the system location,
@@ -128,9 +112,7 @@ cp ${SETUP_BINPATH}/.gitconfig ${HOME}/.gitconfig
 source $HOME/.aliases
 source $HOME/.functions
 
-
-
-message "Done." "Quit and restart Terminal for changes to take effect"
+status "./dot-test.sh - done." "Restart Terminal for changes to take effect"
 exit 0
 
 

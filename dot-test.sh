@@ -1,39 +1,28 @@
 #!/bin/zsh
 #
 # dot-test.sh
+echo
 
-# NOTE: Ensure that any variables that downstream scripts
-#       need are exported before calling the script.
-
-# If need to grab parent folder, do this:   cd "$(dirname "$0")/.."
+#export the source and destination folders
 export DOTFILES_ROOT=$(pwd -P)
 export DEVELOPER_HOME=$HOME/Developer
+export DEVELOPER_BIN=${DEVELOPER_HOME}/Bin
 
+# Source in functions such as message, status, and error
 source ${DOTFILES_ROOT}/template/dot-source.sh
 
-message "NOTE:" "Now running dot-test.sh. Be sure you ran this file from within"
-message "NOTE:" "the DotFiles home folder or much of it will not work.\n"
+message "./dot-test.sh" "!! Be sure you ran this file within \"dotfiles\" home"
 
-## cd "$(dirname "$0")/.."
-
-
-
-## Try out the printing function above
-message "DOTFILE_ROOT" ${DOTFILES_ROOT}
+## Report that we are in the right source folder for the dotfiles
+message "DOTFILE_ROOT:" ${DOTFILES_ROOT}
 
 # Install the template (just an example)
 ${DOTFILES_ROOT}/template/install.sh
 
 
-# =========================================================================
-# macOS
 
 
+status "./dot-test.sh - done." "Exiting.\n"
 
-
-
-echo ''
-message "Finished" All components are installed
-echo ''
 
 
