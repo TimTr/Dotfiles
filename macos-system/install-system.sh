@@ -4,7 +4,7 @@
 
 # Import the default functions used in these scripts
 source ${DOTFILES_ROOT}/template/dot-source.sh
-status "macos-system.sh - start" "Configuring shell settings."
+status "install-system.sh - start" "Configuring shell and OS settings."
 
 
 #### Switch to`zsh` if not already using it
@@ -24,7 +24,7 @@ sudo chmod -R 777 ${DEVELOPER_BIN}/*
 
 
 # ==============================================================================
-status "macos-system.sh - done." "Returning to parent script."
+status "install-system.sh - done." "Returning to parent script."
 exit 0
 
 

@@ -5,7 +5,10 @@
 source $HOME/.aliases
 source $HOME/.functions
 
-# Add the DEVELOPER_BIN folder to the PATH
+# Hard coding DOTFILES_ROOT to $HOME/Developer/Bin
+export DOTFILES_ROOT=$HOME/Developer/Bin
+
+# Hard-coding the ~/Developer/Bin folder to lead the PATH
 export PATH="$HOME/Developer/Bin:$PATH"
 
 # Ruby - Add rbenv to allow picking a newer Ruby
@@ -16,20 +19,14 @@ export PATH="/usr/local/sbin:$PATH"
 export PY_PYTHON=3
 
 
-#### Colors -- usable everywhere now that they are in the .profile, e.g:
+# Colors -- usable everywhere now that they are in the .zshrc
 autoload colors; colors;
 
-
-# ... Syntax coloring for ZSH is a bit different than bash
+# Syntax coloring for ZSH is a bit different than bash
 export CLICOLOR=1
 export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
 # another example for zsh: export LSCOLORS=GxFxCxDxBxexexaxaxaxex
 
 # ... Custom prompt with newline
 NEWLINE=$'\n'
-PS1="${NEWLINE}🐛 %F{yellow}%~%{%F{white}%} ▶︎ %{%f%}%"
-
-# Old version, includes current user account
-# PS1="${NEWLINE}🐛 %{%F{white}%}[ %F{yellow}%~ %{%F{white}%}] %{%f%}% "
-# example - PS1="> %{%F{red}%}%n%{%f%}@%{%F{blue}%}%m %{%F{yellow}%}%~ %{$%f%}%% "
-# PS1="${NEWLINE}> %{%F{yellow}%}%n%{%f%} %{%F{white}%}%~ %{%f%}% > "
+PS1="${NEWLINE}%F{white}🐛 [%F{cyan}%~%{%F{white}%}] %{%f%}%"
