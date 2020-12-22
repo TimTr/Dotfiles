@@ -16,7 +16,7 @@
 		BA1E9B2B258FE781005D5A65 /* gitignore.dotfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = gitignore.dotfile; sourceTree = "<group>"; };
 		BA1E9B2C258FE781005D5A65 /* com.apple.Terminal.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.apple.Terminal.plist; sourceTree = "<group>"; };
 		BA1E9B35258FE814005D5A65 /* TimTr Toothpaste.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Toothpaste.xccolortheme"; sourceTree = "<group>"; };
-		BA1E9B36258FE814005D5A65 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
+		BA1E9B36258FE814005D5A65 /* install-xcode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-xcode.sh"; sourceTree = "<group>"; };
 		BA1E9B37258FE814005D5A65 /* TimTr Grey.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Grey.xccolortheme"; sourceTree = "<group>"; };
 		BA1E9B38258FE814005D5A65 /* TimTr (Dark Default).xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr (Dark Default).xccolortheme"; sourceTree = "<group>"; };
 		BA1E9B39258FE814005D5A65 /* aliases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = aliases.sh; sourceTree = "<group>"; };
@@ -27,10 +27,11 @@
 		BA462B94256EF61800BEC226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA462B95256EF61800BEC226 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BA48D5DC258FE4C60024A8C2 /* dot-source.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-source.sh"; sourceTree = "<group>"; };
-		BADE0F36258FFA4B00AF8E10 /* macos-system.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "macos-system.sh"; sourceTree = "<group>"; };
-		BADE0F37258FFAA600AF8E10 /* macos-settings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "macos-settings.sh"; sourceTree = "<group>"; };
-		BADE0F38259013B400AF8E10 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
+		BADE0F36258FFA4B00AF8E10 /* install-system.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-system.sh"; sourceTree = "<group>"; };
+		BADE0F37258FFAA600AF8E10 /* install-settings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-settings.sh"; sourceTree = "<group>"; };
+		BADE0F38259013B400AF8E10 /* install-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-homebrew.sh"; sourceTree = "<group>"; };
 		BADE0F3925901E0E00AF8E10 /* test.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test.sh; sourceTree = "<group>"; };
+		BAF17D3525914C5300C840B7 /* install-system.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-system.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -47,7 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				BA1E9B39258FE814005D5A65 /* aliases.sh */,
-				BA1E9B36258FE814005D5A65 /* install.sh */,
+				BA1E9B36258FE814005D5A65 /* install-xcode.sh */,
 				BA1E9B38258FE814005D5A65 /* TimTr (Dark Default).xccolortheme */,
 				BA1E9B3A258FE814005D5A65 /* TimTr Dark.xccolortheme */,
 				BA1E9B37258FE814005D5A65 /* TimTr Grey.xccolortheme */,
@@ -76,7 +77,7 @@
 		BA462B96256EF62A00BEC226 /* macos-system */ = {
 			isa = PBXGroup;
 			children = (
-				BADE0F36258FFA4B00AF8E10 /* macos-system.sh */,
+				BADE0F36258FFA4B00AF8E10 /* install-system.sh */,
 				BA1E9B26258FE775005D5A65 /* aliases.sh */,
 				BADE0F3925901E0E00AF8E10 /* test.sh */,
 				BA1E9B27258FE775005D5A65 /* functions.sh */,
@@ -89,7 +90,7 @@
 		BA462B98256EF64500BEC226 /* macos-homebrew */ = {
 			isa = PBXGroup;
 			children = (
-				BADE0F38259013B400AF8E10 /* install.sh */,
+				BADE0F38259013B400AF8E10 /* install-homebrew.sh */,
 			);
 			path = "macos-homebrew";
 			sourceTree = "<group>";
@@ -97,7 +98,7 @@
 		BA462B99256EF66400BEC226 /* macos-settings */ = {
 			isa = PBXGroup;
 			children = (
-				BADE0F37258FFAA600AF8E10 /* macos-settings.sh */,
+				BADE0F37258FFAA600AF8E10 /* install-settings.sh */,
 				BA1E9B2C258FE781005D5A65 /* com.apple.Terminal.plist */,
 				BA1E9B2A258FE781005D5A65 /* gitconfig.dotfile */,
 				BA1E9B2B258FE781005D5A65 /* gitignore.dotfile */,
@@ -108,6 +109,7 @@
 		BA48D5DB258ECA0D0024A8C2 /* linux-system */ = {
 			isa = PBXGroup;
 			children = (
+				BAF17D3525914C5300C840B7 /* install-system.sh */,
 			);
 			path = "linux-system";
 			sourceTree = "<group>";
@@ -120,7 +122,7 @@
 			attributes = {
 				LastUpgradeCheck = 1230;
 			};
-			buildConfigurationList = BA462B8E256EF60500BEC226 /* Build configuration list for PBXProject "DotFiles" */;
+			buildConfigurationList = BA462B8E256EF60500BEC226 /* Build configuration list for PBXProject "dotfiles" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -206,7 +208,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BA462B8E256EF60500BEC226 /* Build configuration list for PBXProject "DotFiles" */ = {
+		BA462B8E256EF60500BEC226 /* Build configuration list for PBXProject "dotfiles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA462B8F256EF60500BEC226 /* Debug */,
