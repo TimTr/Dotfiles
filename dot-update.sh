@@ -1,34 +1,15 @@
-#!/bin/sh
+#!/bin/zsh
 #
 # dot-update.sh
-#
-# This script handles installation and updates. Run it periodically
-# to make sure you're on the latest and to fix any broken settings.
 
-set -e
+source ${HOME}/.functions
+source ${HOME}/.aliases
 
-parentDirectory="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd -P)"
-dotfilesDirectory="$(cd "$( dirname "$parentDirectory" )" && pwd -P)"
+message "Running message test.sh from" "$PWD"
+status "Running status test.sh from" "$PWD"
+error "Running error test.sh from " "$PWD"
 
-export ZSH=$HOME/.dotfiles
+message "dot-update.sh - done." "Restart Terminal for changes to take effect"
 
-# Set macOS defaults
-$ZSH/macos/set-defaults.sh
+exit 0
 
-# Install homebrew
-$ZSH/homebrew/install.sh 2>&1
-
-# Upgrade homebrew
-echo "› brew update"
-brew update
-
-# Install software
-echo "› $ZSH/script/install"
-$ZSH/script/install
-
-
-# Go into the source `dotfiles` folder to then run all the installers
-cd "$(dirname $0)"/..
-
-# find the installers is subfolders and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done

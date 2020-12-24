@@ -1,74 +1,33 @@
-# .dotfiles for Tim Triemstra
+# .dotfiles
 
-This my the personal collection of dotfiles, settings, and setup scripts for macOS. The scripts are primarily qualified to work in ZSH, although they rarely use advanced features and are likely portable to other shells.
+This is Tim Triemstra's personal collection of dotfiles, settings, and setup scripts for macOS. 
 
-The  `dot-install.sh` and `dot-update.sh` files at the root of this project are the primary files with which to interact. Note that these files drive files named `install.sh` in the subfolders for each topic.
+The scripts are  qualified to work in ZSH, although they rarely use advanced features and are likely portable to other shells. The important files are at the root, and are the only files that should be directly launched by hand.
 
-This creates a folder in the user home folder called `~/Developer/bin` that is added to the path. Other folders may be added to `~/Developer` but only the `bin` folder should be in the path.
+- `dot-install.sh`  - installs a fresh version of the dotfiles, and creates new PATH folders
+- `dot-update.sh`  - only updates existing installs (dot-install.sh is likely safe to re-run)
+- `dot-test.sh` - when a make a change, this is the file I use to experiment
 
-There is also a file named `dot-test.sh` designed to test ideas before they move into the install or update workflows.
+Once installed, there will be a file called `dot` installed in the PATH. You can run this to reset the configuration of the shell and standard OS settings at any time. This is the same file as `dot-update.sh` above.
 
+Note the these files drive other installer scripts within the subfolders, for instance to install Xcode settings, or configure the default ZSH shell. So the interesting work is really in thees folders.
 
+Installing will create a folder in the user home folder called `~/Developer/Bin` that is added to the PATH variable. Other folders may be added to `~/Developer` but only the `Bin` folder should be in the PATH when complete. Notably, some sub-installers (for instance from Homebrew) may further autment the path, but those are specific to third-party tools.
 
-
-
-
-
-
-
-
+Other example dotfiles setups use advanced logic to traverse all sub-folders, launching an `install.sh` file, or some other strict pattern. I considered that route, but since there will never be hundreds of folders, I'm manually calling each sub-installer, and each has its own name, so it is easier to read when the tabs are open in the text editor, or to see reported errors.
 
 
 
+## Install
 
-
-
-
-
-# OLD VERSION OF THIS FILE
-
-This is the personal collection of Tim Triemstra's configuration files and scripts (dotfiles) for running macOS (and Linux, in early testing). This script puts some scripts into `/usr/local/bin` as a way to put things into the PATH.
-
-The `_template` folder shows how to add a new tool or language to the mix. Rather than automatically querry the folders as Zach's original setup did (quite nicely) this setup requires adding `./toolname/install.sh` to the list of commands in the `dot-setup.sh` file manually.
-
-Files like `.functions` and `.aliases` will be automatically sourced when the script completes.
-
-
-## Components
-
-There's a few special files in the hierarchy.
-
-- **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
-  available everywhere.
-- **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
-  environment.
-- **topic/path.zsh**: Any file named `path.zsh` is loaded first and is
-  expected to setup `$PATH` or similar.
-- **topic/completion.zsh**: Any file named `completion.zsh` is loaded
-  last and is expected to setup autocomplete.
-- **topic/install.sh**: Any file named `install.sh` is executed when you run `script/install`. To avoid being loaded automatically, its extension is `.sh`, not `.zsh`.
-- **topic/\*.symlink**: Any file ending in `*.symlink` gets symlinked into
-  your `$HOME`. This is so you can keep all of those versioned in your dotfiles
-  but still keep those autoloaded files in your home directory. These get
-  symlinked in when you run `script/bootstrap`.
-
-## install
-
-The initial installer will check if it is being run from within `/usr/local/bin/dotfiles` and if not, it will setup that folder, make sure it is in the path, and copy everything from here into that shared folder. This makes it easier for any other user on the machine to setup the `dotfiles` quickly, too.
-
-The intall the very first time, go into the `dotfiles` folder and run:
+The install the very first time by cloning from GitHub, go into a `dotfiles` folder and run:
 
 ```sh
-    git clone https://github.com/holman/dotfiles.git ~/.dotfiles
+    git clone https://github.com/timtr/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     script/bootstrap
 ```
 
-This will symlink the appropriate files in `.dotfiles` to your home directory.
-Everything is configured and tweaked within `~/.dotfiles`.
-
-The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
-which sets up a few paths that'll be different on your particular machine.
 
 `dot` is a simple script that installs some dependencies, sets sane macOS
 defaults, and so on. Tweak this script, and occasionally run `dot` from
@@ -80,15 +39,14 @@ this script in `bin/`.
 
 ## Inspired by Zach Holman's dotfiles
 
-My original inspiration for workign with dotfiles, and reproducible setup scripts, was to be able to very quickly setup new Macs for demos. This was a pretty big part of my daily life at work. But I got inspired to completely rethink how I manage the process by reading Zach Holman's [post on dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/). This project was rebuilt, starting from [Zach's repository](https://github.com/holman/dotfiles/). I confess to not doing a fork because I fully expect my version will be extremely anemic when completed, and probably pretty useless to tie back to the original for anyone else. Hopefully this acknowledgement suffices to give him the kudos he deserves for the inspiration.
+My original inspiration for workign with dotfiles, and reproducible setup scripts, was to be able to very quickly setup new Macs for demos. This was a pretty big part of my daily life at work. But I got inspired to completely rethink how I manage the process by reading Zach Holman's [post on dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/). This project was rebuilt, starting from [Zach's repository](https://github.com/holman/dotfiles/). I confess to not doing a fork because I mostly wanted to start from scratch (so I fully understood the inner-workings) and because my version will be  simple when completed. Hopefully this acknowledgement suffices to give him the kudos he deserves for the inspiration.
 
 
 **The text below is copied from Zach's original dotfiles readme:**
 
-> I (Zach) forked [Ryan Bates](http://github.com/ryanb)' excellent [dotfiles](http://github.com/ryanb/dotfiles) for a couple years before the weight of my changes and tweaks inspired me to finally roll my own. But Ryan's dotfiles were an easy way to get into bash customization, and then to jump ship to zsh a bit later. A decent amount of the code in these dotfiles stem or are inspired from Ryan's original project.
+> I (Zach) forked [Ryan Bates](http://github.com/ryanb)' excellent [dotfiles](http://github.com/ryanb/dotfiles) for a couple years before the weight of my changes and tweaks inspired me to finally roll my own. But Ryan's dotfiles were an easy way to get into bash customization, and then to jump ship to `zsh` a bit later. A decent amount of the code in these dotfiles stem or are inspired from Ryan's original project.
 
 
 ## License
 
-Everything in here is made available under the MIT license, as was Zach's original version. I don't think any of Zach's original code is in here (really, just the approach), so for simplicity I just edited the included license grant.
-
+Everything in here is made available under the MIT license found within the repository.

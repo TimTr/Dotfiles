@@ -16,6 +16,8 @@ status () { printf "\r  [\033[00;34m $1\033[0m ] $2\n"
 error () { printf "\r  [\033[00;31m $1\033[0m ] $2\n"
 }
 
+typeset -fx message
+
 
 # Function to find all files recursively under current folder
 findall () {

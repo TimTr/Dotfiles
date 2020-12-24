@@ -37,6 +37,10 @@ ${DOTFILES_ROOT}/macos-xcode/install-xcode.sh
 ${DOTFILES_ROOT}/macos-homebrew/install-homebrew.sh
 
 
+status "[Adding `dot`]" "Run `dot` from the PATH to reset settings any time"
+cp ${DOTFILES_ROOT}/dot-update.sh ${DEVELOPER_BIN}/dot
+sudo chmod -R 777 ${DEVELOPER_BIN}/*
+
 
 message "dot-install.sh - done." "Restart Terminal for changes to take effect"
 
