@@ -14,12 +14,12 @@ if [ "$SHELL" != "/bin/zsh" ]; then
 fi
 
 # Copy the dotfiles to the $HOME folder (copies over any existing files)
-cp ${DOTFILES_ROOT}/macos-system/aliases.sh $HOME/.aliases
-cp ${DOTFILES_ROOT}/macos-system/functions.sh $HOME/.functions
-cp ${DOTFILES_ROOT}/macos-system/zprofile.sh $HOME/.zprofile
-cp ${DOTFILES_ROOT}/macos-system/zshrc.sh $HOME/.zshrc
+cp ${DOTFILES_ROOT}/macos-shell/aliases.sh $HOME/.aliases
+cp ${DOTFILES_ROOT}/macos-shell/functions.sh $HOME/.functions
+cp ${DOTFILES_ROOT}/macos-shell/zprofile.sh $HOME/.zprofile
+cp ${DOTFILES_ROOT}/macos-shell/zshrc.sh $HOME/.zshrc
 
-cp ${DOTFILES_ROOT}/macos-system/test.sh ${DEVELOPER_BIN}/
+cp ${DOTFILES_ROOT}/macos-shell/test.sh ${DEVELOPER_BIN}/
 sudo chmod -R 777 ${DEVELOPER_BIN}/*
 
 
