@@ -27,6 +27,7 @@
 		BA462B94256EF61800BEC226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA462B95256EF61800BEC226 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BA48D5DC258FE4C60024A8C2 /* dot-source.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-source.sh"; sourceTree = "<group>"; };
+		BA76CC3F2596B965006CDD9A /* install-vscode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-vscode.sh"; sourceTree = "<group>"; };
 		BADE0F36258FFA4B00AF8E10 /* install-shell.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-shell.sh"; sourceTree = "<group>"; };
 		BADE0F37258FFAA600AF8E10 /* install-settings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-settings.sh"; sourceTree = "<group>"; };
 		BADE0F38259013B400AF8E10 /* install-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-homebrew.sh"; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 				BA462B96256EF62A00BEC226 /* macos-shell */,
 				BA462B99256EF66400BEC226 /* macos-settings */,
 				BA1E9B2E258FE7D9005D5A65 /* macos-xcode */,
+				BA76CC3E2596B951006CDD9A /* macos-vscode */,
 				BA462B98256EF64500BEC226 /* macos-homebrew */,
 				BA48D5DB258ECA0D0024A8C2 /* linux-system */,
 				BA0D7AE82571F4DC0057E271 /* template */,
@@ -112,6 +114,14 @@
 				BAF17D3525914C5300C840B7 /* install-system.sh */,
 			);
 			path = "linux-system";
+			sourceTree = "<group>";
+		};
+		BA76CC3E2596B951006CDD9A /* macos-vscode */ = {
+			isa = PBXGroup;
+			children = (
+				BA76CC3F2596B965006CDD9A /* install-vscode.sh */,
+			);
+			path = "macos-vscode";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

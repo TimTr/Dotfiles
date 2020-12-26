@@ -7,18 +7,28 @@ source ${HOME}/.aliases
 
 # determine the filename for the called file (e.g. update or dot)
 MYNAME=`basename "$0"`
-if [ "$MYNAME" = "dot" ]; then
-  status "Running as $MYNAME" "This is expected."
+
+# ZSH syntax to confirm DOTFILES_ROOT is set, otherwise abort with an error
+if [[ -v DOTFILES_ROOT ]]; then
+  status "$MYNAME" "Updating settings and latest software"
 else
-  status "Running as $MYNAME" "Something is wrong"
+  echo "!! ABORTING: Run dot-install.sh from \"dotfiles\" and restart Terminal"
+  exit 0
 fi
 
-# Just report that it is working...
-message "Running message test.sh from" "$PWD"
-status "Running status test.sh from" "$PWD"
-error "Running error test.sh from " "$PWD"
 
-message "dot-update.sh - done." "Restart Terminal for changes to take effect"
+# If this is not run as "dot" most likely it isn't setup, so re-connect it
+if [ "$MYNAME" != "dot" ]; then
+  error "$MYNAME" "FYI: Use \"dot\" via the PATH to update at any time"
+  
+  # Add a symlink to the dot-update.sh file at the root here
+  rm ${DEVELOPER_BIN}/dot 2> /dev/null
+  ln -s ${DOTFILES_ROOT}/dot-update.sh ${DEVELOPER_BIN}/dot
+  sudo chmod -R 777 ${DEVELOPER_BIN}/*
+fi
+
+
+message "Done updating" "Restart Terminal.app for changes to take effect"
 
 exit 0
 

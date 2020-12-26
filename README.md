@@ -1,8 +1,8 @@
 # .dotfiles
 
-This is Tim Triemstra's personal collection of dotfiles, settings, and setup scripts for macOS. 
+This is Tim Triemstra's personal collection of setup scripts for macOS, including settings for the `zsh` shell, Terminal, Xcode, and several other tools and apps. 
 
-The scripts are  qualified to work in ZSH, although they rarely use advanced features and are likely portable to other shells. The important files are at the root, and are the only files that should be directly launched by hand.
+The scripts are qualified to work in ZSH, although they rarely use advanced features and are likely portable to other shells. The important files are at the root, and are the only files that should be directly launched by hand.
 
 - `dot-install.sh`  - installs a fresh version of the dotfiles, and creates new PATH folders
 - `dot-update.sh`  - only updates existing installs (dot-install.sh is likely safe to re-run)
