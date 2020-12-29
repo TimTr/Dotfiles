@@ -27,12 +27,15 @@ message "Installing dotfiles..." "May require SUDO permission..."
 status "$DOTFILES_ROOT" "Global variable points to source dotfiles folder"
 status "$DEVELOPER_BIN" "Global variable for new files in the PATH"
 
+
+# ==============================================================================
 # chown and chmod all the files before we copy them
 sudo chown -R $USER ${DOTFILES_ROOT}/* 2> /dev/null
 sudo chmod -R 777 ${DOTFILES_ROOT}/* 2> /dev/null
 
 # Un-set the quarantine bit for all my own script files
 xattr -d com.apple.quarantine ${DOTFILES_ROOT}/* 2> /dev/null
+
 
 # ==============================================================================
 # Install each of the sub-sections
@@ -43,6 +46,8 @@ ${DOTFILES_ROOT}/macos-vscode/macos-vscode.sh
 ${DOTFILES_ROOT}/macos-jekyll/macos-jekyll.sh
 ${DOTFILES_ROOT}/macos-homebrew/macos-homebrew.sh
 
+
+# ==============================================================================
 # Add a symlink to the dot-update.sh file at the root here
 status "[SymLink \"dot\"]" "Run \"dot\" from PATH to reset settings any time"
 rm ${DEVELOPER_BIN}/dot 2> /dev/null

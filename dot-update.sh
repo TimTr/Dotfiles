@@ -5,9 +5,11 @@
 source ${HOME}/.functions
 source ${HOME}/.aliases
 
-# determine the filename for the called file (e.g. update or dot)
+# determine the filename for the called file (e.g. `dot-update.sh` or `dot`)
 MYNAME=`basename "$0"`
 
+
+# ==============================================================================
 # ZSH syntax to confirm DOTFILES_ROOT is set, otherwise abort with an error
 if [[ -v DOTFILES_ROOT ]]; then
   status "$MYNAME" "Updating settings and latest software"
@@ -17,6 +19,7 @@ else
 fi
 
 
+# ==============================================================================
 # If this is not run as "dot" most likely it isn't setup, so re-connect it
 if [ "$MYNAME" != "dot" ]; then
   error "$MYNAME" "FYI: Use \"dot\" via the PATH to update at any time"
