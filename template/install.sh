@@ -7,8 +7,6 @@ source ${DOTFILES_ROOT}/template/dot-source.sh
 status "platform-tool.sh - start" "Configuring app and tool settings"
 
 
-
-
 # ==============================================================================
 status "platform-tool.sh - (template) done." "Returning to parent script."
 exit 0
