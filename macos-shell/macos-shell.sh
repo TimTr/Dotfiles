@@ -1,10 +1,10 @@
 #!/bin/zsh
 #
-# macos-system.sh - macos-system
+# macos-shell.sh
 
 # Import the default functions used in these scripts
 source ${DOTFILES_ROOT}/template/dot-source.sh
-status "install-system.sh - start" "Configuring shell and OS settings."
+status "macos-system.sh - start" "Configuring shell and OS settings."
 
 
 #### Switch to`zsh` if not already using it

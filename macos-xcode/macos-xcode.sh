@@ -4,7 +4,7 @@
 
 # Import the default functions used in these scripts
 source ${DOTFILES_ROOT}/template/dot-source.sh
-status "install-xcode.sh - start" "Configuring Xcode settings"
+status "macos-xcode.sh - start" "Configuring Xcode settings"
 
 
 #### Copy all the Xcode colors and themes -- requires re-launch

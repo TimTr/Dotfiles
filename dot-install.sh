@@ -36,11 +36,12 @@ xattr -d com.apple.quarantine ${DOTFILES_ROOT}/* 2> /dev/null
 
 # ==============================================================================
 # Install each of the sub-sections
-${DOTFILES_ROOT}/macos-shell/install-shell.sh
-${DOTFILES_ROOT}/macos-settings/install-settings.sh
-${DOTFILES_ROOT}/macos-xcode/install-xcode.sh
-${DOTFILES_ROOT}/macos-vscode/install-vscode.sh
-${DOTFILES_ROOT}/macos-homebrew/install-homebrew.sh
+${DOTFILES_ROOT}/macos-shell/macos-shell.sh
+${DOTFILES_ROOT}/macos-settings/macos-settings.sh
+${DOTFILES_ROOT}/macos-xcode/macos-xcode.sh
+${DOTFILES_ROOT}/macos-vscode/macos-vscode.sh
+${DOTFILES_ROOT}/macos-jekyll/macos-jekyll.sh
+${DOTFILES_ROOT}/macos-homebrew/macos-homebrew.sh
 
 # Add a symlink to the dot-update.sh file at the root here
 status "[SymLink \"dot\"]" "Run \"dot\" from PATH to reset settings any time"

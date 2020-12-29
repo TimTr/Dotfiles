@@ -4,7 +4,7 @@
 #
 # Import the default functions used in these scripts
 source ${DOTFILES_ROOT}/template/dot-source.sh
-status "install-settings.sh - start" "Configuring app and tool settings"
+status "macos-settings.sh - start" "Configuring app and tool settings"
 
 
 # copy settings to $HOME root
