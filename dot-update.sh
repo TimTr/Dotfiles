@@ -8,13 +8,13 @@ source ${HOME}/.aliases
 # determine the filename for the called file (e.g. `dot-update.sh` or `dot`)
 MYNAME=`basename "$0"`
 
-
 # ==============================================================================
-# ZSH syntax to confirm DOTFILES_ROOT is set, otherwise abort with an error
+# Confirm DOTFILES_ROOT is set, otherwise abort with an error
 if [[ -v DOTFILES_ROOT ]]; then
-  status "$MYNAME" "Updating settings and latest software"
+  status "$MYNAME" "Updating settings - DOTFILES_ROOT = ${DOTFILES_ROOT}"
 else
-  echo "!! ABORTING: Run dot-install.sh from \"dotfiles\" and restart Terminal"
+  echo "!! ABORTING: DOTFILES_ROOT is not properly setup"
+  echo "             Run dot-install.sh from \"dotfiles\" and restart Terminal"
   exit 0
 fi
 
@@ -29,6 +29,18 @@ if [ "$MYNAME" != "dot" ]; then
   ln -s ${DOTFILES_ROOT}/dot-update.sh ${DEVELOPER_BIN}/dot
   sudo chmod -R 777 ${DEVELOPER_BIN}/*
 fi
+
+# Install each of the sub-sections
+# ${DOTFILES_ROOT}/macos-shell/macos-shell.sh
+# ${DOTFILES_ROOT}/macos-settings/macos-settings.sh
+# ${DOTFILES_ROOT}/macos-xcode/macos-xcode.sh
+# ${DOTFILES_ROOT}/macos-vscode/macos-vscode.sh
+# ${DOTFILES_ROOT}/macos-homebrew/macos-homebrew.sh
+${DOTFILES_ROOT}/macos-ruby/macos-ruby.sh
+
+
+
+
 
 
 message "Done updating" "Restart Terminal.app for changes to take effect"

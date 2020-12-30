@@ -1,0 +1,38 @@
+#!/bin/zsh
+#
+# macos-ruby.sh
+#
+# Import the default functions used in these scripts
+source ${HOME}/.functions
+status "macos-ruby.sh - start" "Configuring app and tool settings"
+
+# ==============================================================================
+# This script will install Ruby, rbenv, and Jekyll (blogging platform)
+which -s brew
+if [[ $? != 0 ]] ; then
+  # Install Homebrew
+  error "Missing Homebrew" "Must first install Homebrew before installing Ruby"
+  exit 0
+fi
+
+# First install RBENV so we can easily switch to the new Ruby install
+status "Installing rbenv" "Using Homebrew to install `rbenv` tool"
+brew install rbenv ruby-build
+brew upgrade ruby-build
+
+# Install latest version of Ruby (currently set to version 3.0.0)
+status "Installing Ruby" "Using `rbenv` to install Ruby"
+rbenv install 3.0.0
+rbenv global 3.0.0
+
+# Install some gems (Jekyll and Bundler to start)
+gem install jekyll bundler
+
+
+
+
+# ==============================================================================
+status "macos-ruby.sh - done." "Returning to parent script."
+exit 0
+
+

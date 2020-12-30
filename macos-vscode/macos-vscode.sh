@@ -3,7 +3,7 @@
 # macos-vscode.sh
 
 # Import the default functions used in these scripts
-source ${DOTFILES_ROOT}/template/dot-source.sh
+source ${HOME}/.functions
 status "macos-vscode.sh - start" "Configuring Visual Studio Code settings"
 
 

@@ -3,7 +3,7 @@
 # macos-settings.sh
 #
 # Import the default functions used in these scripts
-source ${DOTFILES_ROOT}/template/dot-source.sh
+source ${HOME}/.functions
 status "macos-settings.sh - start" "Configuring app and tool settings"
 
 

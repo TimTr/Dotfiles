@@ -9,8 +9,8 @@ error () { printf "\r  [\033[00;31m $1\033[0m ] $2\n" }
 
 # First make sure the installer is run from within the dotfiles folder
 if [ "$(basename "$PWD")" != "dotfiles" ]; then
-  error "ABORT" "You must run the installer from within the dotfiles folder"
-  exit 0
+ error "ABORT" "You must run the installer from within the dotfiles folder"
+ exit 0
 fi
 
 # export the home of the dotfiles folder, and the target Developer folders
@@ -43,8 +43,8 @@ ${DOTFILES_ROOT}/macos-shell/macos-shell.sh
 ${DOTFILES_ROOT}/macos-settings/macos-settings.sh
 ${DOTFILES_ROOT}/macos-xcode/macos-xcode.sh
 ${DOTFILES_ROOT}/macos-vscode/macos-vscode.sh
-${DOTFILES_ROOT}/macos-jekyll/macos-jekyll.sh
 ${DOTFILES_ROOT}/macos-homebrew/macos-homebrew.sh
+${DOTFILES_ROOT}/macos-ruby/macos-ruby.sh
 
 
 # ==============================================================================
@@ -53,6 +53,9 @@ status "[SymLink \"dot\"]" "Run \"dot\" from PATH to reset settings any time"
 rm ${DEVELOPER_BIN}/dot 2> /dev/null
 ln -s ${DOTFILES_ROOT}/dot-update.sh ${DEVELOPER_BIN}/dot
 sudo chmod -R 777 ${DEVELOPER_BIN}/*
+
+
+# Hard code the critical
 
 
 message "dot-install.sh - done." "Restart Terminal for changes to take effect"
