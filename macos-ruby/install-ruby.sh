@@ -16,18 +16,18 @@ if [[ $? != 0 ]] ; then
 fi
 
 # First install RBENV so we can easily switch to the new Ruby install
-status "Installing rbenv" "Using Homebrew to install `rbenv` tool"
+status "Installing rbenv" "Using Homebrew to install \"rbenv\" tool"
 brew install rbenv ruby-build
 brew upgrade ruby-build
 
 # Install latest version of Ruby (currently set to version 3.0.0)
-status "Installing Ruby" "Using `rbenv` to install Ruby 3.0.0"
+status "Installing Ruby" "Using \"rbenv\" to install Ruby 3.0.0"
 rbenv install 3.0.0
 rbenv global 3.0.0
 
 message "Ruby not finished" "Must restart Terminal then run dot-update.sh"
 bullet "rbenv doesn't take effect until Terminal restarts"
-bullet "One restarted, run dot-update.sh or just `dot` to install gems"
+bullet "One restarted, run dot-update.sh or just \"dot\" to install gems"
 
 
 

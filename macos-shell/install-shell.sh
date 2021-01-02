@@ -2,7 +2,7 @@
 #
 # install-shell.sh
 
-# Source functions.sh so we have functions like `status` and `message`
+# Source functions.sh so we have functions like "status" and "message"
 source $(dirname $0)/functions.sh
 status "install-system.sh" "Configuring shell and OS settings."
 

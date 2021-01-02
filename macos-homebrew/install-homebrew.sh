@@ -2,7 +2,7 @@
 #
 # install-hombebrew.sh
 
-# Source functions.sh so we have functions like `status` and `message`
+# Source functions.sh so we have functions like "status" and "message"
 source ${HOME}/.functions
 status "install-homebrew.sh" "Setting up Homebrew for the first time"
 

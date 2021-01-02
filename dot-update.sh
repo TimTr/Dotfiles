@@ -5,8 +5,8 @@
 source ${HOME}/.functions
 source ${HOME}/.aliases
 
-# determine the filename for the called file (e.g. `dot-update.sh` or `dot`)
-MYNAME=`basename "$0"`
+# determine the filename for the called file (e.g. "dot-update.sh" or "dot")
+MYNAME=(basename "$0")
 
 # ==============================================================================
 # Confirm DOTFILES_ROOT is set, otherwise abort with an error

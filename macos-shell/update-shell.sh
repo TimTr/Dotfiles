@@ -7,7 +7,7 @@ source ${HOME}/.functions
 status "update-shell.sh" "Configuring shell and OS settings."
 
 
-#### Switch to`zsh` if not already using it
+#### Switch to ZSH if not already using it
 if [ "$SHELL" != "/bin/zsh" ]; then
   error "SHELL is not set to ZSH" "Switching to ZSH - needs authentication"
   chsh -s $(which zsh)

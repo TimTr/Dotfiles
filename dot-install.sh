@@ -14,8 +14,8 @@ fi
 message "Starting Install..." "Step 1 of installing dotfiles on new machine"
 bullet "This creates the folder ~/Developer/Bin and puts it in the PATH"
 bullet "After this completes, you must quit and restart Terminal"
-bullet "Then, in the new Terminal window, run `dot` to finish the install"
-bullet "You can then re-run `dot` at any time to reset the config"
+bullet "Then, in the new Terminal window, run \"dot\" to finish the install"
+bullet "You can then re-run \"dot\" at any time to reset the config"
 echo
 read -s -k $'?Press any key to continue. Hit Control-C to abort now.\n'
 
@@ -71,8 +71,8 @@ sudo chmod -R 777 ${DEVELOPER_BIN}/*
 
 message "dot-install.sh - Install step 1 done." "Restart Terminal, then:"
 message "." "- Re-launch Terminal.app"
-message "." "- Type `ruby -v` to confirm it is running Ruby 3.0 or later"
-message "." "- Type `dot` in Terminal to finish the install"
+message "." "- Type \"ruby -v\" to confirm it is running Ruby 3.0 or later"
+message "." "- Type \"dot\" in Terminal to finish the install"
 message "." "- Then quit and re-launch Terminal.app -- install will be finished"
 echo
 
