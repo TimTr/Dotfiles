@@ -3,7 +3,7 @@
 # macos-hombebrew.sh
 
 # Import the default functions used in these scripts
-source ${DOTFILES_ROOT}/template/dot-source.sh
+source ${DOTFILES_ROOT}/template/source.sh
 
 
 

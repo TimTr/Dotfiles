@@ -9,6 +9,8 @@ source $HOME/.functions
 # Hard-coding the ~/Developer/Bin folder to lead the PATH
 # Do NOT append the previous $PATH as this will duplicate with each script run
 export PATH="$HOME/Developer/Bin"
+# Add the Homebrew alternate folder to PATH
+export PATH="$PATH:/opt/homebrew/bin"
 # Add default system PATHs to the chain (these are REALLY important)
 export PATH="$PATH:/usr/local/bin:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin"
 # Add the Xcode tooling folder to PATH

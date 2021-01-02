@@ -1,14 +1,13 @@
 #!/bin/zsh
 #
-# macos-vscode.sh
+# update-vscode.sh
 
 # Import the default functions used in these scripts
 source ${HOME}/.functions
-status "macos-vscode.sh - start" "Configuring Visual Studio Code settings"
+status "update-vscode.sh - start" "Configuring Visual Studio Code settings"
 
 
 ln -s "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" ${DEVELOPER_BIN}/vscode
 
 # ==============================================================================
-status "install-vscode.sh - done." "Returning to parent script."
 exit 0

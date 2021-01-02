@@ -1,10 +1,10 @@
 #!/bin/zsh
 #
-# macos-xcode.sh
+# update-xcode.sh
 
 # Import the default functions used in these scripts
 source ${HOME}/.functions
-status "macos-xcode.sh - start" "Configuring Xcode settings"
+status "update-xcode.sh" "Configuring Xcode settings, mostly color themes"
 
 
 #### Copy all the Xcode colors and themes -- requires re-launch
@@ -15,8 +15,8 @@ cp ${DOTFILES_ROOT}/macos-xcode/*.xccolortheme \
    ${HOME}/Library/Developer/Xcode/UserData/FontAndColorThemes/
 
 
+# TODO: append the aliases.sh file to ~/.aliases
 
 
 # ==============================================================================
-status "install-xcode.sh - done." "Returning to parent script."
 exit 0

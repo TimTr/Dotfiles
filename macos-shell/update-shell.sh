@@ -1,16 +1,10 @@
 #!/bin/zsh
 #
-# macos-shell.sh
-
-# Copy the dotfiles to the $HOME folder (copies over any existing files)
-cp ${DOTFILES_ROOT}/macos-shell/aliases.sh $HOME/.aliases
-cp ${DOTFILES_ROOT}/macos-shell/functions.sh $HOME/.functions
-cp ${DOTFILES_ROOT}/macos-shell/zprofile.sh $HOME/.zprofile
-cp ${DOTFILES_ROOT}/macos-shell/zshrc.sh $HOME/.zshrc
+# update-shell.sh
 
 # Import the default functions used in these scripts
 source ${HOME}/.functions
-status "macos-system.sh - start" "Configuring shell and OS settings."
+status "update-shell.sh" "Configuring shell and OS settings."
 
 
 #### Switch to`zsh` if not already using it
@@ -38,8 +32,10 @@ echo "export DOTFILES_ROOT=$DOTFILES_ROOT" >> ~/.zshrc
 echo "export DEVELOPER_HOME=$DEVELOPER_HOME" >> ~/.zshrc
 echo "export DEVELOPER_BIN=$DEVELOPER_BIN" >> ~/.zshrc
 
+
+
+
 # ==============================================================================
-status "install-system.sh - done." "Returning to parent script."
 exit 0
 
 

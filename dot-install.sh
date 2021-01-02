@@ -1,17 +1,24 @@
 #!/bin/zsh
 #
 # dot-install.sh
+source $PWD/macos-shell/functions.sh
 echo
-# Functions to make output attractive when running the script
-message () { printf "\r  [\033[00;32m $1\033[0m ] $2\n" }
-status () { printf "\r  [\033[00;34m $1\033[0m ] $2\n" }
-error () { printf "\r  [\033[00;31m $1\033[0m ] $2\n" }
 
 # First make sure the installer is run from within the dotfiles folder
 if [ "$(basename "$PWD")" != "dotfiles" ]; then
  error "ABORT" "You must run the installer from within the dotfiles folder"
  exit 0
 fi
+
+# Pause and wait for keypress to continue
+message "Starting Install..." "Step 1 of installing dotfiles on new machine"
+bullet "This creates the folder ~/Developer/Bin and puts it in the PATH"
+bullet "After this completes, you must quit and restart Terminal"
+bullet "Then, in the new Terminal window, run `dot` to finish the install"
+bullet "You can then re-run `dot` at any time to reset the config"
+echo
+read -s -k $'?Press any key to continue. Hit Control-C to abort now.\n'
+
 
 # export the home of the dotfiles folder, and the target Developer folders
 export DOTFILES_ROOT=$(pwd -P)
@@ -38,27 +45,36 @@ xattr -d com.apple.quarantine ${DOTFILES_ROOT}/* 2> /dev/null
 
 
 # ==============================================================================
+# For the install to complete, will need this path setup for this session
+export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin"
+# This Homebrew path is used for M1 Macs -- may not be used in the future
+export PATH="/opt/homebrew/bin:$PATH"
+
+
+# ==============================================================================
 # Install each of the sub-sections
-${DOTFILES_ROOT}/macos-shell/macos-shell.sh
-${DOTFILES_ROOT}/macos-settings/macos-settings.sh
-${DOTFILES_ROOT}/macos-xcode/macos-xcode.sh
-${DOTFILES_ROOT}/macos-vscode/macos-vscode.sh
-${DOTFILES_ROOT}/macos-homebrew/macos-homebrew.sh
-${DOTFILES_ROOT}/macos-ruby/macos-ruby.sh
+${DOTFILES_ROOT}/macos-shell/install-shell.sh
+${DOTFILES_ROOT}/macos-settings/install-settings.sh
+${DOTFILES_ROOT}/macos-xcode/install-xcode.sh
+${DOTFILES_ROOT}/macos-vscode/install-vscode.sh
+${DOTFILES_ROOT}/macos-homebrew/install-homebrew.sh
+${DOTFILES_ROOT}/macos-ruby/install-ruby.sh
 
 
 # ==============================================================================
 # Add a symlink to the dot-update.sh file at the root here
-status "[SymLink \"dot\"]" "Run \"dot\" from PATH to reset settings any time"
+status "[Symlink \"dot\"]" "Run \"dot\" from PATH to reset settings any time"
 rm ${DEVELOPER_BIN}/dot 2> /dev/null
 ln -s ${DOTFILES_ROOT}/dot-update.sh ${DEVELOPER_BIN}/dot
 sudo chmod -R 777 ${DEVELOPER_BIN}/*
 
 
-# Hard code the critical
-
-
-message "dot-install.sh - done." "Restart Terminal for changes to take effect"
+message "dot-install.sh - Install step 1 done." "Restart Terminal, then:"
+message "." "- Re-launch Terminal.app"
+message "." "- Type `ruby -v` to confirm it is running Ruby 3.0 or later"
+message "." "- Type `dot` in Terminal to finish the install"
+message "." "- Then quit and re-launch Terminal.app -- install will be finished"
+echo
 
 exit 0
 

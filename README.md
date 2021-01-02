@@ -1,14 +1,22 @@
 # .dotfiles
 
-This is Tim Triemstra's personal collection of setup scripts for macOS, including settings for the `zsh` shell, Terminal, Xcode, and several other tools and apps. 
+This is Tim Triemstra's personal collection of setup scripts for macOS, including settings for the `zsh` shell, Terminal, Xcode, and several other tools and apps. This set will also install Ruby, along with `rbenv` as a way to control which version of Ruby should act as the system default. This is useful for tools like `jekyll`.
 
-The scripts are qualified to work in ZSH, although they rarely use advanced features and are likely portable to other shells. The important files are at the root, and are the only files that should be directly launched by hand.
+The scripts are designed to work in ZSH, although they rarely use advanced features and are likely portable to other shells. The important files are at the root, and are the only files that should be directly launched by hand.
 
 - `dot-install.sh`  - installs a fresh version of the dotfiles, and creates new PATH folders
-- `dot-update.sh`  - only updates existing installs (dot-install.sh is likely safe to re-run)
-- `dot-test.sh` - when a make a change, this is the file I use to experiment
+- `dot-update.sh`  - updates settings and  installs additional tools (always run update after install)
+- `dot-reset.sh`  - deletes a bunch of files to aid in a fresh re-install (rarely needed)
+- `dot-test.sh` - when making a change, this is the file I use to experiment
 
-Once installed, there will be a file called `dot` installed in the PATH. You can run this to reset the configuration of the shell and standard OS settings at any time. This is the same file as `dot-update.sh` above.
+To install, you need to follow these steps:
+- Go into the `dotfiles` folder within Terminal (do not run from elsewhere)
+- Type `./dot-install.sh` to run the initial install
+- Quit Terminal (or iTerm2) and restart it. This will give a shell with the proper default settings
+- Type `dot` or `./dot-update.sh` to finish the installation
+- You can re-run `dot` at any time to update to reset the configuration
+
+The file  `dot` is installed in the PATH, and is just a symlink to the `dot-update.sh` above. Be sure to run `dot` after running a fresh `dot-install.sh` as tools like Jekyll and others require that the environment, such as `rbenv` is fully setup before it can be run, forcing the two-step process.
 
 Note the these files drive other installer scripts within the subfolders, for instance to install Xcode settings, or configure the default ZSH shell. So the interesting work is really in thees folders.
 

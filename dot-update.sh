@@ -31,12 +31,12 @@ if [ "$MYNAME" != "dot" ]; then
 fi
 
 # Install each of the sub-sections
-# ${DOTFILES_ROOT}/macos-shell/macos-shell.sh
-# ${DOTFILES_ROOT}/macos-settings/macos-settings.sh
-# ${DOTFILES_ROOT}/macos-xcode/macos-xcode.sh
-# ${DOTFILES_ROOT}/macos-vscode/macos-vscode.sh
-# ${DOTFILES_ROOT}/macos-homebrew/macos-homebrew.sh
-${DOTFILES_ROOT}/macos-ruby/macos-ruby.sh
+# ${DOTFILES_ROOT}/macos-shell/udpate-shell.sh
+# ${DOTFILES_ROOT}/macos-settings/update-settings.sh
+# ${DOTFILES_ROOT}/macos-xcode/update-xcode.sh
+# ${DOTFILES_ROOT}/macos-vscode/update-vscode.sh
+# ${DOTFILES_ROOT}/macos-homebrew/update-homebrew.sh
+${DOTFILES_ROOT}/macos-ruby/update-ruby.sh
 
 
 

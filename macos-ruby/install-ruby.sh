@@ -4,7 +4,7 @@
 #
 # Import the default functions used in these scripts
 source ${HOME}/.functions
-status "macos-ruby.sh - start" "Configuring app and tool settings"
+status "install-ruby.sh" "Configuring app and tool settings"
 
 # ==============================================================================
 # This script will install Ruby, rbenv, and Jekyll (blogging platform)
@@ -21,18 +21,17 @@ brew install rbenv ruby-build
 brew upgrade ruby-build
 
 # Install latest version of Ruby (currently set to version 3.0.0)
-status "Installing Ruby" "Using `rbenv` to install Ruby"
+status "Installing Ruby" "Using `rbenv` to install Ruby 3.0.0"
 rbenv install 3.0.0
 rbenv global 3.0.0
 
-# Install some gems (Jekyll and Bundler to start)
-gem install jekyll bundler
-
+message "Ruby not finished" "Must restart Terminal then run dot-update.sh"
+bullet "rbenv doesn't take effect until Terminal restarts"
+bullet "One restarted, run dot-update.sh or just `dot` to install gems"
 
 
 
 # ==============================================================================
-status "macos-ruby.sh - done." "Returning to parent script."
 exit 0
 
 
