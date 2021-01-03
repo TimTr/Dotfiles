@@ -2,7 +2,7 @@
 #
 # install-settings.sh
 #
-# Import the default functions used in these scripts
+# Source ~/.functions so we have functions like "status" and "message"
 source ${HOME}/.functions
 status "install-settings.sh" "Configuring app and tool settings"
 

@@ -2,7 +2,7 @@
 #
 # update-hombebrew.sh
 
-# Import the default functions used in these scripts
+# Source ~/.functions so we have functions like "status" and "message"
 source ${HOME}/.functions
 status "update-homebrew.sh" "Updating Homebrew"
 
@@ -15,7 +15,7 @@ if [[ $? != 0 ]] ; then
   status "Installing Homebrew" "First time installing Homebrew..."
   
   # New Bash-based Homebrew installer (doesn't use Ruby)
-  sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   
   # Old Ruby-based installer (supposedly deprecated)
   # ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -28,7 +28,7 @@ else
 fi
 
 # This should have been installed by the initial install script. Mostly a test.
-brew update tree
+brew install tree
 
 
 # ==============================================================================

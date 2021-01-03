@@ -63,18 +63,22 @@ ${DOTFILES_ROOT}/macos-ruby/install-ruby.sh
 
 # ==============================================================================
 # Add a symlink to the dot-update.sh file at the root here
-status "[Symlink \"dot\"]" "Run \"dot\" from PATH to reset settings any time"
+status "Symlink \"dot\"" "Run \"dot\" from PATH to reset settings any time"
 rm ${DEVELOPER_BIN}/dot 2> /dev/null
 ln -s ${DOTFILES_ROOT}/dot-update.sh ${DEVELOPER_BIN}/dot
+
+status "Resetting chmod" "Ensure all scripts are executable (needs sudo)"
 sudo chmod -R 777 ${DEVELOPER_BIN}/*
 
 
+
+# ==============================================================================
 message "dot-install.sh - Install step 1 done." "Restart Terminal, then:"
-message "." "- Re-launch Terminal.app"
-message "." "- Type \"ruby -v\" to confirm it is running Ruby 3.0 or later"
-message "." "- Type \"dot\" in Terminal to finish the install"
-message "." "- Then quit and re-launch Terminal.app -- install will be finished"
+bullet "Type \"ruby -v\" to confirm it is running Ruby 3.0 or later"
+bullet "Type \"dot\" in Terminal to finish the install"
+bullet "Then quit and re-launch Terminal.app -- install will be finished"
 echo
 
+# ==============================================================================
 exit 0
 

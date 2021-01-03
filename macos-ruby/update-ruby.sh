@@ -4,18 +4,18 @@
 #
 # Import the default functions used in these scripts
 source ${HOME}/.functions
-status "update-ruby.sh" "Must have rbenv installed and restarted Terminal first"
+status "update-ruby.sh" "Checking current installs of \"brew\" and \"rbenv\""
 
 # ==============================================================================
 # This script will install Ruby, rbenv, and Jekyll (blogging platform)
-which -s brew
+which -s brew &> /dev/null
 if [[ $? != 0 ]] ; then
   # Install Homebrew
   error "Missing Homebrew" "Re-run dot-install.sh"
   exit 0
 fi
 
-which -s rbenv
+which -s rbenv &> /dev/null
 if [[ $? != 0 ]] ; then
   # Install Homebrew
   error "Missing rbenv" "Re-run dot-install.sh"
@@ -24,7 +24,7 @@ fi
 
 
 CURRENT_RUBY=$(ruby -v 2> /dev/null)
-status "Ruby -v = $CURRENT_RUBY" "Should be using Ruby 3 or later"
+status "Ruby -v" "$CURRENT_RUBY"
 
 # Install some gems (Jekyll and Bundler to start) spawned from new shell
 # The new shell allows the rbenv environment to be setup, so the new

@@ -2,7 +2,7 @@
 #
 # update-xcode.sh
 
-# Import the default functions used in these scripts
+# Source ~/.functions so we have functions like "status" and "message"
 source ${HOME}/.functions
 status "update-xcode.sh" "Configuring Xcode settings, mostly color themes"
 

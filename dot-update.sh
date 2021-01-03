@@ -5,13 +5,13 @@
 source ${HOME}/.functions
 source ${HOME}/.aliases
 
-# determine the filename for the called file (e.g. "dot-update.sh" or "dot")
-MYNAME=(basename "$0")
+# determine the filename for the called file (just filename, not full path)
+MYNAME="$(basename "$0")"
 
 # ==============================================================================
 # Confirm DOTFILES_ROOT is set, otherwise abort with an error
 if [[ -v DOTFILES_ROOT ]]; then
-  status "$MYNAME" "Updating settings - DOTFILES_ROOT = ${DOTFILES_ROOT}"
+  status "$MYNAME" "DOTFILES_ROOT = ${DOTFILES_ROOT}"
 else
   echo "!! ABORTING: DOTFILES_ROOT is not properly setup"
   echo "             Run dot-install.sh from \"dotfiles\" and restart Terminal"
@@ -30,12 +30,12 @@ if [ "$MYNAME" != "dot" ]; then
   sudo chmod -R 777 ${DEVELOPER_BIN}/*
 fi
 
-# Install each of the sub-sections
-# ${DOTFILES_ROOT}/macos-shell/udpate-shell.sh
-# ${DOTFILES_ROOT}/macos-settings/update-settings.sh
-# ${DOTFILES_ROOT}/macos-xcode/update-xcode.sh
-# ${DOTFILES_ROOT}/macos-vscode/update-vscode.sh
-# ${DOTFILES_ROOT}/macos-homebrew/update-homebrew.sh
+# Update each of the sub-sections
+${DOTFILES_ROOT}/macos-shell/udpate-shell.sh
+${DOTFILES_ROOT}/macos-settings/update-settings.sh
+${DOTFILES_ROOT}/macos-xcode/update-xcode.sh
+${DOTFILES_ROOT}/macos-vscode/update-vscode.sh
+${DOTFILES_ROOT}/macos-homebrew/update-homebrew.sh
 ${DOTFILES_ROOT}/macos-ruby/update-ruby.sh
 
 

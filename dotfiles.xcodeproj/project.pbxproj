@@ -72,8 +72,8 @@
 			children = (
 				BA462B94256EF61800BEC226 /* README.md */,
 				BA462B93256EF61800BEC226 /* dot-install.sh */,
-				BA3989C4259F954600978484 /* dot-reset.sh */,
 				BA462B92256EF61800BEC226 /* dot-update.sh */,
+				BA3989C4259F954600978484 /* dot-reset.sh */,
 				BA462B91256EF61800BEC226 /* dot-test.sh */,
 				BA462B96256EF62A00BEC226 /* macos-shell */,
 				BA462B99256EF66400BEC226 /* macos-settings */,
