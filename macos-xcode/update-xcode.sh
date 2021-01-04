@@ -15,8 +15,8 @@ cp ${DOTFILES_ROOT}/macos-xcode/*.xccolortheme \
    ${HOME}/Library/Developer/Xcode/UserData/FontAndColorThemes/
 
 
-# TODO: append the aliases.sh file to ~/.aliases
-
+# Append the Xcode aliases.sh file to ~/.aliases (adds the Simulator CL tool)
+cat $(dirname $0)/aliases.sh >> ${HOME}/.aliases
 
 # ==============================================================================
 exit 0

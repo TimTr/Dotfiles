@@ -9,7 +9,7 @@ status "install-xcode.sh" "Configuring Xcode"
 
 # ==============================================================================
 # Most of the real work occurs in the update file
-source $(dirname $0)/update-shell.sh
+source $(dirname $0)/update-xcode.sh
 
 
 

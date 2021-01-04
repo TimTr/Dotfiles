@@ -7,7 +7,7 @@ source ${HOME}/.functions
 status "update-vscode.sh - start" "Configuring Visual Studio Code settings"
 
 
-ln -s "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" ${DEVELOPER_BIN}/vscode
+ln -s "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" ${DEVELOPER_BIN}/vscode 2> /dev/null
 
 # ==============================================================================
 exit 0

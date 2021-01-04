@@ -3,7 +3,7 @@
 # update-shell.sh
 
 # Import the default functions used in these scripts
-source $(dirname $0)/.functions
+source $(dirname $0)/functions.sh
 status "update-shell.sh" "Configuring shell and OS settings."
 
 

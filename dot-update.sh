@@ -11,7 +11,7 @@ MYNAME="$(basename "$0")"
 # ==============================================================================
 # Confirm DOTFILES_ROOT is set, otherwise abort with an error
 if [[ -v DOTFILES_ROOT ]]; then
-  status "$MYNAME" "DOTFILES_ROOT = ${DOTFILES_ROOT}"
+  message "$MYNAME" "DOTFILES_ROOT = ${DOTFILES_ROOT}"
 else
   echo "!! ABORTING: DOTFILES_ROOT is not properly setup"
   echo "             Run dot-install.sh from \"dotfiles\" and restart Terminal"
@@ -22,16 +22,17 @@ fi
 # ==============================================================================
 # If this is not run as "dot" most likely it isn't setup, so re-connect it
 if [ "$MYNAME" != "dot" ]; then
-  error "$MYNAME" "FYI: Use \"dot\" via the PATH to update at any time"
-  
-  # Add a symlink to the dot-update.sh file at the root here
-  rm ${DEVELOPER_BIN}/dot 2> /dev/null
-  ln -s ${DOTFILES_ROOT}/dot-update.sh ${DEVELOPER_BIN}/dot
-  sudo chmod -R 777 ${DEVELOPER_BIN}/*
+  error "Launched as $MYNAME" "Setting up \"dot\" to re-run via PATH any time"
+
+  # Re-add a symlink to the dot-update.sh file at the root here
+  rm -f ${DEVELOPER_BIN}/dot &> /dev/null
+  ln -s ${DOTFILES_ROOT}/dot-update.sh ${DEVELOPER_BIN}/dot &> /dev/null
+  sudo chmod -R 777 ${DEVELOPER_BIN}/* &> /dev/null
 fi
 
+status "Running sub-scripts" "Launching each of the update scripts"
 # Update each of the sub-sections
-${DOTFILES_ROOT}/macos-shell/udpate-shell.sh
+${DOTFILES_ROOT}/macos-shell/update-shell.sh
 ${DOTFILES_ROOT}/macos-settings/update-settings.sh
 ${DOTFILES_ROOT}/macos-xcode/update-xcode.sh
 ${DOTFILES_ROOT}/macos-vscode/update-vscode.sh

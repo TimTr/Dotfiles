@@ -17,8 +17,8 @@ export PATH="$PATH:/usr/local/bin:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin"
 export PATH="$PATH:/Library/Apple/usr/bin"
 
 # This needs to be hard-coded into .zshrc by default
-eval "$(rbenv init - zsh)"
-export PATH="${HOME}/.rbenv/bin:$PATH"
+# eval "$(rbenv init - zsh)"
+# export PATH="${HOME}/.rbenv/bin:$PATH"
 
 
 # ==============================================================================
