@@ -14,7 +14,9 @@ alias cp='cp -v'
 
 # ... Make 'ls' look a lot prettier
 alias ls='ls -FG'
-alias lsl='ls -loAFGT'
+alias lsl='ls -loFGT'
+alias lsla='ls -loAFGT'
+
 
 # original color-coded lsl command:  alias lsl='ls -loFGT'
 # sorts folders at the top:  ls -la | grep "^d" && ls -la | grep -v "^d"
