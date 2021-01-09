@@ -22,12 +22,14 @@
 		BA1E9B39258FE814005D5A65 /* aliases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = aliases.sh; sourceTree = "<group>"; };
 		BA1E9B3A258FE814005D5A65 /* TimTr Dark.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Dark.xccolortheme"; sourceTree = "<group>"; };
 		BA3989C4259F954600978484 /* dot-reset.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-reset.sh"; sourceTree = "<group>"; };
+		BA40326B25AA54BA00DAC3CA /* com.microsoft.VSCode.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.microsoft.VSCode.plist; sourceTree = "<group>"; };
 		BA462B91256EF61800BEC226 /* dot-test.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-test.sh"; sourceTree = "<group>"; };
 		BA462B92256EF61800BEC226 /* dot-update.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-update.sh"; sourceTree = "<group>"; };
 		BA462B93256EF61800BEC226 /* dot-install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-install.sh"; sourceTree = "<group>"; };
 		BA462B94256EF61800BEC226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA462B95256EF61800BEC226 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BA76CC3F2596B965006CDD9A /* install-vscode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-vscode.sh"; sourceTree = "<group>"; };
+		BAAA412225AA58FC00C19739 /* vscode-extensions.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "vscode-extensions.zip"; sourceTree = "<group>"; };
 		BADE0F36258FFA4B00AF8E10 /* install-shell.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-shell.sh"; sourceTree = "<group>"; };
 		BADE0F37258FFAA600AF8E10 /* install-settings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-settings.sh"; sourceTree = "<group>"; };
 		BADE0F38259013B400AF8E10 /* install-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-homebrew.sh"; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 				BA1E9B35258FE814005D5A65 /* TimTr Toothpaste.xccolortheme */,
 			);
 			path = "macos-xcode";
+			sourceTree = "<group>";
+		};
+		BA40326A25AA54BA00DAC3CA /* vscode-prefs */ = {
+			isa = PBXGroup;
+			children = (
+				BA40326B25AA54BA00DAC3CA /* com.microsoft.VSCode.plist */,
+			);
+			path = "vscode-prefs";
 			sourceTree = "<group>";
 		};
 		BA462B8A256EF60500BEC226 = {
@@ -133,8 +143,10 @@
 		BA76CC3E2596B951006CDD9A /* macos-vscode */ = {
 			isa = PBXGroup;
 			children = (
+				BA40326A25AA54BA00DAC3CA /* vscode-prefs */,
 				BA76CC3F2596B965006CDD9A /* install-vscode.sh */,
 				BAF35A0F25A0267100F7099D /* update-vscode.sh */,
+				BAAA412225AA58FC00C19739 /* vscode-extensions.zip */,
 			);
 			path = "macos-vscode";
 			sourceTree = "<group>";
