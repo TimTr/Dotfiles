@@ -1,0 +1,11 @@
+{
+    "window.zoomLevel": 0,
+    "editor.minimap.enabled": false,
+    "files.associations": {
+        "*.dotfile": "shellscript",
+        "*.txt": "markdown"
+    },
+    "workbench.iconTheme": "vs-seti",
+    "workbench.colorTheme": "FireFly Pro",
+    "editor.fontSize": 16
+}

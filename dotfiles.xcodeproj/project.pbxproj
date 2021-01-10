@@ -28,8 +28,9 @@
 		BA462B93256EF61800BEC226 /* dot-install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-install.sh"; sourceTree = "<group>"; };
 		BA462B94256EF61800BEC226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA462B95256EF61800BEC226 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		BA54D04B25AA6CA1005443DF /* settings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = settings.json; sourceTree = "<group>"; };
 		BA76CC3F2596B965006CDD9A /* install-vscode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-vscode.sh"; sourceTree = "<group>"; };
-		BAAA412225AA58FC00C19739 /* vscode-extensions.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "vscode-extensions.zip"; sourceTree = "<group>"; };
+		BAAA412225AA58FC00C19739 /* vscode-root.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "vscode-root.zip"; sourceTree = "<group>"; };
 		BADE0F36258FFA4B00AF8E10 /* install-shell.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-shell.sh"; sourceTree = "<group>"; };
 		BADE0F37258FFAA600AF8E10 /* install-settings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-settings.sh"; sourceTree = "<group>"; };
 		BADE0F38259013B400AF8E10 /* install-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-homebrew.sh"; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				BA40326B25AA54BA00DAC3CA /* com.microsoft.VSCode.plist */,
+				BA54D04B25AA6CA1005443DF /* settings.json */,
 			);
 			path = "vscode-prefs";
 			sourceTree = "<group>";
@@ -146,7 +148,7 @@
 				BA40326A25AA54BA00DAC3CA /* vscode-prefs */,
 				BA76CC3F2596B965006CDD9A /* install-vscode.sh */,
 				BAF35A0F25A0267100F7099D /* update-vscode.sh */,
-				BAAA412225AA58FC00C19739 /* vscode-extensions.zip */,
+				BAAA412225AA58FC00C19739 /* vscode-root.zip */,
 			);
 			path = "macos-vscode";
 			sourceTree = "<group>";
