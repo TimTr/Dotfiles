@@ -7,52 +7,47 @@ source ${HOME}/.functions
 status "update-ruby.sh" "Checking current installs of \"brew\" and \"rbenv\""
 
 # If rbenv isn't already installed, add following to the .zshrc file
-if [[ -v RBENV_INSTALLED ]]; then
-
-  bullet "RBENV_INSTALLED = $RBENV_INSTALLED - already installed"
-
-else
-
-  bullet "RBENV_INSTALLED = $RBENV_INSTALLED - not installed, adding to .zshrc"
- 
-  echo '\n# ============================================================' >> ${HOME}/.zshrc
-  echo '# Adding support for RBENV to the .zshrc file' >> ${HOME}/.zshrc
-  echo ' ' >> ${HOME}/.zshrc
-  echo 'eval "$(rbenv init - zsh)"' >> ${HOME}/.zshrc
-  echo 'export PATH="${HOME}/.rbenv/bin:$PATH"' >> ${HOME}/.zshrc
-  echo 'export RBENV_INSTALLED=1' >> ${HOME}/.zshrc
-
-fi
+# if [[ -v RBENV_INSTALLED ]]; then
+#   bullet "RBENV_INSTALLED = $RBENV_INSTALLED - already installed"
+# else
+#   bullet "RBENV_INSTALLED = $RBENV_INSTALLED - not installed, adding to .zshrc"
+# fi
 
 
 # ==============================================================================
 CURRENT_RUBY=$(ruby -v 2> /dev/null)
 bullet "Ruby Version = ${CURRENT_RUBY}"
 
-
+# ==============================================================================
+# Add rbenv support to the .zshrc file
+echo '\n# ============================================================' >> ${HOME}/.zshrc
+echo '# Adding support for RBENV to the .zshrc file' >> ${HOME}/.zshrc
+echo ' ' >> ${HOME}/.zshrc
+echo 'eval "$(rbenv init - zsh)"' >> ${HOME}/.zshrc
+echo 'export PATH="${HOME}/.rbenv/bin:$PATH"' >> ${HOME}/.zshrc
+echo 'export RBENV_INSTALLED=1' >> ${HOME}/.zshrc
+  
 
 # ==============================================================================
-# This script will install Ruby, rbenv, and Jekyll (blogging platform)
+# Make sure Homebrew and rbenv are properly installed, or this will all fail
 which -s brew &> /dev/null
 if [[ $? != 0 ]] ; then
-  # Install Homebrew
   error "Missing Homebrew" "Re-run dot-install.sh"
   exit 0
 fi
 
 which -s rbenv &> /dev/null
 if [[ $? != 0 ]] ; then
-  # Install Homebrew
   error "Missing rbenv" "Re-run dot-install.sh"
   exit 0
 fi
 
 
+
 # ==============================================================================
-# Install some gems (Jekyll and Bundler to start) spawned from new shell
-# The new shell allows the rbenv environment to be setup, so the new
-# Ruby install is what is used, rather than the system Ruby that doesn't
-# allow the user to install their own gems (write protected system)
+# Install some gems (Jekyll and Bundler to start)
+# rbenv and a custom Ruby is required for users to install their own gems
+# because the system Ruby is read-only (no new gems installs)
 which -s bundler &> /dev/null
 if [[ $? != 0 ]] ; then
   bullet "Installing Bundler" "Installing the Bundler gem for the first time"

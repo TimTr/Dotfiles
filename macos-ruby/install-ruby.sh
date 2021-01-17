@@ -6,16 +6,6 @@
 # Import the default functions used in these scripts
 source ${HOME}/.functions
 status "install-ruby.sh" "Configuring app and tool settings"
-
-# ==============================================================================
-# Adding rbenv support to the .zshrc file
-echo '\n# ============================================================' >> ${HOME}/.zshrc
-echo '# Adding support for RBENV to the .zshrc file' >> ${HOME}/.zshrc
-echo ' ' >> ${HOME}/.zshrc
-echo 'eval "$(rbenv init - zsh)"' >> ${HOME}/.zshrc
-echo 'export PATH="${HOME}/.rbenv/bin:$PATH"' >> ${HOME}/.zshrc
-echo 'export RBENV_INSTALLED=1' >> ${HOME}/.zshrc
-  
   
 # ==============================================================================
 # This script will install Ruby, rbenv, and Jekyll (blogging platform)
@@ -38,10 +28,12 @@ rbenv install 3.0.0
 rbenv global 3.0.0
 
 
+# ==============================================================================
+# Most of the real work occurs in the update file
+source $(dirname $0)/update-ruby.sh
 
-message "Ruby not finished" "Must restart Terminal then run dot-update.sh"
-bullet "rbenv doesn't take effect until Terminal restarts"
-bullet "One restarted, run dot-update.sh or just \"dot\" to install gems"
+
+message "Ruby not finished" "Must restart Terminal then run \"dot\""
 
 
 
