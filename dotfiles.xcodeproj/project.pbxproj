@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		BA08E3B92606FB04009D83A6 /* test1.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test1.sh; sourceTree = "<group>"; };
+		BA08E3BA2606FB0C009D83A6 /* test2.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test2.sh; sourceTree = "<group>"; };
 		BA0D7AE92571F5220057E271 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		BA1E9B25258FE775005D5A65 /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
 		BA1E9B26258FE775005D5A65 /* aliases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = aliases.sh; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
@@ -23,7 +25,7 @@
 		BA1E9B3A258FE814005D5A65 /* TimTr Dark.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Dark.xccolortheme"; sourceTree = "<group>"; };
 		BA3989C4259F954600978484 /* dot-reset.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-reset.sh"; sourceTree = "<group>"; };
 		BA40326B25AA54BA00DAC3CA /* com.microsoft.VSCode.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.microsoft.VSCode.plist; sourceTree = "<group>"; };
-		BA462B91256EF61800BEC226 /* dot-test.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-test.sh"; sourceTree = "<group>"; };
+		BA462B91256EF61800BEC226 /* test.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test.sh; sourceTree = "<group>"; };
 		BA462B92256EF61800BEC226 /* dot-update.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-update.sh"; sourceTree = "<group>"; };
 		BA462B93256EF61800BEC226 /* dot-install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-install.sh"; sourceTree = "<group>"; };
 		BA462B94256EF61800BEC226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -36,7 +38,6 @@
 		BADE0F38259013B400AF8E10 /* install-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-homebrew.sh"; sourceTree = "<group>"; };
 		BADE0F3925901E0E00AF8E10 /* test.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test.sh; sourceTree = "<group>"; };
 		BAE773EC259BC652000933FE /* install-ruby.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-ruby.sh"; sourceTree = "<group>"; };
-		BAF17D3525914C5300C840B7 /* install-system.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-system.sh"; sourceTree = "<group>"; };
 		BAF35A0B259FF70600F7099D /* update-ruby.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-ruby.sh"; sourceTree = "<group>"; };
 		BAF35A0C259FFCED00F7099D /* update-settings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-settings.sh"; sourceTree = "<group>"; };
 		BAF35A0D25A0262700F7099D /* update-shell.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-shell.sh"; sourceTree = "<group>"; };
@@ -47,6 +48,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		BA08E3B82606FAEE009D83A6 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				BA462B91256EF61800BEC226 /* test.sh */,
+				BA08E3B92606FB04009D83A6 /* test1.sh */,
+				BA08E3BA2606FB0C009D83A6 /* test2.sh */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
 		BA0D7AE82571F4DC0057E271 /* template */ = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +67,7 @@
 			path = template;
 			sourceTree = "<group>";
 		};
-		BA1E9B2E258FE7D9005D5A65 /* macos-xcode */ = {
+		BA1E9B2E258FE7D9005D5A65 /* xcode */ = {
 			isa = PBXGroup;
 			children = (
 				BA1E9B36258FE814005D5A65 /* install-xcode.sh */,
@@ -67,7 +78,7 @@
 				BA1E9B37258FE814005D5A65 /* TimTr Grey.xccolortheme */,
 				BA1E9B35258FE814005D5A65 /* TimTr Toothpaste.xccolortheme */,
 			);
-			path = "macos-xcode";
+			path = xcode;
 			sourceTree = "<group>";
 		};
 		BA40326A25AA54BA00DAC3CA /* vscode-prefs */ = {
@@ -86,20 +97,19 @@
 				BA462B93256EF61800BEC226 /* dot-install.sh */,
 				BA462B92256EF61800BEC226 /* dot-update.sh */,
 				BA3989C4259F954600978484 /* dot-reset.sh */,
-				BA462B91256EF61800BEC226 /* dot-test.sh */,
-				BA462B96256EF62A00BEC226 /* macos-shell */,
+				BA08E3B82606FAEE009D83A6 /* test */,
+				BA462B96256EF62A00BEC226 /* shell */,
 				BA462B99256EF66400BEC226 /* macos-settings */,
-				BA1E9B2E258FE7D9005D5A65 /* macos-xcode */,
-				BA76CC3E2596B951006CDD9A /* macos-vscode */,
-				BA462B98256EF64500BEC226 /* macos-homebrew */,
-				BAE773EB259BC641000933FE /* macos-ruby */,
-				BA48D5DB258ECA0D0024A8C2 /* linux-system */,
+				BA1E9B2E258FE7D9005D5A65 /* xcode */,
+				BA76CC3E2596B951006CDD9A /* vscode */,
+				BA462B98256EF64500BEC226 /* homebrew-mac */,
+				BAE773EB259BC641000933FE /* ruby */,
 				BA0D7AE82571F4DC0057E271 /* template */,
 				BA462B95256EF61800BEC226 /* LICENSE.md */,
 			);
 			sourceTree = "<group>";
 		};
-		BA462B96256EF62A00BEC226 /* macos-shell */ = {
+		BA462B96256EF62A00BEC226 /* shell */ = {
 			isa = PBXGroup;
 			children = (
 				BADE0F36258FFA4B00AF8E10 /* install-shell.sh */,
@@ -110,16 +120,16 @@
 				BA1E9B28258FE775005D5A65 /* zprofile.sh */,
 				BA1E9B25258FE775005D5A65 /* zshrc.sh */,
 			);
-			path = "macos-shell";
+			path = shell;
 			sourceTree = "<group>";
 		};
-		BA462B98256EF64500BEC226 /* macos-homebrew */ = {
+		BA462B98256EF64500BEC226 /* homebrew-mac */ = {
 			isa = PBXGroup;
 			children = (
 				BADE0F38259013B400AF8E10 /* install-homebrew.sh */,
 				BAF35A1025A0268800F7099D /* update-homebrew.sh */,
 			);
-			path = "macos-homebrew";
+			path = "homebrew-mac";
 			sourceTree = "<group>";
 		};
 		BA462B99256EF66400BEC226 /* macos-settings */ = {
@@ -134,15 +144,7 @@
 			path = "macos-settings";
 			sourceTree = "<group>";
 		};
-		BA48D5DB258ECA0D0024A8C2 /* linux-system */ = {
-			isa = PBXGroup;
-			children = (
-				BAF17D3525914C5300C840B7 /* install-system.sh */,
-			);
-			path = "linux-system";
-			sourceTree = "<group>";
-		};
-		BA76CC3E2596B951006CDD9A /* macos-vscode */ = {
+		BA76CC3E2596B951006CDD9A /* vscode */ = {
 			isa = PBXGroup;
 			children = (
 				BA40326A25AA54BA00DAC3CA /* vscode-prefs */,
@@ -150,16 +152,16 @@
 				BAF35A0F25A0267100F7099D /* update-vscode.sh */,
 				BAAA412225AA58FC00C19739 /* vscode-root.zip */,
 			);
-			path = "macos-vscode";
+			path = vscode;
 			sourceTree = "<group>";
 		};
-		BAE773EB259BC641000933FE /* macos-ruby */ = {
+		BAE773EB259BC641000933FE /* ruby */ = {
 			isa = PBXGroup;
 			children = (
 				BAE773EC259BC652000933FE /* install-ruby.sh */,
 				BAF35A0B259FF70600F7099D /* update-ruby.sh */,
 			);
-			path = "macos-ruby";
+			path = ruby;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
