@@ -4,6 +4,15 @@
 # code into one of the production scripts.
 
 
+# This script will run either the Linux or macOS install version
+if [[ $OSTYPE == darwin* ]];
+then
+  echo "I am a Mac" ;
+else
+  echo "I am NOT a Mac (apparently)" ;
+fi
+
+
 # Source in functions such as message, status, error, and bullet
 source $PWD/shell/functions.sh
 

@@ -37,15 +37,15 @@
 		BAD43EC3269255710098B6ED /* zprofile.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zprofile.sh; sourceTree = "<group>"; };
 		BAD43EC4269255720098B6ED /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
 		BAD43EC5269255720098B6ED /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
-		BAD43EC6269255720098B6ED /* install-shell.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-shell.sh"; sourceTree = "<group>"; };
-		BAD43EC7269255720098B6ED /* update-shell.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-shell.sh"; sourceTree = "<group>"; };
-		BADE0F36258FFA4B00AF8E10 /* install-shell.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-shell.sh"; sourceTree = "<group>"; };
+		BAD43EC6269255720098B6ED /* install-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-linux.sh"; sourceTree = "<group>"; };
+		BAD43EC7269255720098B6ED /* update-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-linux.sh"; sourceTree = "<group>"; };
+		BADE0F36258FFA4B00AF8E10 /* install-macos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-macos.sh"; sourceTree = "<group>"; };
 		BADE0F37258FFAA600AF8E10 /* install-settings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-settings.sh"; sourceTree = "<group>"; };
 		BADE0F38259013B400AF8E10 /* install-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-homebrew.sh"; sourceTree = "<group>"; };
 		BAE773EC259BC652000933FE /* install-ruby.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-ruby.sh"; sourceTree = "<group>"; };
 		BAF35A0B259FF70600F7099D /* update-ruby.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-ruby.sh"; sourceTree = "<group>"; };
 		BAF35A0C259FFCED00F7099D /* update-settings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-settings.sh"; sourceTree = "<group>"; };
-		BAF35A0D25A0262700F7099D /* update-shell.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-shell.sh"; sourceTree = "<group>"; };
+		BAF35A0D25A0262700F7099D /* update-macos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-macos.sh"; sourceTree = "<group>"; };
 		BAF35A0E25A0265500F7099D /* update-xcode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-xcode.sh"; sourceTree = "<group>"; };
 		BAF35A0F25A0267100F7099D /* update-vscode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-vscode.sh"; sourceTree = "<group>"; };
 		BAF35A1025A0268800F7099D /* update-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-homebrew.sh"; sourceTree = "<group>"; };
@@ -147,8 +147,8 @@
 		BAD43EC1269254E00098B6ED /* linux */ = {
 			isa = PBXGroup;
 			children = (
-				BAD43EC6269255720098B6ED /* install-shell.sh */,
-				BAD43EC7269255720098B6ED /* update-shell.sh */,
+				BAD43EC6269255720098B6ED /* install-linux.sh */,
+				BAD43EC7269255720098B6ED /* update-linux.sh */,
 				BAD43EC5269255720098B6ED /* functions.sh */,
 				BAD43EC3269255710098B6ED /* zprofile.sh */,
 				BAD43EC4269255720098B6ED /* zshrc.sh */,
@@ -164,8 +164,8 @@
 				BAE773EB259BC641000933FE /* ruby */,
 				BA1E9B2E258FE7D9005D5A65 /* xcode */,
 				BA462B99256EF66400BEC226 /* settings */,
-				BADE0F36258FFA4B00AF8E10 /* install-shell.sh */,
-				BAF35A0D25A0262700F7099D /* update-shell.sh */,
+				BADE0F36258FFA4B00AF8E10 /* install-macos.sh */,
+				BAF35A0D25A0262700F7099D /* update-macos.sh */,
 				BA1E9B27258FE775005D5A65 /* functions.sh */,
 				BA1E9B28258FE775005D5A65 /* zprofile.sh */,
 				BA1E9B25258FE775005D5A65 /* zshrc.sh */,

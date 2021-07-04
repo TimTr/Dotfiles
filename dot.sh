@@ -5,6 +5,14 @@
 # TODO: move to validate install or update mode
 #
 
+# This script will run either the Linux or macOS install version
+if [[ $OSTYPE == darwin* ]];
+then
+  echo "I am a Mac" ;
+else
+  echo "I am NOT a Mac (apparently)" ;
+fi
+
 
 source $PWD/shell/functions.sh
 echo
