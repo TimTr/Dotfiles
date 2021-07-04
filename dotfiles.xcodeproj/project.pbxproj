@@ -34,6 +34,11 @@
 		BA9B1A2D2607FD090068E61E /* dot.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = dot.sh; sourceTree = "<group>"; };
 		BA9B1A2E2607FD940068E61E /* test3.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test3.sh; sourceTree = "<group>"; };
 		BAAA412225AA58FC00C19739 /* vscode-root.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "vscode-root.zip"; sourceTree = "<group>"; };
+		BAD43EC3269255710098B6ED /* zprofile.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zprofile.sh; sourceTree = "<group>"; };
+		BAD43EC4269255720098B6ED /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
+		BAD43EC5269255720098B6ED /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
+		BAD43EC6269255720098B6ED /* install-shell.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-shell.sh"; sourceTree = "<group>"; };
+		BAD43EC7269255720098B6ED /* update-shell.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-shell.sh"; sourceTree = "<group>"; };
 		BADE0F36258FFA4B00AF8E10 /* install-shell.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-shell.sh"; sourceTree = "<group>"; };
 		BADE0F37258FFAA600AF8E10 /* install-settings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-settings.sh"; sourceTree = "<group>"; };
 		BADE0F38259013B400AF8E10 /* install-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-homebrew.sh"; sourceTree = "<group>"; };
@@ -99,28 +104,12 @@
 				BA462B94256EF61800BEC226 /* README.md */,
 				BA9B1A2D2607FD090068E61E /* dot.sh */,
 				BA462B91256EF61800BEC226 /* dot-test.sh */,
+				BAD43EC2269255280098B6ED /* macos */,
+				BAD43EC1269254E00098B6ED /* linux */,
 				BA08E3B82606FAEE009D83A6 /* test */,
-				BA462B96256EF62A00BEC226 /* shell */,
-				BA462B99256EF66400BEC226 /* macos-settings */,
-				BA1E9B2E258FE7D9005D5A65 /* xcode */,
-				BA76CC3E2596B951006CDD9A /* vscode */,
-				BA462B98256EF64500BEC226 /* homebrew */,
-				BAE773EB259BC641000933FE /* ruby */,
 				BA0D7AE82571F4DC0057E271 /* template */,
 				BA462B95256EF61800BEC226 /* LICENSE.md */,
 			);
-			sourceTree = "<group>";
-		};
-		BA462B96256EF62A00BEC226 /* shell */ = {
-			isa = PBXGroup;
-			children = (
-				BADE0F36258FFA4B00AF8E10 /* install-shell.sh */,
-				BAF35A0D25A0262700F7099D /* update-shell.sh */,
-				BA1E9B27258FE775005D5A65 /* functions.sh */,
-				BA1E9B28258FE775005D5A65 /* zprofile.sh */,
-				BA1E9B25258FE775005D5A65 /* zshrc.sh */,
-			);
-			path = shell;
 			sourceTree = "<group>";
 		};
 		BA462B98256EF64500BEC226 /* homebrew */ = {
@@ -132,7 +121,7 @@
 			path = homebrew;
 			sourceTree = "<group>";
 		};
-		BA462B99256EF66400BEC226 /* macos-settings */ = {
+		BA462B99256EF66400BEC226 /* settings */ = {
 			isa = PBXGroup;
 			children = (
 				BADE0F37258FFAA600AF8E10 /* install-settings.sh */,
@@ -141,7 +130,7 @@
 				BA1E9B2A258FE781005D5A65 /* gitconfig.dotfile */,
 				BA1E9B2B258FE781005D5A65 /* gitignore.dotfile */,
 			);
-			path = "macos-settings";
+			path = settings;
 			sourceTree = "<group>";
 		};
 		BA76CC3E2596B951006CDD9A /* vscode */ = {
@@ -153,6 +142,35 @@
 				BAAA412225AA58FC00C19739 /* vscode-root.zip */,
 			);
 			path = vscode;
+			sourceTree = "<group>";
+		};
+		BAD43EC1269254E00098B6ED /* linux */ = {
+			isa = PBXGroup;
+			children = (
+				BAD43EC6269255720098B6ED /* install-shell.sh */,
+				BAD43EC7269255720098B6ED /* update-shell.sh */,
+				BAD43EC5269255720098B6ED /* functions.sh */,
+				BAD43EC3269255710098B6ED /* zprofile.sh */,
+				BAD43EC4269255720098B6ED /* zshrc.sh */,
+			);
+			path = linux;
+			sourceTree = "<group>";
+		};
+		BAD43EC2269255280098B6ED /* macos */ = {
+			isa = PBXGroup;
+			children = (
+				BA76CC3E2596B951006CDD9A /* vscode */,
+				BA462B98256EF64500BEC226 /* homebrew */,
+				BAE773EB259BC641000933FE /* ruby */,
+				BA1E9B2E258FE7D9005D5A65 /* xcode */,
+				BA462B99256EF66400BEC226 /* settings */,
+				BADE0F36258FFA4B00AF8E10 /* install-shell.sh */,
+				BAF35A0D25A0262700F7099D /* update-shell.sh */,
+				BA1E9B27258FE775005D5A65 /* functions.sh */,
+				BA1E9B28258FE775005D5A65 /* zprofile.sh */,
+				BA1E9B25258FE775005D5A65 /* zshrc.sh */,
+			);
+			path = macos;
 			sourceTree = "<group>";
 		};
 		BAE773EB259BC641000933FE /* ruby */ = {

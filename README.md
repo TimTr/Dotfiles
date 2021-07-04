@@ -1,14 +1,11 @@
 # dotfiles
 
-TODO:  move to a single launch file called `dot` with parameters like `install` and `update` to tell it to do different things. Some items to add:
+TODO:  move to a single launch file called `dot` with parameters like `install` and `update` to tell it to do different things. Also able to pick a specific tool to install/update by running `dot python` for example. Some items to add:
 
 - Assume these scripts are setup in the `~/dotfiles` folder - doesn't support other homes
-- If `dot` is run from a folder other than `~/dotforms` copy over there, and tell the user
-- Add a new parameter called `DOTFILES` that is set to "YES" if already installed
+- If `dot` is run from a folder other than `~/dotfiles` then copy over there, and tell the user about the change
+- Add a new parameter called `DOTFILES_INSTALLED` that is set to `1` if already installed
 - If `dot` is run without `DOTFILES` set, assume it is a fresh install, otherwise it is an update
-
-
-___
 
 
 This is Tim Triemstra's personal collection of setup scripts for macOS, including settings for the `zsh` shell, Terminal, Xcode, and several other tools and apps. This set will also install Ruby, along with `rbenv` as a way to control which version of Ruby should act as the system default. This is useful for tools like `jekyll`.
@@ -58,14 +55,19 @@ this script in `bin/`.
 
 ## Inspired by Zach Holman's dotfiles
 
-My original inspiration for workign with dotfiles, and reproducible setup scripts, was to be able to very quickly setup new Macs for demos. This was a pretty big part of my daily life at work. But I got inspired to completely rethink how I manage the process by reading Zach Holman's [post on dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/). This project was rebuilt, starting from [Zach's repository](https://github.com/holman/dotfiles/). I confess to not doing a fork because I mostly wanted to start from scratch (so I fully understood the inner-workings) and because my version will be  simple when completed. Hopefully this acknowledgement suffices to give him the kudos he deserves for the inspiration.
+My original inspiration for workign with dotfiles, and reproducible setup scripts, was to be able to very quickly setup new Macs for demos. This was a pretty big part of my daily life at work. But I got inspired to completely rethink how I manage the process by reading Zach Holman's [post on dotfiles][1]. This project was rebuilt, starting from [Zach's repository][2]. I confess to not doing a fork because I mostly wanted to start from scratch (so I fully understood the inner-workings) and because my version will be  simple when completed. Hopefully this acknowledgement suffices to give him the kudos he deserves for the inspiration.
 
 
 **The text below is copied from Zach's original dotfiles readme:**
 
-> I (Zach) forked [Ryan Bates](http://github.com/ryanb)' excellent [dotfiles](http://github.com/ryanb/dotfiles) for a couple years before the weight of my changes and tweaks inspired me to finally roll my own. But Ryan's dotfiles were an easy way to get into bash customization, and then to jump ship to `zsh` a bit later. A decent amount of the code in these dotfiles stem or are inspired from Ryan's original project.
+> I (Zach) forked [Ryan Bates][3]' excellent [dotfiles][4] for a couple years before the weight of my changes and tweaks inspired me to finally roll my own. But Ryan's dotfiles were an easy way to get into bash customization, and then to jump ship to `zsh` a bit later. A decent amount of the code in these dotfiles stem or are inspired from Ryan's original project.
 
 
 ## License
 
-Everything in here is made available under the MIT license found within the repository.
+These scripts and settings are provided for free, and covered by the MIT license found within the repository.
+
+[1]:	http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/
+[2]:	https://github.com/holman/dotfiles/
+[3]:	http://github.com/ryanb
+[4]:	http://github.com/ryanb/dotfiles
