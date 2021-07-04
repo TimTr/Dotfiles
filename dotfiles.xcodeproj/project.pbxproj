@@ -56,6 +56,7 @@
 		BA08E3B82606FAEE009D83A6 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				BA462B91256EF61800BEC226 /* dot-test.sh */,
 				BA462B93256EF61800BEC226 /* dot-install.sh */,
 				BA462B92256EF61800BEC226 /* dot-update.sh */,
 				BA3989C4259F954600978484 /* dot-reset.sh */,
@@ -103,7 +104,6 @@
 			children = (
 				BA462B94256EF61800BEC226 /* README.md */,
 				BA9B1A2D2607FD090068E61E /* dot.sh */,
-				BA462B91256EF61800BEC226 /* dot-test.sh */,
 				BAD43EC2269255280098B6ED /* macos */,
 				BAD43EC1269254E00098B6ED /* linux */,
 				BA08E3B82606FAEE009D83A6 /* test */,

@@ -40,6 +40,9 @@ alias ls='ls -FG'
 alias lsl='ls -loFGT'
 alias lsla='ls -loAFGT'
 
+# ... echo $SHELL tells you the default shell, this command
+#     instead tells you which shell you are presently inside
+alias shell-now='ps -p $$'
 
 # original color-coded lsl command:  alias lsl='ls -loFGT'
 # sorts folders at the top:  ls -la | grep "^d" && ls -la | grep -v "^d"

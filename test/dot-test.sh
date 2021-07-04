@@ -1,9 +1,7 @@
 #!/bin/zsh
 #
-# dot-test.sh - This script is designed for trying out ideas before moving
-#               code into one of the production scripts.
-#
-
+# This script is designed for trying out ideas before moving
+# code into one of the production scripts.
 
 
 # Source in functions such as message, status, error, and bullet
