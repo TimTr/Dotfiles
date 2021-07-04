@@ -3,14 +3,20 @@
 # dot.sh
 #
 # TODO: move to validate install or update mode
-#
 
-# This script will run either the Linux or macOS install version
+#    First, going to do the platform-agnostic steps:
+#     - Check what the command-line parameters were
+#     - Update the semaphore setting "dotfiles-installed" accordingly
+#     - Call into the platform installers or updaters
+
+
+# This script will run either the Linux or macOS installer
+# (yes, one day may need more options than this, but...)
 if [[ $OSTYPE == darwin* ]];
 then
-  echo "I am a Mac" ;
+  echo "Running macOS." ;
 else
-  echo "I am NOT a Mac (apparently)" ;
+  echo "Not macOS, so assuming this is Linux of some sort." ;
 fi
 
 

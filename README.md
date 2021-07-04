@@ -1,12 +1,13 @@
 # dotfiles
 
-TODO:  move to a single launch file called `dot` with parameters like `install` and `update` to tell it to do different things. Also able to pick a specific tool to install/update by running `dot python` for example. Some items to add:
+## TODO: items
 
-- Assume these scripts are setup in the `~/dotfiles` folder - doesn't support other homes
-- If `dot` is run from a folder other than `~/dotfiles` then copy over there, and tell the user about the change
-- Add a new parameter called `DOTFILES_INSTALLED` that is set to `1` if already installed
-- If `dot` is run without `DOTFILES` set, assume it is a fresh install, otherwise it is an update
+- move to a single launch file called `dot.sh` with parameters like `install` and `update` to tell it to do different things. Also able to pick a specific tool to install/update by running `dot python` for example. Some items to add:
 
+- Add variable named `DOTFILES_INSTALLED` that is set to `1` if already installed
+
+
+## Overview
 
 This is Tim Triemstra's personal collection of setup scripts for macOS, including settings for the `zsh` shell, Terminal, Xcode, and several other tools and apps. This set will also install Ruby, along with `rbenv` as a way to control which version of Ruby should act as the system default. This is useful for tools like `jekyll`.
 
