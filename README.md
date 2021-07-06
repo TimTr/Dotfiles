@@ -37,26 +37,26 @@ Other example dotfiles setups use advanced logic to traverse all sub-folders, la
 
 ## Install
 
-The install the very first time by cloning from GitHub, go into a `dotfiles` folder and run:
+Install by cloning from GitHub into `~/.dotfiles` like this:
 
 ```sh
+    mkdir ~/.dotfiles
     git clone https://github.com/timtr/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
-    script/bootstrap
+    ./dot.sh
 ```
 
 
-`dot` is a simple script that installs some dependencies, sets sane macOS
-defaults, and so on. Tweak this script, and occasionally run `dot` from
-time to time to keep your environment fresh and up-to-date. You can find
-this script in `bin/`.
+`dot.sh` is a simple script that installs some dependencies, sets sane macOS
+defaults, and so on. Tweak this script, and occasionally run `dot.sh` from
+time to time to keep your environment fresh and up-to-date. 
 
 
 ## License
 
-These scripts and settings are provided for free, and covered by the MIT license found within the repository.
+These scripts and settings are provided for free, covered by the MIT license found within the repository.
 
 ### Inspired by...
 
-I got inspired to completely rethink how I manage the process by reading Zach Holman's [post on dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/). I think a lot of other ideas have since influenced this repo, and it is hardly expert-level scripting.
+An early inspiration for this repo was Zach Holman's [post on dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/). But as this repo is composed mostly of a mish-mash of StackOverflow search results, I wouldn't want to blame him or anyone else for the poor script code you'll find here.
 

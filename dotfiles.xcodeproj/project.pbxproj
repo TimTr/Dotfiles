@@ -28,6 +28,7 @@
 		BA462B93256EF61800BEC226 /* dot-install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-install.sh"; sourceTree = "<group>"; };
 		BA462B94256EF61800BEC226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA462B95256EF61800BEC226 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		BA9AE2CB2693EEE700D62D30 /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
 		BA9B1A2D2607FD090068E61E /* dot.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = dot.sh; sourceTree = "<group>"; };
 		BA9B1A2E2607FD940068E61E /* test3.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test3.sh; sourceTree = "<group>"; };
 		BAD43EC3269255710098B6ED /* zprofile.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zprofile.sh; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 			children = (
 				BA462B94256EF61800BEC226 /* README.md */,
 				BA9B1A2D2607FD090068E61E /* dot.sh */,
+				BA9AE2CB2693EEE700D62D30 /* functions.sh */,
 				BAD43EC2269255280098B6ED /* macos */,
 				BAD43EC1269254E00098B6ED /* linux */,
 				BA08E3B82606FAEE009D83A6 /* test */,
