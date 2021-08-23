@@ -1,16 +1,7 @@
 #!/bin/zsh
 #
-# The logic for the setup works as follows:
-#
-# 1. This ~/dotfiles folder MUST be in the root of the user's home folder
-# 2. First verify if `dot.sh install` or just `dot.sh` was called
-#    - Must run with the `dot.sh install` parameter on first run or will abort
-#    - The `update` command also works, but is the default
-#
-# 3. If installing, will need to setup based on platform
-#
-# TODO: add `update` or `install` check, and OS platform checks
-# TODO: support $HOME/dotfiles as the only home folder allowed
+# setup-macos.sh - the macOS version
+
 
 # These scripts all presume `zsh` as the default, will setup as needed
 if [ $SHELL != "/bin/zsh" ]; then
@@ -126,7 +117,6 @@ ${DOTFILES_ROOT}/macos-vscode/install-vscode.sh
 ${DOTFILES_ROOT}/macos-homebrew/install-homebrew.sh
 ${DOTFILES_ROOT}/macos-ruby/install-ruby.sh
 
-
 # ==============================================================================
 # Add a symlink to the dot-update.sh file at the root here
 status "Symlink \"dot\"" "Run \"dot\" from PATH to reset settings any time"
@@ -136,14 +126,26 @@ ln -s ${DOTFILES_ROOT}/dot-update.sh ${DEVELOPER_BIN}/dot
 status "Resetting chmod" "Ensure all scripts are executable (needs sudo)"
 sudo chmod -R 777 ${DEVELOPER_BIN}/*
 
+# copy settings to $HOME root
+cp ${DOTFILES_ROOT}/macos/settings/gitconfig.dotfile $HOME/.gitconfig
+cp ${DOTFILES_ROOT}/macos/settings/gitignore.dotfile $HOME/.gitignore
+
+# copy Terminal and other plists to $HOME/Library/Preferences
+cp ${DOTFILES_ROOT}/macos/settings/*.plist $HOME/Library/Preferences
+
+# set the macOS defaults
+source ${DOTFILES_ROOT}/macos/settings/defaults-macos.sh
 
 
 # ==============================================================================
-message "dot-install.sh - Install step 1 done." "Restart Terminal, then:"
+message "NOTE: manually setup Git info (and other personal info) e.g.:"
+bullet "git config --global user.name \"Your Name\""
+bullet "git config --global user.email \"youremail@yourdomain.com\""
+
+message "Quit and re-launch the terminal -- install will be finished"
 bullet "Type \"ruby -v\" to confirm it is running Ruby 3.0 or later"
-bullet "Type \"dot\" in Terminal to finish the install"
-bullet "Then quit and re-launch Terminal.app -- install will be finished"
 echo
+
 
 # ==============================================================================
 exit 0

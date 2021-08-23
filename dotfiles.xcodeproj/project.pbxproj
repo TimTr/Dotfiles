@@ -28,21 +28,21 @@
 		BA462B93256EF61800BEC226 /* dot-install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-install.sh"; sourceTree = "<group>"; };
 		BA462B94256EF61800BEC226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA462B95256EF61800BEC226 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		BA9AE2CB2693EEE700D62D30 /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
-		BA9B1A2D2607FD090068E61E /* dot.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = dot.sh; sourceTree = "<group>"; };
+		BA9AE2CB2693EEE700D62D30 /* alias.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = alias.sh; sourceTree = "<group>"; };
+		BA9B1A2D2607FD090068E61E /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; };
 		BA9B1A2E2607FD940068E61E /* test3.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test3.sh; sourceTree = "<group>"; };
 		BAD43EC3269255710098B6ED /* zprofile.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zprofile.sh; sourceTree = "<group>"; };
 		BAD43EC4269255720098B6ED /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
 		BAD43EC5269255720098B6ED /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
 		BAD43EC6269255720098B6ED /* install-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-linux.sh"; sourceTree = "<group>"; };
 		BAD43EC7269255720098B6ED /* update-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-linux.sh"; sourceTree = "<group>"; };
-		BADE0F36258FFA4B00AF8E10 /* install-macos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-macos.sh"; sourceTree = "<group>"; };
-		BADE0F37258FFAA600AF8E10 /* install-settings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-settings.sh"; sourceTree = "<group>"; };
 		BADE0F38259013B400AF8E10 /* install-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-homebrew.sh"; sourceTree = "<group>"; };
 		BAE773EC259BC652000933FE /* install-ruby.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-ruby.sh"; sourceTree = "<group>"; };
+		BAEBF5D426D3095E007A028E /* inputrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = inputrc.sh; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
+		BAEBF5D526D30A32007A028E /* exports.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = exports.sh; sourceTree = "<group>"; };
+		BAEBF5D626D31306007A028E /* setup-macos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "setup-macos.sh"; sourceTree = "<group>"; };
+		BAEBF5D726D31434007A028E /* defaults-macos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "defaults-macos.sh"; sourceTree = "<group>"; };
 		BAF35A0B259FF70600F7099D /* update-ruby.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-ruby.sh"; sourceTree = "<group>"; };
-		BAF35A0C259FFCED00F7099D /* update-settings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-settings.sh"; sourceTree = "<group>"; };
-		BAF35A0D25A0262700F7099D /* update-macos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-macos.sh"; sourceTree = "<group>"; };
 		BAF35A0E25A0265500F7099D /* update-xcode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-xcode.sh"; sourceTree = "<group>"; };
 		BAF35A1025A0268800F7099D /* update-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-homebrew.sh"; sourceTree = "<group>"; };
 		BAF35A1125A026F600F7099D /* update.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = update.sh; sourceTree = "<group>"; };
@@ -90,8 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				BA462B94256EF61800BEC226 /* README.md */,
-				BA9B1A2D2607FD090068E61E /* dot.sh */,
-				BA9AE2CB2693EEE700D62D30 /* functions.sh */,
+				BA9B1A2D2607FD090068E61E /* setup.sh */,
 				BAD43EC2269255280098B6ED /* macos */,
 				BAD43EC1269254E00098B6ED /* linux */,
 				BA08E3B82606FAEE009D83A6 /* test */,
@@ -112,11 +111,10 @@
 		BA462B99256EF66400BEC226 /* settings */ = {
 			isa = PBXGroup;
 			children = (
-				BADE0F37258FFAA600AF8E10 /* install-settings.sh */,
-				BAF35A0C259FFCED00F7099D /* update-settings.sh */,
 				BA1E9B2C258FE781005D5A65 /* com.apple.Terminal.plist */,
 				BA1E9B2A258FE781005D5A65 /* gitconfig.dotfile */,
 				BA1E9B2B258FE781005D5A65 /* gitignore.dotfile */,
+				BAEBF5D726D31434007A028E /* defaults-macos.sh */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -140,11 +138,13 @@
 				BAE773EB259BC641000933FE /* ruby */,
 				BA1E9B2E258FE7D9005D5A65 /* xcode */,
 				BA462B99256EF66400BEC226 /* settings */,
-				BADE0F36258FFA4B00AF8E10 /* install-macos.sh */,
-				BAF35A0D25A0262700F7099D /* update-macos.sh */,
+				BA9AE2CB2693EEE700D62D30 /* alias.sh */,
+				BAEBF5D526D30A32007A028E /* exports.sh */,
 				BA1E9B27258FE775005D5A65 /* functions.sh */,
+				BAEBF5D426D3095E007A028E /* inputrc.sh */,
 				BA1E9B28258FE775005D5A65 /* zprofile.sh */,
 				BA1E9B25258FE775005D5A65 /* zshrc.sh */,
+				BAEBF5D626D31306007A028E /* setup-macos.sh */,
 			);
 			path = macos;
 			sourceTree = "<group>";

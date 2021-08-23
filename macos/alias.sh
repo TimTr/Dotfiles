@@ -1,25 +1,28 @@
 # source this file into .zshrc
 
-# Functions to make output attractive when running the script
-# NOTE: some characters in the comment will break the function, e.g. "!"
-message () { printf "\r  [\033[00;32m $1\033[0m ] $2\n" }
-status () { printf "\r  [\033[00;34m $1\033[0m ] $2\n" }
-error () { printf "\r  [\033[00;31m $1\033[0m ] $2\n" }
-bullet () { printf "\r    - \033[00;32m $1\033[0m \n" }
 
-
-# Function to find all files recursively under current folder
-findall () {
-    find ./ -name $1 -print 2> /dev/null
-}
-
-# Function to create a new directory and enter it
-md() {
-	mkdir -p "$@" && cd "$@"
-}
 
 # ===========================================
 # Aliases
+
+# ... Turn off the Quarantine Bit for all files in local folder
+alias qbit="xattr -d com.apple.quarantine ./*"
+
+# ... Eject a volume (type the volume name after)
+alias eject="hdiutil detach -verbose -force /Volumes/"
+
+# ... Touch the time and date recursively for all files in current folder
+alias touchall="find . -exec touch {} \;"
+
+# ... Tell Time Machine to use higher CPU priority until reboot
+alias time-machine-fast="sudo sysctl debug.lowpri_throttle_enabled=0"
+
+# launch the iOS Simulator app from the command line
+# you can then type "simulator help" or "simulator list" to see more info
+alias simulator="xcrun simctl"
+
+# Recursively remove .DS_Store files
+alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
 
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
