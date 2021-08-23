@@ -15,7 +15,6 @@ The `dotfiles` folder needs to exist at the home root to work properly.
 
 - Moved to `setup.sh` per convention GitHub is promoting (see links at bottom)
 - Setup is only designed to work from a home folder `~/dotfiles` on any OS
-- Add variable named `DOTFILES_INSTALLED` that is set to `1` if already installed
 
 
 ## Overview
