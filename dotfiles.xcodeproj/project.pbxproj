@@ -46,6 +46,7 @@
 		BAF35A0E25A0265500F7099D /* update-xcode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-xcode.sh"; sourceTree = "<group>"; };
 		BAF35A1025A0268800F7099D /* update-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-homebrew.sh"; sourceTree = "<group>"; };
 		BAF35A1125A026F600F7099D /* update.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = update.sh; sourceTree = "<group>"; };
+		BAF5518126D4330F008FE898 /* vimrc.dotfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = vimrc.dotfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -113,6 +114,7 @@
 			children = (
 				BA1E9B2C258FE781005D5A65 /* com.apple.Terminal.plist */,
 				BA1E9B2A258FE781005D5A65 /* gitconfig.dotfile */,
+				BAF5518126D4330F008FE898 /* vimrc.dotfile */,
 				BA1E9B2B258FE781005D5A65 /* gitignore.dotfile */,
 				BAEBF5D726D31434007A028E /* defaults-macos.sh */,
 			);

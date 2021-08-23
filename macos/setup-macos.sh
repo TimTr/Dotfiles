@@ -2,6 +2,9 @@
 #
 # setup-macos.sh - the macOS version
 
+echo
+echo "setup-macos.sh -- setting up for macOS"
+echo
 
 # These scripts all presume `zsh` as the default, will setup as needed
 if [ $SHELL != "/bin/zsh" ]; then
@@ -52,20 +55,6 @@ source $PWD/shared/functions.sh
 # export the home of the dotfiles folder, and the target Developer folders
 export DOTFILES_ROOT=$(pwd -P)
 
-
-# This script will run either the Linux or macOS installer
-# (yes, one day may need more options than this, but for now...)
-if [[ $OSTYPE == darwin* ]]; then
-
-  echo "Running macOS." ;
-  source $PWD/macos/functions.sh
-  
-else
-
-  echo "Not macOS, so assuming this is version of Linux." ;
-  source $PWD/linux/functions.sh
-  
-fi
 
 
 

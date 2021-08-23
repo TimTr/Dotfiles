@@ -3,6 +3,7 @@
 To install, run the following command:
 
 ```
+    cd ~
     git clone https://github.com/timtr/dotfiles.git
     cd dotfiles
     ./setup.sh

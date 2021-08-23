@@ -14,6 +14,16 @@
 # TODO: add `update` or `install` check, and OS platform checks
 # TODO: support $HOME/dotfiles as the only home folder allowed
 
+
+# First make sure the installer is located at ~/dotfiles/setup.sh
+if [ "$(basename "$PWD")" != "dotfiles" ]; then
+ error "ABORT" "You must run the installer from within the dotfiles folder"
+fi
+
+# Aborting until get the above check working properly
+exit 0
+ 
+
 # This script will run either the Linux or macOS installer
 # (yes, one day may need more options than this, but for now...)
 if [[ $OSTYPE == darwin* ]]; then
