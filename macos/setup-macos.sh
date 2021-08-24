@@ -2,9 +2,13 @@
 #
 # setup-macos.sh - the macOS version
 
-echo
 echo "setup-macos.sh -- setting up for macOS"
 echo
+
+exit 0
+
+
+####### ABORTING FOR NOW
 
 # These scripts all presume `zsh` as the default, will setup as needed
 if [ $SHELL != "/bin/zsh" ]; then

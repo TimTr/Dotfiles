@@ -31,10 +31,10 @@
 		BA9AE2CB2693EEE700D62D30 /* alias.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = alias.sh; sourceTree = "<group>"; };
 		BA9B1A2D2607FD090068E61E /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; };
 		BA9B1A2E2607FD940068E61E /* test3.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test3.sh; sourceTree = "<group>"; };
+		BAB331B726D478DD000967B5 /* setup-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "setup-linux.sh"; sourceTree = "<group>"; };
 		BAD43EC3269255710098B6ED /* zprofile.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zprofile.sh; sourceTree = "<group>"; };
 		BAD43EC4269255720098B6ED /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
 		BAD43EC5269255720098B6ED /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
-		BAD43EC6269255720098B6ED /* install-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-linux.sh"; sourceTree = "<group>"; };
 		BAD43EC7269255720098B6ED /* update-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-linux.sh"; sourceTree = "<group>"; };
 		BADE0F38259013B400AF8E10 /* install-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-homebrew.sh"; sourceTree = "<group>"; };
 		BAE773EC259BC652000933FE /* install-ruby.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-ruby.sh"; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		BAD43EC1269254E00098B6ED /* linux */ = {
 			isa = PBXGroup;
 			children = (
-				BAD43EC6269255720098B6ED /* install-linux.sh */,
+				BAB331B726D478DD000967B5 /* setup-linux.sh */,
 				BAD43EC7269255720098B6ED /* update-linux.sh */,
 				BAD43EC5269255720098B6ED /* functions.sh */,
 				BAD43EC3269255710098B6ED /* zprofile.sh */,
