@@ -1,21 +1,22 @@
 #!/bin/zsh
 #
 # setup-macos.sh - the macOS version
-
-echo "setup-macos.sh -- setting up for macOS"
+source "$DOTFILES_HOME/macos/functions.sh"
 echo
+status "setup-macos.sh -- setting up for macOS"
+echo
+
+echo "$DOTFILES_HOME"
+echo "$DOTFILES_SETUP"
+
+
 
 exit 0
 
 
 ####### ABORTING FOR NOW
 
-# These scripts all presume `zsh` as the default, will setup as needed
-if [ $SHELL != "/bin/zsh" ]; then
-  chsh -s /bin/zsh
-  echo "Switched default shell to /bin/zsh -- re-run dot.sh file"
-  exit 0
-fi
+
 
 # If there were no parameters, explain how to use the tool
 if [ $# -eq 0 ]; then

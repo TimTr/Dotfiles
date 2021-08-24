@@ -2,8 +2,8 @@
 
 # Functions to make output attractive when running the script
 # NOTE: some characters in the comment will break the function, e.g. "!"
+status () { printf "\r\033[00;35m === $1\033[0m $2\n" }
 message () { printf "\r  [\033[00;32m $1\033[0m ] $2\n" }
-status () { printf "\r  [\033[00;34m $1\033[0m ] $2\n" }
 error () { printf "\r  [\033[00;31m $1\033[0m ] $2\n" }
 bullet () { printf "\r    - \033[00;32m $1\033[0m \n" }
 
