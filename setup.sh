@@ -16,20 +16,16 @@ fi
 # Get the folder in which setup.sh was run, no matter your current location.
 # This is then the root from which all further operations are run.
 # NOTE: this syntax is `zsh` specific
-DOTFILES_HOME=${0:a:h}
+DOTFILES_ROOT=${0:a:h}
 DOTFILES_SETUP=${0:a}
 
 
 # This script will run either the Linux or macOS installer
 # (yes, one day may need more options than this, but for now...)
 if [[ $OSTYPE == darwin* ]]; then
-
-  source $DOTFILES_HOME/macos/setup-macos.sh
-  
+  source $DOTFILES_ROOT/macos/setup-macos.sh
 else
-
-  source $DOTFILES_HOME/linux/setup-linux.sh
-  
+  source $DOTFILES_ROOT/linux/setup-linux.sh
 fi
 
 exit 0
