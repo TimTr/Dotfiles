@@ -9,19 +9,28 @@ source $HOME/.inputrc
 
 # ==============================================================================
 # Hard-coding the ~/Developer/Bin folder to lead the PATH
-# Do NOT append the previous $PATH as this will duplicate with each script run
-export PATH="$HOME/Developer/Bin"
-# Add the Homebrew alternate folder to PATH
-export PATH="$PATH:/opt/homebrew/bin"
+# Add the Homebrew paths and custom path first
+export PATH="/opt/homebrew/bin:/usr/local/bin:/opt/bin"
 # Add default system PATHs to the chain (these are REALLY important)
-export PATH="$PATH:/usr/local/bin:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin"
+export PATH="$PATH:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin"
 # Add the Xcode tooling folder to PATH
 export PATH="$PATH:/Library/Apple/usr/bin"
 
-# This needs to be hard-coded into .zshrc by default
-# eval "$(rbenv init - zsh)"
-# export PATH="${HOME}/.rbenv/bin:$PATH"
+# This `rbenv` setting needs to be hard-coded into .zshrc by default
+eval "$(rbenv init - zsh)"
+export PATH="${HOME}/.rbenv/bin:$PATH"
 
-# ... Custom prompt with newline
+# ==============================================================================
+# Custom prompt with newline
 NEWLINE=$'\n'
 PS1="${NEWLINE}%F{white}🐛 [%F{cyan}%~%{%F{white}%}] %{%f%}%"
+
+
+
+
+# ==============================================================================
+# Previous iterations of the prompt line
+# NEWLINE=$'\n'
+# PS1="${NEWLINE}%F{white}🐛 [%F{cyan}%~%{%F{white}%}] %{%f%}%"
+
+

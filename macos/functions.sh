@@ -17,3 +17,26 @@ md() {
     mkdir -p "$@" && cd "$@"
 }
 
+# ... Install Homebrew for the first time
+install-brew() {
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+}
+
+
+# Finder: show hidden files by default
+# defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Automatically hide and show the Dock
+# defaults write com.apple.dock autohide -bool true
+
+# Save screenshots to the downloads folder
+defaults write com.apple.screencapture location -string “$HOME/Downloads”
+
+# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+defaults write com.apple.screencapture type -string “png”
+
+# Display full POSIX path as Finder window title
+# defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+
