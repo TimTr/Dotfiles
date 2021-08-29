@@ -20,7 +20,17 @@ md() {
 # ... Install Homebrew for the first time
 install-brew() {
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+}
 
+# ... Run the Homebrew demo
+demo-brew() {
+  /opt/bin/demo-homebrew.sh
+}
+
+
+# ... Run the Safari many-website demo script
+demo-safari() {
+  open /opt/bin/demo-safari-cycle.html
 }
 
 

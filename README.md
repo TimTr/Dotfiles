@@ -9,7 +9,13 @@ To install, run the following command:
     ./setup.sh
 ```
 
-The `dotfiles` folder is expected to be at the user's home folder root, but is also largely functional if `setup.sh` is run from any user folder.
+The `dotfiles` folder is expected to be at the user's home folder root, but is also largely functional if `setup.sh` is run from any user folder. Once installed, quit Terminal and relaunch. You can now install Homebrew by typing:
+
+```
+    install-brew
+```
+
+You may want to quit and restart Terminal after this install as well.
 
 
 ## Overview
@@ -21,6 +27,22 @@ The scripts are designed to work in `zsh`, although they rarely use advanced fea
 The setup will create a custom folder `/opt/bin/` that is added to the PATH variable and useful for putting random stuff in the path. It also adds `/usr/local/bin` and `/opt/homebrew/bin` to the PATH to support Homebrew and some other tools. 
 
 There are a few aliases added that make it easy to install Homebrew and other tools, rather than trying to do the installs directly from `setup.sh`. Mostly this is because the install is a multi-step process, and it is just a lot easier to run the full setup, then manually type `install-brew` when everything else looks to be working.
+
+
+## Demos
+
+Once installed, you can install Homebrew and run demos. To do that, these commands are available:
+
+```
+    demo-brew
+    demo-safari
+```
+
+The `demo-brew` command will install and uninstall many Homebrew formulas over and over, making the terminal window look very busy. Be sure to dedicate a Terminal window or tab to just this task, and use CONTROL-Z to quit whenever.
+
+The `demo-safari` command will open Safari and begin cycling through many web pages, implying a sort of automated web test harness. Again, will need to CONTROL-Z to quit the Terminal session.
+
+
 
 
 ## TODO: Items

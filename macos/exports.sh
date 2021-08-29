@@ -21,10 +21,4 @@ export EDITOR='vim';
 # Tell grep to highlight matches
 export GREP_OPTIONS='—color=auto'
 
-# Case-insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob
-
-# Autocorrect typos in path names when using `cd`
-shopt -s cdspell
-
 # export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$DOTFILES_DIR/bin"

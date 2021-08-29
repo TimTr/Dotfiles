@@ -16,7 +16,7 @@ module.exports = {
         // font weight for bold characters: 'normal' or 'bold'
         fontWeightBold: 'bold',
         // line height as a relative unit
-        lineHeight: 1,
+        lineHeight: 1.2,
         // letter spacing as a relative unit
         letterSpacing: 0,
         // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
@@ -31,7 +31,9 @@ module.exports = {
         foregroundColor: '#fff',
         // terminal background color
         // opacity is only supported on macOS
-        backgroundColor: '#000',
+        // ORIGNAL:  backgroundColor: '#000',
+        // The 0.6 defines opacity (0 to 1, closer to 1 is darker)
+        backgroundColor: 'rgba(0, 0, 0, 0.9)',
         // terminal selection color
         selectionColor: 'rgba(248,28,229,0.3)',
         // border color (window, tabs)

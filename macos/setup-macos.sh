@@ -28,23 +28,35 @@ sudo mkdir -p /opt/bin
 sudo mkdir -p /opt/homebrew/bin
 sudo mkdir -p /usr/local/bin
 
+sudo chmod 777 /opt/bin
+sudo chmod 777 /opt/homebrew/bin
+sudo chmod 777 /usr/local/bin
+
+
 
 # ==============================================================================
 message "Copying dotfiles" "Overwriting existing versions of these files"
-cp ${DOTFILES_ROOT}/macos/zshrc.sh $HOME/.zshrc
-cp ${DOTFILES_ROOT}/macos/zprofile.sh $HOME/.zprofile
-cp ${DOTFILES_ROOT}/macos/aliases.sh $HOME/.aliases
-cp ${DOTFILES_ROOT}/macos/exports.sh $HOME/.exports
-cp ${DOTFILES_ROOT}/macos/functions.sh $HOME/.functions
-cp ${DOTFILES_ROOT}/macos/inputrc.sh $HOME/.inputrc
+cp $DOTFILES_ROOT/macos/zshrc.sh $HOME/.zshrc
+cp $DOTFILES_ROOT/macos/zprofile.sh $HOME/.zprofile
+cp $DOTFILES_ROOT/macos/aliases.sh $HOME/.aliases
+cp $DOTFILES_ROOT/macos/exports.sh $HOME/.exports
+cp $DOTFILES_ROOT/macos/functions.sh $HOME/.functions
+cp $DOTFILES_ROOT/macos/inputrc.sh $HOME/.inputrc
 
 # Copy app settings
-cp ${DOTFILES_ROOT}/macos/settings/dot.gitconfig $HOME/.gitconfig
-cp ${DOTFILES_ROOT}/macos/settings/dot.gitignore $HOME/.gitignore
-cp ${DOTFILES_ROOT}/macos/settings/dot.vimrc $HOME/.vimrc
-cp ${DOTFILES_ROOT}/macos/settings/dot.hyper.js $HOME/.hyper.js
-cp ${DOTFILES_ROOT}/macos/settings/com.apple.Terminal.plist $HOME/Library/Preferences/
+cp $DOTFILES_ROOT/macos/settings/dot.gitconfig $HOME/.gitconfig
+cp $DOTFILES_ROOT/macos/settings/dot.gitignore $HOME/.gitignore
+cp $DOTFILES_ROOT/macos/settings/dot.vimrc $HOME/.vimrc
+cp $DOTFILES_ROOT/macos/settings/dot.hyper.js $HOME/.hyper.js
+cp $DOTFILES_ROOT/macos/settings/com.apple.Terminal.plist $HOME/Library/Preferences/
 
+# Copy Xcode settings
+mkdir -p $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes
+cp -R $DOTFILES_ROOT/macos/xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
+
+# Copy scripts into the PATH folder
+message "Copying..." "$DOTFILES_ROOT/macos/scripts/* /opt/bin/"
+cp -R $DOTFILES_ROOT/macos/scripts/* /opt/bin/
 
 
 # ==============================================================================
@@ -53,6 +65,7 @@ bullet "git config --global user.name \"Your Name\""
 bullet "git config --global user.email \"youremail@yourdomain.com\""
 bullet "install-brew  <-- this will install Homebrew when you're ready"
 bullet "install-ruby  <-- this will instruct you to install latest Ruby"
+
 echo
 
 exit 0
