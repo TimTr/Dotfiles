@@ -12,7 +12,11 @@ To install, run the following command:
 The `dotfiles` folder is expected to be at the user's home folder root, but is also largely functional if `setup.sh` is run from any user folder. Once installed, quit Terminal and relaunch. You can now install Homebrew by typing:
 
 ```
+    git config --global user.name "Your Name"
+    git config --global user.email "youremail@yourdomain.com"
+    
     install-brew
+    install-ruby  // this isn't working yet
 ```
 
 You may want to quit and restart Terminal after this install as well.
@@ -55,9 +59,6 @@ The `demo-safari` command will open Safari and begin cycling through many web pa
 
 These scripts and settings are provided for free, covered by the MIT license found within the repository.
 
-### Inspired by...
-
-An early inspiration for this repo was Zach Holman's [post on dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/). But as this repo is composed mostly of a mish-mash of StackOverflow search results, I wouldn't want to blame him or anyone else for the poor script code you'll find here.
 
 
 ## Useful reference links
@@ -65,6 +66,6 @@ An early inspiration for this repo was Zach Holman's [post on dotfiles](http://z
 - https://docs.github.com/en/codespaces/setting-up-your-codespace/
 - https://dotfiles.github.io
 
-Docs that `setup.sh` is a starter script used by GitHub Codespaces: [CodeSpaces and Dotfiles](https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-codespaces-for-your-account)
+Docs indicating that `setup.sh` is a starter script used by GitHub Codespaces: [CodeSpaces and Dotfiles](https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-codespaces-for-your-account)
 
 
