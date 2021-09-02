@@ -66,7 +66,7 @@ brew cleanup -s
 echo "Press [CONTROL-C] to stop..."
 sleep 1
 
-# NOTE: Commout-out the exit command below to turn this into an infinite loop
+# NOTE: Comment-out the exit command below to turn this into an infinite loop
 # exit 0
 
 

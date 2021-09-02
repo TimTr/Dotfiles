@@ -17,13 +17,14 @@ export PATH="$PATH:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin"
 export PATH="$PATH:/Library/Apple/usr/bin"
 
 # This `rbenv` setting needs to be hard-coded into .zshrc by default
-eval "$(rbenv init - zsh)"
+# If you get a "command not found" for rbenv, run `install-ruby`
+eval "$(rbenv init - zsh)" 2> /dev/null
 export PATH="${HOME}/.rbenv/bin:$PATH"
 
 # ==============================================================================
 # Custom prompt with newline
 NEWLINE=$'\n'
-PS1="${NEWLINE}%F{white}🐛 [%F{cyan}%~%{%F{white}%}] %{%f%}%"
+PS1="${NEWLINE}%F{white} %F{cyan}%~%{%F{white}%} %F{red}▶︎%F{yellow}▶︎ %{%f%}%"
 
 
 

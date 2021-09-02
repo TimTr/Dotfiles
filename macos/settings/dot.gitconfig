@@ -1,6 +1,6 @@
 # Updated recently
 [user]
-        name = Fill Me In
+        name = Fill MeIn
         email = example@example.com
 [include]
         path = ~/.gitconfig.local
