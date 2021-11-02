@@ -1,6 +1,17 @@
 #!/bin/zsh
 #
-# macos-ruby.sh
+# install-ruby.sh   -- macOS version
+#
+# Some tips if rbenv refuses to properly install Ruby
+#
+#     brew uninstall --ignore-dependencies openssl
+#
+#     rbenv uninstall 2.5.3     (or 3.0.0 or whatever version)
+#     rbenv install 2.5.3       (or 3.0.0 etc...)
+#
+#     export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1) --with-gdbm-dir=/opt/local"
+#
+# ==============================================================================
 
 
 # Import the default functions used in these scripts
@@ -20,13 +31,16 @@ fi
 # First install RBENV so we can easily switch to the new Ruby install
 status "Installing rbenv" "Using Homebrew to install \"rbenv\" tool"
 # brew install rbenv ruby-build
-brew install rbenv ruby-build rbenv-gemset rbenv-vars
+brew install rbenv ruby-build rbenv-gemset rbenv-vars rbenv-bundler
 brew upgrade ruby-build
 
-# Install latest version of Ruby (currently set to version 3.0.2)
+# Install latest version of Ruby
 status "Installing Ruby" "Using \"rbenv\" to install Ruby 3.0.2"
 rbenv install 3.0.2
 rbenv global 3.0.2
+
+bullet "If install fails, try:  brew uninstall --ignore-dependencies openssl"
+
 
 
 # ==============================================================================
@@ -34,7 +48,4 @@ rbenv global 3.0.2
 # source $(dirname $0)/update-ruby.sh
 
 
-message "Ruby not finished" "Must restart Terminal then run update-ruby"
-exit 0
-
-
+status "Ruby not finished" "Must restart Terminal then run update-ruby"

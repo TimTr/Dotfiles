@@ -54,6 +54,13 @@ update-ruby() {
   /opt/bin/update-ruby.sh
 }
 
+# ... Install the GitHub Personal Access Token
+install-github-token() {
+    echo "Be sure to pass the GitHib Personal Access Token as a parameter"
+    echo "You entered token: $1"
+    echo "export HOMEBREW_GITHUB_API_TOKEN=$1" >> ~/.zshrc
+}
+
 
 
 # ... Run the Homebrew demo

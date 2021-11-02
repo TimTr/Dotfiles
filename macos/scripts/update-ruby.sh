@@ -23,13 +23,13 @@ bullet "Ruby Version = ${CURRENT_RUBY}"
 # Make sure Homebrew and rbenv are properly installed, or this will all fail
 which -s brew &> /dev/null
 if [[ $? != 0 ]] ; then
-  error "Missing Homebrew" "Re-run dot-install.sh"
+  error "Missing Homebrew" "Re-run install-brew"
   exit 0
 fi
 
 which -s rbenv &> /dev/null
 if [[ $? != 0 ]] ; then
-  error "Missing rbenv" "Re-run dot-install.sh"
+  error "Missing rbenv" "Re-run install-ruby"
   exit 0
 fi
 
