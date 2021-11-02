@@ -16,10 +16,23 @@ The `dotfiles` folder is expected to be at the user's home folder root, but is a
     git config --global user.email "youremail@yourdomain.com"
     
     install-brew
-    install-ruby  // this isn't working yet
+    install-ruby  // TODO: this isn't working yet
 ```
 
+At any time, you can see a list of new commands by typing `commands`
+
+
 You may want to quit and restart Terminal after this install as well.
+
+
+### Setup a custom Swift toolchain
+
+You can download new Swift toolchains from [Swift.org](https://swift.org/download/#snapshots) and set them up to be used by default. There is a new alias installed by these dotfiles called `swift-alt` that will run the `swift` command line interface using the alternate toolchain, once installed.
+
+This dotfiles install will install a file called `.swift-settings.sh` at the user's root, enabling feature flags and adding the `swift-alt` alias. You will likely need to edit this file to enter the bundle ID of the installed toolchain you would like to use. As a result, the dotfiles `setup.sh` script will not overwrite this file once installed, so as to not blow away your customizations. If you want to re-install this file, simply delete it and re-run the dotfiles `setup.sh` to install a fresh version.
+
+To get the correct toolchain bundle ID, in the format `org.swift.cXXXXXXX` you will need to go to the folder `/Library/Something/Toolchains` after installed, show package contents of one of the toolchains, and open the `Info.plist` file. From there, you should see a Bundle ID entry, matching the format.
+
 
 
 ## Overview

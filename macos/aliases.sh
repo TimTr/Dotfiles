@@ -1,7 +1,6 @@
 # source this file into .zshrc
 
 
-
 # ===========================================
 # Aliases
 

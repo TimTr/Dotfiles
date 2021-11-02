@@ -42,6 +42,8 @@ cp $DOTFILES_ROOT/macos/aliases.sh $HOME/.aliases
 cp $DOTFILES_ROOT/macos/exports.sh $HOME/.exports
 cp $DOTFILES_ROOT/macos/functions.sh $HOME/.functions
 cp $DOTFILES_ROOT/macos/inputrc.sh $HOME/.inputrc
+cp $DOTFILES_ROOT/macos/swift-toolchain.sh $HOME
+cp $DOTFILES_ROOT/macos/swift-reset.sh $HOME
 
 # Copy app settings
 cp $DOTFILES_ROOT/macos/settings/dot.gitconfig $HOME/.gitconfig
@@ -49,6 +51,7 @@ cp $DOTFILES_ROOT/macos/settings/dot.gitignore $HOME/.gitignore
 cp $DOTFILES_ROOT/macos/settings/dot.vimrc $HOME/.vimrc
 cp $DOTFILES_ROOT/macos/settings/dot.hyper.js $HOME/.hyper.js
 cp $DOTFILES_ROOT/macos/settings/com.apple.Terminal.plist $HOME/Library/Preferences/
+
 
 # Copy Xcode settings
 mkdir -p $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes

@@ -18,15 +18,6 @@ status "update-ruby.sh" "Checking current installs of \"brew\" and \"rbenv\""
 CURRENT_RUBY=$(ruby -v 2> /dev/null)
 bullet "Ruby Version = ${CURRENT_RUBY}"
 
-# ==============================================================================
-# Add rbenv support to the .zshrc file
-echo '\n# ============================================================' >> ${HOME}/.zshrc
-echo '# Adding support for RBENV to the .zshrc file' >> ${HOME}/.zshrc
-echo ' ' >> ${HOME}/.zshrc
-echo 'eval "$(rbenv init - zsh)"' >> ${HOME}/.zshrc
-echo 'export PATH="${HOME}/.rbenv/bin:$PATH"' >> ${HOME}/.zshrc
-echo 'export RBENV_INSTALLED=1' >> ${HOME}/.zshrc
-  
 
 # ==============================================================================
 # Make sure Homebrew and rbenv are properly installed, or this will all fail
@@ -51,19 +42,19 @@ fi
 which -s bundler &> /dev/null
 if [[ $? != 0 ]] ; then
   bullet "Installing Bundler" "Installing the Bundler gem for the first time"
-  gem install bundler
+  sudo gem install bundler
 else
   message "Updating Bundler" "Updating the Bundler gem to latest version"
-  gem update bundler
+  sudo gem update bundler
 fi
 
 which -s jekyll &> /dev/null
 if [[ $? != 0 ]] ; then
   bullet "Installing Jekyll" "Installing the Jekyll gem for the first time"
-  gem install jekyll
+  sudo gem install jekyll
 else
   bullet "Updating Jekyll" "Updating the Jekyll gem to latest version"
-  gem update jekyll
+  sudo gem update jekyll
 fi
 
 

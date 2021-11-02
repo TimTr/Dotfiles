@@ -15,8 +15,8 @@ export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
 # another example for zsh: export LSCOLORS=GxFxCxDxBxexexaxaxaxex
 
 
-# Make vim the default editor.
-export EDITOR='vim';
+# Make VSCode the default editor.
+export EDITOR='code';
 
 # Tell grep to highlight matches
 export GREP_OPTIONS='—color=auto'
