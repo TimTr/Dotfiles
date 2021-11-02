@@ -23,12 +23,27 @@ export PATH="$PATH:/Library/Apple/usr/bin"
 # If you get a "command not found" for rbenv, run `install-ruby`
 #
 # To read more about installing rbenv see: https://github.com/rbenv/rbenv
-eval "$(rbenv init - zsh)"
+# eval "$(rbenv init - zsh)"
+eval "$(rbenv init -)"
 export PATH="${HOME}/.rbenv/bin:$PATH"
 export RBENV_INSTALLED=1
 export RUBY_CONFIGURE_OPTS=""
 # export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1) --with-gdbm-dir=/opt/local"
 
+
+# Configure the GitHub Personal Access Token. This is needed for some Homebrew
+#   packages such as Bundler for Ruby.
+# NOTE: Do not actually enter the token here -- this would expose it via GitHub
+#       Instead, edit this file once installed into ~/.zshrc locally
+#       The token is usually stored in 1Password or similar
+export HOMEBREW_GITHUB_API_TOKEN=EMPTY
+
+
+# ==============================================================================
+# Previous iterations of the prompt line
+# NEWLINE=$'\n'
+# PS1="${NEWLINE}%F{white} %F{cyan}%~%{%F{white}%} %F{red}▶︎%F{yellow}▶︎ %{%f%}%"
+# PS1="${NEWLINE}%F{white}🐛 [%F{cyan}%~%{%F{white}%}] %{%f%}%"
 
 # ==============================================================================
 # Custom prompt with newline before each new command entry
@@ -38,12 +53,8 @@ PS1="${NEWLINE}%F{blue}[%F{white}%~%{%F{white}%}%F{blue}]%F{cyan}▶︎ %{%f%}%"
 
 
 
-# ==============================================================================
-# Previous iterations of the prompt line
-#
-# PS1="${NEWLINE}%F{white} %F{cyan}%~%{%F{white}%} %F{red}▶︎%F{yellow}▶︎ %{%f%}%"
-#
-# NEWLINE=$'\n'
-# PS1="${NEWLINE}%F{white}🐛 [%F{cyan}%~%{%F{white}%}] %{%f%}%"
+
+
+
 
 

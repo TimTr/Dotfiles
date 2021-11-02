@@ -18,7 +18,7 @@ export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
 # Make VSCode the default editor.
 export EDITOR='code';
 
-# Tell grep to highlight matches
-export GREP_OPTIONS='—color=auto'
+# Tell grep to highlight matches (throwing errors)
+# export GREP_OPTIONS='—color=auto'
 
 # export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$DOTFILES_DIR/bin"

@@ -34,7 +34,7 @@ rbenv global 3.0.2
 # source $(dirname $0)/update-ruby.sh
 
 
-message "Ruby not finished" "Must restart Terminal then run update-ruby""
+message "Ruby not finished" "Must restart Terminal then run update-ruby"
 exit 0
 
 

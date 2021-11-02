@@ -16,13 +16,18 @@ The `dotfiles` folder is expected to be at the user's home folder root, but is a
     git config --global user.email "youremail@yourdomain.com"
     
     install-brew
-    install-ruby  // TODO: this isn't working yet
 ```
 
-At any time, you can see a list of new commands by typing `commands`
-
+At any time, you can see a list of added commands by typing `commands`
 
 You may want to quit and restart Terminal after this install as well.
+
+
+
+## Known Issues
+
+- Ruby install via `rbenv` is not working on my macOS 12 Monterey machine with Xcode 13.1. All the workarounds I've tried have not succeeded. It may be a build issue in either `rbenv` or Ruby itself, although trying many different versions of Ruby from 2.7.4 up to 3.0.2 didn't resolve the issue. I suspect it is an `rbenv` incompatibility with latest compiler and OS releases so will simply try again in a few weeks.
+
 
 
 ### Setup a custom Swift toolchain
