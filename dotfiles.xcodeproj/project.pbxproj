@@ -9,6 +9,7 @@
 /* Begin PBXFileReference section */
 		BA08E3B92606FB04009D83A6 /* test1.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test1.sh; sourceTree = "<group>"; };
 		BA08E3BA2606FB0C009D83A6 /* test2.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test2.sh; sourceTree = "<group>"; };
+		BA0AB53A27458C28008BFF44 /* _config.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = _config.yml; sourceTree = "<group>"; };
 		BA0D7AE92571F5220057E271 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		BA1E9B25258FE775005D5A65 /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
 		BA1E9B27258FE775005D5A65 /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		BA59AAB227457DDE00FEFD78 /* docs */ = {
 			isa = PBXGroup;
 			children = (
+				BA0AB53A27458C28008BFF44 /* _config.yml */,
 				BA59AAB327457DF000FEFD78 /* index.md */,
 			);
 			path = docs;

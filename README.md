@@ -1,6 +1,6 @@
 # dotfiles for Tim Triemstra
 
-Full documentation: [timtr.github.io/dotfiles/](https://timtr.github.io/dotfiles/)
+Link to documentation: [timtr.github.io/dotfiles/](https://timtr.github.io/dotfiles/)
 
 ---
 
