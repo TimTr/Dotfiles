@@ -2,7 +2,6 @@
 
 Link to documentation: [timtr.github.io/dotfiles/](https://timtr.github.io/dotfiles/)
 
-
 ---
 
 To install, run the following command:
@@ -26,7 +25,6 @@ The `dotfiles` folder is expected to be at the user's home folder root, but is a
 At any time, you can see a list of added commands by typing `commands`
 
 You may want to quit and restart Terminal after this install as well.
-
 
 
 ### Known Issues
