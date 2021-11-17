@@ -2,6 +2,8 @@
 
 Full documentation: [timtr.github.io/dotfiles/](https://timtr.github.io/dotfiles/)
 
+---
+
 To install, run the following command:
 
 ```
