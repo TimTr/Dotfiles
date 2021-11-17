@@ -32,6 +32,9 @@ sudo chmod 777 /opt/bin
 sudo chmod 777 /opt/homebrew/bin
 sudo chmod 777 /usr/local/bin
 
+sudo chown -R "$USER":admin /opt/bin/*
+sudo chown -R "$USER":admin /opt/homebrew/*
+sudo chown -R "$USER":admin /usr/local/*
 
 
 # ==============================================================================
@@ -42,24 +45,30 @@ cp $DOTFILES_ROOT/macos/aliases.sh $HOME/.aliases
 cp $DOTFILES_ROOT/macos/exports.sh $HOME/.exports
 cp $DOTFILES_ROOT/macos/functions.sh $HOME/.functions
 cp $DOTFILES_ROOT/macos/inputrc.sh $HOME/.inputrc
-cp $DOTFILES_ROOT/macos/swift-toolchain.sh $HOME
-cp $DOTFILES_ROOT/macos/swift-reset.sh $HOME
-
-# Copy app settings
-cp $DOTFILES_ROOT/macos/settings/dot.gitconfig $HOME/.gitconfig
-cp $DOTFILES_ROOT/macos/settings/dot.gitignore $HOME/.gitignore
-cp $DOTFILES_ROOT/macos/settings/dot.vimrc $HOME/.vimrc
-cp $DOTFILES_ROOT/macos/settings/dot.hyper.js $HOME/.hyper.js
-cp $DOTFILES_ROOT/macos/settings/com.apple.Terminal.plist $HOME/Library/Preferences/
 
 
-# Copy Xcode settings
+# Copy app preferences
+cp $DOTFILES_ROOT/macos/preferences/dot.gitconfig $HOME/.gitconfig
+cp $DOTFILES_ROOT/macos/preferences/dot.gitignore $HOME/.gitignore
+cp $DOTFILES_ROOT/macos/preferences/dot.vimrc $HOME/.vimrc
+cp $DOTFILES_ROOT/macos/preferences/dot.hyper.js $HOME/.hyper.js
+cp $DOTFILES_ROOT/macos/preferences/com.apple.Terminal.plist $HOME/Library/Preferences/
+
+
+# Copy Xcode preferences
 mkdir -p $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes
 cp -R $DOTFILES_ROOT/macos/xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
 
 # Copy scripts into the PATH folder
 message "Copying..." "$DOTFILES_ROOT/macos/scripts/* /opt/bin/"
 cp -R $DOTFILES_ROOT/macos/scripts/* /opt/bin/
+
+# Check if the "tokens.sh" file exists, and if not, create a stub
+# If
+message "Creating ~/tokens.sh" "Modify this file to add your GitHub and SSH tokens"
+# TODO: need to validate the file doesn't exist so don't overwrite it
+# TODO: need to update .zshrc to source this file at the end
+# TODO: remove the install-github-token function once this is working
 
 
 # ==============================================================================

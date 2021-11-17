@@ -23,8 +23,6 @@ commands () {
 }
 
 
-
-
 # ... Find all files recursively under current folder
 findall () {
     find ./ -name $1 -print 2> /dev/null
@@ -37,41 +35,11 @@ md() {
 }
 
 
-# ... Install Homebrew for the first time
-install-brew() {
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-}
-
-
-# ... Install Ruby and rbenv for the first time
-install-ruby() {
-  /opt/bin/install-ruby.sh
-}
-
-
-# ... Install Ruby and rbenv for the first time
-update-ruby() {
-  /opt/bin/update-ruby.sh
-}
-
 # ... Install the GitHub Personal Access Token
 install-github-token() {
     echo "Be sure to pass the GitHib Personal Access Token as a parameter"
     echo "You entered token: $1"
     echo "export HOMEBREW_GITHUB_API_TOKEN=$1" >> ~/.zshrc
-}
-
-
-
-# ... Run the Homebrew demo
-demo-brew() {
-  /opt/bin/demo-homebrew.sh
-}
-
-
-# Run the Safari many-website demo script
-demo-safari() {
-  open /opt/bin/demo-safari-cycle.html
 }
 
 

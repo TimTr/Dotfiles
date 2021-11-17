@@ -27,6 +27,15 @@ if [[ $? != 0 ]] ; then
   exit 0
 fi
 
+# TODO: install rbenv if not already installed
+which -s rbenv &> /dev/null
+if [[ $? != 0 ]] ; then
+  error "Missing rbenv" "Re-run install-ruby"
+  exit 0
+fi
+
+
+
 
 # First install RBENV so we can easily switch to the new Ruby install
 status "Installing rbenv" "Using Homebrew to install \"rbenv\" tool"

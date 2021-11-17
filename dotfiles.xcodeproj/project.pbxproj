@@ -10,7 +10,6 @@
 		BA08E3B92606FB04009D83A6 /* test1.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test1.sh; sourceTree = "<group>"; };
 		BA08E3BA2606FB0C009D83A6 /* test2.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test2.sh; sourceTree = "<group>"; };
 		BA0D7AE92571F5220057E271 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
-		BA17E6D126EBF1F7006F8D97 /* swift-toolchain.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "swift-toolchain.sh"; sourceTree = "<group>"; };
 		BA1E9B25258FE775005D5A65 /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
 		BA1E9B27258FE775005D5A65 /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
 		BA1E9B28258FE775005D5A65 /* zprofile.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zprofile.sh; sourceTree = "<group>"; };
@@ -24,13 +23,13 @@
 		BA25DBCC26DC30DA00AC5D59 /* demo-safari-cycle.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "demo-safari-cycle.html"; sourceTree = "<group>"; };
 		BA25DBCD26DC466D00AC5D59 /* demo-safari-backup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "demo-safari-backup.html"; sourceTree = "<group>"; };
 		BA25DBCE26DC467700AC5D59 /* demo-safari-new.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "demo-safari-new.html"; sourceTree = "<group>"; };
-		BA2FCEDA272F2D8000765F09 /* swift-reset.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "swift-reset.sh"; sourceTree = "<group>"; };
 		BA3989C4259F954600978484 /* dot-reset.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-reset.sh"; sourceTree = "<group>"; };
 		BA462B91256EF61800BEC226 /* dot-test.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-test.sh"; sourceTree = "<group>"; };
 		BA462B92256EF61800BEC226 /* dot-update.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-update.sh"; sourceTree = "<group>"; };
 		BA462B93256EF61800BEC226 /* dot-install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-install.sh"; sourceTree = "<group>"; };
 		BA462B94256EF61800BEC226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA462B95256EF61800BEC226 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		BA59AAB327457DF000FEFD78 /* index.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = index.md; sourceTree = "<group>"; };
 		BA9AE2CB2693EEE700D62D30 /* aliases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = aliases.sh; sourceTree = "<group>"; };
 		BA9B1A2D2607FD090068E61E /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; };
 		BA9B1A2E2607FD940068E61E /* test3.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test3.sh; sourceTree = "<group>"; };
@@ -39,6 +38,7 @@
 		BAD43EC4269255720098B6ED /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
 		BAD43EC5269255720098B6ED /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
 		BAD43EC7269255720098B6ED /* update-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-linux.sh"; sourceTree = "<group>"; };
+		BADBE7D92732F65800682EC3 /* customize.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = customize.sh; sourceTree = "<group>"; };
 		BAE773EC259BC652000933FE /* install-ruby.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-ruby.sh"; sourceTree = "<group>"; };
 		BAEBF5D426D3095E007A028E /* inputrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = inputrc.sh; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
 		BAEBF5D526D30A32007A028E /* exports.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = exports.sh; sourceTree = "<group>"; };
@@ -92,13 +92,14 @@
 				BA9B1A2D2607FD090068E61E /* setup.sh */,
 				BAD43EC2269255280098B6ED /* macos */,
 				BAD43EC1269254E00098B6ED /* linux */,
+				BA59AAB227457DDE00FEFD78 /* docs */,
 				BA08E3B82606FAEE009D83A6 /* test */,
 				BA0D7AE82571F4DC0057E271 /* template */,
 				BA462B95256EF61800BEC226 /* LICENSE.md */,
 			);
 			sourceTree = "<group>";
 		};
-		BA462B99256EF66400BEC226 /* settings */ = {
+		BA462B99256EF66400BEC226 /* preferences */ = {
 			isa = PBXGroup;
 			children = (
 				BAF13F2126D9762C000D5261 /* dot.hyper.js */,
@@ -107,7 +108,15 @@
 				BA1E9B2B258FE781005D5A65 /* dot.gitignore */,
 				BAF5518126D4330F008FE898 /* dot.vimrc */,
 			);
-			path = settings;
+			path = preferences;
+			sourceTree = "<group>";
+		};
+		BA59AAB227457DDE00FEFD78 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				BA59AAB327457DF000FEFD78 /* index.md */,
+			);
+			path = docs;
 			sourceTree = "<group>";
 		};
 		BAD43EC1269254E00098B6ED /* linux */ = {
@@ -127,12 +136,11 @@
 			children = (
 				BAF13F2226D97F32000D5261 /* scripts */,
 				BA1E9B2E258FE7D9005D5A65 /* xcode */,
-				BA462B99256EF66400BEC226 /* settings */,
+				BA462B99256EF66400BEC226 /* preferences */,
 				BAEBF5D626D31306007A028E /* setup-macos.sh */,
 				BA9AE2CB2693EEE700D62D30 /* aliases.sh */,
 				BA1E9B27258FE775005D5A65 /* functions.sh */,
-				BA17E6D126EBF1F7006F8D97 /* swift-toolchain.sh */,
-				BA2FCEDA272F2D8000765F09 /* swift-reset.sh */,
+				BADBE7D92732F65800682EC3 /* customize.sh */,
 				BAEBF5D526D30A32007A028E /* exports.sh */,
 				BAEBF5D426D3095E007A028E /* inputrc.sh */,
 				BA1E9B28258FE775005D5A65 /* zprofile.sh */,

@@ -1,4 +1,8 @@
-# dotfiles for Tim Triemstra
+# Documentation for Dotfiles
+
+This is the documentation for Tim Triemstra's `dotfiles` setup.
+
+---
 
 To install, run the following command:
 
@@ -18,15 +22,9 @@ The `dotfiles` folder is expected to be at the user's home folder root, but is a
     install-brew
 ```
 
-At any time, you can see a list of added commands by typing `commands`
-
 You may want to quit and restart Terminal after this install as well.
 
-
-
-### Known Issues
-
-- Ruby install via `rbenv` is not working on my macOS 12 Monterey machine with Xcode 13.1. All the workarounds I've tried have not succeeded. It may be a build issue in either `rbenv` or Ruby itself, although trying many different versions of Ruby from 2.7.4 up to 3.0.2 didn't resolve the issue. I suspect it is an `rbenv` incompatibility with latest compiler and OS releases so will simply try again in a few weeks.
+At any time, you can see a list of added commands by typing `commands`
 
 
 ## Folder structure
@@ -61,13 +59,13 @@ There are a few aliases added that make it easy to install Homebrew and other to
 Once installed, you can install Homebrew and run demos. To do that, these commands are available:
 
 ```
-    demo-brew
-    demo-safari
+    demo-brew.sh
+    demo-safari.sh
 ```
 
-The `demo-brew` command will install and uninstall many Homebrew formulas over and over, making the terminal window look very busy. Be sure to dedicate a Terminal window or tab to just this task, and use CONTROL-Z to quit whenever.
+The `demo-brew.sh` command will install and uninstall many Homebrew formulas over and over, making the terminal window look very busy. Be sure to dedicate a Terminal window or tab to just this task, and use CONTROL-Z to quit whenever.
 
-The `demo-safari` command will open Safari and begin cycling through many web pages, implying a sort of automated web test harness. Again, will need to CONTROL-Z to quit the Terminal session.
+The `demo-safari.sh` command will open Safari and begin cycling through many web pages, implying a sort of automated web test harness. Again, will need to CONTROL-Z to quit the Terminal session.
 
 
 

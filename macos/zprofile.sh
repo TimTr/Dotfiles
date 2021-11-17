@@ -3,13 +3,28 @@
 # This .zprofile file is registered before .zshrc, so sourcing .zshrc first
 
 
-echo ".zprofile:  loading..."
+status ".zprofile" "Initializing..."
 
 # Doesn't seem like there is a need to source this file?
 # if [ -f ~/.zshrc ]; then
 #     echo ".zprofile:  Sourcing the .zshrc file..."
 #     source ~/.zshrc
 # fi
+
+# ==============================================================================
+# Warn about installing Homebrew and Ruby as needed
+which -s brew &> /dev/null
+if [[ $? != 0 ]] ; then
+  error "Missing Homebrew" "Run `install-brew.sh`"
+fi
+
+which -s rbenv &> /dev/null
+if [[ $? != 0 ]] ; then
+  error "Missing rbenv" "Run `install-ruby.sh`"
+fi
+
+
+
 
 ## ================================================================================
 # Welcome to the shell message
