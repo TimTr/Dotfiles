@@ -11,12 +11,13 @@
 		BA08E3BA2606FB0C009D83A6 /* test2.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test2.sh; sourceTree = "<group>"; };
 		BA0AB53A27458C28008BFF44 /* _config.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = _config.yml; sourceTree = "<group>"; };
 		BA0D7AE92571F5220057E271 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
+		BA0FAE2A275995BC00030DB7 /* TimTr Lighthaus.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Lighthaus.xccolortheme"; sourceTree = "<group>"; };
+		BA0FAE2C2759963E00030DB7 /* com.apple.Terminal.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.apple.Terminal.plist; sourceTree = "<group>"; };
 		BA1E9B25258FE775005D5A65 /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
 		BA1E9B27258FE775005D5A65 /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
 		BA1E9B28258FE775005D5A65 /* zprofile.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zprofile.sh; sourceTree = "<group>"; };
 		BA1E9B2A258FE781005D5A65 /* dot.gitconfig */ = {isa = PBXFileReference; lastKnownFileType = text; path = dot.gitconfig; sourceTree = "<group>"; };
 		BA1E9B2B258FE781005D5A65 /* dot.gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = dot.gitignore; sourceTree = "<group>"; };
-		BA1E9B2C258FE781005D5A65 /* com.apple.Terminal.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.apple.Terminal.plist; sourceTree = "<group>"; };
 		BA1E9B35258FE814005D5A65 /* TimTr Toothpaste.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Toothpaste.xccolortheme"; sourceTree = "<group>"; };
 		BA1E9B37258FE814005D5A65 /* TimTr Grey.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Grey.xccolortheme"; sourceTree = "<group>"; };
 		BA1E9B38258FE814005D5A65 /* TimTr (Dark Default).xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr (Dark Default).xccolortheme"; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 				BA1E9B38258FE814005D5A65 /* TimTr (Dark Default).xccolortheme */,
 				BA1E9B3A258FE814005D5A65 /* TimTr Dark.xccolortheme */,
 				BA1E9B37258FE814005D5A65 /* TimTr Grey.xccolortheme */,
+				BA0FAE2A275995BC00030DB7 /* TimTr Lighthaus.xccolortheme */,
 				BA1E9B35258FE814005D5A65 /* TimTr Toothpaste.xccolortheme */,
 			);
 			path = xcode;
@@ -103,8 +105,8 @@
 		BA462B99256EF66400BEC226 /* preferences */ = {
 			isa = PBXGroup;
 			children = (
+				BA0FAE2C2759963E00030DB7 /* com.apple.Terminal.plist */,
 				BAF13F2126D9762C000D5261 /* dot.hyper.js */,
-				BA1E9B2C258FE781005D5A65 /* com.apple.Terminal.plist */,
 				BA1E9B2A258FE781005D5A65 /* dot.gitconfig */,
 				BA1E9B2B258FE781005D5A65 /* dot.gitignore */,
 				BAF5518126D4330F008FE898 /* dot.vimrc */,
@@ -140,9 +142,9 @@
 				BA1E9B2E258FE7D9005D5A65 /* xcode */,
 				BA462B99256EF66400BEC226 /* preferences */,
 				BAEBF5D626D31306007A028E /* setup-macos.sh */,
+				BADBE7D92732F65800682EC3 /* customize.sh */,
 				BA9AE2CB2693EEE700D62D30 /* aliases.sh */,
 				BA1E9B27258FE775005D5A65 /* functions.sh */,
-				BADBE7D92732F65800682EC3 /* customize.sh */,
 				BAEBF5D526D30A32007A028E /* exports.sh */,
 				BAEBF5D426D3095E007A028E /* inputrc.sh */,
 				BA1E9B28258FE775005D5A65 /* zprofile.sh */,
