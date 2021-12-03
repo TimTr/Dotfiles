@@ -7,8 +7,8 @@
 #
 message () { printf "\r  [\033[00;32m $1\033[0m ] $2\n" }
 status ()  { printf "\r\033[00;35m === $1\033[0m $2\n" }
-error ()   { printf "\r  [\033[00;31m $1\033[0m ] $2\n" }
 bullet ()  { printf "\r    - \033[00;36m $1\033[0m \n" }
+error ()   { printf "\r  [\033[00;31m $1\033[0m ] \033[00;31m$2 \033[0m \n" }
 
 
 # ... Find all files recursively under current folder
@@ -32,14 +32,6 @@ findall () {
 # ... Create a new directory and enter it
 md() {
     mkdir -p "$@" && cd "$@"
-}
-
-
-# ... Install the GitHub Personal Access Token
-install-github-token() {
-    echo "Be sure to pass the GitHib Personal Access Token as a parameter"
-    echo "You entered token: $1"
-    echo "export HOMEBREW_GITHUB_API_TOKEN=$1" >> ~/.zshrc
 }
 
 

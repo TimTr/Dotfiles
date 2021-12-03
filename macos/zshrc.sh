@@ -1,7 +1,7 @@
 # GLOBAL ENVIRONMENT VARIABLES
 # -------------------------------------
 
-echo ".zshrc:     Setting up .aliases, .functions, and more..."
+echo ">> .zshrc:     Setting up .aliases, .functions, and more..."
 
 
 #### Will need to have copied the ~/.aliases file over already.
@@ -24,11 +24,16 @@ export PATH="$PATH:/Library/Apple/usr/bin"
 #
 # To read more about installing rbenv see: https://github.com/rbenv/rbenv
 # eval "$(rbenv init - zsh)"
-eval "$(rbenv init -)"
-export PATH="${HOME}/.rbenv/bin:$PATH"
-export RBENV_INSTALLED=1
-export RUBY_CONFIGURE_OPTS=""
+which -s rbenv &> /dev/null
+if [[ $? != 0 ]] ; then
+  echo " - Missing rbenv.     Run install-ruby.sh"
+else
+  eval "$(rbenv init -)"
+  export PATH="${HOME}/.rbenv/bin:$PATH"
+  export RBENV_INSTALLED=1
+  export RUBY_CONFIGURE_OPTS=""
 # export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1) --with-gdbm-dir=/opt/local"
+fi
 
 
 # Configure the GitHub Personal Access Token. This is needed for some Homebrew

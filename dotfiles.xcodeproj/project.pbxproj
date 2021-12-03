@@ -13,6 +13,7 @@
 		BA0D7AE92571F5220057E271 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		BA0FAE2A275995BC00030DB7 /* TimTr Lighthaus.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Lighthaus.xccolortheme"; sourceTree = "<group>"; };
 		BA0FAE2C2759963E00030DB7 /* com.apple.Terminal.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.apple.Terminal.plist; sourceTree = "<group>"; };
+		BA0FAE2D2759A16A00030DB7 /* install-brew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-brew.sh"; sourceTree = "<group>"; };
 		BA1E9B25258FE775005D5A65 /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
 		BA1E9B27258FE775005D5A65 /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
 		BA1E9B28258FE775005D5A65 /* zprofile.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zprofile.sh; sourceTree = "<group>"; };
@@ -157,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				BAE773EC259BC652000933FE /* install-ruby.sh */,
+				BA0FAE2D2759A16A00030DB7 /* install-brew.sh */,
 				BAF35A0B259FF70600F7099D /* update-ruby.sh */,
 				BA25DBCC26DC30DA00AC5D59 /* demo-safari-cycle.html */,
 				BA25DBCE26DC467700AC5D59 /* demo-safari-new.html */,

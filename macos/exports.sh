@@ -25,9 +25,8 @@ export EDITOR='code';
 defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
 
 # This one stops the IDE from saving the workspace layout
-# Probably don't want this one enabled
+# Probably don't want this one enabled - manually delete if needed
 # defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool YES
-defaults delete com.apple.dt.Xcode IDEDisableStateRestoration
 
 # Sets Xcode to show extensions for .sh and .md files, additionally
 # NOTE: the single-quote, comma + space format, with no space before/after the

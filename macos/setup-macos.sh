@@ -63,9 +63,9 @@ cp -R $DOTFILES_ROOT/macos/xcode/* $HOME/Library/Developer/Xcode/UserData/FontAn
 message "Copying..." "$DOTFILES_ROOT/macos/scripts/* /opt/bin/"
 cp -R $DOTFILES_ROOT/macos/scripts/* /opt/bin/
 
-# Check if the "tokens.sh" file exists, and if not, create a stub
+# Check if the "customize.sh" file exists, and if not, create a stub
 # If
-message "Creating ~/tokens.sh" "Modify this file to add your GitHub and SSH tokens"
+message "Creating ~/customize.sh" "Modify this file to add your GitHub and SSH tokens"
 # TODO: need to validate the file doesn't exist so don't overwrite it
 # TODO: need to update .zshrc to source this file at the end
 # TODO: remove the install-github-token function once this is working
@@ -75,8 +75,8 @@ message "Creating ~/tokens.sh" "Modify this file to add your GitHub and SSH toke
 message "Restart terminal" "After restart, you can run the following commands:"
 bullet "git config --global user.name \"Your Name\""
 bullet "git config --global user.email \"youremail@yourdomain.com\""
-bullet "install-brew  <-- this will install Homebrew when you're ready"
-bullet "install-ruby  <-- this will instruct you to install latest Ruby"
+bullet "install-brew.sh  <-- this will install Homebrew when you're ready"
+bullet "install-ruby.sh  <-- this will instruct you to install latest Ruby"
 
 echo
 

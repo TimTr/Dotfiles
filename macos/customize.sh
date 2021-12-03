@@ -8,21 +8,21 @@
 #
 
 message "Customizing environemnt" "Adding tokens, keys, and passwords..."
-bullet "Adding GitHub personal access token"
 
-
-
-
-bullet "Enabling toolchains (installed in /Some/Folder/On/Disk)"
+status "Enabling toolchains (installed in /Some/Folder/On/Disk)"
 export SWIFT_TOOLCHAIN=1
 
-bullet "Selecting toolchain ID: XXXXXXX"
+status "Selecting toolchain ID: XXXXXXX"
 # Do something here
 
-bullet "Enable the Snippets feature in the custom toolchain"
+status "Enable the Snippets feature in the custom toolchain"
 export SWIFTPM_ENABLE_SNIPPETS=1
 
-bullet "NOTE: to try snippets, go into a package and type:"
+status "NOTE: to try snippets, go into a package and type:"
 bullet "    `swift package learn`"
 
+status "Adding GitHub personal access token for use with Homebrew and others"
+bullet "Obviously, this must be edited ONLY in the local machine,"
+bullet "Do NOT put in a GitHub repo, e.g. the dotfiles repo
+export HOMEBREW_GITHUB_API_TOKEN=$1
 
