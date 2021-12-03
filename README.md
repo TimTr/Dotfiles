@@ -29,7 +29,8 @@ You may want to quit and restart Terminal after this install as well.
 
 ### Known Issues
 
-- Ruby install via `rbenv` is not working on my macOS 12 Monterey machine with Xcode 13.1. All the workarounds I've tried have not succeeded. It may be a build issue in either `rbenv` or Ruby itself, although trying many different versions of Ruby from 2.7.4 up to 3.0.2 didn't resolve the issue. I suspect it is an `rbenv` incompatibility with latest compiler and OS releases so will simply try again in a few weeks.
+- TODO: `customize.sh` is not setup to be installed yet. Check the setup scripts
+- TODO: `install-brew.sh` is not configured at all, just is a copy of ruby installer 
 
 
 ## Folder structure
