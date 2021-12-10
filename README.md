@@ -19,19 +19,29 @@ The `dotfiles` folder is expected to be at the user's home folder root, but is a
     git config --global user.name "Your Name"
     git config --global user.email "youremail@yourdomain.com"
     
-    install-brew
+    install-brew.sh
+    install-ruby.sh
 ```
 
 At any time, you can see a list of added commands by typing `commands`
 
 You may want to quit and restart Terminal after this install as well.
 
+### Order of loading
+
+For reference, `zsh` config files are loaded in the following order:
+
+```
+    .zshenv    -- global (even if not interactive) so good for PATH etc
+    .zprofile  -- if login
+    .zshrc     -- if interactive shell
+```
 
 ### Known Issues
 
 - TODO: `customize.sh` is not setup to be installed yet. Check the setup scripts
 - TODO: `install-brew.sh` is not configured at all, just is a copy of ruby installer 
-
+- TODO: Source `.functions.sh` and use message / error in .zshrc and .zprofile
 
 ## Folder structure
 
@@ -87,6 +97,10 @@ These scripts and settings are provided for free, covered by the MIT license fou
 
 - https://docs.github.com/en/codespaces/setting-up-your-codespace/
 - https://dotfiles.github.io
+
+Reference for which `zsh` files contain which settings
+https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout
+
 
 Docs indicating that `setup.sh` is a starter script used by GitHub Codespaces: [CodeSpaces and Dotfiles](https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-codespaces-for-your-account)
 

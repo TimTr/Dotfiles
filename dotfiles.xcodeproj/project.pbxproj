@@ -9,7 +9,6 @@
 /* Begin PBXFileReference section */
 		BA08E3B92606FB04009D83A6 /* test1.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test1.sh; sourceTree = "<group>"; };
 		BA08E3BA2606FB0C009D83A6 /* test2.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test2.sh; sourceTree = "<group>"; };
-		BA0AB53A27458C28008BFF44 /* _config.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = _config.yml; sourceTree = "<group>"; };
 		BA0D7AE92571F5220057E271 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		BA0FAE2A275995BC00030DB7 /* TimTr Lighthaus.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Lighthaus.xccolortheme"; sourceTree = "<group>"; };
 		BA0FAE2C2759963E00030DB7 /* com.apple.Terminal.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.apple.Terminal.plist; sourceTree = "<group>"; };
@@ -23,16 +22,18 @@
 		BA1E9B37258FE814005D5A65 /* TimTr Grey.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Grey.xccolortheme"; sourceTree = "<group>"; };
 		BA1E9B38258FE814005D5A65 /* TimTr (Dark Default).xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr (Dark Default).xccolortheme"; sourceTree = "<group>"; };
 		BA1E9B3A258FE814005D5A65 /* TimTr Dark.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Dark.xccolortheme"; sourceTree = "<group>"; };
+		BA229F06275EA4D30057779C /* zshenv.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshenv.sh; sourceTree = "<group>"; };
 		BA25DBCC26DC30DA00AC5D59 /* demo-safari-cycle.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "demo-safari-cycle.html"; sourceTree = "<group>"; };
 		BA25DBCD26DC466D00AC5D59 /* demo-safari-backup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "demo-safari-backup.html"; sourceTree = "<group>"; };
 		BA25DBCE26DC467700AC5D59 /* demo-safari-new.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "demo-safari-new.html"; sourceTree = "<group>"; };
+		BA3140E6276291FC0087D0A1 /* docs.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = docs.css; sourceTree = "<group>"; };
 		BA3989C4259F954600978484 /* dot-reset.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-reset.sh"; sourceTree = "<group>"; };
 		BA462B91256EF61800BEC226 /* dot-test.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-test.sh"; sourceTree = "<group>"; };
 		BA462B92256EF61800BEC226 /* dot-update.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-update.sh"; sourceTree = "<group>"; };
 		BA462B93256EF61800BEC226 /* dot-install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-install.sh"; sourceTree = "<group>"; };
 		BA462B94256EF61800BEC226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA462B95256EF61800BEC226 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		BA59AAB327457DF000FEFD78 /* index.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = index.md; sourceTree = "<group>"; };
+		BA59AAB327457DF000FEFD78 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		BA9AE2CB2693EEE700D62D30 /* aliases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = aliases.sh; sourceTree = "<group>"; };
 		BA9B1A2D2607FD090068E61E /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; };
 		BA9B1A2E2607FD940068E61E /* test3.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test3.sh; sourceTree = "<group>"; };
@@ -41,10 +42,8 @@
 		BAD43EC4269255720098B6ED /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
 		BAD43EC5269255720098B6ED /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
 		BAD43EC7269255720098B6ED /* update-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-linux.sh"; sourceTree = "<group>"; };
-		BADBE7D92732F65800682EC3 /* customize.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = customize.sh; sourceTree = "<group>"; };
+		BADBE7D92732F65800682EC3 /* local.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = local.sh; sourceTree = "<group>"; };
 		BAE773EC259BC652000933FE /* install-ruby.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-ruby.sh"; sourceTree = "<group>"; };
-		BAEBF5D426D3095E007A028E /* inputrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = inputrc.sh; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
-		BAEBF5D526D30A32007A028E /* exports.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = exports.sh; sourceTree = "<group>"; };
 		BAEBF5D626D31306007A028E /* setup-macos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "setup-macos.sh"; sourceTree = "<group>"; };
 		BAF13F2126D9762C000D5261 /* dot.hyper.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = dot.hyper.js; sourceTree = "<group>"; };
 		BAF13F2326D97FBF000D5261 /* demo-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "demo-homebrew.sh"; sourceTree = "<group>"; };
@@ -118,8 +117,8 @@
 		BA59AAB227457DDE00FEFD78 /* docs */ = {
 			isa = PBXGroup;
 			children = (
-				BA0AB53A27458C28008BFF44 /* _config.yml */,
-				BA59AAB327457DF000FEFD78 /* index.md */,
+				BA59AAB327457DF000FEFD78 /* index.html */,
+				BA3140E6276291FC0087D0A1 /* docs.css */,
 			);
 			path = docs;
 			sourceTree = "<group>";
@@ -143,12 +142,11 @@
 				BA1E9B2E258FE7D9005D5A65 /* xcode */,
 				BA462B99256EF66400BEC226 /* preferences */,
 				BAEBF5D626D31306007A028E /* setup-macos.sh */,
-				BADBE7D92732F65800682EC3 /* customize.sh */,
+				BADBE7D92732F65800682EC3 /* local.sh */,
 				BA9AE2CB2693EEE700D62D30 /* aliases.sh */,
 				BA1E9B27258FE775005D5A65 /* functions.sh */,
-				BAEBF5D526D30A32007A028E /* exports.sh */,
-				BAEBF5D426D3095E007A028E /* inputrc.sh */,
 				BA1E9B28258FE775005D5A65 /* zprofile.sh */,
+				BA229F06275EA4D30057779C /* zshenv.sh */,
 				BA1E9B25258FE775005D5A65 /* zshrc.sh */,
 			);
 			path = macos;

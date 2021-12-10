@@ -23,6 +23,6 @@ bullet "    `swift package learn`"
 
 status "Adding GitHub personal access token for use with Homebrew and others"
 bullet "Obviously, this must be edited ONLY in the local machine,"
-bullet "Do NOT put in a GitHub repo, e.g. the dotfiles repo
-export HOMEBREW_GITHUB_API_TOKEN=$1
+bullet "Do NOT put in a GitHub repo, e.g. the dotfiles repo"
+export HOMEBREW_GITHUB_API_TOKEN=EMPTY
 
