@@ -23,9 +23,9 @@ DOTFILES_SETUP=${0:a}
 # This script will run either the Linux or macOS installer
 # (yes, one day may need more options than this, but for now...)
 if [[ $OSTYPE == darwin* ]]; then
-  source $DOTFILES_ROOT/macos/setup-macos.sh
+  source $DOTFILES_ROOT/Mac/setup-macos.sh
 else
-  source $DOTFILES_ROOT/linux/setup-linux.sh
+  source $DOTFILES_ROOT/Linux/setup-linux.sh
 fi
 
 exit 0

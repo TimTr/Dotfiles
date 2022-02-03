@@ -42,6 +42,9 @@ alias ls='ls -FG'
 alias lsl='ls -loFGT'
 alias lsla='ls -loAFGT'
 
+# ... Make 'ls' also sort
+alias ls -FG | sort -k1,1 -k9,9 -r
+
 # ... echo $SHELL tells you the default shell, this command
 #     instead tells you which shell you are presently inside
 alias shell-now='ps -p $$'

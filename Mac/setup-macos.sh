@@ -1,7 +1,7 @@
 #!/bin/zsh
 #
 # setup-macos.sh - the macOS version
-source "$DOTFILES_ROOT/macos/functions.sh"
+source "$DOTFILES_ROOT/Mac/functions.sh"
 echo
 status "setup-macos.sh -- setting up for macOS"
 echo
@@ -39,30 +39,30 @@ sudo chown -R "$USER":admin /usr/local/*
 
 # ==============================================================================
 message "Copying dotfiles" "Overwriting existing versions of these files"
-cp $DOTFILES_ROOT/macos/zshrc.sh $HOME/.zshrc
-cp $DOTFILES_ROOT/macos/zshenv.sh $HOME/.zshenv
-cp $DOTFILES_ROOT/macos/zprofile.sh $HOME/.zprofile
-cp $DOTFILES_ROOT/macos/aliases.sh $HOME/.aliases
-cp $DOTFILES_ROOT/macos/functions.sh $HOME/.functions
+cp $DOTFILES_ROOT/Mac/zshrc.sh $HOME/.zshrc
+cp $DOTFILES_ROOT/Mac/zshenv.sh $HOME/.zshenv
+cp $DOTFILES_ROOT/Mac/zprofile.sh $HOME/.zprofile
+cp $DOTFILES_ROOT/Mac/aliases.sh $HOME/.aliases
+cp $DOTFILES_ROOT/Mac/functions.sh $HOME/.functions
 
 
 # Copy app preferences
-cp $DOTFILES_ROOT/macos/preferences/dot.gitconfig $HOME/.gitconfig
-cp $DOTFILES_ROOT/macos/preferences/dot.gitignore $HOME/.gitignore
-cp $DOTFILES_ROOT/macos/preferences/dot.vimrc $HOME/.vimrc
-cp $DOTFILES_ROOT/macos/preferences/dot.hyper.js $HOME/.hyper.js
-cp $DOTFILES_ROOT/macos/preferences/com.apple.Terminal.plist $HOME/Library/Preferences/
+cp $DOTFILES_ROOT/Mac/Preferences/dot.gitconfig $HOME/.gitconfig
+cp $DOTFILES_ROOT/Mac/Preferences/dot.gitignore $HOME/.gitignore
+cp $DOTFILES_ROOT/Mac/Preferences/dot.vimrc $HOME/.vimrc
+cp $DOTFILES_ROOT/Mac/Preferences/dot.hyper.js $HOME/.hyper.js
+cp $DOTFILES_ROOT/Mac/Preferences/com.apple.Terminal.plist $HOME/Library/Preferences/
 
 
 # Copy Xcode preferences
 mkdir -p $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes
-cp -R $DOTFILES_ROOT/macos/xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
+cp -R $DOTFILES_ROOT/Mac/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
 
 
 # ==============================================================================
 # Copy scripts into the PATH folder
-message "Copying..." "$DOTFILES_ROOT/macos/scripts/* /opt/bin/"
-cp -R $DOTFILES_ROOT/macos/scripts/* /opt/bin/
+message "Copying..." "$DOTFILES_ROOT/Mac/Scripts/* /opt/bin/"
+cp -R $DOTFILES_ROOT/Mac/Scripts/* /opt/bin/
 
 
 # ==============================================================================
@@ -71,7 +71,7 @@ if [[ -f "$HOME/local.sh" ]]; then
   message "~/local.sh exists" "Delete this file then re-run to install clean"
 else
   message "Creating ~/local.sh" "Modify this file to add GitHub and SSH tokens"
-  cp $DOTFILES_ROOT/macos/zprofile.sh $HOME/.zprofile
+  cp $DOTFILES_ROOT/Mac/zprofile.sh $HOME/.zprofile
 fi
 
 
@@ -102,9 +102,29 @@ bullet "git config --global user.name \"Your Name\""
 bullet "git config --global user.email \"youremail@yourdomain.com\""
 bullet "install-brew.sh  <-- this will install Homebrew when you're ready"
 bullet "install-ruby.sh  <-- this will instruct you to install latest Ruby"
-
 echo
 
 exit 0
 
 
+
+
+
+
+
+
+
+# ==============================================================================
+# Other ideas for defaults settings
+
+# Removes the delay in hide/show the Dock setting
+# defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
+
+# Display full POSIX path as Finder window title
+# defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# Finder: show hidden files by default
+# defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Automatically hide and show the Dock
+# defaults write com.apple.dock autohide -bool true

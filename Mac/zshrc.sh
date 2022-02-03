@@ -1,8 +1,5 @@
-# GLOBAL ENVIRONMENT VARIABLES
-# -------------------------------------
+# .zshrc - Loaded in interactive shell sessions
 
-
-#### Will need to have copied over the ~/.aliases and other files already.
 source $HOME/.aliases
 source $HOME/.functions
 
@@ -63,28 +60,19 @@ NEWLINE=$'\n'
 PS1="${NEWLINE}%F{blue}[%F{white}%~%{%F{white}%}%F{blue}]%F{cyan}▶︎ %{%f%}%"
 
 
+# Source the customization I made for this specific computer
+# These changes
+source $HOME/local.sh
+
+
 # end of file
 
 
 # ==============================================================================
 # Other ideas for reference
 
-# Removes the delay in hide/show the Dock setting
-# defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
-
-# Display full POSIX path as Finder window title
-# defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-
-# Finder: show hidden files by default
-# defaults write com.apple.finder AppleShowAllFiles -bool true
-
-# Automatically hide and show the Dock
-# defaults write com.apple.dock autohide -bool true
-
 # Tell grep to highlight matches (throwing errors)
 # export GREP_OPTIONS='—color=auto'
-
-# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$DOTFILES_DIR/bin"
 
 # ==============================================================================
 # Previous iterations of the prompt line

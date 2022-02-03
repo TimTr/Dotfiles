@@ -1,4 +1,4 @@
-# Loaded in every session, even if not an interactive Terminal
+# .zshenv - Loaded in every session, even if not interactive
 #
 # No need to import command prompt, graphics, or other things
 # that only apply to interactive shells. Those won't have any
@@ -21,9 +21,4 @@ export PATH="$PATH:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin"
 # Python3 - Augument the default PATH for Python3 use
 export PY_PYTHON=3
 
-
-# NOTE: don't put stuff in here that only affects interactive shell sessions
-
-
-
-
+# end of file

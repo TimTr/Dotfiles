@@ -7,6 +7,10 @@
 # settings due to security concerns.
 #
 
+source $HOME/.aliases
+source $HOME/.functions
+
+
 message "Customizing environemnt" "Adding tokens, keys, and passwords..."
 
 status "Enabling toolchains (installed in /Some/Folder/On/Disk)"
