@@ -162,7 +162,7 @@
 			attributes = {
 				LastUpgradeCheck = 1230;
 			};
-			buildConfigurationList = BA462B8E256EF60500BEC226 /* Build configuration list for PBXProject "Dotfiles" */;
+			buildConfigurationList = BA462B8E256EF60500BEC226 /* Build configuration list for PBXProject "dotfiles" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -248,7 +248,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BA462B8E256EF60500BEC226 /* Build configuration list for PBXProject "Dotfiles" */ = {
+		BA462B8E256EF60500BEC226 /* Build configuration list for PBXProject "dotfiles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA462B8F256EF60500BEC226 /* Debug */,
