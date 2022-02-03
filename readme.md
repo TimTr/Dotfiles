@@ -1,6 +1,8 @@
 # dotfiles for Tim Triemstra
 
-Link to documentation: [timtr.github.io/dotfiles/](https://timtr.github.io/dotfiles/)
+Link to documentation: [timtr.github.io/Dotfiles/](https://timtr.github.io/Dotfiles/)
+
+Note: the URL requires a capital "Dotfiles" to resolve
 
 ---
 
