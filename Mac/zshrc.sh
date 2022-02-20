@@ -12,7 +12,7 @@ message ".zshrc" "Launched $SHELL' at ${TIMENOW}."
 # Add the Homebrew paths and custom path first
 
 # TODO: remove PATH setups from this file, rely on .zshenv (but test first!)
-# export PATH="/opt/homebrew/bin:/usr/local/bin:/opt/bin"
+# export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/bin"
 # Add default system PATHs to the chain (these are REALLY important)
 # export PATH="$PATH:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin"
 # Add the Xcode tooling folder to PATH

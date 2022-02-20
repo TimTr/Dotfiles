@@ -6,16 +6,15 @@ Note: the URL requires a capital "Dotfiles" to resolve
 
 ---
 
-To install, run the following command:
+To install, from your home directory run the following command:
 
 ```
-    cd ~
-    git clone https://github.com/timtr/dotfiles.git
-    cd dotfiles
+    git clone https://github.com/timtr/Dotfiles.git
+    cd Dotfiles
     ./setup.sh
 ```
 
-The `dotfiles` folder is expected to be at the user's home folder root, but is also largely functional if `setup.sh` is run from any user folder. Once installed, quit Terminal and relaunch. You can now install Homebrew by typing:
+The `Dotfiles` folder is expected to be at the user's home folder root, but is also largely functional if `setup.sh` is run from any user folder. Once installed, quit Terminal and relaunch. You can now install Homebrew by typing:
 
 ```
     git config --global user.name "Your Name"
@@ -67,7 +66,7 @@ This is my personal collection of setup scripts for macOS (and soon Linux), incl
 
 The scripts are designed to work in `zsh`, although they rarely use advanced features and are likely portable to other shells. SImply run `setup.sh` to install, or re-install, at any time.
 
-The setup will create a custom folder `/opt/bin/` that is added to the PATH variable and useful for putting random stuff in the path. It also adds `/usr/local/bin` and `/opt/homebrew/bin` to the PATH to support Homebrew and some other tools. 
+The setup will create a custom folder `$HOME/bin/` that is added to the PATH variable and useful for putting random stuff in the path. For Homebrew and related tools support, it also adds `/usr/local/bin` (for Intel) and `/opt/homebrew/bin` (for Apple) to the PATH. 
 
 There are a few aliases added that make it easy to install Homebrew and other tools, rather than trying to do the installs directly from `setup.sh`. Mostly this is because the install is a multi-step process, and it is just a lot easier to run the full setup, then manually type `install-brew` when everything else looks to be working.
 

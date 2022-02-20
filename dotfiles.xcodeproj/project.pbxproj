@@ -80,13 +80,13 @@
 		BA462B8A256EF60500BEC226 = {
 			isa = PBXGroup;
 			children = (
+				BABA38F427AC708E00EBDA86 /* readme.md */,
 				BA9B1A2D2607FD090068E61E /* setup.sh */,
 				BAD43EC2269255280098B6ED /* Mac */,
 				BAD43EC1269254E00098B6ED /* Linux */,
 				BA59AAB227457DDE00FEFD78 /* Docs */,
 				BA08E3B82606FAEE009D83A6 /* Test */,
 				BA462B95256EF61800BEC226 /* license.md */,
-				BABA38F427AC708E00EBDA86 /* readme.md */,
 			);
 			sourceTree = "<group>";
 		};

@@ -2,39 +2,52 @@
 #
 # setup-macos.sh - the macOS version
 source "$DOTFILES_ROOT/Mac/functions.sh"
+
 echo
 status "setup-macos.sh -- setting up for macOS"
 echo
-message "Installed Xcode?" "Before proceeding, Xcode or CL tools must be installed"
+message "DOTFILES_ROOT =" "${DOTFILES_ROOT}"
+echo
+message "Installed Xcode?" "Xcode or command line tools must be installed first"
+# NOTE: Add some sort of check here for Xcode or CL tools (Git?)
 read -s -k $'?Press any key to continue. Hit Control-C to abort now.\n'
-
+echo
 
 ## Report that we are in the right source folder for the dotfiles
-message "$DOTFILES_ROOT" "Global variable points to source dotfiles folder"
-
 
 # ==============================================================================
-message "Requires SUDO" "Setting source file permissions and ownership"
-sudo chown -R $USER ${DOTFILES_ROOT}/* 2> /dev/null
-sudo chmod -R 777 ${DOTFILES_ROOT}/* 2> /dev/null
+status "SUDO Password Required to set permissions and ownership"
+sudo chown -R $USER ${DOTFILES_ROOT}/*  2> /dev/null
+sudo chmod -R 777 ${DOTFILES_ROOT}/*    2> /dev/null
 
 # Un-set the quarantine bit for all my own script files
 xattr -d com.apple.quarantine ${DOTFILES_ROOT}/* 2> /dev/null
 
 
 # ==============================================================================
-message "mkdir -p" "Adding: /opt/bin, /opt/homebrew/bin, /usr/local/bin"
-sudo mkdir -p /opt/bin
+message "mkdir -p" "/opt/homebrew/bin, /usr/local/bin, and $HOME/bin"
+# Note that /opt/homebrew is used on Apple silicon, /usr/local is legacy Intel
+# Note the /opt/bin is used in Linux setups
+
+# Create these directories "just in case"
+sudo mkdir -p $HOME/Bin
 sudo mkdir -p /opt/homebrew/bin
 sudo mkdir -p /usr/local/bin
 
-sudo chmod 777 /opt/bin
+# Put some files in these directories just to validate
+cp ${DOTFILES_ROOT}/readme.md $HOME/Bin
+cp ${DOTFILES_ROOT}/readme.md /opt/homebrew/bin
+cp ${DOTFILES_ROOT}/readme.md /usr/local/bin
+
+# Reset ownership, note the directory name does not end in / or /*
+sudo chown -R "$USER":admin $HOME/Bin
+sudo chown -R "$USER":admin /opt/homebrew
+sudo chown -R "$USER":admin /usr/local/bin
+
+# Set the permissions for the folders (read/write for all)
+sudo chmod 766 $HOME/Bin
 sudo chmod 777 /opt/homebrew/bin
 sudo chmod 777 /usr/local/bin
-
-sudo chown -R "$USER":admin /opt/bin/*
-sudo chown -R "$USER":admin /opt/homebrew/*
-sudo chown -R "$USER":admin /usr/local/*
 
 
 # ==============================================================================
@@ -45,14 +58,12 @@ cp $DOTFILES_ROOT/Mac/zprofile.sh $HOME/.zprofile
 cp $DOTFILES_ROOT/Mac/aliases.sh $HOME/.aliases
 cp $DOTFILES_ROOT/Mac/functions.sh $HOME/.functions
 
-
 # Copy app preferences
 cp $DOTFILES_ROOT/Mac/Preferences/dot.gitconfig $HOME/.gitconfig
 cp $DOTFILES_ROOT/Mac/Preferences/dot.gitignore $HOME/.gitignore
 cp $DOTFILES_ROOT/Mac/Preferences/dot.vimrc $HOME/.vimrc
 cp $DOTFILES_ROOT/Mac/Preferences/dot.hyper.js $HOME/.hyper.js
 cp $DOTFILES_ROOT/Mac/Preferences/com.apple.Terminal.plist $HOME/Library/Preferences/
-
 
 # Copy Xcode preferences
 mkdir -p $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes
@@ -61,8 +72,8 @@ cp -R $DOTFILES_ROOT/Mac/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndC
 
 # ==============================================================================
 # Copy scripts into the PATH folder
-message "Copying..." "$DOTFILES_ROOT/Mac/Scripts/* /opt/bin/"
-cp -R $DOTFILES_ROOT/Mac/Scripts/* /opt/bin/
+message "Copying..." "$DOTFILES_ROOT/Mac/Scripts/* $HOME/Bin"
+cp -R $DOTFILES_ROOT/Mac/Scripts/* $HOME/Bin/
 
 
 # ==============================================================================
