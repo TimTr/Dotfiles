@@ -43,7 +43,13 @@ alias lsl='ls -loFGT'
 alias lsla='ls -loAFGT'
 
 # ... Make 'ls' also sort
-alias ls -FG | sort -k1,1 -k9,9 -r
+# alias ls -FG | sort -k1,1 -k9,9 -r
+
+# Git can sometimes create locked files in the .git folder, which then
+# blocks things like compress tasks, or copying files. Run "unlock" to
+# unlock all files in the current folder (and recursively)
+alias showlocks=`find . -flags +uchg`
+alias unlock=`find . -flags +uchg -exec chflags nouchg {} \;`
 
 # ... echo $SHELL tells you the default shell, this command
 #     instead tells you which shell you are presently inside

@@ -7,16 +7,23 @@ echo
 status "setup-macos.sh -- setting up for macOS"
 echo
 message "DOTFILES_ROOT =" "${DOTFILES_ROOT}"
+
+# If Xcode isn't installed, the abort the install
+if xcode-select -p &> /dev/null
+then
+  message "Xcode location" $(xcode-select -p)
+else
+  # URL docs: https://developer.apple.com/library/archive/qa/qa1633/_index.html
+  error "Xcode missing" "Install Xcode first: https://appstore.com/mac/apple/xcode"
+  exit 0
+fi
+
 echo
-message "Installed Xcode?" "Xcode or command line tools must be installed first"
-# NOTE: Add some sort of check here for Xcode or CL tools (Git?)
+# ==============================================================================
+status "SUDO Password Required to set permissions and ownership"
 read -s -k $'?Press any key to continue. Hit Control-C to abort now.\n'
 echo
 
-## Report that we are in the right source folder for the dotfiles
-
-# ==============================================================================
-status "SUDO Password Required to set permissions and ownership"
 sudo chown -R $USER ${DOTFILES_ROOT}/*  2> /dev/null
 sudo chmod -R 777 ${DOTFILES_ROOT}/*    2> /dev/null
 
@@ -72,23 +79,23 @@ cp -R $DOTFILES_ROOT/Mac/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndC
 
 # ==============================================================================
 # Copy scripts into the PATH folder
-message "Copying..." "$DOTFILES_ROOT/Mac/Scripts/* $HOME/Bin"
+message "Copying scripts" "Scripts in PATH: $HOME/Bin"
 cp -R $DOTFILES_ROOT/Mac/Scripts/* $HOME/Bin/
 
 
 # ==============================================================================
-# Check if the "~/local.sh" file exists, and if not, copy over the stub
+# TODO: Check if the "~/local.sh" file exists, and if not, copy over the stub
 if [[ -f "$HOME/local.sh" ]]; then
   message "~/local.sh exists" "Delete this file then re-run to install clean"
 else
   message "Creating ~/local.sh" "Modify this file to add GitHub and SSH tokens"
-  cp $DOTFILES_ROOT/Mac/zprofile.sh $HOME/.zprofile
+  cp $DOTFILES_ROOT/Mac/local.sh $HOME/local.sh
 fi
 
 
 # ==============================================================================
 # Example Xcode defaults:  https://github.com/ctreffs/xcode-defaults
-message "Settings defaults" "Mostly Xcode related"
+message "Settings defaults" "Xcode, Terminal, and other app preferences"
 
 # Tells Xcode to never re-open last open project, regardless of OS setting
 defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
