@@ -25,13 +25,11 @@
 		BA25DBCC26DC30DA00AC5D59 /* demo-safari-cycle.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "demo-safari-cycle.html"; sourceTree = "<group>"; };
 		BA25DBCD26DC466D00AC5D59 /* demo-safari-backup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "demo-safari-backup.html"; sourceTree = "<group>"; };
 		BA25DBCE26DC467700AC5D59 /* demo-safari-new.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "demo-safari-new.html"; sourceTree = "<group>"; };
-		BA3140E6276291FC0087D0A1 /* docs.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = docs.css; sourceTree = "<group>"; };
 		BA3989C4259F954600978484 /* dot-reset.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-reset.sh"; sourceTree = "<group>"; };
 		BA462B91256EF61800BEC226 /* dot-test.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-test.sh"; sourceTree = "<group>"; };
 		BA462B92256EF61800BEC226 /* dot-update.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-update.sh"; sourceTree = "<group>"; };
 		BA462B93256EF61800BEC226 /* dot-install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-install.sh"; sourceTree = "<group>"; };
 		BA462B95256EF61800BEC226 /* license.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = license.md; sourceTree = "<group>"; };
-		BA59AAB327457DF000FEFD78 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		BA9AE2CB2693EEE700D62D30 /* aliases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = aliases.sh; sourceTree = "<group>"; };
 		BA9B1A2D2607FD090068E61E /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; };
 		BA9B1A2E2607FD940068E61E /* test3.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test3.sh; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				BA9B1A2D2607FD090068E61E /* setup.sh */,
 				BAD43EC2269255280098B6ED /* Mac */,
 				BAD43EC1269254E00098B6ED /* Linux */,
-				BA59AAB227457DDE00FEFD78 /* Docs */,
 				BA08E3B82606FAEE009D83A6 /* Test */,
 				BA462B95256EF61800BEC226 /* license.md */,
 			);
@@ -100,15 +97,6 @@
 				BAF5518126D4330F008FE898 /* dot.vimrc */,
 			);
 			path = Preferences;
-			sourceTree = "<group>";
-		};
-		BA59AAB227457DDE00FEFD78 /* Docs */ = {
-			isa = PBXGroup;
-			children = (
-				BA59AAB327457DF000FEFD78 /* index.html */,
-				BA3140E6276291FC0087D0A1 /* docs.css */,
-			);
-			path = Docs;
 			sourceTree = "<group>";
 		};
 		BAD43EC1269254E00098B6ED /* Linux */ = {
