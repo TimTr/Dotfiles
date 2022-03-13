@@ -30,7 +30,7 @@ sudo chmod -R 777 ${DOTFILES_ROOT}/*    2> /dev/null
 # Un-set the quarantine bit for all my own script files
 xattr -d com.apple.quarantine ${DOTFILES_ROOT}/* 2> /dev/null
 
-
+echo
 # ==============================================================================
 message "mkdir -p" "/opt/homebrew/bin, /usr/local/bin, and $HOME/bin"
 # Note that /opt/homebrew is used on Apple silicon, /usr/local is legacy Intel

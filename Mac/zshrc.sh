@@ -32,23 +32,19 @@ fi
 # eval "$(rbenv init - zsh)"
 which -s rbenv &> /dev/null
 if [[ $? != 0 ]] ; then
-  error " - Missing rbenv" "Run install-ruby.sh"
+  error "Missing rbenv" "Run install-ruby.sh"
 else
   eval "$(rbenv init -)"
   export PATH="${HOME}/.rbenv/bin:$PATH"
 # export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1) --with-gdbm-dir=/opt/local"
 fi
 
-
 # ==============================================================================
 # Make VSCode the default editor.
 export EDITOR='code';
 
-
 # ==============================================================================
-# Prompt and color settings
-
-# Syntax coloring for ZSH is a bit different than bash
+# Prompt and color settings (zsh-specific, different from bash)
 autoload colors; colors;
 export CLICOLOR=1
 export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
