@@ -11,7 +11,7 @@ message "DOTFILES_ROOT =" "${DOTFILES_ROOT}"
 # If Xcode isn't installed, the abort the install
 if xcode-select -p &> /dev/null
 then
-  message "Xcode location" $(xcode-select -p)
+  message "Xcode selected" $(xcode-select -p)
 else
   # URL docs: https://developer.apple.com/library/archive/qa/qa1633/_index.html
   error "Xcode missing" "Install Xcode first: https://appstore.com/mac/apple/xcode"
@@ -84,7 +84,22 @@ cp -R $DOTFILES_ROOT/Mac/Scripts/* $HOME/Bin/
 
 
 # ==============================================================================
-# TODO: Check if the "~/local.sh" file exists, and if not, copy over the stub
+# Check if the "~/lDropbox" directory (or symlink) exists, and verify that
+# there is indeed a $HOME/Library/CloudStorage/Dropbox folder to link to
+if [[ -d "$HOME/Dropbox/" ]]; then
+  message "~/Dropbox exists" "If symlink is incorrect, manually delete and rerun"
+else
+  if [[ -d "$HOME/Library/CloudStorage/Dropbox/" ]]; then
+    message "Creating ~/Dropbox" "Symlink to ~/Library/CloudStorage/Dropbox/"
+    ln -s $HOME/Library/CloudStorage/Dropbox $HOME/Dropbox
+  else
+    error "Dropbox not installed" "No folder at ~/Library/CloudStorage/Dropbox/"
+  fi
+fi
+
+
+# ==============================================================================
+# Check if the "~/local.sh" file exists, and if not, copy over the stub
 if [[ -f "$HOME/local.sh" ]]; then
   message "~/local.sh exists" "Delete this file then re-run to install clean"
 else
@@ -119,7 +134,7 @@ message "Restart terminal" "After restart, you can run the following commands:"
 bullet "git config --global user.name \"Your Name\""
 bullet "git config --global user.email \"youremail@yourdomain.com\""
 bullet "install-brew.sh  <-- this will install Homebrew when you're ready"
-bullet "install-ruby.sh  <-- this will instruct you to install latest Ruby"
+bullet "install-ruby.sh  <-- this will install a recent Ruby via rbenv"
 echo
 
 exit 0

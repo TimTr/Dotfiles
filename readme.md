@@ -1,8 +1,8 @@
 # dotfiles for Tim Triemstra
 
 Link to documentation: [timtr.github.io/Dotfiles/](https://timtr.github.io/Dotfiles/)
-
-Note: the URL requires a capital "Dotfiles" to resolve
+Note: the URL requires a capital "Dotfiles" to resolve.
+Note: UGH, also note I was getting tons of GitHub errors so docs temporarily removed.
 
 ---
 
