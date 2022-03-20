@@ -42,7 +42,7 @@ alias ls='ls -FG'
 alias lsl='ls -loFGT'
 alias lsla='ls -loAFGT'
 
-# ... Make 'ls' also sort
+# ... Make 'ls' also sort (loses all coloring, sigh)
 # alias ls -FG | sort -k1,1 -k9,9 -r
 
 # Git can sometimes create locked files in the .git folder, which then

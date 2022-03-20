@@ -17,12 +17,11 @@ export SWIFT_TOOLCHAIN=1
 bullet "Select toolchain ID: XXXXXXX"
 # Do something here
 
-status "Enable the Snippets feature in the custom toolchain"
-bullet "To try snippets, type: \"swift package learn\" within a package"
+bullet "Enable Snippets: type \"swift package learn\" within a package"
 export SWIFTPM_ENABLE_SNIPPETS=1
 
-status "Add GitHub personal access token for use with Homebrew and others"
-bullet "Obviously, this must be edited ONLY in the local machine,"
-bullet "Do NOT put in a GitHub repo, e.g. the dotfiles repo"
+# Obviously, this must be edited ONLY in the local machine
+# Do NOT put in a GitHub repo, e.g. the dotfiles repo
+bullet "Add GitHub personal access token for use with Homebrew and others"
 export HOMEBREW_GITHUB_API_TOKEN=EMPTY
 

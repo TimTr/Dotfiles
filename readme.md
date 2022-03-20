@@ -28,6 +28,20 @@ At any time, you can see a list of added commands by typing `commands`
 
 You may want to quit and restart Terminal after this install as well.
 
+
+## Features
+
+Files ending in .sh are often renamed to be dotfiles (prefix by a `"."`) and the `.sh` extension is removed. This makes these files easier to edit during creation of this project, and also makes it clear which are "source" versions of these files, vs the installed "production" versions of the files.
+
+**ZSH settings** - sets up the prompt, `PATH`, and other basic settings for a basic ZSH shell setup. Most of these settings are included in the `zshrc.sh` file to be installed into `~/.zshrc` by the setup script.
+
+**local.sh** - Creates a file called `~/local.sh` (if doesn't exist) that you can customize with settings that do not belong checked into GitHub, for instance set certain keys, or environment variables.
+
+### Other smaller features
+
+- Creates a symlink from ~/Dropbox to the new ~/Library/CloudStorage directory
+
+
 ### Order of loading
 
 For reference, `zsh` config files are loaded in the following order:
@@ -38,9 +52,9 @@ For reference, `zsh` config files are loaded in the following order:
     .zshrc     -- if interactive shell
 ```
 
+
 ### Known Issues
 
-- TODO: `customize.sh` is not setup to be installed yet. Check the setup scripts
 - TODO: `install-brew.sh` is not configured at all, just is a copy of ruby installer 
 - TODO: Source `.functions.sh` and use message / error in .zshrc and .zprofile
 
