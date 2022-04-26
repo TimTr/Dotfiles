@@ -84,7 +84,7 @@ cp -R $DOTFILES_ROOT/Mac/Scripts/* $HOME/Bin/
 
 
 # ==============================================================================
-# Check if the "~/lDropbox" directory (or symlink) exists, and verify that
+# Check if the "~/Dropbox" directory (or symlink) exists, and verify that
 # there is indeed a $HOME/Library/CloudStorage/Dropbox folder to link to
 if [[ -d "$HOME/Dropbox/" ]]; then
   message "~/Dropbox exists" "If symlink is incorrect, manually delete and rerun"
@@ -95,6 +95,20 @@ else
   else
     error "Dropbox not installed" "No folder at ~/Library/CloudStorage/Dropbox/"
   fi
+fi
+
+
+# ==============================================================================
+# Check if the "~/Sync" directory (or symlink) exists, and verify that
+# there is indeed a ../com\~apple\~CloudDocs/Sync/ folder to link to
+if [[ -d "$HOME/Sync/" ]]; then
+  message "~/Sync exists" "If symlink is incorrect, manually delete and rerun"
+else
+  # Oddly Terminal is never reporting if the folder exists so can't do
+  # a similar check that the iCloud folder is present before the symlink
+  # command. Need to rely on an error if ./Sync doesn't exist
+  message "Creating ~/Sync" "Symlink to ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync"
+  ln -s $HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync $HOME/Sync
 fi
 
 

@@ -7,6 +7,10 @@
 # settings due to security concerns.
 #
 
+if [[ -v LOADED_LOCAL ]]; then return; fi
+LOADED_LOCAL=true
+
+
 source $HOME/.aliases
 source $HOME/.functions
 

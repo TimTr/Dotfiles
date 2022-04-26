@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+if [[ -v LOADED_FUNCTIONS ]]; then return; fi
+LOADED_FUNCTIONS=true
+
 
 # Functions to make output attractive when running the script
 #
