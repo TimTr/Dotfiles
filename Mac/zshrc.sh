@@ -12,7 +12,7 @@ message ".zshrc" "Launched $SHELL' at ${TIMENOW}."
 # Warn about installing Homebrew and Ruby as needed
 which -s brew &> /dev/null
 if [[ $? != 0 ]] ; then
-  error "Missing Homebrew"  "Run install-brew.sh"
+  error "Missing Homebrew" "Run install-brew.sh"
 fi
 
 # This `rbenv` setting needs to be hard-coded into .zshrc by default

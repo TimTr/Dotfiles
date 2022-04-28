@@ -28,8 +28,6 @@
 	<string>1 1 1 1</string>
 	<key>DVTConsoleTextSelectionColor</key>
 	<string>0.397 0.397 0.302 1</string>
-	<key>DVTDebuggerInstructionPointerColor</key>
-	<string>0.12 0.31 0.34 1</string>
 	<key>DVTFontAndColorVersion</key>
 	<integer>1</integer>
 	<key>DVTFontSizeModifier</key>
@@ -139,7 +137,7 @@
 		<key>xcode.syntax.identifier.variable.system</key>
 		<string>0.427451 0.67451 1 1</string>
 		<key>xcode.syntax.keyword</key>
-		<string>0.584314 0.956863 0.560784 1</string>
+		<string>0.201818 0.352864 0.939535 1</string>
 		<key>xcode.syntax.mark</key>
 		<string>0.572549 0.631373 0.694118 1</string>
 		<key>xcode.syntax.markup.code</key>
@@ -158,59 +156,59 @@
 	<key>DVTSourceTextSyntaxFonts</key>
 	<dict>
 		<key>xcode.syntax.attribute</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.character</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.comment</key>
-		<string>SFMono-LightItalic - 14.0</string>
+		<string>SFMono-RegularItalic - 16.0</string>
 		<key>xcode.syntax.comment.doc</key>
-		<string>SFMono-Semibold - 14.0</string>
+		<string>SFMono-SemiboldItalic - 16.0</string>
 		<key>xcode.syntax.comment.doc.keyword</key>
-		<string>SFMono-Semibold - 14.0</string>
+		<string>SFMono-Bold - 16.0</string>
 		<key>xcode.syntax.declaration.other</key>
-		<string>SFMono-Medium - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.declaration.type</key>
-		<string>SFMono-Medium - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.identifier.class</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.identifier.class.system</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.identifier.constant</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-BoldItalic - 16.0</string>
 		<key>xcode.syntax.identifier.constant.system</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.identifier.function</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.identifier.function.system</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.identifier.macro</key>
-		<string>SFMono-SemiboldItalic - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.identifier.macro.system</key>
-		<string>SFMono-Semibold - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.identifier.type</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.identifier.type.system</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.identifier.variable</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.identifier.variable.system</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.keyword</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Semibold - 16.0</string>
 		<key>xcode.syntax.mark</key>
-		<string>SFMono-Bold - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.markup.code</key>
-		<string>SFMono-Medium - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.number</key>
-		<string>SFMono-Semibold - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.plain</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.preprocessor</key>
-		<string>SFMono-Regular - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.string</key>
-		<string>SFMono-RegularItalic - 14.0</string>
+		<string>SFMono-Regular - 16.0</string>
 		<key>xcode.syntax.url</key>
-		<string>SFMono-RegularItalic - 14.0</string>
+		<string>SFMono-SemiboldItalic - 16.0</string>
 	</dict>
 </dict>
 </plist>
