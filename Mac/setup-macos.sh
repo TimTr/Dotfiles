@@ -2,11 +2,9 @@
 #
 # setup-macos.sh - the macOS version
 source "$DOTFILES_ROOT/Mac/functions.sh"
+echo
+status "setup-macos.sh -- setting up for macOS via ${DOTFILES_ROOT}"
 
-echo
-status "setup-macos.sh -- setting up for macOS"
-echo
-message "DOTFILES_ROOT =" "${DOTFILES_ROOT}"
 
 # If Xcode isn't installed, the abort the install
 if xcode-select -p &> /dev/null
@@ -37,22 +35,22 @@ message "mkdir -p" "/opt/homebrew/bin, /usr/local/bin, and $HOME/bin"
 # Note the /opt/bin is used in Linux setups
 
 # Create these directories "just in case"
-sudo mkdir -p $HOME/Dev
+sudo mkdir -p $HOME/Developer/Bin
 sudo mkdir -p /opt/homebrew/bin
 sudo mkdir -p /usr/local/bin
 
 # Reset ownership, note the directory name does not end in / or /*
-sudo chown -R "$USER":admin $HOME/Dev
+sudo chown -R "$USER":admin $HOME/Developer/Bin
 sudo chown -R "$USER":admin /opt/homebrew
 sudo chown -R "$USER":admin /usr/local/bin
 
 # Set the permissions for the folders (read/write for all)
-sudo chmod 766 $HOME/Dev
+sudo chmod 766 $HOME/Developer/Bin
 sudo chmod 777 /opt/homebrew/bin
 sudo chmod 777 /usr/local/bin
 
 # Put some files in these directories just to validate
-cp ${DOTFILES_ROOT}/readme.md $HOME/Dev
+cp ${DOTFILES_ROOT}/readme.md $HOME/Developer/Bin
 cp ${DOTFILES_ROOT}/readme.md /opt/homebrew/bin
 cp ${DOTFILES_ROOT}/readme.md /usr/local/bin
 
@@ -78,8 +76,8 @@ cp -R $DOTFILES_ROOT/Mac/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndC
 
 # ==============================================================================
 # Copy scripts into the PATH folder
-message "Copying scripts" "Scripts in PATH: $HOME/Dev"
-cp -R $DOTFILES_ROOT/Mac/Scripts/* $HOME/Dev/
+message "Copying scripts" "Scripts in PATH: $HOME/Developer/Bin"
+cp -R $DOTFILES_ROOT/Mac/Scripts/* $HOME/Developer/Bin/
 
 
 # ==============================================================================

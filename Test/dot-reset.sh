@@ -23,9 +23,6 @@ export DOTFILES_ROOT=$(pwd -P)
 
 ## Report that we are in the right source folder for the dotfiles
 message "Installing dotfiles..." "May require SUDO permission..."
-status "$DOTFILES_ROOT" "Global variable points to source dotfiles folder"
-status "$DEVELOPER_BIN" "Global variable for new files in the PATH"
-
 
 # ==============================================================================
 # chown and chmod all the files before we copy them

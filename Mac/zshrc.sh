@@ -6,17 +6,7 @@ source $HOME/.functions
 TIMENOW=$(date +%d-%m-%Y" "%H:%M:%S)
 message ".zshrc" "Launched $SHELL' at ${TIMENOW}."
 
-
-# ==============================================================================
-# Hard-coding the ~/Developer/Dev folder to lead the PATH
-# Add the Homebrew paths and custom path first
-
-# TODO: remove PATH setups from this file, rely on .zshenv (but test first!)
-# export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/bin"
-# Add default system PATHs to the chain (these are REALLY important)
-# export PATH="$PATH:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin"
-# Add the Xcode tooling folder to PATH
-# export PATH="$PATH:/Library/Apple/usr/bin"
+# No PATH setups within this file, rely on .zshenv (but test first!)
 
 
 # Warn about installing Homebrew and Ruby as needed

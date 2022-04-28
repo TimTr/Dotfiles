@@ -14,7 +14,7 @@ fi
 
 # Pause and wait for keypress to continue
 message "Starting Install..." "Step 1 of installing dotfiles on new machine"
-bullet "This creates the folder ~/Developer/Dev and puts it in the PATH"
+bullet "This creates the folder ~/Developer/Bin and puts it in the PATH"
 bullet "After this completes, you must quit and restart Terminal"
 bullet "Then, in the new Terminal window, run \"dot\" to finish the install"
 bullet "You can then re-run \"dot\" at any time to reset the config"
@@ -24,17 +24,6 @@ read -s -k $'?Press any key to continue. Hit Control-C to abort now.\n'
 
 # export the home of the dotfiles folder, and the target Developer folders
 export DOTFILES_ROOT=$(pwd -P)
-
-
-# Create the ~/Developer folder, just in case
-mkdir -p ${DEVELOPER_HOME} 2> /dev/null
-mkdir -p ${DEVELOPER_BIN} 2> /dev/null
-
-## Report that we are in the right source folder for the dotfiles
-message "Installing dotfiles..." "May require SUDO permission..."
-status "$DOTFILES_ROOT" "Global variable points to source dotfiles folder"
-status "$DEVELOPER_BIN" "Global variable for new files in the PATH"
-
 
 # ==============================================================================
 # chown and chmod all the files before we copy them
