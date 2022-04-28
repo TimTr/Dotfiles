@@ -53,8 +53,14 @@ export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
 # ==============================================================================
 # Custom prompt with newline before each new command entry
 NEWLINE=$'\n'
-PS1="${NEWLINE}%F{blue}[%F{white}%~%{%F{white}%}%F{blue}]%F{cyan}▶︎ %{%f%}%"
+PS1="${NEWLINE}%F{white}[%F{27}%~%{%F{blue}%}%F{white}]%F{cyan}▶︎ %{%f%}%"
 
+# Info on ZSH colors
+# https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
+# 256 color cheat sheet
+# https://www.ditig.com/256-colors-cheat-sheet
+# Previous prompt
+# PS1="${NEWLINE}%F{blue}[%F{white}%~%{%F{white}%}%F{blue}]%F{cyan}▶︎ %{%f%}%"
 
 # Source the customization I made for this specific computer
 # These changes
