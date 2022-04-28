@@ -30,6 +30,7 @@
 		BA462B92256EF61800BEC226 /* dot-update.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-update.sh"; sourceTree = "<group>"; };
 		BA462B93256EF61800BEC226 /* dot-install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-install.sh"; sourceTree = "<group>"; };
 		BA462B95256EF61800BEC226 /* license.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = license.md; sourceTree = "<group>"; };
+		BA8F26C9281A4194006B6CC1 /* help.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = help.sh; sourceTree = "<group>"; };
 		BA9AE2CB2693EEE700D62D30 /* aliases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = aliases.sh; sourceTree = "<group>"; };
 		BA9B1A2D2607FD090068E61E /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; };
 		BA9B1A2E2607FD940068E61E /* test3.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test3.sh; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				BAE773EC259BC652000933FE /* install-ruby.sh */,
+				BA8F26C9281A4194006B6CC1 /* help.sh */,
 				BA0FAE2D2759A16A00030DB7 /* install-brew.sh */,
 				BAF35A0B259FF70600F7099D /* update-ruby.sh */,
 				BA25DBCC26DC30DA00AC5D59 /* demo-safari-cycle.html */,

@@ -37,25 +37,24 @@ message "mkdir -p" "/opt/homebrew/bin, /usr/local/bin, and $HOME/bin"
 # Note the /opt/bin is used in Linux setups
 
 # Create these directories "just in case"
-sudo mkdir -p $HOME/Bin
+sudo mkdir -p $HOME/Dev
 sudo mkdir -p /opt/homebrew/bin
 sudo mkdir -p /usr/local/bin
 
-# Put some files in these directories just to validate
-cp ${DOTFILES_ROOT}/readme.md $HOME/Bin
-cp ${DOTFILES_ROOT}/readme.md /opt/homebrew/bin
-cp ${DOTFILES_ROOT}/readme.md /usr/local/bin
-
 # Reset ownership, note the directory name does not end in / or /*
-sudo chown -R "$USER":admin $HOME/Bin
+sudo chown -R "$USER":admin $HOME/Dev
 sudo chown -R "$USER":admin /opt/homebrew
 sudo chown -R "$USER":admin /usr/local/bin
 
 # Set the permissions for the folders (read/write for all)
-sudo chmod 766 $HOME/Bin
+sudo chmod 766 $HOME/Dev
 sudo chmod 777 /opt/homebrew/bin
 sudo chmod 777 /usr/local/bin
 
+# Put some files in these directories just to validate
+cp ${DOTFILES_ROOT}/readme.md $HOME/Dev
+cp ${DOTFILES_ROOT}/readme.md /opt/homebrew/bin
+cp ${DOTFILES_ROOT}/readme.md /usr/local/bin
 
 # ==============================================================================
 message "Copying dotfiles" "Overwriting existing versions of these files"
@@ -79,8 +78,8 @@ cp -R $DOTFILES_ROOT/Mac/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndC
 
 # ==============================================================================
 # Copy scripts into the PATH folder
-message "Copying scripts" "Scripts in PATH: $HOME/Bin"
-cp -R $DOTFILES_ROOT/Mac/Scripts/* $HOME/Bin/
+message "Copying scripts" "Scripts in PATH: $HOME/Dev"
+cp -R $DOTFILES_ROOT/Mac/Scripts/* $HOME/Dev/
 
 
 # ==============================================================================
@@ -103,12 +102,14 @@ fi
 # there is indeed a ../com\~apple\~CloudDocs/Sync/ folder to link to
 if [[ -d "$HOME/Sync/" ]]; then
   message "~/Sync exists" "If symlink is incorrect, manually delete and rerun"
+
 else
   # Oddly Terminal is never reporting if the folder exists so can't do
   # a similar check that the iCloud folder is present before the symlink
   # command. Need to rely on an error if ./Sync doesn't exist
   message "Creating ~/Sync" "Symlink to ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync"
   ln -s $HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync $HOME/Sync
+  
 fi
 
 

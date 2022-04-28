@@ -8,7 +8,7 @@ message ".zshrc" "Launched $SHELL' at ${TIMENOW}."
 
 
 # ==============================================================================
-# Hard-coding the ~/Developer/Bin folder to lead the PATH
+# Hard-coding the ~/Developer/Dev folder to lead the PATH
 # Add the Homebrew paths and custom path first
 
 # TODO: remove PATH setups from this file, rely on .zshenv (but test first!)
@@ -53,7 +53,9 @@ export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
 # ==============================================================================
 # Custom prompt with newline before each new command entry
 NEWLINE=$'\n'
-PS1="${NEWLINE}%F{white}[%F{27}%~%{%F{blue}%}%F{white}]%F{cyan}▶︎ %{%f%}%"
+PS1="${NEWLINE}%F{111}[%F{251}%~%{%F{blue}%F{111}]%F{46}▶︎ %{%f%}%"
+
+# PS1="${NEWLINE}%F{39}[%F{white}%~%{%F{blue}%}%F{39}]%F{cyan}▶︎ %{%f%}%"
 
 # Info on ZSH colors
 # https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/

@@ -43,7 +43,7 @@ alias cp='cp -v'
 # ... Make 'ls' look a lot prettier
 alias ls='ls -FG'
 alias lsl='ls -loFGT'
-alias lsla='ls -loAFGT'
+alias lsla='ls -lo@AFGT'
 
 # ... Make 'ls' also sort (loses all coloring, sigh)
 # alias ls -FG | sort -k1,1 -k9,9 -r

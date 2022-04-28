@@ -1,7 +1,9 @@
 #!/bin/zsh
 #
 # dot-reset.sh -- deletes all installs to try a clean re-install
-echo
+echo THIS FILE IS BADLY OUT OF DATE FOR USEFUL TESTING
+
+
 # Functions to make output attractive when running the script
 message () { printf "\r  [\033[00;32m $1\033[0m ] $2\n" }
 status () { printf "\r  [\033[00;34m $1\033[0m ] $2\n" }
@@ -15,8 +17,7 @@ fi
 
 # export the home of the dotfiles folder, and the target Developer folders
 export DOTFILES_ROOT=$(pwd -P)
-export DEVELOPER_HOME=$HOME/Developer
-export DEVELOPER_BIN=${DEVELOPER_HOME}/Bin
+
 
 # NOTE: Does not delete the ~/Developer folder in case other stuff is in there
 

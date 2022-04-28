@@ -53,8 +53,9 @@ For reference, `zsh` config files are loaded in the following order:
 ```
 
 
-### Known Issues
+### Known Issues and ToDo items
 
+- TODO: report the current `git config --global user.name "your name"` info, or if not set then report how to set it. Same for the setting for `git config --global user.email \"email@domain.com\"`
 - TODO: `install-brew.sh` is not configured at all, just is a copy of ruby installer 
 - TODO: Source `.functions.sh` and use message / error in .zshrc and .zprofile
 
