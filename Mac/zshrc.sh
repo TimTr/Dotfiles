@@ -1,4 +1,11 @@
-# .zshrc - Loaded in interactive shell sessions
+# .zshrc - Loaded only in interactive shell sessions
+#
+# Because this file is only loaded in interactive shell (Terminal) sessions,
+# It is perfect for setting up things like colors, etc. However, it isn't
+# the right place to setup PATH and other variables that tools may want.
+# For those global (no shell visible) cases, use the `.zshenv` file.
+# -------------------------------------------------------------
+
 
 source $HOME/.aliases
 source $HOME/.functions

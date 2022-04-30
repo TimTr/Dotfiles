@@ -14,13 +14,13 @@
 		BA0FAE2D2759A16A00030DB7 /* install-brew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-brew.sh"; sourceTree = "<group>"; };
 		BA1E9B25258FE775005D5A65 /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
 		BA1E9B27258FE775005D5A65 /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
-		BA1E9B28258FE775005D5A65 /* zprofile.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zprofile.sh; sourceTree = "<group>"; };
 		BA1E9B2A258FE781005D5A65 /* dot.gitconfig */ = {isa = PBXFileReference; lastKnownFileType = text; path = dot.gitconfig; sourceTree = "<group>"; };
 		BA1E9B2B258FE781005D5A65 /* dot.gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = dot.gitignore; sourceTree = "<group>"; };
 		BA1E9B35258FE814005D5A65 /* TimTr Toothpaste.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Toothpaste.xccolortheme"; sourceTree = "<group>"; };
 		BA1E9B37258FE814005D5A65 /* TimTr Grey.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Grey.xccolortheme"; sourceTree = "<group>"; };
 		BA1E9B38258FE814005D5A65 /* TimTr (Dark Default).xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr (Dark Default).xccolortheme"; sourceTree = "<group>"; };
 		BA1E9B3A258FE814005D5A65 /* TimTr Dark.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Dark.xccolortheme"; sourceTree = "<group>"; };
+		BA1FFA32281DE24400A4B952 /* zshenv.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshenv.sh; sourceTree = "<group>"; };
 		BA229F06275EA4D30057779C /* zshenv.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshenv.sh; sourceTree = "<group>"; };
 		BA25DBCC26DC30DA00AC5D59 /* demo-safari-cycle.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "demo-safari-cycle.html"; sourceTree = "<group>"; };
 		BA25DBCD26DC466D00AC5D59 /* demo-safari-backup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "demo-safari-backup.html"; sourceTree = "<group>"; };
@@ -36,14 +36,12 @@
 		BA9B1A2E2607FD940068E61E /* test3.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test3.sh; sourceTree = "<group>"; };
 		BAB331B726D478DD000967B5 /* setup-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "setup-linux.sh"; sourceTree = "<group>"; };
 		BABA38F427AC708E00EBDA86 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
-		BAD43EC3269255710098B6ED /* zprofile.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zprofile.sh; sourceTree = "<group>"; };
 		BAD43EC4269255720098B6ED /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
 		BAD43EC5269255720098B6ED /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
 		BAD43EC7269255720098B6ED /* update-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-linux.sh"; sourceTree = "<group>"; };
 		BADBE7D92732F65800682EC3 /* local.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = local.sh; sourceTree = "<group>"; };
 		BAE773EC259BC652000933FE /* install-ruby.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-ruby.sh"; sourceTree = "<group>"; };
 		BAEBF5D626D31306007A028E /* setup-macos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "setup-macos.sh"; sourceTree = "<group>"; };
-		BAF13F2126D9762C000D5261 /* dot.hyper.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = dot.hyper.js; sourceTree = "<group>"; };
 		BAF13F2326D97FBF000D5261 /* demo-homebrew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "demo-homebrew.sh"; sourceTree = "<group>"; };
 		BAF35A0B259FF70600F7099D /* update-ruby.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-ruby.sh"; sourceTree = "<group>"; };
 		BAF5518126D4330F008FE898 /* dot.vimrc */ = {isa = PBXFileReference; lastKnownFileType = text; path = dot.vimrc; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				BA0713F8281A108E000669E8 /* com.apple.Terminal.plist */,
-				BAF13F2126D9762C000D5261 /* dot.hyper.js */,
 				BA1E9B2A258FE781005D5A65 /* dot.gitconfig */,
 				BA1E9B2B258FE781005D5A65 /* dot.gitignore */,
 				BAF5518126D4330F008FE898 /* dot.vimrc */,
@@ -106,7 +103,7 @@
 				BAB331B726D478DD000967B5 /* setup-linux.sh */,
 				BAD43EC7269255720098B6ED /* update-linux.sh */,
 				BAD43EC5269255720098B6ED /* functions.sh */,
-				BAD43EC3269255710098B6ED /* zprofile.sh */,
+				BA1FFA32281DE24400A4B952 /* zshenv.sh */,
 				BAD43EC4269255720098B6ED /* zshrc.sh */,
 			);
 			path = Linux;
@@ -122,7 +119,6 @@
 				BADBE7D92732F65800682EC3 /* local.sh */,
 				BA9AE2CB2693EEE700D62D30 /* aliases.sh */,
 				BA1E9B27258FE775005D5A65 /* functions.sh */,
-				BA1E9B28258FE775005D5A65 /* zprofile.sh */,
 				BA229F06275EA4D30057779C /* zshenv.sh */,
 				BA1E9B25258FE775005D5A65 /* zshrc.sh */,
 			);

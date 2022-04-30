@@ -14,8 +14,8 @@ The `Dotfiles` folder is expected to be at the user's home folder root, but is a
     git config --global user.name "Your Name"
     git config --global user.email "youremail@yourdomain.com"
     
-    install-brew.sh
     install-ruby.sh
+    install-brew.sh
 ```
 
 At any time, you can see a list of added commands by typing `commands`
@@ -47,8 +47,8 @@ For reference, `zsh` config files are loaded in the following order:
 
 ```
     .zshenv    -- global (even if not interactive) so good for PATH etc
-    .zprofile  -- if login
     .zshrc     -- if interactive shell
+    .zprofile  -- if login (not using this file in current setup)
 ```
 
 
@@ -56,7 +56,7 @@ For reference, `zsh` config files are loaded in the following order:
 
 - TODO: report the current `git config --global user.name "your name"` info, or if not set then report how to set it. Same for the setting for `git config --global user.email \"email@domain.com\"`
 - TODO: `install-brew.sh` is not configured at all, just is a copy of ruby installer 
-- TODO: Source `.functions.sh` and use message / error in .zshrc and .zprofile
+
 
 ## Folder structure
 
@@ -110,11 +110,9 @@ These scripts and settings are provided for free, covered by the MIT license fou
 
 ## Useful reference links
 
-- https://docs.github.com/en/codespaces/setting-up-your-codespace/
 - https://dotfiles.github.io
 
-Reference for which `zsh` files contain which settings
-https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout
+Which `zsh` files contain which settings: https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout
 
 
 Docs indicating that `setup.sh` is a starter script used by GitHub Codespaces: [CodeSpaces and Dotfiles](https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-codespaces-for-your-account)

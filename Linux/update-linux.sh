@@ -16,8 +16,8 @@ fi
 # Copy the dotfiles to the $HOME folder (copies over any existing files)
 cp ${DOTFILES_ROOT}/Mac/aliases.sh $HOME/.aliases
 cp ${DOTFILES_ROOT}/Mac/functions.sh $HOME/.functions
-cp ${DOTFILES_ROOT}/Mac/zprofile.sh $HOME/.zprofile
 cp ${DOTFILES_ROOT}/Mac/zshrc.sh $HOME/.zshrc
+# cp ${DOTFILES_ROOT}/Mac/zprofile.sh $HOME/.zprofile
 
 cp ${DOTFILES_ROOT}/Mac/test.sh ${DEVELOPER_BIN}/
 sudo chmod -R 777 ${DEVELOPER_BIN}/*
