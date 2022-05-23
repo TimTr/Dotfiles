@@ -20,6 +20,8 @@ message ".zshrc" "Launched $SHELL' at ${TIMENOW}."
 which -s brew &> /dev/null
 if [[ $? != 0 ]] ; then
   error "Missing Homebrew" "Run install-brew.sh"
+else
+  status "Found Homebrew" "TODO report if Homebrew needs an update"
 fi
 
 # This `rbenv` setting needs to be hard-coded into .zshrc by default
@@ -33,7 +35,7 @@ if [[ $? != 0 ]] ; then
 else
   eval "$(rbenv init -)"
   export PATH="${HOME}/.rbenv/bin:$PATH"
-# export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1) --with-gdbm-dir=/opt/local"
+  status "Found rbenv" "Current version of ruby = TODO"
 fi
 
 # ==============================================================================
