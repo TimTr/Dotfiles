@@ -37,10 +37,6 @@ else
 fi
 
 # ==============================================================================
-# Make VSCode the default editor.
-export EDITOR='code';
-
-# ==============================================================================
 # Prompt and color settings (zsh-specific, different from bash)
 autoload colors; colors;
 export CLICOLOR=1
@@ -60,10 +56,6 @@ PS1="${NEWLINE}%F{111}[%F{251}%~%{%F{blue}%F{111}]%F{46}▶︎ %{%f%}%"
 # https://www.ditig.com/256-colors-cheat-sheet
 # Previous prompt
 # PS1="${NEWLINE}%F{blue}[%F{white}%~%{%F{white}%}%F{blue}]%F{cyan}▶︎ %{%f%}%"
-
-# Source the customization I made for this specific computer
-# These changes
-source $HOME/local.sh
 
 
 # end of file
