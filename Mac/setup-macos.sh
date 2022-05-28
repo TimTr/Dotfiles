@@ -3,7 +3,7 @@
 # setup-macos.sh - the macOS version
 source "$DOTFILES_ROOT/Mac/functions.sh"
 echo
-status "setup-macos.sh -- setting up for macOS via ${DOTFILES_ROOT}"
+message "setup-macos.sh -- setting up for macOS via ${DOTFILES_ROOT}"
 
 
 # If Xcode isn't installed, the abort the install
@@ -18,7 +18,7 @@ fi
 
 echo
 # ==============================================================================
-status "SUDO Password Required to set permissions and ownership"
+alert "SUDO Password Required to set permissions and ownership"
 read -s -k $'?Press any key to continue. Hit Control-C to abort now.\n'
 echo
 

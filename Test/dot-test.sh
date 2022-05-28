@@ -13,10 +13,10 @@ else
 fi
 
 
-# Source in functions such as message, status, error, and bullet
+# Source in functions such as message, alert, error, and bullet
 source $PWD/shell/functions.sh
 
-status "$#" "= total number of arguments passed"
+message "$#" "= total number of arguments passed"
 
 # First make sure the installer is run from within the dotfiles folder
 if [ "$(basename "$PWD")" != "dotfiles" ]; then
@@ -37,7 +37,7 @@ fi
 
 
 
-status "./dot-test.sh - done." "Exiting.\n"
+alert "./dot-test.sh - done." 
 
 
 

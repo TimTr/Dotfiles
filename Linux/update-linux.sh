@@ -4,7 +4,7 @@
 
 # Import the default functions used in these scripts
 source $(dirname $0)/functions.sh
-status "update-shell.sh" "Configuring shell and OS settings."
+message "update-shell.sh" "Configuring shell and OS settings."
 
 
 #### Switch to ZSH if not already using it

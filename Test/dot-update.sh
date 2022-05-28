@@ -30,7 +30,7 @@ if [ "$MYNAME" != "dot" ]; then
   sudo chmod -R 777 ${DEVELOPER_BIN}/* &> /dev/null
 fi
 
-status "Running sub-scripts" "Launching each of the update scripts"
+message "Running sub-scripts" "Launching each of the update scripts"
 # Update each of the sub-sections - NOTE: THIS IS BROKEN
 ${DOTFILES_ROOT}/macos-shell/update-shell.sh
 ${DOTFILES_ROOT}/macos-settings/update-settings.sh

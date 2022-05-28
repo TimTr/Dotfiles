@@ -21,7 +21,7 @@ which -s brew &> /dev/null
 if [[ $? != 0 ]] ; then
   error "Missing Homebrew" "Run install-brew.sh"
 else
-  status "Found Homebrew" "TODO report if Homebrew needs an update"
+  message "Found Homebrew" "TODO report if Homebrew needs an update"
 fi
 
 # This `rbenv` setting needs to be hard-coded into .zshrc by default
@@ -35,7 +35,7 @@ if [[ $? != 0 ]] ; then
 else
   eval "$(rbenv init -)"
   export PATH="${HOME}/.rbenv/bin:$PATH"
-  status "Found rbenv" "Current version of ruby = TODO"
+  message "Found rbenv" "Current version of ruby = TODO"
 fi
 
 # ==============================================================================

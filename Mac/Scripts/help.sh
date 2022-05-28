@@ -16,4 +16,4 @@ message "Help!" "Some simple instructions to setup the system properly"
 
 
 # ==============================================================================
-status "Helped?" "Will try to add more later."
+message "Helped?" "Will try to add more later."

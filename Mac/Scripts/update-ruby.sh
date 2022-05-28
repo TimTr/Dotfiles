@@ -4,7 +4,7 @@
 #
 # Import the default functions used in these scripts
 source ${HOME}/.functions
-status "update-ruby.sh" "Checking current installs of \"brew\" and \"rbenv\""
+message "update-ruby.sh" "Checking current installs of \"brew\" and \"rbenv\""
 
 # If rbenv isn't already installed, add following to the .zshrc file
 # if [[ -v RBENV_INSTALLED ]]; then

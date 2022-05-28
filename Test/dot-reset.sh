@@ -4,11 +4,6 @@
 echo THIS FILE IS BADLY OUT OF DATE FOR USEFUL TESTING
 
 
-# Functions to make output attractive when running the script
-message () { printf "\r  [\033[00;32m $1\033[0m ] $2\n" }
-status () { printf "\r  [\033[00;34m $1\033[0m ] $2\n" }
-error () { printf "\r  [\033[00;31m $1\033[0m ] $2\n" }
-
 # First make sure the installer is run from within the dotfiles folder
 if [ "$(basename "$PWD")" != "dotfiles" ]; then
  error "ABORT" "You must run the installer from within the dotfiles folder"
@@ -45,9 +40,9 @@ export PATH="/opt/homebrew/bin:$PATH"
 which -s brew
 if [[ $? != 0 ]] ; then
   # Install Homebrew
-  status "Skipping Homebrew" "Homebrew does not appear to be installed."
+  message "Skipping Homebrew" "Homebrew does not appear to be installed."
 else
-  status "Removing Homebrew" "Homebrew was already installed. Uninstalling..."
+    message "Removing Homebrew" "Homebrew was already installed. Uninstalling..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
 fi
 

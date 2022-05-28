@@ -53,11 +53,11 @@ ${DOTFILES_ROOT}/macos-ruby/install-ruby.sh
 
 # ==============================================================================
 # Add a symlink to the dot-update.sh file at the root here
-status "Symlink \"dot\"" "Run \"dot\" from PATH to reset settings any time"
+message "Symlink \"dot\"" "Run \"dot\" from PATH to reset settings any time"
 rm ${DEVELOPER_BIN}/dot 2> /dev/null
 ln -s ${DOTFILES_ROOT}/dot-update.sh ${DEVELOPER_BIN}/dot
 
-status "Resetting chmod" "Ensure all scripts are executable (needs sudo)"
+message "Resetting chmod" "Ensure all scripts are executable (needs sudo)"
 sudo chmod -R 777 ${DEVELOPER_BIN}/*
 
 

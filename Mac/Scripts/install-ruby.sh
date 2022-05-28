@@ -16,7 +16,7 @@
 
 # Import the default functions used in these scripts
 source ${HOME}/.functions
-status "install-ruby.sh" "Configuring app and tool settings"
+message "install-ruby.sh" "Configuring app and tool settings"
   
 # ==============================================================================
 # This script will install Ruby, rbenv, and Jekyll (blogging platform)
@@ -38,13 +38,13 @@ fi
 
 
 # First install RBENV so we can easily switch to the new Ruby install
-status "Installing rbenv" "Using Homebrew to install \"rbenv\" tool"
+message "Installing rbenv" "Using Homebrew to install \"rbenv\" tool"
 # brew install rbenv ruby-build
 brew install rbenv ruby-build rbenv-gemset rbenv-vars rbenv-bundler
 brew upgrade ruby-build
 
 # Install latest version of Ruby
-status "Installing Ruby" "Using \"rbenv\" to install Ruby 3.0.2"
+message "Installing Ruby" "Using \"rbenv\" to install Ruby 3.0.2"
 rbenv install 3.0.2
 rbenv global 3.0.2
 
@@ -57,4 +57,4 @@ bullet "If install fails, try:  brew uninstall --ignore-dependencies openssl"
 # source $(dirname $0)/update-ruby.sh
 
 
-status "Ruby not finished" "Must restart Terminal then run update-ruby"
+message "Ruby install not finished" "Restart Terminal then run \"update-ruby\""

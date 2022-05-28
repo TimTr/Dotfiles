@@ -8,8 +8,6 @@
 
 /* Begin PBXFileReference section */
 		BA0713F8281A108E000669E8 /* com.apple.Terminal.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.apple.Terminal.plist; sourceTree = "<group>"; };
-		BA08E3B92606FB04009D83A6 /* test1.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test1.sh; sourceTree = "<group>"; };
-		BA08E3BA2606FB0C009D83A6 /* test2.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test2.sh; sourceTree = "<group>"; };
 		BA0FAE2A275995BC00030DB7 /* TimTr Lighthaus.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Lighthaus.xccolortheme"; sourceTree = "<group>"; };
 		BA0FAE2D2759A16A00030DB7 /* install-brew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-brew.sh"; sourceTree = "<group>"; };
 		BA1E9B25258FE775005D5A65 /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
@@ -33,7 +31,6 @@
 		BA8F26C9281A4194006B6CC1 /* help.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = help.sh; sourceTree = "<group>"; };
 		BA9AE2CB2693EEE700D62D30 /* aliases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = aliases.sh; sourceTree = "<group>"; };
 		BA9B1A2D2607FD090068E61E /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; };
-		BA9B1A2E2607FD940068E61E /* test3.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test3.sh; sourceTree = "<group>"; };
 		BAB331B726D478DD000967B5 /* setup-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "setup-linux.sh"; sourceTree = "<group>"; };
 		BABA38F427AC708E00EBDA86 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		BAD43EC4269255720098B6ED /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
@@ -55,9 +52,6 @@
 				BA462B93256EF61800BEC226 /* dot-install.sh */,
 				BA462B92256EF61800BEC226 /* dot-update.sh */,
 				BA3989C4259F954600978484 /* dot-reset.sh */,
-				BA08E3B92606FB04009D83A6 /* test1.sh */,
-				BA08E3BA2606FB0C009D83A6 /* test2.sh */,
-				BA9B1A2E2607FD940068E61E /* test3.sh */,
 			);
 			path = Test;
 			sourceTree = "<group>";
