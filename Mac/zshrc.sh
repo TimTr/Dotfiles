@@ -48,16 +48,20 @@ export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
 # ==============================================================================
 # Custom prompt with newline before each new command entry
 NEWLINE=$'\n'
-PS1="${NEWLINE}%F{111}[%F{251}%~%{%F{blue}%F{111}]%F{46}▶︎ %{%f%}%"
+PROMPT="${NEWLINE}→ %F{39}[%F{white}%~%{%F{blue}%}%F{39}] %f"
 
+### Was using "PS1" instead of PROMPT for some reason
+# PROMPT="${NEWLINE}→ %F{39}[%F{white}%~%{%F{blue}%}%F{39}] %{%f%}%"
+# PROMPT="${NEWLINE}%F{111}[%F{251}%~%{%F{blue}%F{111}]%F{46}▶︎ %{%f%}%"
 # PS1="${NEWLINE}%F{39}[%F{white}%~%{%F{blue}%}%F{39}]%F{cyan}▶︎ %{%f%}%"
+# PS1="%F{39}Boo! [%F{white}%~%{%F{blue}%}%F{39}]%F{cyan}▶︎ %{%f%}%"
+# PS1="${NEWLINE}%F{39}Boo! [%F{white}%~%{%F{blue}%}%F{39}]%F{cyan}▶︎ %{%f%}%"
 
 # Info on ZSH colors
 # https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
 # 256 color cheat sheet
 # https://www.ditig.com/256-colors-cheat-sheet
-# Previous prompt
-# PS1="${NEWLINE}%F{blue}[%F{white}%~%{%F{white}%}%F{blue}]%F{cyan}▶︎ %{%f%}%"
+
 
 
 # end of file

@@ -1,6 +1,6 @@
 # dotfiles for Tim Triemstra
 
-To install, from your home directory run the following command:
+On Mac, first install Xcode or the command line tools package. Then run:
 
 ```
     git clone https://github.com/timtr/Dotfiles.git
@@ -8,7 +8,7 @@ To install, from your home directory run the following command:
     ./setup.sh
 ```
 
-The `Dotfiles` folder is expected to be at the user's home folder root, but is also largely functional if `setup.sh` is run from any user folder. Once installed, quit Terminal and relaunch. You can now install Homebrew by typing:
+The `Dotfiles` folder is known to work in the root user folder ($HOME), but should also work if `setup.sh` is run from any user-owned folder. Once installed, quit Terminal and relaunch. You can now install Homebrew by typing:
 
 ```
     git config --global user.name "Your Name"
@@ -17,15 +17,12 @@ The `Dotfiles` folder is expected to be at the user's home folder root, but is a
     install-ruby.sh
     install-brew.sh
 ```
-
-At any time, you can see a list of added commands by typing `commands`
-
 You may want to quit and restart Terminal after this install as well.
 
-Link to documentation: [timtr.github.io/Dotfiles/](https://timtr.github.io/Dotfiles/)
-*Note: the URL requires a capital "Dotfiles" to resolve.*
-**Note:** *UGH, getting tons of GitHub errors so docs temporarily removed.*
+A tool called `help.sh` is installed and runable from the shell for additional help. 
 
+Link to documentation: [timtr.github.io/Dotfiles/](https://timtr.github.io/Dotfiles/)
+*Note: the URL requires a capital "Dotfiles"  - and presently docs are offline*
 
 
 ## Features
@@ -57,10 +54,6 @@ For reference, `zsh` config files are loaded in the following order:
 - TODO: report the current `git config --global user.name "your name"` info, or if not set then report how to set it. Same for the setting for `git config --global user.email \"email@domain.com\"`
 - TODO: `install-brew.sh` is not configured at all, just is a copy of ruby installer 
 
-
-## Folder structure
-
-TODO: 
 
 
 
