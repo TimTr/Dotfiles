@@ -97,7 +97,7 @@ fi
 # ==============================================================================
 # Check if the "~/local.sh" file exists, and if not, copy over the stub
 if [[ -f "$HOME/local.sh" ]]; then
-  message "~/local.sh exists" "Delete this file then re-run to install clean"
+  message "~/local.sh exists" "Delete the file then re-run to install a template version"
 else
   message "Creating ~/local.sh" "Modify this file to add GitHub and SSH tokens"
   cp $DOTFILES_ROOT/Mac/local.sh $HOME/local.sh

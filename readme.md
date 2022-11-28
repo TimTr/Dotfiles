@@ -31,7 +31,7 @@ Files ending in .sh are often renamed to be dotfiles (prefix by a `"."`) and the
 
 **ZSH settings** - sets up the prompt, `PATH`, and other basic settings for a basic ZSH shell setup. Most of these settings are included in the `zshrc.sh` file to be installed into `~/.zshrc` by the setup script.
 
-**local.sh** - Creates a file called `~/local.sh` (if doesn't exist) that you can customize with settings that do not belong checked into GitHub, for instance set certain keys, or environment variables.
+**local.sh** - Creates a file called `~/local.sh` (if doesn't exist) that you can customize with settings that do not belong checked into GitHub, for instance set certain keys, or environment variables. This is also the file to add things like feature flags (variables)during development of a new feature, or to enable internal build settings.
 
 ### Other smaller features
 

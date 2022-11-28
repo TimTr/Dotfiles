@@ -5,13 +5,8 @@
 # impact and can just slow down some tools that load this.
 # -------------------------------------------------------------
 
-# TODO: haven't yet done the work to make this file good!!!
-
-# ==============================================================================
 # Hard-coding the PATH in .zshenv so available even to non-interactive shells
-# Add the Homebrew paths and custom path first
 export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/Developer/Bin"
-# export PATH="/opt/homebrew/bin:/usr/local/bin:/opt/bin"
 
 # Add default system PATHs to the chain (these are REALLY important)
 export PATH="$PATH:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin"
@@ -21,4 +16,7 @@ export PATH="$PATH:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin"
 # Python3 - Augument the default PATH for Python3 use
 export PY_PYTHON=3
 
-# end of file
+
+
+# Saved examples
+# export PATH="/opt/homebrew/bin:/usr/local/bin:/opt/bin"

@@ -1,7 +1,7 @@
 # Updated recently
 [user]
-        name = Fill MeIn
-        email = example@example.com
+        name = Tim Triemstra
+        email = root@timtr.com
 [include]
         path = ~/.gitconfig.local
 [color]

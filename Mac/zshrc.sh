@@ -10,6 +10,7 @@
 source $HOME/.aliases
 source $HOME/.functions
 
+
 TIMENOW=$(date +%d-%m-%Y" "%H:%M:%S)
 message ".zshrc" "Launched $SHELL' at ${TIMENOW}."
 
@@ -43,28 +44,26 @@ fi
 autoload colors; colors;
 export CLICOLOR=1
 export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
-# another example for zsh: export LSCOLORS=GxFxCxDxBxexexaxaxaxex
 
-# ==============================================================================
 # Custom prompt with newline before each new command entry
 NEWLINE=$'\n'
 PROMPT="${NEWLINE}→ %F{39}[%F{white}%~%{%F{blue}%}%F{39}] %f"
 
-### Was using "PS1" instead of PROMPT for some reason
-# PROMPT="${NEWLINE}→ %F{39}[%F{white}%~%{%F{blue}%}%F{39}] %{%f%}%"
-# PROMPT="${NEWLINE}%F{111}[%F{251}%~%{%F{blue}%F{111}]%F{46}▶︎ %{%f%}%"
-# PS1="${NEWLINE}%F{39}[%F{white}%~%{%F{blue}%}%F{39}]%F{cyan}▶︎ %{%f%}%"
-# PS1="%F{39}Boo! [%F{white}%~%{%F{blue}%}%F{39}]%F{cyan}▶︎ %{%f%}%"
-# PS1="${NEWLINE}%F{39}Boo! [%F{white}%~%{%F{blue}%}%F{39}]%F{cyan}▶︎ %{%f%}%"
 
-# Info on ZSH colors
-# https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
-# 256 color cheat sheet
-# https://www.ditig.com/256-colors-cheat-sheet
+# Loan local custom settings (e.g. security keys that don't belong in Git)
+source $HOME/local.sh
+
+
 
 
 
 # end of file
+# ==============================================================================
+
+
+
+
+
 
 
 # ==============================================================================
@@ -78,6 +77,19 @@ PROMPT="${NEWLINE}→ %F{39}[%F{white}%~%{%F{blue}%}%F{39}] %f"
 # NEWLINE=$'\n'
 # PS1="${NEWLINE}%F{white} %F{cyan}%~%{%F{white}%} %F{red}▶︎%F{yellow}▶︎ %{%f%}%"
 # PS1="${NEWLINE}%F{white}🐛 [%F{cyan}%~%{%F{white}%}] %{%f%}%"
+# another example for zsh: export LSCOLORS=GxFxCxDxBxexexaxaxaxex
+
+### Was using "PS1" instead of PROMPT for some reason
+# PROMPT="${NEWLINE}→ %F{39}[%F{white}%~%{%F{blue}%}%F{39}] %{%f%}%"
+# PROMPT="${NEWLINE}%F{111}[%F{251}%~%{%F{blue}%F{111}]%F{46}▶︎ %{%f%}%"
+# PS1="${NEWLINE}%F{39}[%F{white}%~%{%F{blue}%}%F{39}]%F{cyan}▶︎ %{%f%}%"
+# PS1="%F{39}Boo! [%F{white}%~%{%F{blue}%}%F{39}]%F{cyan}▶︎ %{%f%}%"
+# PS1="${NEWLINE}%F{39}Boo! [%F{white}%~%{%F{blue}%}%F{39}]%F{cyan}▶︎ %{%f%}%"
+
+# Info on ZSH colors
+# https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
+# 256 color cheat sheet
+# https://www.ditig.com/256-colors-cheat-sheet
 
 
 
