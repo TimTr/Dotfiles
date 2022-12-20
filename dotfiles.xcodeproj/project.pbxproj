@@ -77,7 +77,7 @@
 				BAD43EC2269255280098B6ED /* Mac */,
 				BAD43EC1269254E00098B6ED /* Linux */,
 				BA08E3B82606FAEE009D83A6 /* Test */,
-				BACD8C7129524C7E00AA7677 /* Docs-move */,
+				BACD8C7129524C7E00AA7677 /* docs */,
 				BA462B95256EF61800BEC226 /* license.md */,
 			);
 			sourceTree = "<group>";
@@ -93,12 +93,12 @@
 			path = Preferences;
 			sourceTree = "<group>";
 		};
-		BACD8C7129524C7E00AA7677 /* Docs-move */ = {
+		BACD8C7129524C7E00AA7677 /* docs */ = {
 			isa = PBXGroup;
 			children = (
 				BACD8C7229524CA300AA7677 /* index.html */,
 			);
-			path = "Docs-move";
+			path = docs;
 			sourceTree = "<group>";
 		};
 		BAD43EC1269254E00098B6ED /* Linux */ = {
