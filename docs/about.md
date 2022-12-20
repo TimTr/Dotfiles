@@ -1,7 +1,10 @@
-# About TimTr.com
+# About these dotfiles
 
-This is an example Markdown file. Not sure what GitHub Pages will do with it. This is not fully setup as a Jekyll site at this stage.
+Not much to see here so far. Will update as needed. Honestly, I'm mostly just experimenting with including a GitHub Pages docs folder in a repository, for now.
 
+
+Signed,
+Tim Triemstra - github.com/timtr
 
 
 
