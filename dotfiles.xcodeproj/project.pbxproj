@@ -33,8 +33,9 @@
 		BA9B1A2D2607FD090068E61E /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; };
 		BAB331B726D478DD000967B5 /* setup-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "setup-linux.sh"; sourceTree = "<group>"; };
 		BABA38F427AC708E00EBDA86 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
-		BACD8C7229524CA300AA7677 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		BACD8C7229524CA300AA7677 /* index-old.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "index-old.html"; sourceTree = "<group>"; };
 		BACD8C74295276C500AA7677 /* about.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = about.md; sourceTree = "<group>"; };
+		BACD8C7529527D5100AA7677 /* index.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = index.md; sourceTree = "<group>"; };
 		BAD43EC4269255720098B6ED /* zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zshrc.sh; sourceTree = "<group>"; };
 		BAD43EC5269255720098B6ED /* functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = functions.sh; sourceTree = "<group>"; };
 		BAD43EC7269255720098B6ED /* update-linux.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-linux.sh"; sourceTree = "<group>"; };
@@ -97,8 +98,9 @@
 		BACD8C7129524C7E00AA7677 /* docs */ = {
 			isa = PBXGroup;
 			children = (
-				BACD8C7229524CA300AA7677 /* index.html */,
+				BACD8C7529527D5100AA7677 /* index.md */,
 				BACD8C74295276C500AA7677 /* about.md */,
+				BACD8C7229524CA300AA7677 /* index-old.html */,
 			);
 			path = docs;
 			sourceTree = "<group>";
