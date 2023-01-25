@@ -6,37 +6,20 @@
 # For those global (no shell visible) cases, use the `.zshenv` file.
 # -------------------------------------------------------------
 
-
 source $HOME/.aliases
 source $HOME/.functions
-
+source $HOME/.zshenv
+# Source .zshenv as well to ensure a consistent PATH variable
 
 TIMENOW=$(date +%d-%m-%Y" "%H:%M:%S)
 message ".zshrc" "Launched $SHELL' at ${TIMENOW}."
 
-# No PATH setups within this file, rely on .zshenv (but test first!)
-
-
-# Warn about installing Homebrew and Ruby as needed
+# Warn about installing Homebrew as needed
 which -s brew &> /dev/null
 if [[ $? != 0 ]] ; then
   error "Missing Homebrew" "Run install-brew.sh"
 else
-  message "Found Homebrew" "TODO report if Homebrew needs an update"
-fi
-
-# This `rbenv` setting needs to be hard-coded into .zshrc by default
-# If you get a "command not found" for rbenv, run `install-ruby`
-#
-# To read more about installing rbenv see: https://github.com/rbenv/rbenv
-# eval "$(rbenv init - zsh)"
-which -s rbenv &> /dev/null
-if [[ $? != 0 ]] ; then
-  error "Missing rbenv" "Run install-ruby.sh"
-else
-  eval "$(rbenv init -)"
-  export PATH="${HOME}/.rbenv/bin:$PATH"
-  message "Found rbenv" "Current version of ruby = TODO"
+  message "Found Homebrew" "Installed brew tools supercede system tools (e.g. Ruby)"
 fi
 
 # ==============================================================================
@@ -50,9 +33,11 @@ NEWLINE=$'\n'
 PROMPT="${NEWLINE}%F{39}[%F{white}%~%{%F{blue}%}%F{39}] ${NEWLINE}→ %f"
 # PROMPT="${NEWLINE}→ %F{39}[%F{white}%~%{%F{blue}%}%F{39}] %f"
 
-
 # Load local custom settings (e.g. security keys that don't belong in Git)
 source $HOME/local.sh
+
+
+
 
 
 
@@ -61,6 +46,21 @@ source $HOME/local.sh
 # end of file
 # ==============================================================================
 
+# *** NOTE: Removing rbenv - switched to simple `brew install ruby`
+#
+# This `rbenv` setting needs to be hard-coded into .zshrc by default
+# If you get a "command not found" for rbenv, run `install-ruby`
+#
+# To read more about installing rbenv see: https://github.com/rbenv/rbenv
+# eval "$(rbenv init - zsh)"
+# which -s rbenv &> /dev/null
+# if [[ $? != 0 ]] ; then
+#   error "Missing rbenv" "Run install-ruby.sh"
+# else
+#   eval "$(rbenv init -)"
+#   export PATH="${HOME}/.rbenv/bin:$PATH"
+#   message "Found rbenv" "Current version of ruby = TODO"
+# fi
 
 
 

@@ -27,15 +27,15 @@ Link to documentation: [timtr.github.io/Dotfiles/](https://timtr.github.io/Dotfi
 
 ## Features
 
-Files ending in .sh are often renamed to be dotfiles (prefix by a `"."`) and the `.sh` extension is removed. This makes these files easier to edit during creation of this project, and also makes it clear which are "source" versions of these files, vs the installed "production" versions of the files.
+Files ending in .sh are often renamed to be prefix by a `"."` with the `.sh` extension removed. This makes these files easier to edit during creation of this project, and also makes it clear which are "source" versions of these files, versus the installed versions.
 
-**ZSH settings** - sets up the prompt, `PATH`, and other basic settings for a basic ZSH shell setup. Most of these settings are included in the `zshrc.sh` file to be installed into `~/.zshrc` by the setup script.
+**ZSH settings** - sets up the prompt, `PATH`, and other basic settings. Note that `.zshenv` sets up the PATH so it works even when there is no interactive terminal session, and `.zshrc` will source this file for a consistent PATH for terminal windows.
 
-**local.sh** - Creates a file called `~/local.sh` (if doesn't exist) that you can customize with settings that do not belong checked into GitHub, for instance set certain keys, or environment variables. This is also the file to add things like feature flags (variables)during development of a new feature, or to enable internal build settings.
+**local.sh** - Installs a file called `~/local.sh` (if doesn't exist) that you can customize with settings that do not belong checked into GitHub, for instance set certain keys, or environment variables. This is also the file to add things like feature flags during development, add a Swift toolchain, or to enable secret build settings.
 
 ### Other smaller features
 
-- Creates a symlink from ~/Dropbox to the new ~/Library/CloudStorage directory
+- Creates a symlink from ~/Dropbox to the new ~/Library/CloudStorage directory if it exists
 
 
 ### Order of loading

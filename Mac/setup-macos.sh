@@ -89,7 +89,7 @@ else
     message "Creating ~/Dropbox" "Symlink to ~/Library/CloudStorage/Dropbox/"
     ln -s $HOME/Library/CloudStorage/Dropbox $HOME/Dropbox
   else
-    error "Dropbox not installed" "No folder at ~/Library/CloudStorage/Dropbox/"
+    message "Dropbox skipped" "Not installed at ~/Library/CloudStorage/Dropbox/"
   fi
 fi
 
