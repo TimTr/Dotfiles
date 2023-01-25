@@ -14,13 +14,26 @@ export LOADED_LOCAL=true
 source $HOME/.aliases
 source $HOME/.functions
 
-message "Loading local.sh..." "Customize local tokens, keys, and passwords..."
+message "Loading local.sh..." "Set local Swift toolchain, keys, and passwords..."
 
-# ======= CUSTOMIZE ANY LOCAL SETTINGS THAT DON'T BELONG IN GIT BELOW:
+bullet "Enabled latest Swift.org toolchain installed in /Library/Developer/Toolchains/"
+bullet "NOTE: export TOOLCHAIN=null to revert to default swift tools in any shell session"
+export TOOLCHAINS=swift
+# Above uses toolchain at: /Library/Developer/Toolchains/swift-latest.xctoolchain
+# This will always point at the newest-installed Toolchain
+# Simplest answer is to delete any toolchains to go back to default
+# or can export TOOLCHAINS=null to go back to default
 
-# bullet "Enable Swift.org toolchain (installed in /Some/Folder/On/Disk)"
-# export SWIFT_TOOLCHAIN=1
-# Configure the toolchain somehow
+# Alternately, pick any specific toolchain using its identifier.
+# To get the identifier, first run the following command in Terminal:
+#
+#    /usr/libexec/PlistBuddy -c "Print CFBundleIdentifier:" /Library/Developer/Toolchains/swift-[TOOLCHAIN FILENAME]/Info.plist
+#
+# Then set TOOLCHAINS to equal that result, e.g. command will look like:
+#
+#    export TOOLCHAINS=org.swift.57202301021a
+#
+
 
 # Obviously, this must be edited ONLY in the local machine
 # Do NOT put in a GitHub repo, e.g. the dotfiles repo

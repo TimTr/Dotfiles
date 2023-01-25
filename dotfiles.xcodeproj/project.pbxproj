@@ -135,8 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				BAE773EC259BC652000933FE /* install-ruby.sh */,
-				BA8F26C9281A4194006B6CC1 /* help.sh */,
 				BA0FAE2D2759A16A00030DB7 /* install-brew.sh */,
+				BA8F26C9281A4194006B6CC1 /* help.sh */,
 				BAF35A0B259FF70600F7099D /* update-ruby.sh */,
 				BA25DBCC26DC30DA00AC5D59 /* demo-safari-cycle.html */,
 				BA25DBCE26DC467700AC5D59 /* demo-safari-new.html */,

@@ -103,10 +103,6 @@ exit 0
 # fi
 
 
-# === Symlink \"dot\"" "Run \"dot\" from PATH to reset settings any time"
-# rm ${DEVELOPER_BIN}/dot 2> /dev/null
-# ln -s ${DOTFILES_ROOT}/dot-update.sh ${DEVELOPER_BIN}/dot
-
 
 
 

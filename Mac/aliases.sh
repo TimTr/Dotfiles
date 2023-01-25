@@ -40,13 +40,16 @@ alias mv='mv -v'
 alias rm='rm -i -v'
 alias cp='cp -v'
 
-# ... Make 'ls' look a lot prettier
+# Make 'ls' look prettier, with colors
 alias ls='ls -FG'
-alias lsl='ls -loFGT'
-alias lsla='ls -lo@AFGT'
+# Use 'll' most of the time, includes show all
+alias ll='ls -loAFGT'
+# Use 'll' to remove the "show all" flag, to pretty it up
+alias lla='ls -loFGT'
+# Use 'llx' to see the most info, including extended attributes
+alias llx='ls -lo@AFGT'
 
-# ... Make 'ls' also sort (loses all coloring, sigh)
-# alias ls -FG | sort -k1,1 -k9,9 -r
+
 
 # Git can sometimes create locked files in the .git folder, which then
 # blocks things like compress tasks, or copying files. Run "unlock" to
