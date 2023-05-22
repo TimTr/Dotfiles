@@ -40,12 +40,12 @@ alias mv='mv -v'
 alias rm='rm -i -v'
 alias cp='cp -v'
 
-# Make 'ls' look prettier, with colors
+# Make 'ls' look prettier, with colors and sorting
 alias ls='ls -FG'
-# Use 'll' most of the time, includes show all
-alias ll='ls -loAFGT'
-# Use 'll' to remove the "show all" flag, to pretty it up
-alias lla='ls -loFGT'
+# Use 'll' most of the time, does not "show all" by default
+alias ll='ls -loFGT'
+# Use 'lla' to enable "show all" for hidden files beginning with a period
+alias lla='ls -loAFGT'
 # Use 'llx' to see the most info, including extended attributes
 alias llx='ls -lo@AFGT'
 
