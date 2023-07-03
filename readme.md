@@ -50,8 +50,6 @@ For reference, `zsh` config files are loaded in the following order:
 ### Known Issues and ToDo items
 
 - TODO: report the current `git config --global user.name "your name"` info, or if not set then report how to set it. Same for the setting for `git config --global user.email \"email@domain.com\"`
-- TODO: `install-brew.sh` is not configured at all, just is a copy of ruby installer 
-
 
 
 
@@ -78,25 +76,14 @@ There are a few aliases added that make it easy to install Homebrew and other to
 
 ## Demos
 
-Once installed, you can install Homebrew and run demos. To do that, these commands are available:
+Once installed, you can install Homebrew and run demos. For example, run `demo-homebrew.sh` from the PATH to show a  Terminal screen of software being downloaded, built, installed, and erased (in a repeating loop). Hit `CONTROL-Z` to quit that demo.
 
-```
-    demo-brew
-    demo-safari
-```
-
-The `demo-brew` command will install and uninstall many Homebrew formulas over and over, making the terminal window look very busy. Be sure to dedicate a Terminal window or tab to just this task, and use CONTROL-Z to quit whenever.
-
-The `demo-safari` command will open Safari and begin cycling through many web pages, implying a sort of automated web test harness. Again, will need to CONTROL-Z to quit the Terminal session.
-
-
-
+You can also open the `./Developer/Bin/demo-safari-cycle.html` file to launch Safari and begin cycling through many web pages, implying a sort of automated web test harness. 
 
 
 ## License
 
 These scripts and settings are provided for free, covered by the MIT license found within the repository.
-
 
 
 ## Useful reference links
