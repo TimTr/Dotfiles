@@ -1,7 +1,14 @@
 .DS_Store
 *~
+\#*
+.\#*
 *.swp
 *.xcuserstate
 *.xcuserdata
+xcuserdata
+.swiftpm
+.vscode
+.build
+DerivedData
 
 

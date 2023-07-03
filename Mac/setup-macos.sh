@@ -73,9 +73,12 @@ mkdir -p $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes
 cp -R $DOTFILES_ROOT/Mac/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
 
 
+# Register gitignore and other git stuff
+git config --global core.excludesfile ~/.gitignore
+
+
 # ==============================================================================
-# Copy scripts into the PATH folder
-message "Copying scripts" "Scripts in PATH: $HOME/Developer/Bin"
+message "Copying scripts" "Scripts are now in PATH: $HOME/Developer/Bin"
 cp -R $DOTFILES_ROOT/Mac/Scripts/* $HOME/Developer/Bin/
 
 
