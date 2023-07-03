@@ -22,10 +22,5 @@ else
 fi
 
 
-# Try this in the future - uses the API instead of Git checkouts
-# export HOMEBREW_INSTALL_FROM_API=1
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-
 exit 0
 

@@ -1,6 +1,8 @@
-# dotfiles for Tim Triemstra
+# Dotfiles for Tim Triemstra
 
-To read more documentation [in the "about" document here](./Docs/about.html).
+Documentation for these `dotfiles` can be [found here](https://timtr.github.io/Dotfiles/).
+
+To read more documentation [in the "about" document here](./Docs/index.html).
 
 On a Mac, first install Xcode or the command line tools package. Then run:
 
@@ -10,21 +12,17 @@ On a Mac, first install Xcode or the command line tools package. Then run:
     ./setup.sh
 ```
 
-The `Dotfiles` folder is known to work in the root user folder ($HOME), but should also work if `setup.sh` is run from any user-owned folder. Once installed, quit Terminal and relaunch. You can now install Homebrew by typing:
+Run `setup.sh` from within a local `Dotfiles` folder instance. Once installed, quit Terminal and relaunch. Finish install by typing:
 
 ```
     git config --global user.name "Your Name"
     git config --global user.email "youremail@yourdomain.com"
     
-    install-ruby.sh
     install-brew.sh
+    install-ruby.sh
 ```
-You may want to quit and restart Terminal after this install as well.
 
-A tool called `help.sh` is installed and runable from the shell for additional help. 
-
-Link to documentation: [timtr.github.io/Dotfiles/](https://timtr.github.io/Dotfiles/)
-*Note: the URL requires a capital "Dotfiles"  - and presently docs are offline*
+A tool called `help.sh` is runable from the shell for additional help. 
 
 
 ## Features
