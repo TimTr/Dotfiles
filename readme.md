@@ -1,5 +1,7 @@
 # dotfiles for Tim Triemstra
 
+To read more documentation [in the "about" document here](./Docs/about.html).
+
 On a Mac, first install Xcode or the command line tools package. Then run:
 
 ```
