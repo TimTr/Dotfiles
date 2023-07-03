@@ -1,6 +1,6 @@
 # dotfiles for Tim Triemstra
 
-On Mac, first install Xcode or the command line tools package. Then run:
+On a Mac, first install Xcode or the command line tools package. Then run:
 
 ```
     git clone https://github.com/timtr/Dotfiles.git
