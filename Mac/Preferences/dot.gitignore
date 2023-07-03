@@ -6,6 +6,7 @@
 *.xcuserstate
 *.xcuserdata
 xcuserdata
+Package.resolved
 .swiftpm
 .vscode
 .build
