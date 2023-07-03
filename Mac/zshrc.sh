@@ -9,12 +9,14 @@
 source $HOME/.aliases
 source $HOME/.functions
 source $HOME/.zshenv
-# Source .zshenv as well to ensure a consistent PATH variable
 
+
+# Report tha .zshrc is loading and at what time
 TIMENOW=$(date +%d-%m-%Y" "%H:%M:%S)
 message ".zshrc" "Launched $SHELL' at ${TIMENOW}."
 
-# Warn about installing Homebrew as needed
+
+# Warn about installing Homebrew if it is not yet present
 which -s brew &> /dev/null
 if [[ $? != 0 ]] ; then
   error "Missing Homebrew" "Run install-brew.sh"
@@ -22,16 +24,18 @@ else
   message "Found Homebrew" "Installed brew tools supercede system tools (e.g. Ruby)"
 fi
 
-# ==============================================================================
+
 # Prompt and color settings (zsh-specific, different from bash)
 autoload colors; colors;
 export CLICOLOR=1
 export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
 
+
 # Custom prompt with newline before each new command entry
 NEWLINE=$'\n'
 PROMPT="${NEWLINE}%F{39}[%F{white}%~%{%F{blue}%}%F{39}] ${NEWLINE}→ %f"
 # PROMPT="${NEWLINE}→ %F{39}[%F{white}%~%{%F{blue}%}%F{39}] %f"
+
 
 # Load local custom settings (e.g. security keys that don't belong in Git)
 source $HOME/local.sh
