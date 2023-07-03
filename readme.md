@@ -1,8 +1,6 @@
 # Dotfiles for Tim Triemstra
 
-Documentation for these `dotfiles` can be [found here](https://timtr.github.io/Dotfiles/).
-
-To read more documentation [in the "about" document here](./Docs/index.html).
+Documentation for these `dotfiles` can be [found here](https://timtr.github.io/Dotfiles/Docs/).
 
 On a Mac, first install Xcode or the command line tools package. Then run:
 

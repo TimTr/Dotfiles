@@ -7,7 +7,7 @@ Honestly, I don't think this project warrants a full set of docs. In many ways, 
 
 ## Table of Contents
 
-`Dotfiles` is covered by the [MIT license](./licence-mit.html).
+`Dotfiles` is covered by the [MIT license](./license-mit.html).
 
 
 
