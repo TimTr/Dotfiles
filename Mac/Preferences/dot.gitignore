@@ -3,6 +3,7 @@
 \#*
 .\#*
 *.swp
+*.out
 *.xcuserstate
 *.xcuserdata
 xcuserdata
