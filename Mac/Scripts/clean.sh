@@ -10,8 +10,8 @@ message "clean.sh" "Reset caches and preferences to default"
 # ==============================================================================
 
 
-# Hide the ~/Documents/Insta360/ folder from Finder, if present
+# Hide tfolders from being visible in Finder (they still show in Terminal)
 chflags hidden ${HOME}/Documents/Insta360/   &> /dev/null
-
+chflags hidden ${HOME}/Documents/Larian\ Studios
 
 
