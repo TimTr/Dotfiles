@@ -63,10 +63,13 @@ cp $DOTFILES_ROOT/Mac/functions.sh $HOME/.functions
 # cp $DOTFILES_ROOT/Mac/zprofile.sh $HOME/.zprofile
 
 # Copy app preferences
+cp $DOTFILES_ROOT/Mac/Preferences/* $HOME/Library/Preferences/
+
+# Copy config files
 cp $DOTFILES_ROOT/Mac/Preferences/dot.gitconfig $HOME/.gitconfig
 cp $DOTFILES_ROOT/Mac/Preferences/dot.gitignore $HOME/.gitignore
 cp $DOTFILES_ROOT/Mac/Preferences/dot.vimrc $HOME/.vimrc
-cp $DOTFILES_ROOT/Mac/Preferences/com.apple.Terminal.plist $HOME/Library/Preferences/
+
 
 # Copy Xcode preferences
 mkdir -p $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes

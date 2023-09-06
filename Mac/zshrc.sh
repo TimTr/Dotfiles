@@ -34,7 +34,6 @@ export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
 # Custom prompt with newline before each new command entry
 NEWLINE=$'\n'
 PROMPT="${NEWLINE}%F{39}[%F{white}%~%{%F{blue}%}%F{39}] ${NEWLINE}→ %f"
-# PROMPT="${NEWLINE}→ %F{39}[%F{white}%~%{%F{blue}%}%F{39}] %f"
 
 
 # Load local custom settings (e.g. security keys that don't belong in Git)
