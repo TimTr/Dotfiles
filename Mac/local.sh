@@ -7,42 +7,30 @@
 # settings due to security concerns.
 #
 
+# Only load this file once per session
 if [[ -v LOADED_LOCAL ]]; then return; fi
-export LOADED_LOCAL=true
 
+export LOADED_LOCAL=true
+message "Loading local.sh..." "Set local Swift toolchain, keys, and passwords..."
 
 source $HOME/.aliases
 source $HOME/.functions
 
-message "Loading local.sh..." "Set local Swift toolchain, keys, and passwords..."
-
-bullet "Enabled latest Swift.org toolchain installed in /Library/Developer/Toolchains/"
-bullet "NOTE: export TOOLCHAIN=null to revert to default swift tools in any shell session"
-export TOOLCHAINS=swift
-# Above uses toolchain at: /Library/Developer/Toolchains/swift-latest.xctoolchain
-# This will always point at the newest-installed Toolchain
-# Simplest answer is to delete any toolchains to go back to default
-# or can export TOOLCHAINS=null to go back to default
-
-# Alternately, pick any specific toolchain using its identifier.
-# To get the identifier, first run the following command in Terminal:
+# To use the latest custom installed toolchain from Swift.org
 #
-#    /usr/libexec/PlistBuddy -c "Print CFBundleIdentifier:" /Library/Developer/Toolchains/swift-[TOOLCHAIN FILENAME]/Info.plist
+#    bullet "Enabled latest Swift.org toolchain in /Library/Developer/Toolchains/"
+#    export TOOLCHAINS=swift
 #
-# Then set TOOLCHAINS to equal that result, e.g. command will look like:
-#
-#    export TOOLCHAINS=org.swift.57202301021a
-#
+# To use the Xcode toolchain:  export TOOLCHAINS=null (or empty)
+export TOOLCHAINS=
 
 
-# Obviously, this must be edited ONLY in the local machine
-# Do NOT put in a GitHub repo, e.g. the dotfiles repo
+# This must be edited ONLY in the local machine. Do not commit to a repo!
 bullet "e.g.: Add GitHub personal access token for use with Homebrew and others"
 export HOMEBREW_GITHUB_API_TOKEN=EMPTY
 
 
-# EXAMPLE: This was used during development of the Swift-DocC snippets feature
-#
+
 # bullet "Enable Snippets: type \"swift package learn\" within a package"
 # export SWIFTPM_ENABLE_SNIPPETS=1
 
