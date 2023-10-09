@@ -18,6 +18,22 @@ fi
 # NOTE: this syntax is `zsh` specific
 DOTFILES_ROOT=${0:a:h}
 DOTFILES_SETUP=${0:a}
+export DOTFILES_RESET=0
+
+
+# Display usage information if no commands are entered
+if [[ "$1" = "" ]]; then
+  echo "\n \033[1mUsage\033[0m:"
+  echo " - \033[1m setup.sh [no parameters] \033[0m Will not override ~/local.sh"
+  echo " - \033[1m setup.sh reset \033[0m Reset ALL settings, even Git and Xcode accounts"
+fi
+
+# Handle the "reset" command if entered
+if [[ "$1" = "reset" ]]; then
+  echo "\n \033[1mWARNING - Full reset\033[0m: RETURN to continue. Control-C to abort."
+  read -s -k
+  export DOTFILES_RESET=1
+fi
 
 
 # This script will run either the Linux or macOS installer
@@ -27,6 +43,7 @@ if [[ $OSTYPE == darwin* ]]; then
 else
   source $DOTFILES_ROOT/Linux/setup-linux.sh
 fi
+
 
 exit 0
 

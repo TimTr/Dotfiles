@@ -18,8 +18,8 @@ fi
 
 echo
 # ==============================================================================
-alert "SUDO Password Required to set permissions and ownership"
-read -s -k $'?Press any key to continue. Hit Control-C to abort now.\n'
+alert "SUDO Password Required to unsure proper permissions and ownership"
+# read -s -k $'?Press any key to continue. Hit Control-C to abort now.\n'
 echo
 
 sudo chown -R $USER ${DOTFILES_ROOT}/*  2> /dev/null
@@ -28,7 +28,6 @@ sudo chmod -R 777 ${DOTFILES_ROOT}/*    2> /dev/null
 # Un-set the quarantine bit for all my own script files
 xattr -d com.apple.quarantine ${DOTFILES_ROOT}/* 2> /dev/null
 
-echo
 # ==============================================================================
 message "mkdir -p" "/opt/homebrew/bin, /usr/local/bin, and $HOME/bin"
 # Note that /opt/homebrew is used on Apple silicon, /usr/local is legacy Intel
@@ -132,6 +131,15 @@ defaults write com.apple.screencapture type -string “png”
 
 
 # ==============================================================================
+# Report that this launch was a RESET or not
+echo
+if [[ "$DOTFILES_RESET" == 1 ]]; then
+  alert "Setup complete. All settings have been reset. \033[0m"
+else
+  alert "Completed default Dotfile setup."
+fi
+echo
+
 message "Restart terminal" "After restart, you can run the following commands:"
 bullet "git config --global user.name \"Your Name\""
 bullet "git config --global user.email \"youremail@yourdomain.com\""

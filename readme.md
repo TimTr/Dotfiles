@@ -10,6 +10,8 @@ On a Mac, first install Xcode or the command line tools package. Then run:
     ./setup.sh
 ```
 
+Alternately, type `./setup.sh reset` to override custom files like `./local.sh` and to blow-away settings for tools like Xcode that you may otherwise not want to modify.
+
 Run `setup.sh` from within a local `Dotfiles` folder instance. Once installed, quit Terminal and relaunch. Finish install by typing:
 
 ```
@@ -41,11 +43,10 @@ Files ending in .sh are often renamed to be prefix by a `"."` with the `.sh` ext
 For reference, `zsh` config files are loaded in the following order:
 
 ```
-    .zshenv    -- global (even if not interactive) so good for PATH etc
-    .zshrc     -- if interactive shell
+    .zshenv    -- global (even non-interactive), useful for PATH and tooling variables
+    .zshrc     -- loaded from the interactive shell (e.g. a Terminal window)
     .zprofile  -- if login (not using this file in current setup)
 ```
-
 
 ### Known Issues and ToDo items
 
