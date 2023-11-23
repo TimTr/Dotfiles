@@ -1,6 +1,6 @@
 #!/bin/zsh
 #
-# install-brew.sh   -- macOS version
+# setup-brew.sh   -- macOS version
 #
 # ==============================================================================
 
@@ -8,7 +8,7 @@
 
 source ~/.functions
 
-message "install-brew.sh" "Installing Homebrew using default script"
+message "setup-brew.sh" "Installing Homebrew using default script"
 
 which -s brew &> /dev/null
 if [[ $? != 0 ]] ; then

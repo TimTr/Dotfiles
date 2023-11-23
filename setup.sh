@@ -18,6 +18,7 @@ fi
 DOTFILES_ROOT=${0:a:h}
 DOTFILES_SETUP=${0:a}
 export DOTFILES_RESET=0
+export DOTFILES_FRESH=1
 
 
 # Display usage information if no commands are entered
@@ -34,13 +35,22 @@ if [[ "$1" = "reset" ]]; then
   export DOTFILES_RESET=1
 fi
 
+# Handle the "reset" command if entered
+if [[ "$1" = "fresh" ]]; then
+  echo "\n \033[1mFresh install\033[0m: Type setup-dotfiles.sh to re-run setup from PATH"
+  read -s -k
+  export DOTFILES_FRESH=1
+fi
+
+
+
 
 # This script will run either the Linux or macOS installer
 # (yes, one day may need more options than this, but for now...)
 if [[ $OSTYPE == darwin* ]]; then
-  source $DOTFILES_ROOT/Mac/setup-macos.sh
+  source $DOTFILES_ROOT/Mac/setup-dotfiles.sh
 else
-  source $DOTFILES_ROOT/Linux/setup-linux.sh
+  source $DOTFILES_ROOT/Linux/setup-dotfiles.sh
 fi
 
 

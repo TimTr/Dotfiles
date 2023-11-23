@@ -19,7 +19,7 @@ message ".zshrc" "Launched $SHELL' at ${TIMENOW}."
 # Warn about installing Homebrew if it is not yet present
 which -s brew &> /dev/null
 if [[ $? != 0 ]] ; then
-  error "Missing Homebrew" "Run install-brew.sh"
+  error "Missing Homebrew" "Run setup-brew.sh"
 else
   message "Found Homebrew" "Installed brew tools supercede system tools (e.g. Ruby)"
 fi
@@ -52,13 +52,13 @@ source $HOME/local.sh
 # *** NOTE: Removing rbenv - switched to simple `brew install ruby`
 #
 # This `rbenv` setting needs to be hard-coded into .zshrc by default
-# If you get a "command not found" for rbenv, run `install-ruby`
+# If you get a "command not found" for rbenv, run `setup-ruby`
 #
 # To read more about installing rbenv see: https://github.com/rbenv/rbenv
 # eval "$(rbenv init - zsh)"
 # which -s rbenv &> /dev/null
 # if [[ $? != 0 ]] ; then
-#   error "Missing rbenv" "Run install-ruby.sh"
+#   error "Missing rbenv" "Run setup-ruby.sh"
 # else
 #   eval "$(rbenv init -)"
 #   export PATH="${HOME}/.rbenv/bin:$PATH"

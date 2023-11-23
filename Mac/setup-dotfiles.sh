@@ -1,7 +1,9 @@
 #!/bin/zsh
 #
 # setup-macos.sh - the macOS version
-source "$DOTFILES_ROOT/Mac/dot-functions.sh"
+
+# TODO: This needs to adapt to whether this is a FRESH install or re-run from PATH
+source "$DOTFILES_ROOT/Mac/Root/dot-functions.sh"
 echo
 message "setup-macos.sh -- setting up for macOS via ${DOTFILES_ROOT}"
 
@@ -48,46 +50,43 @@ sudo chmod 766 $HOME/Developer
 sudo chmod 777 /opt/homebrew/bin
 sudo chmod 777 /usr/local/bin
 
+
+# ==============================================================================
+message "Copying scripts into ~/Developer" "These scripts are now in PATH"
 # Put some files in these directories just to validate
 cp ${DOTFILES_ROOT}/readme.md $HOME/Developer
 
-# ==============================================================================
-message "Copying dotfiles" "Overwriting existing versions of these files"
-cp $DOTFILES_ROOT/Mac/dot-zshrc.sh $HOME/.zshrc
-cp $DOTFILES_ROOT/Mac/dot-zshenv.sh $HOME/.zshenv
-cp $DOTFILES_ROOT/Mac/dot-aliases.sh $HOME/.aliases
-cp $DOTFILES_ROOT/Mac/dot-functions.sh $HOME/.functions
+# Don't copy with -R for the primary PATH files
+cp -R $DOTFILES_ROOT/Mac/* $HOME/Developer/
 
-# Copy app preferences
-cp $DOTFILES_ROOT/Mac/Preferences/* $HOME/Library/Preferences/
+
+
+# TODO: FEATURE - Install from ~/Developer if run from PATH, or DOTFILES if fresh install
+
+# ==============================================================================
+message "Installing root dotfiles" "Overwriting existing versions of these files"
+cp $DOTFILES_ROOT/Mac/Root/dot-zshrc.sh $HOME/.zshrc
+cp $DOTFILES_ROOT/Mac/Root/dot-zshenv.sh $HOME/.zshenv
+cp $DOTFILES_ROOT/Mac/Root/dot-aliases.sh $HOME/.aliases
+cp $DOTFILES_ROOT/Mac/Root/dot-functions.sh $HOME/.functions
 
 # Copy Git and other config files
-cp $DOTFILES_ROOT/Mac/dot-gitconfig $HOME/.gitconfig
-cp $DOTFILES_ROOT/Mac/dot-gitignore $HOME/.gitignore
-cp $DOTFILES_ROOT/Mac/dot-vimrc $HOME/.vimrc
+cp $DOTFILES_ROOT/Mac/Root/dot-gitconfig $HOME/.gitconfig
+cp $DOTFILES_ROOT/Mac/Root/dot-gitignore $HOME/.gitignore
+cp $DOTFILES_ROOT/Mac/Root/dot-vimrc $HOME/.vimrc
 
 # Register gitignore and other git stuff
 git config --global core.excludesfile ~/.gitignore
+
+message "Installing app preferences" "Overwriting Terminal, Xcode, and other settings"
+# Copy app settings
+cp $DOTFILES_ROOT/Mac/Preferences/* $HOME/Library/Preferences/
 
 # Copy Xcode preferences
 mkdir -p $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes
 cp -R $DOTFILES_ROOT/Mac/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
 
 
-
-# ==============================================================================
-message "Copying scripts into ~/Developer" "These scripts are now in PATH"
-cp -R $DOTFILES_ROOT/Mac/Demos/* $HOME/Developer/
-cp -R $DOTFILES_ROOT/Mac/Scripts/* $HOME/Developer/
-# Don't copy with -R for the root files, to avoid copyin
-cp $DOTFILES_ROOT/Mac/* $HOME/Developer/
-
-# These files are copied into Developer subfolders, not into the PATH
-mkdir -p $HOME/Developer/Settings
-cp -R $DOTFILES_ROOT/Mac/Settings/* $HOME/Developer/Settings/
-
-mkdir -p $HOME/Developer/Xcode
-cp -R $DOTFILES_ROOT/Mac/Xcode/* $HOME/Developer/Xcode/
 
 
 
@@ -156,8 +155,8 @@ echo
 message "Restart terminal" "After restart, you can run the following commands:"
 bullet "git config --global user.name \"Your Name\""
 bullet "git config --global user.email \"youremail@yourdomain.com\""
-bullet "install-brew.sh  <-- install and setup Homebrew"
-bullet "install-ruby.sh  <-- install a newer version of Ruby via Homebrew"
+bullet "setup-brew.sh  <-- install or update Homebrew"
+bullet "setup-ruby.sh  <-- setup a newer version (or update) of Ruby via Homebrew"
 echo
 
 exit 0
