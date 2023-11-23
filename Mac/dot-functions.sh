@@ -42,7 +42,7 @@ md() {
 
 
 # Delete Xcode derived data
-delete-derived-data() {
+xcode-clean() {
     echo "Deleting all Xcode derived data..."
     rm -rdf ~/Library/Developer/Xcode/DerivedData/*
 }

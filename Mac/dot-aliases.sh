@@ -40,15 +40,15 @@ alias mv='mv -v'
 alias rm='rm -i -v'
 alias cp='cp -v'
 
-# Make 'ls' look prettier, with colors and sorting
-alias ls='ls -FG'
-# Use 'll' most of the time, does not "show all" by default
-alias ll='ls -loFGT'
-# Use 'lla' to enable "show all" for hidden files beginning with a period
-alias lla='ls -loAFGT'
+
+# Use 'll' to enable "show all" for hidden files beginning with a period
+alias ll='ls -loAFGT'
+# Use 'lla' to suppress the "show all" flag when listing files
+alias lla='ls -loFGT'
 # Use 'llx' to see the most info, including extended attributes
 alias llx='ls -lo@AFGT'
-
+# Make standard 'ls' look prettier, with colors and sorting
+alias ls='ls -FG'
 
 
 # Git can sometimes create locked files in the .git folder, which then

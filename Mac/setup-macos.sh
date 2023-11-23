@@ -1,7 +1,7 @@
 #!/bin/zsh
 #
 # setup-macos.sh - the macOS version
-source "$DOTFILES_ROOT/Mac/functions.sh"
+source "$DOTFILES_ROOT/Mac/dot-functions.sh"
 echo
 message "setup-macos.sh -- setting up for macOS via ${DOTFILES_ROOT}"
 
@@ -34,54 +34,61 @@ message "mkdir -p" "/opt/homebrew/bin, /usr/local/bin, and $HOME/bin"
 # Note the /opt/bin is used in Linux setups
 
 # Create these directories "just in case"
-sudo mkdir -p $HOME/Developer/Bin
+sudo mkdir -p $HOME/Developer
 sudo mkdir -p /opt/homebrew/bin
 sudo mkdir -p /usr/local/bin
 
 # Reset ownership, note the directory name does not end in / or /*
-sudo chown -R "$USER":admin $HOME/Developer/Bin
+sudo chown -R "$USER":admin $HOME/Developer
 sudo chown -R "$USER":admin /opt/homebrew
 sudo chown -R "$USER":admin /usr/local/bin
 
 # Set the permissions for the folders (read/write for all)
-sudo chmod 766 $HOME/Developer/Bin
+sudo chmod 766 $HOME/Developer
 sudo chmod 777 /opt/homebrew/bin
 sudo chmod 777 /usr/local/bin
 
 # Put some files in these directories just to validate
-cp ${DOTFILES_ROOT}/readme.md $HOME/Developer/Bin
-cp ${DOTFILES_ROOT}/readme.md /opt/homebrew/bin
-cp ${DOTFILES_ROOT}/readme.md /usr/local/bin
+cp ${DOTFILES_ROOT}/readme.md $HOME/Developer
 
 # ==============================================================================
 message "Copying dotfiles" "Overwriting existing versions of these files"
-cp $DOTFILES_ROOT/Mac/zshrc.sh $HOME/.zshrc
-cp $DOTFILES_ROOT/Mac/zshenv.sh $HOME/.zshenv
-cp $DOTFILES_ROOT/Mac/aliases.sh $HOME/.aliases
-cp $DOTFILES_ROOT/Mac/functions.sh $HOME/.functions
-# cp $DOTFILES_ROOT/Mac/zprofile.sh $HOME/.zprofile
+cp $DOTFILES_ROOT/Mac/dot-zshrc.sh $HOME/.zshrc
+cp $DOTFILES_ROOT/Mac/dot-zshenv.sh $HOME/.zshenv
+cp $DOTFILES_ROOT/Mac/dot-aliases.sh $HOME/.aliases
+cp $DOTFILES_ROOT/Mac/dot-functions.sh $HOME/.functions
 
 # Copy app preferences
 cp $DOTFILES_ROOT/Mac/Preferences/* $HOME/Library/Preferences/
 
-# Copy config files
-cp $DOTFILES_ROOT/Mac/Config/dot.gitconfig $HOME/.gitconfig
-cp $DOTFILES_ROOT/Mac/Config/dot.gitignore $HOME/.gitignore
-cp $DOTFILES_ROOT/Mac/Config/dot.vimrc $HOME/.vimrc
+# Copy Git and other config files
+cp $DOTFILES_ROOT/Mac/dot-gitconfig $HOME/.gitconfig
+cp $DOTFILES_ROOT/Mac/dot-gitignore $HOME/.gitignore
+cp $DOTFILES_ROOT/Mac/dot-vimrc $HOME/.vimrc
 
+# Register gitignore and other git stuff
+git config --global core.excludesfile ~/.gitignore
 
 # Copy Xcode preferences
 mkdir -p $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes
 cp -R $DOTFILES_ROOT/Mac/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
 
 
-# Register gitignore and other git stuff
-git config --global core.excludesfile ~/.gitignore
-
 
 # ==============================================================================
-message "Copying scripts" "Scripts are now in PATH: $HOME/Developer/Bin"
-cp -R $DOTFILES_ROOT/Mac/Scripts/* $HOME/Developer/Bin/
+message "Copying scripts into ~/Developer" "These scripts are now in PATH"
+cp -R $DOTFILES_ROOT/Mac/Demos/* $HOME/Developer/
+cp -R $DOTFILES_ROOT/Mac/Scripts/* $HOME/Developer/
+# Don't copy with -R for the root files, to avoid copyin
+cp $DOTFILES_ROOT/Mac/* $HOME/Developer/
+
+# These files are copied into Developer subfolders, not into the PATH
+mkdir -p $HOME/Developer/Settings
+cp -R $DOTFILES_ROOT/Mac/Settings/* $HOME/Developer/Settings/
+
+mkdir -p $HOME/Developer/Xcode
+cp -R $DOTFILES_ROOT/Mac/Xcode/* $HOME/Developer/Xcode/
+
 
 
 # ==============================================================================
@@ -120,14 +127,20 @@ defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
 # The single-quote, comma + space format, no space at end is important!
 defaults write com.apple.dt.Xcode IDEFileExtensionDisplayShowOnlyList '(c, cc, cpp, h, hpp, m, mm, gif, icns, jpeg, jpg, png, tiff, sh, md, html, css, js)'
 
-# Stops the IDE from saving the workspace layout (window size, etc)
-# defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool YES
+# Set macOS to not write .DS_Store files on network drives
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+# Set macOS to not write .DS_Store files on USB drives
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
 
 # Save screenshots to the downloads folder
 defaults write com.apple.screencapture location -string “$HOME/Downloads”
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string “png”
+
+# Stops Xcode IDE from saving the workspace layout (window size, etc)
+# defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool YES
 
 
 # ==============================================================================
@@ -143,8 +156,8 @@ echo
 message "Restart terminal" "After restart, you can run the following commands:"
 bullet "git config --global user.name \"Your Name\""
 bullet "git config --global user.email \"youremail@yourdomain.com\""
-bullet "install-brew.sh  <-- this will install Homebrew when you're ready"
-bullet "install-ruby.sh  <-- this will install a recent Ruby via rbenv"
+bullet "install-brew.sh  <-- install and setup Homebrew"
+bullet "install-ruby.sh  <-- install a newer version of Ruby via Homebrew"
 echo
 
 exit 0

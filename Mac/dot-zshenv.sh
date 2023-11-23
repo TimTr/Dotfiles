@@ -1,7 +1,7 @@
 # .zshenv - Loaded in every session, even if not interactive. Great for PATH.
 
-# Homebrew and local Developer/Bin folder for my scripts in the PATH
-export PATH="$HOME/Developer/Bin:/opt/homebrew/bin"
+# Homebrew and local ~/Developer folder for my scripts in the PATH
+export PATH="$HOME/Developer:/opt/homebrew/bin"
 
 # Put Homebrew-installed Ruby at the start of the PATH (override macOS version)
 

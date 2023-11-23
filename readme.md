@@ -79,21 +79,20 @@ There are a few aliases added that make it easy to install Homebrew and other to
 
 Once installed, you can install Homebrew and run demos. For example, run `demo-homebrew.sh` from the PATH to show a  Terminal screen of software being downloaded, built, installed, and erased (in a repeating loop). Hit `CONTROL-Z` to quit that demo.
 
-You can also open the `./Developer/Bin/demo-safari-cycle.html` file to launch Safari and begin cycling through many web pages, implying a sort of automated web test harness. 
+You can also open the `./Developer/demo-safari-cycle.html` file to launch Safari and begin cycling through many web pages, implying a sort of automated web test harness. 
 
 
 ## License
 
-These scripts and settings are provided for free, covered by the MIT license found within the repository.
+These scripts and settings are provided for free, covered by the MIT license.
 
 
 ## Useful reference links
 
-- https://dotfiles.github.io
+This project's' [documentation for Dotfiles FIXME](https://dotfiles.github.io)
 
-Which `zsh` files contain which settings: https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout
+Which `zsh` files contain which settings: [CodeSpaces and Dotfiles](https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout)
 
-
-Docs indicating that `setup.sh` is a starter script used by GitHub Codespaces: [CodeSpaces and Dotfiles](https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-codespaces-for-your-account)
+Docs on using `setup.sh` with [GitHub CodeSpaces and Dotfiles](https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-codespaces-for-your-account)
 
 

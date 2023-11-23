@@ -5,8 +5,7 @@
 # TODO: add `update` or `install` check to easily update without full re-install
 
 
-# These scripts all require `zsh` as the default.
-# This will set the default shell if needed
+# Require `zsh` as the default, and set the default shell if needed
 if [ $SHELL != "/bin/zsh" ]; then
   chsh -s /bin/zsh
   echo "Requires \"zsh\". Switched default shell to /bin/zsh -- re-run setup.sh file"
@@ -46,6 +45,11 @@ fi
 
 
 exit 0
+
+
+
+
+
 
 
 
