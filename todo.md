@@ -1,11 +1,13 @@
 # TODO Items
 
-
-- Use a new variable for $HOME/Developer, e.g. $DEVELOPER
-- Drive full setup from $DEVELOPER to enable re-run from PATH, not from Dotfiles
-    - Using `export DOTFILES_FRESH=1` to indicate a fresh install
-- Report current `git config --global user.name "your name"` info (and email) - or instruct how to set it
-
+- BIG CHANGE: Put `Dotfiles` into the PATH itself
+- Add "refresh" command to re-setup, but not wipe critical files
+- If `setup.sh` is run from the PATH, don't override app settings
+- Report current `git config --global user.name "your name"` info after setup
+    - If it is empty, output instructions to set it up
+    - Do something similar for Ruby, Homebrew, or other pieces
+- Turn `setup-brew.sh` into an auto upgrade/upgrade if already setup.
+    - Eliminate the need for a two-step process
 
 
 ## Done

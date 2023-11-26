@@ -5,8 +5,6 @@
 # impact and can just slow down some tools that load this.
 # -------------------------------------------------------------
 
-# TODO: haven't yet done the work to make this file good!!!
-
 # ==============================================================================
 # Hard-coding the PATH in .zshenv so available even to non-interactive shells
 # Add the Homebrew paths and custom path first

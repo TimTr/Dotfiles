@@ -2,8 +2,8 @@
 #
 # setup-macos.sh - the macOS version
 
-# TODO: This needs to adapt to whether this is a FRESH install or re-run from PATH
-source "$DOTFILES_ROOT/Mac/Root/dot-functions.sh"
+# TODO: Adapt to whether this is a FRESH install or re-run from PATH
+source "$DOTFILES_ROOT/Mac/Home/dot-functions.sh"
 echo
 message "setup-macos.sh -- setting up for macOS via ${DOTFILES_ROOT}"
 
@@ -60,20 +60,17 @@ cp ${DOTFILES_ROOT}/readme.md $HOME/Developer
 cp -R $DOTFILES_ROOT/Mac/* $HOME/Developer/
 
 
-
-# TODO: FEATURE - Install from ~/Developer if run from PATH, or DOTFILES if fresh install
-
 # ==============================================================================
 message "Installing root dotfiles" "Overwriting existing versions of these files"
-cp $DOTFILES_ROOT/Mac/Root/dot-zshrc.sh $HOME/.zshrc
-cp $DOTFILES_ROOT/Mac/Root/dot-zshenv.sh $HOME/.zshenv
-cp $DOTFILES_ROOT/Mac/Root/dot-aliases.sh $HOME/.aliases
-cp $DOTFILES_ROOT/Mac/Root/dot-functions.sh $HOME/.functions
+cp $DOTFILES_ROOT/Mac/Home/dot-zshrc.sh $HOME/.zshrc
+cp $DOTFILES_ROOT/Mac/Home/dot-zshenv.sh $HOME/.zshenv
+cp $DOTFILES_ROOT/Mac/Home/dot-aliases.sh $HOME/.aliases
+cp $DOTFILES_ROOT/Mac/Home/dot-functions.sh $HOME/.functions
 
 # Copy Git and other config files
-cp $DOTFILES_ROOT/Mac/Root/dot-gitconfig $HOME/.gitconfig
-cp $DOTFILES_ROOT/Mac/Root/dot-gitignore $HOME/.gitignore
-cp $DOTFILES_ROOT/Mac/Root/dot-vimrc $HOME/.vimrc
+cp $DOTFILES_ROOT/Mac/Home/dot-gitconfig $HOME/.gitconfig
+cp $DOTFILES_ROOT/Mac/Home/dot-gitignore $HOME/.gitignore
+cp $DOTFILES_ROOT/Mac/Home/dot-vimrc $HOME/.vimrc
 
 # Register gitignore and other git stuff
 git config --global core.excludesfile ~/.gitignore
@@ -107,11 +104,12 @@ fi
 
 # ==============================================================================
 # Check if the "~/local.sh" file exists, and if not, copy over the stub
+# TODO: Add a check if a full "reset" was requested via setup.sh
 if [[ -f "$HOME/local.sh" ]]; then
   message "~/local.sh exists" "Delete the file then re-run to install a template version"
 else
   message "Creating ~/local.sh" "Modify this file to add GitHub and SSH tokens"
-  cp $DOTFILES_ROOT/Mac/local.sh $HOME/local.sh
+  cp $DOTFILES_ROOT/Mac/Home/local-template.sh $HOME/local.sh
 fi
 
 

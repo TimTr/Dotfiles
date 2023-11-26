@@ -20,7 +20,7 @@ The first install requires that you run `setup.sh` from within the local `Dotfil
     setup-ruby.sh
 ```
 
-Once installed, a tool called `help.sh` is runable from the PATH for additional help. 
+Once installed, run `help.sh` for additional help. 
 
 ## Overview
 
