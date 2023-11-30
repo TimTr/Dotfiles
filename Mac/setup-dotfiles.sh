@@ -8,13 +8,12 @@ echo
 message "setup-macos.sh -- setting up for macOS via ${DOTFILES_ROOT}"
 
 
-# If Xcode isn't installed, the abort the install
+# If Xcode isn't installed, then abort the install
 if xcode-select -p &> /dev/null
 then
   message "Xcode selected" $(xcode-select -p)
 else
-  # URL docs: https://developer.apple.com/library/archive/qa/qa1633/_index.html
-  error "Xcode missing" "Install Xcode first: https://appstore.com/mac/apple/xcode"
+  error "Xcode missing" "Install Xcode, then re-run the script"
   exit 0
 fi
 
@@ -31,33 +30,33 @@ sudo chmod -R 777 ${DOTFILES_ROOT}/*    2> /dev/null
 xattr -d com.apple.quarantine ${DOTFILES_ROOT}/* 2> /dev/null
 
 # ==============================================================================
-message "mkdir -p" "/opt/homebrew/bin, /usr/local/bin, and $HOME/bin"
+message "mkdir -p" "/opt/homebrew/bin, /usr/local/bin, and $DOTFILES_BIN"
 # Note that /opt/homebrew is used on Apple silicon, /usr/local is legacy Intel
 # Note the /opt/bin is used in Linux setups
 
 # Create these directories "just in case"
-sudo mkdir -p $HOME/Developer
+sudo mkdir -p $DOTFILES_BIN
 sudo mkdir -p /opt/homebrew/bin
 sudo mkdir -p /usr/local/bin
 
 # Reset ownership, note the directory name does not end in / or /*
-sudo chown -R "$USER":admin $HOME/Developer
+sudo chown -R "$USER":admin $DOTFILES_BIN
 sudo chown -R "$USER":admin /opt/homebrew
 sudo chown -R "$USER":admin /usr/local/bin
 
 # Set the permissions for the folders (read/write for all)
-sudo chmod 766 $HOME/Developer
+sudo chmod 766 $DOTFILES_BIN
 sudo chmod 777 /opt/homebrew/bin
 sudo chmod 777 /usr/local/bin
 
 
 # ==============================================================================
-message "Copying scripts into ~/Developer" "These scripts are now in PATH"
+message "Copying scripts into $DOTFILES_BIN" "These scripts are now in PATH"
 # Put some files in these directories just to validate
-cp ${DOTFILES_ROOT}/readme.md $HOME/Developer
+cp ${DOTFILES_ROOT}/readme.md $DOTFILES_BIN
 
 # Don't copy with -R for the primary PATH files
-cp -R $DOTFILES_ROOT/Mac/* $HOME/Developer/
+cp -R $DOTFILES_ROOT/Mac/* $DOTFILES_BIN
 
 
 # ==============================================================================
@@ -82,9 +81,6 @@ cp $DOTFILES_ROOT/Mac/Preferences/* $HOME/Library/Preferences/
 # Copy Xcode preferences
 mkdir -p $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes
 cp -R $DOTFILES_ROOT/Mac/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
-
-
-
 
 
 # ==============================================================================
@@ -131,10 +127,10 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
 
 # Save screenshots to the downloads folder
-defaults write com.apple.screencapture location -string “$HOME/Downloads”
+# defaults write com.apple.screencapture location -string “$HOME/Downloads”
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-defaults write com.apple.screencapture type -string “png”
+# defaults write com.apple.screencapture type -string “png”
 
 # Stops Xcode IDE from saving the workspace layout (window size, etc)
 # defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool YES
@@ -157,6 +153,7 @@ bullet "setup-brew.sh  <-- install or update Homebrew"
 bullet "setup-ruby.sh  <-- setup a newer version (or update) of Ruby via Homebrew"
 echo
 
+echo "TEST: DOTFILES_BIN == $DOTFILES_BIN"
 exit 0
 
 

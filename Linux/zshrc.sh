@@ -6,9 +6,9 @@ source $HOME/.aliases
 source $HOME/.functions
 
 # ==============================================================================
-# Hard-coding the ~/Developer folder to lead the PATH
+# Hard-coding the new binary folder to lead the PATH
 # Do NOT append the previous $PATH as this will duplicate with each script run
-export PATH="$HOME/Developer"
+export PATH="$DOTFILES_BIN"
 # Add the Homebrew alternate folder to PATH
 export PATH="$PATH:/opt/homebrew/bin"
 # Add default system PATHs to the chain (these are REALLY important)

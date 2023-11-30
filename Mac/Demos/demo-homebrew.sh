@@ -4,7 +4,7 @@
 #
 # This script will install, uninstall, clean, and then re-install a bunch
 # of Homebrew formula. This will keep the CPU busy, and shows a lot of activity
-# in the Terminal window to show a more generic developer workflow.
+# in the Terminal window to show a more generic coding workflow.
 #
 
 # Infinite loop...

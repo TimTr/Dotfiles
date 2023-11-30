@@ -1,6 +1,5 @@
 # TODO Items
 
-- BIG CHANGE: Put `Dotfiles` into the PATH itself
 - Add "refresh" command to re-setup, but not wipe critical files
 - If `setup.sh` is run from the PATH, don't override app settings
 - Report current `git config --global user.name "your name"` info after setup
@@ -12,6 +11,7 @@
 
 ## Done
 
+- Install into `$HOME/Bin` instead of ~/Developer
 - Move all script files into main `Mac` folder to go into the $PATH
 - Put root `~/Developer` in the PATH (remove `./Bin` sub-folder)
 - Rename the dot files to `dot-name.sh` to be more clear (Almost done)

@@ -18,10 +18,8 @@ source $HOME/.functions
 
 # To use the latest custom installed toolchain from Swift.org
 #
-#    bullet "Enabled latest Swift.org toolchain in /Library/Developer/Toolchains/"
-#    export TOOLCHAINS=swift
-#
-# To use the Xcode toolchain:  export TOOLCHAINS=null (or empty)
+#  Enable latest Swift.org toolchain in /Library/Developer/Toolchains/"
+#  export TOOLCHAINS=swift ("swift" = use Swift.org tools, empty = use Xcode)
 export TOOLCHAINS=
 
 
