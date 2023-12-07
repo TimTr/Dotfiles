@@ -7,10 +7,11 @@
     - Do something similar for Ruby, Homebrew, or other pieces
 - Turn `setup-brew.sh` into an auto upgrade/upgrade if already setup.
     - Eliminate the need for a two-step process
-
+- Function to delete `./DS_Store` files recursively down a folder structure 
 
 ## Done
 
+- Add the current git branch of the current folder to the prompt
 - Install into `$HOME/Bin` instead of ~/Developer
 - Move all script files into main `Mac` folder to go into the $PATH
 - Put root `~/Developer` in the PATH (remove `./Bin` sub-folder)

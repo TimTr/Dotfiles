@@ -17,6 +17,7 @@ fi
 # NOTE: this syntax is `zsh` specific
 DOTFILES_ROOT=${0:a:h}
 DOTFILES_SETUP=${0:a}
+DOTFILES_BIN=$HOME/bin
 
 export DOTFILES_RESET=0
 export DOTFILES_FRESH=1
