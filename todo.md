@@ -1,7 +1,7 @@
 # TODO Items
 
-- Add "refresh" command to re-setup, but not wipe critical files
-- Use "refresh" behavior by default if `setup.sh` is run via PATH
+- Add "update" command to re-setup, but not wipe critical files
+- Use "update" behavior by default if `setup.sh` is run via PATH
 - Report current `git config` name/email after setup, or instruct to setup
     - Do something similar for Ruby, Homebrew, or other pieces
 - Use `setup-brew.sh` to update/upgrade if already installed (not two files)

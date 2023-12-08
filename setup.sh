@@ -45,10 +45,7 @@ if [[ "$1" = "fresh" ]]; then
 fi
 
 
-
-
 # This script will run either the Linux or macOS installer
-# (yes, one day may need more options than this, but for now...)
 if [[ $OSTYPE == darwin* ]]; then
   source $DOTFILES_ROOT/Mac/setup-dotfiles.sh
 else
