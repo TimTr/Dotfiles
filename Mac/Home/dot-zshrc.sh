@@ -28,7 +28,9 @@ fi
 # Prompt and color settings (zsh-specific, different from bash)
 autoload colors; colors;
 export CLICOLOR=1
-export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
+export LSCOLORS=gxFxCxDxdxExBxAxaxaxex
+# Previous color options
+# export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
 
 ## Parse git branch to put into the prompt
 parse_git_branch() {
@@ -39,20 +41,7 @@ setopt PROMPT_SUBST
 
 # Set the actual prompt
 NEWLINE=$'\n'
-PROMPT='${NEWLINE}%F{blue}% → %F{white}% %9c% %F{blue}% $(parse_git_branch) %F{blue}% ${NEWLINE}↪ %f'
-
-
-# ----------------------------------
-# This solution I know works
-# parse_git_branch() {
-#     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-# }
-# setopt PROMPT_SUBST
-# PROMPT='%9c%{%F{green}%}$(parse_git_branch)%{%F{none}%} $ '
-# ----------------------------------
-
-# Old prompt with nice colors and new lines
-# PROMPT="${NEWLINE}%F{39}[%F{white}%~%{%F{blue}%}%F{39} - ${parse_git_branch}%# ] ${NEWLINE}→ %f"
+PROMPT='${NEWLINE}%F{white}% → %F{red}% %9c% %F{grey}% $(parse_git_branch) %F{white}% ${NEWLINE}↪ %f'
 
 
 # Load local custom settings (e.g. security keys that don't belong in Git)

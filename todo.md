@@ -1,17 +1,15 @@
 # TODO Items
 
 - Add "refresh" command to re-setup, but not wipe critical files
-- If `setup.sh` is run from the PATH, don't override app settings
-- Report current `git config --global user.name "your name"` info after setup
-    - If it is empty, output instructions to set it up
+- Use "refresh" behavior by default if `setup.sh` is run via PATH
+- Report current `git config` name/email after setup, or instruct to setup
     - Do something similar for Ruby, Homebrew, or other pieces
-- Turn `setup-brew.sh` into an auto upgrade/upgrade if already setup.
-    - Eliminate the need for a two-step process
+- Use `setup-brew.sh` to update/upgrade if already installed (not two files)
 - Function to delete `./DS_Store` files recursively down a folder structure 
 
 ## Done
 
-- Add the current git branch of the current folder to the prompt
+- Add the active git branch of the current folder to the prompt
 - Install into `$HOME/Bin` instead of ~/Developer
 - Move all script files into main `Mac` folder to go into the $PATH
 - Put root `~/Developer` in the PATH (remove `./Bin` sub-folder)

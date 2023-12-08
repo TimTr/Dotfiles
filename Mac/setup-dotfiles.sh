@@ -153,7 +153,6 @@ bullet "setup-brew.sh  <-- install or update Homebrew"
 bullet "setup-ruby.sh  <-- setup a newer version (or update) of Ruby via Homebrew"
 echo
 
-echo "TEST: DOTFILES_BIN == $DOTFILES_BIN"
 exit 0
 
 
