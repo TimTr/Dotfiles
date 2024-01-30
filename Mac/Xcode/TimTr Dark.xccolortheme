@@ -111,11 +111,11 @@
 		<key>xcode.syntax.declaration.other</key>
 		<string>0.990419 0.500286 0.0328552 1</string>
 		<key>xcode.syntax.declaration.type</key>
-		<string>0.918666 1 0 1</string>
+		<string>0.990419 0.500286 0.0328552 1</string>
 		<key>xcode.syntax.identifier.class</key>
 		<string>0.713704 0.249773 0.707592 1</string>
 		<key>xcode.syntax.identifier.class.system</key>
-		<string>0.427451 0.67451 1 1</string>
+		<string>0.886388 0.983859 0 1</string>
 		<key>xcode.syntax.identifier.constant</key>
 		<string>0.875867 0.548301 0.784713 1</string>
 		<key>xcode.syntax.identifier.constant.system</key>

@@ -13,11 +13,20 @@ if [[ $? != 0 ]] ; then
   error "Missing Homebrew" "Installing for the first time..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
-  message "Found Homebrew" "Installing critical packages, updating and upgrading..."
+  message "Found Homebrew" "Updating, upgrading, installing Jekyll and others"
 
   brew update
   brew upgrade
   brew install automake bison openssl readline libyaml gdbm libffi wget
+
+  # Install ruby gems, specifically Jekyll for blogs
+  gem update
+  gem install jekyll
+  
+  message "Homebrew update complete" "Reporting current versions:"
+  python3 --version
+  ruby --version
+  jekyll --version
 fi
 
 

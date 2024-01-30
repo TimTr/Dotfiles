@@ -42,11 +42,13 @@ alias cp='cp -v'
 
 
 # Use 'll' to suppress the "show all" flag when listing files
-alias ll='ls -loFGT'
+alias ll='ls -oFGT'
 # Use 'lla' to enable "show all" for hidden files beginning with a period
-alias lla='ls -loAFGT'
+alias lla='ls -oAFGT'
 # Use 'llx' to see the most info, including extended attributes
-alias llx='ls -lo@AFGT'
+alias llx='ls -o@AFGT'
+# Use 'llt' to see the files sorted by modification time
+alias llt='ls -otAFGT'
 # Make standard 'ls' look prettier, with colors and sorting
 # alias ls='ls -FG'
 
