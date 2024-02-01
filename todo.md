@@ -7,8 +7,11 @@
     - Do something similar for Ruby, Homebrew, or other pieces
 - Function to delete `./DS_Store` files recursively down a folder structure 
 
+
+
 ## Done
 
+- Added new VSCode theme settings to `./Mac/Settings`
 - Use `setup-brew.sh` to update/upgrade if already installed (not two files)
 - Add the active git branch of the current folder to the prompt
 - Install into `$HOME/Bin` instead of ~/Developer
