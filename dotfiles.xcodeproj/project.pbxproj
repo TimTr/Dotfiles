@@ -11,21 +11,21 @@
 		BA01DB1E2A53326B00ADA557 /* Docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Docs; sourceTree = "<group>"; };
 		BA01DB212A53326B00ADA557 /* Linux */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Linux; sourceTree = "<group>"; };
 		BA01DB222A53326B00ADA557 /* Mac */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Mac; sourceTree = "<group>"; };
-		BA01DB232A53326B00ADA557 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		BA4B13592A533336001D1E03 /* license.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = license.md; sourceTree = "<group>"; };
 		BA51165A2B00BB12009E0899 /* todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = todo.md; sourceTree = "<group>"; };
+		BA78D61E2B6CA8D60074C417 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = readme.md; path = Mac/readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		BAD1343E2A53323000A5A08D = {
 			isa = PBXGroup;
 			children = (
-				BA01DB232A53326B00ADA557 /* readme.md */,
+				BA78D61E2B6CA8D60074C417 /* readme.md */,
+				BA01DB222A53326B00ADA557 /* Mac */,
+				BA01DB212A53326B00ADA557 /* Linux */,
+				BA01DB1E2A53326B00ADA557 /* Docs */,
 				BA51165A2B00BB12009E0899 /* todo.md */,
 				BA4B13592A533336001D1E03 /* license.md */,
-				BA01DB1E2A53326B00ADA557 /* Docs */,
-				BA01DB212A53326B00ADA557 /* Linux */,
-				BA01DB222A53326B00ADA557 /* Mac */,
 				BA01DB1D2A53326B00ADA557 /* setup.sh */,
 			);
 			sourceTree = "<group>";
