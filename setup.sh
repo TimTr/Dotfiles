@@ -1,8 +1,8 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 #
-# setup.sh is a filename understood as a startup by GitHub Codespaces and VMs
+#  setup.sh is also understood as a startup by GitHub Codespaces and other VMs
 #
-# TODO: add `update` or `install` check to easily update without full re-install
+#  TODO: add `update` or `install` check to easily update without full re-install
 
 
 # Require `zsh` as the default, and set the default shell if needed
@@ -13,8 +13,7 @@ if [ $SHELL != "/bin/zsh" ]; then
 fi
 
 # Get the folder in which setup.sh was run, no matter your current location.
-# This is then the root from which all further operations are run.
-# NOTE: this syntax is `zsh` specific
+# This is then the root from which all further operations are run. (requires ZSH)
 DOTFILES_ROOT=${0:a:h}
 DOTFILES_SETUP=${0:a}
 DOTFILES_BIN=$HOME/bin
