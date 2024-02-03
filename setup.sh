@@ -18,37 +18,11 @@ DOTFILES_ROOT=${0:a:h}
 DOTFILES_SETUP=${0:a}
 DOTFILES_BIN=$HOME/bin
 
-export DOTFILES_RESET=0
-export DOTFILES_FRESH=1
-
-
-# Display usage information if no commands are entered
-if [[ "$1" = "" ]]; then
-  echo "\n \033[1mUsage\033[0m:"
-  echo " - \033[1m setup.sh [no parameters] \033[0m Will not override ~/local.sh"
-  echo " - \033[1m setup.sh reset \033[0m Reset ALL settings, even Git and Xcode accounts"
-fi
-
-# Handle the "reset" command if entered
-if [[ "$1" = "reset" ]]; then
-  echo "\n \033[1mWARNING - Full reset\033[0m: RETURN to continue. Control-C to abort."
-  read -s -k
-  export DOTFILES_RESET=1
-fi
-
-# Handle the "reset" command if entered
-if [[ "$1" = "fresh" ]]; then
-  echo "\n \033[1mFresh install\033[0m: Type setup-dotfiles.sh to re-run setup from PATH"
-  read -s -k
-  export DOTFILES_FRESH=1
-fi
-
-
 # This script will run either the Linux or macOS installer
 if [[ $OSTYPE == darwin* ]]; then
-  source $DOTFILES_ROOT/Mac/setup-dotfiles.sh
+  source $DOTFILES_ROOT/Mac/dotfiles.sh
 else
-  source $DOTFILES_ROOT/Linux/setup-dotfiles.sh
+  source $DOTFILES_ROOT/Linux/dotfiles.sh
 fi
 
 
