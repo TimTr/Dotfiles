@@ -2,6 +2,11 @@
 
 **NOTE:** This is the `index.md` file at the root
 
+Link to the [license file](https://timtr.github.io/Dotfiles/docs/license-mit.html) is here.
+
+Trying a simpler [[Link to a page]({% link license-mit.md %}) here.
+
+
 This is the main documentation for the `Dotfiles` project, beyond the [README](https://timtr.github.io/Dotfiles/) file.
 
 Documentation (or the start of docs) can be [found here](https://timtr.github.io/Dotfiles/docs/). 
