@@ -1,4 +1,4 @@
-# Dotfiles for Tim Triemstra
+# Dotfiles for Mac
 
 On a Mac, first install Xcode or the command line tools, then run:
 
