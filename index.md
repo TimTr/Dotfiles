@@ -6,7 +6,7 @@ Link to the [license file](https://timtr.github.io/Dotfiles/license.html) is her
 
 Trying a simpler [[Link to a page]({% link license.md %}) here.
 
-The [readme for Mac](https://timtr.github.io/Dotfiles/Mac/readme.html) is here.
+The [readme for Mac](https://timtr.github.io/Dotfiles/Mac/readme-for-mac.html) is here.
 
 
 This is the main documentation for the `Dotfiles` project, beyond the [README](https://timtr.github.io/Dotfiles/) file.
