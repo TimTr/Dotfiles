@@ -1,5 +1,7 @@
 # TimTr Dotfiles Documentation
 
+==NOTE:== This is the index file at the root
+
 This is the main documentation for the `Dotfiles` project, beyond the [README](https://timtr.github.io/Dotfiles/) file.
 
 Documentation (or the start of docs) can be [found here](https://timtr.github.io/Dotfiles/docs/). 

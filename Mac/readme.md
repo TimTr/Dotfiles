@@ -8,8 +8,6 @@ On a Mac, first install Xcode or the command line tools, then run:
     ./setup.sh
 ```
 
-You can also type `./setup.sh reset` to override custom files like `./local.sh` and to blow-away settings for tools like Xcode that you may otherwise not want to modify.
-
 The first install requires that you run `setup.sh` from within the local `Dotfiles` folder. Once installed, quit Terminal and relaunch. Finish install by typing:
 
 ```
@@ -20,7 +18,8 @@ The first install requires that you run `setup.sh` from within the local `Dotfil
     setup-ruby.sh
 ```
 
-Once installed, run `help.sh` for additional help. 
+You can run `dotfiles.sh` from the PATH at any time to reset, once installed. For instance, if you want to reset the `~/local.sh` file, simply delete it, then run `dotfiles.sh`. You can also run `help.sh` for additional help once installed.
+
 
 ## Overview
 
@@ -58,9 +57,11 @@ You can also open the `~/Developer/demo-safari-cycle.html` file to launch Safari
 
 ## Useful reference links
 
-Documentation (or the start of docs) can be [found here](https://timtr.github.io/Dotfiles/Docs/).
+Documentation (or the start of docs) can be [found here](https://timtr.github.io/Dotfiles/docs/). Note that the `docs` folder must be in lower-case for GitHub Pages support. Capital `Docs` will fail.
+
 
 Which `zsh` files contain which settings: [CodeSpaces and Dotfiles](https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout)
+
 
 Docs on using `setup.sh` with [GitHub CodeSpaces and Dotfiles](https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-codespaces-for-your-account)
 
