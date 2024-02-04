@@ -1,6 +1,7 @@
 # TODO Items
 
 - Rename `./Bin` back to Developer
+- Up
 - Add "update" command to re-setup, but not wipe critical files
 - Use "update" behavior by default if `setup.sh` is run via PATH
 - Report current `git config` name/email after setup, or instruct to setup

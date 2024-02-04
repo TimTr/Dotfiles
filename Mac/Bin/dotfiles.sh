@@ -2,10 +2,9 @@
 #
 # setup-macos.sh - the macOS version
 
-# TODO: Adapt to whether this is a FRESH install or re-run from PATH
+# TODO: If setup before, prompt to continue since this wipes out current setup
 source "$DOTFILES_ROOT/Mac/Home/dot-functions.sh"
-echo
-message "setup-macos.sh -- setting up for macOS via ${DOTFILES_ROOT}"
+message "dotfiles.sh -- clean setup up for macOS via ${DOTFILES_ROOT}"
 
 
 # If Xcode isn't installed, then abort the install
@@ -83,6 +82,9 @@ mkdir -p $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes
 cp -R $DOTFILES_ROOT/Mac/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
 
 
+
+
+
 # ==============================================================================
 # Check if the "~/Dropbox" directory (or symlink) exists, and verify that
 # there is indeed a $HOME/Library/CloudStorage/Dropbox folder to link to
@@ -99,8 +101,7 @@ fi
 
 
 # ==============================================================================
-# Check if the "~/local.sh" file exists, and if not, copy over the stub
-# TODO: Add a check if a full "reset" was requested via setup.sh
+# Check if the "~/local.sh" file exists, and if not, copy  the stub version to user home
 if [[ -f "$HOME/local.sh" ]]; then
   message "~/local.sh exists" "Delete the file then re-run to install a template version"
 else
@@ -136,15 +137,6 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
 # defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool YES
 
 
-# ==============================================================================
-# Report that this launch was a RESET or not
-echo
-if [[ "$DOTFILES_RESET" == 1 ]]; then
-  alert "Setup complete. All settings have been reset. \033[0m"
-else
-  alert "Completed default Dotfile setup."
-fi
-echo
 
 message "Restart terminal" "After restart, you can run the following commands:"
 bullet "git config --global user.name \"Your Name\""
