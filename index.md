@@ -1,10 +1,10 @@
 # TimTr Dotfiles Documentation
 
-**NOTE:** This is the `index.md` file at the root
+**NOTE:** This is the `index.md` file at the root. Update #2.
 
 Link to the [license file](https://timtr.github.io/Dotfiles/license.html) is here.
 
-Trying a simpler [[Link to a page]({% link license.md %}) here.
+Trying a simpler [[Link to license page](license.html) here.
 
 The [readme for Mac](https://timtr.github.io/Dotfiles/Mac/readme-for-mac.html) is here.
 
