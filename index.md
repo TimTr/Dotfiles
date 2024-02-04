@@ -2,9 +2,14 @@
 
 **NOTE:** This is the `index.md` file at the root. Update #2.
 
-Link to the [license file](https://timtr.github.io/Dotfiles/license.html) is here.
+Link to the [license file](https://timtr.github.io/Dotfiles/Docs/license-mit.html) is here.
 
-Trying a simpler [[Link to license page](license.html) here.
+Link to the [license file v2](./readme.md) is here.
+
+Trying a simple [Link to license page](./license.html) here.
+
+Trying a simple [Link to root README](./readme.md) here.
+
 
 The [readme for Mac](https://timtr.github.io/Dotfiles/Mac/readme-for-mac.html) is here.
 
