@@ -1,15 +1,12 @@
 # TimTr Dotfiles Documentation
 
-**NOTE:** This is the `index.md` file at the root. Update #2.
+**NOTE:** This is the `index.md` file at the root. Update #3.
 
 Link to the [license file](https://timtr.github.io/Dotfiles/Docs/license-mit.html) is here.
 
-Link to the [license file v2](./readme.md) is here.
+Link to the [license file v2](./license.html) is here.
 
-Trying a simple [Link to license page](./license.html) here.
-
-Trying a simple [Link to root README](./readme.md) here.
-
+Trying a simple [Link to root README](./readme.html) here.
 
 The [readme for Mac](https://timtr.github.io/Dotfiles/Mac/readme-for-mac.html) is here.
 
