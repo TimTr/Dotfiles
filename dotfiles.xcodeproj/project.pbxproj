@@ -12,7 +12,6 @@
 		BA01DB222A53326B00ADA557 /* Mac */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Mac; sourceTree = "<group>"; };
 		BA09BAA42B70501E004DE1A0 /* Docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Docs; sourceTree = "<group>"; };
 		BA4B13592A533336001D1E03 /* license.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = license.md; sourceTree = "<group>"; };
-		BA51165A2B00BB12009E0899 /* todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = todo.md; sourceTree = "<group>"; };
 		BA513A222B7041DB00A5A69C /* index.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = index.md; sourceTree = "<group>"; };
 		BAAC27292B704B5200BB725E /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -26,7 +25,6 @@
 				BA01DB222A53326B00ADA557 /* Mac */,
 				BA01DB212A53326B00ADA557 /* Linux */,
 				BA09BAA42B70501E004DE1A0 /* Docs */,
-				BA51165A2B00BB12009E0899 /* todo.md */,
 				BA4B13592A533336001D1E03 /* license.md */,
 				BA01DB1D2A53326B00ADA557 /* setup.sh */,
 			);
