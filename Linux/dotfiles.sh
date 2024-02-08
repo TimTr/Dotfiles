@@ -1,20 +1,14 @@
 #!/bin/zsh
 #
-# setup-macos.sh - the macOS version
+# dotfiles.sh - the Linux version
 
 # TODO: If setup before, prompt to continue since this wipes out current setup
 source "$DOTFILES_ROOT/Mac/Home/dot-functions.sh"
 message "dotfiles.sh -- clean setup up for macOS via ${DOTFILES_ROOT}"
 
 
-# If Xcode isn't installed, then abort the install
-if xcode-select -p &> /dev/null
-then
-  message "Xcode selected" $(xcode-select -p)
-else
-  error "Xcode missing" "Install Xcode, then re-run the script"
-  exit 0
-fi
+# If git and a compiler  isn't installed, then abort the install
+# TODO: check if git, cc, or other needed tools are available
 
 echo
 # ==============================================================================
@@ -127,8 +121,17 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 # Set macOS to not write .DS_Store files on USB drives
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
 
+# Save screenshots to the downloads folder
+# defaults write com.apple.screencapture location -string “$HOME/Downloads”
 
-# ==============================================================================
+# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+# defaults write com.apple.screencapture type -string “png”
+
+# Stops Xcode IDE from saving the workspace layout (window size, etc)
+# defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool YES
+
+
+
 message "Restart terminal" "After restart, you can run the following commands:"
 bullet "git config --global user.name \"Your Name\""
 bullet "git config --global user.email \"youremail@yourdomain.com\""
@@ -148,15 +151,6 @@ exit 0
 
 # ==============================================================================
 # Other ideas for defaults settings
-
-# Save screenshots to the downloads folder
-# defaults write com.apple.screencapture location -string “$HOME/Downloads”
-
-# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-# defaults write com.apple.screencapture type -string “png”
-
-# Stops Xcode IDE from saving the workspace layout (window size, etc)
-# defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool YES
 
 # Removes the delay in hide/show the Dock setting
 # defaults write com.apple.Dock autohide-delay -float 0 && killall Dock

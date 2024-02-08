@@ -20,9 +20,9 @@ DOTFILES_BIN=$HOME/bin
 
 # This script will run either the Linux or macOS installer
 if [[ $OSTYPE == darwin* ]]; then
-  source $DOTFILES_ROOT/Mac/dotfiles.sh
+  source $DOTFILES_ROOT/Mac/Bin/dotfiles.sh
 else
-  source $DOTFILES_ROOT/Linux/dotfiles.sh
+  source $DOTFILES_ROOT/Linux/Bin/dotfiles.sh
 fi
 
 
