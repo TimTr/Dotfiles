@@ -127,17 +127,8 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 # Set macOS to not write .DS_Store files on USB drives
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
 
-# Save screenshots to the downloads folder
-# defaults write com.apple.screencapture location -string “$HOME/Downloads”
 
-# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-# defaults write com.apple.screencapture type -string “png”
-
-# Stops Xcode IDE from saving the workspace layout (window size, etc)
-# defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool YES
-
-
-
+# ==============================================================================
 message "Restart terminal" "After restart, you can run the following commands:"
 bullet "git config --global user.name \"Your Name\""
 bullet "git config --global user.email \"youremail@yourdomain.com\""
@@ -157,6 +148,15 @@ exit 0
 
 # ==============================================================================
 # Other ideas for defaults settings
+
+# Save screenshots to the downloads folder
+# defaults write com.apple.screencapture location -string “$HOME/Downloads”
+
+# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+# defaults write com.apple.screencapture type -string “png”
+
+# Stops Xcode IDE from saving the workspace layout (window size, etc)
+# defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool YES
 
 # Removes the delay in hide/show the Dock setting
 # defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
