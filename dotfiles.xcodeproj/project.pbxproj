@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		BA01DB1D2A53326B00ADA557 /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; };
+		BA01DB1D2A53326B00ADA557 /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
 		BA01DB212A53326B00ADA557 /* Linux */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Linux; sourceTree = "<group>"; };
 		BA01DB222A53326B00ADA557 /* Mac */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Mac; sourceTree = "<group>"; };
 		BA09BAA42B70501E004DE1A0 /* Docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Docs; sourceTree = "<group>"; };
@@ -22,9 +22,9 @@
 			children = (
 				BAAC27292B704B5200BB725E /* readme.md */,
 				BA513A222B7041DB00A5A69C /* index.md */,
+				BA09BAA42B70501E004DE1A0 /* Docs */,
 				BA01DB222A53326B00ADA557 /* Mac */,
 				BA01DB212A53326B00ADA557 /* Linux */,
-				BA09BAA42B70501E004DE1A0 /* Docs */,
 				BA4B13592A533336001D1E03 /* license.md */,
 				BA01DB1D2A53326B00ADA557 /* setup.sh */,
 			);

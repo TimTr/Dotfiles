@@ -1,24 +1,36 @@
 #!/bin/zsh
 #
 # setup-macos.sh - the macOS version
+echo
 
+# ==============================================================================
+# CHECK PRE-REQUISITES OF ZSH and XCODE INSTALLS
+#
+# Require `zsh` as the default, and set the default shell if needed
+if [ $SHELL != "/bin/zsh" ]; then
+  chsh -s /bin/zsh
+  echo "Requires \"zsh\". Switched default shell to /bin/zsh -- re-run setup.sh file"
+  exit 0
+fi
+
+# If Xcode isn't installed, then abort the install
+if xcode-select -p &> /dev/null
+then
+  # echo "Xcode selected at: " $(xcode-select -p)
+else
+  echo "Xcode missing" "Install Xcode, then re-run the script"
+  exit 0
+fi
+echo
+# ==============================================================================
 # TODO: If setup before, prompt to continue since this wipes out current setup
 source "$DOTFILES_ROOT/Mac/Home/dot-functions.sh"
 message "dotfiles.sh -- clean setup up for macOS via ${DOTFILES_ROOT}"
 
 
-# If Xcode isn't installed, then abort the install
-if xcode-select -p &> /dev/null
-then
-  message "Xcode selected" $(xcode-select -p)
-else
-  error "Xcode missing" "Install Xcode, then re-run the script"
-  exit 0
-fi
 
-echo
 # ==============================================================================
-alert "SUDO Password Required to unsure proper permissions and ownership"
+echo "SUDO is required to ensure proper permissions and ownership"
 # read -s -k $'?Press any key to continue. Hit Control-C to abort now.\n'
 echo
 
@@ -28,34 +40,37 @@ sudo chmod -R 777 ${DOTFILES_ROOT}/*    2> /dev/null
 # Un-set the quarantine bit for all my own script files
 xattr -d com.apple.quarantine ${DOTFILES_ROOT}/* 2> /dev/null
 
+
+
+
 # ==============================================================================
-message "mkdir -p" "/opt/homebrew/bin, /usr/local/bin, and $DOTFILES_BIN"
+message "mkdir -p" "/opt/homebrew/bin, /usr/local/bin, and $DOTFILES_DESTINATION"
 # Note that /opt/homebrew is used on Apple silicon, /usr/local is legacy Intel
 # Note the /opt/bin is used in Linux setups
 
 # Create these directories "just in case"
-sudo mkdir -p $DOTFILES_BIN
+sudo mkdir -p $DOTFILES_DESTINATION
 sudo mkdir -p /opt/homebrew/bin
 sudo mkdir -p /usr/local/bin
 
 # Reset ownership, note the directory name does not end in / or /*
-sudo chown -R "$USER":admin $DOTFILES_BIN
+sudo chown -R "$USER":admin $DOTFILES_DESTINATION
 sudo chown -R "$USER":admin /opt/homebrew
 sudo chown -R "$USER":admin /usr/local/bin
 
-# Set the permissions for the folders (read/write for all)
-sudo chmod 766 $DOTFILES_BIN
-sudo chmod 777 /opt/homebrew/bin
-sudo chmod 777 /usr/local/bin
+# Set the permissions for the folders (read for all, write for just me)
+sudo chmod 744 $DOTFILES_DESTINATION
+sudo chmod 744 /opt/homebrew/bin
+sudo chmod 744 /usr/local/bin
 
 
 # ==============================================================================
-message "Copying scripts into $DOTFILES_BIN" "These scripts are now in PATH"
+message "Copying scripts into $DOTFILES_DESTINATION" "These scripts are now in PATH"
 # Put some files in these directories just to validate
-cp ${DOTFILES_ROOT}/readme.md $DOTFILES_BIN
+cp ${DOTFILES_ROOT}/readme.md $DOTFILES_DESTINATION
 
 # Don't copy with -R for the primary PATH files
-cp -R $DOTFILES_ROOT/Mac/* $DOTFILES_BIN
+cp -R $DOTFILES_ROOT/Mac/* $DOTFILES_DESTINATION
 
 
 # ==============================================================================
