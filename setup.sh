@@ -4,19 +4,13 @@
 #
 #  TODO: add `update` or `install` check to easily update without full re-install
 
-
-# Require `zsh` as the default, and set the default shell if needed
-if [ $SHELL != "/bin/zsh" ]; then
-  chsh -s /bin/zsh
-  echo "Requires \"zsh\". Switched default shell to /bin/zsh -- re-run setup.sh file"
-  exit 0
-fi
-
 # Get the folder in which setup.sh was run, no matter your current location.
 # This is then the root from which all further operations are run. (requires ZSH)
-DOTFILES_ROOT=${0:a:h}
-DOTFILES_SETUP=${0:a}
-DOTFILES_BIN=$HOME/bin
+export DOTFILES_ROOT=${0:a:h}
+export DOTFILES_DESTINATION=$HOME/Developer/
+
+# This is the name of the actual file that was run (don't need it)
+# DOTFILES_SETUP_FILE=${0:a}
 
 # This script will run either the Linux or macOS installer
 if [[ $OSTYPE == darwin* ]]; then

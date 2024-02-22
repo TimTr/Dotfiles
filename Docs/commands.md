@@ -1,4 +1,4 @@
-# History of Dotfiles
+# Commands reference
 
 **NOTE:** Just the beginning.
 

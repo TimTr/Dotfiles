@@ -1,7 +1,9 @@
 # TODO Items
 
-- Rename `./Bin` back to Developer
-- Up
+- Use an indirect variable to set where the files are located (`./Dotfiles`)
+- Move everything from the `./Mac/` subfolder to the root - Linux remains
+- Drive EVERYTHING from that destination, not from the Git origin
+- Make sure `./Developer/Bin` is the actual driver for `dotfiles.sh`
 - Add "update" command to re-setup, but not wipe critical files
 - Use "update" behavior by default if `setup.sh` is run via PATH
 - Report current `git config` name/email after setup, or instruct to setup
@@ -12,6 +14,7 @@
 
 ## Done
 
+- Rename `./Bin` back to Developer
 - Added new VSCode theme settings to `./Mac/Settings`
 - Use `setup-brew.sh` to update/upgrade if already installed (not two files)
 - Add the active git branch of the current folder to the prompt

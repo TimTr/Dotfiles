@@ -10,11 +10,9 @@ source $HOME/.aliases
 source $HOME/.functions
 source $HOME/.zshenv
 
-
 # Report tha .zshrc is loading and at what time
 TIMENOW=$(date +%d-%m-%Y" "%H:%M:%S)
 message ".zshrc" "Launched $SHELL' at ${TIMENOW}."
-
 
 # Warn about installing Homebrew if it is not yet present
 which -s brew &> /dev/null
@@ -24,13 +22,10 @@ else
   message "Found Homebrew" "Installed brew tools supercede system tools (e.g. Ruby)"
 fi
 
-
 # Prompt and color settings (zsh-specific, different from bash)
 autoload colors; colors;
 export CLICOLOR=1
 export LSCOLORS=gxFxCxDxdxExBxAxaxaxex
-# Previous color options
-# export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
 
 ## Parse git branch to put into the prompt
 parse_git_branch() {
