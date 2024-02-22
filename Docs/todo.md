@@ -1,6 +1,7 @@
 # TODO Items
 
 - Use an indirect variable to set where the files are located (`./Dotfiles`)
+- Move everything from the `./Mac/` subfolder to the root - Linux remains
 - Drive EVERYTHING from that destination, not from the Git origin
 - Make sure `./Developer/Bin` is the actual driver for `dotfiles.sh`
 - Add "update" command to re-setup, but not wipe critical files
