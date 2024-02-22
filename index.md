@@ -1,6 +1,6 @@
 # TimTr Dotfiles Documentation
 
-**NOTE:** This is the `index.md` file at the root. Update #3.
+**NOTE:** This is the `index.md` file at root. Update #4 - Feb 22, 10:30am
 
 This forms the root of the GitHub Pages documentation generated for this repository. It will link over to files within the `./Docs` folder of this repo for the actual documentation.
 
