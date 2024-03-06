@@ -1,6 +1,6 @@
 # Commands reference
 
-**NOTE:** Just the beginning.
+**NOTE:** This is the commands file located in the `./Docs` folder.
 
 
 
