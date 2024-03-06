@@ -89,13 +89,13 @@
 	<key>DVTSourceTextBlockDimBackgroundColor</key>
 	<string>0.5 0.5 0.5 1</string>
 	<key>DVTSourceTextCurrentLineHighlightColor</key>
-	<string>0.0688602 0.0815624 0.132557 1</string>
+	<string>0.106591 0.120683 0.136839 1</string>
 	<key>DVTSourceTextInsertionPointColor</key>
 	<string>1 1 1 1</string>
 	<key>DVTSourceTextInvisiblesColor</key>
 	<string>0.5 0.5 0.5 1</string>
 	<key>DVTSourceTextSelectionColor</key>
-	<string>0.459354 0.158262 0.0371366 1</string>
+	<string>0.136972 0.104962 0.0695214 1</string>
 	<key>DVTSourceTextSyntaxColors</key>
 	<dict>
 		<key>xcode.syntax.attribute</key>
@@ -103,7 +103,7 @@
 		<key>xcode.syntax.character</key>
 		<string>0.845619 0.845619 0.845619 1</string>
 		<key>xcode.syntax.comment</key>
-		<string>0.388652 0.450257 0.480376 1</string>
+		<string>0.27099 0.31232 0.332514 1</string>
 		<key>xcode.syntax.comment.doc</key>
 		<string>0.262099 0.4621 0.495959 1</string>
 		<key>xcode.syntax.comment.doc.keyword</key>
@@ -159,7 +159,7 @@
 		<key>xcode.syntax.regex.other</key>
 		<string>0.731204 0.763292 0.842913 1</string>
 		<key>xcode.syntax.string</key>
-		<string>0.991358 0.392449 0.372727 1</string>
+		<string>0.987517 0.322992 0.0290003 1</string>
 		<key>xcode.syntax.url</key>
 		<string>0.186306 0.478119 0.849336 1</string>
 	</dict>
