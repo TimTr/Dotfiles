@@ -7,9 +7,13 @@ Edited from my iPad! Using the Files.app
 This forms the root of the GitHub Pages documentation generated for this repository. It will link over to files within the `./Docs` folder of this repo for the actual documentation.
 
 Link to the [license file at root](./license.html) is here.
+
 Trying a simple [link to root README](./readme.html) here.
-Link the [overview file](https://timtr.github.io/Dotfiles/Docs/overview.html). 
+
+Link the [overview file](https://timtr.github.io/Dotfiles/Docs/overview.html).
+ 
 Link the [commands file](https://timtr.github.io/Dotfiles/Docs/commands.html).
+
 Documentation root is [found here](https://timtr.github.io/Dotfiles/Docs/). 
 
 This is the main documentation for the `Dotfiles` project, beyond the [README](https://timtr.github.io/Dotfiles/) file.
