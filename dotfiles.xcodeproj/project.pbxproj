@@ -9,11 +9,17 @@
 /* Begin PBXFileReference section */
 		BA01DB1D2A53326B00ADA557 /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
 		BA01DB212A53326B00ADA557 /* Linux */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Linux; sourceTree = "<group>"; };
-		BA01DB222A53326B00ADA557 /* Mac */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Mac; sourceTree = "<group>"; };
 		BA09BAA42B70501E004DE1A0 /* Docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Docs; sourceTree = "<group>"; };
 		BA4B13592A533336001D1E03 /* license.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = license.md; sourceTree = "<group>"; };
 		BA513A222B7041DB00A5A69C /* index.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = index.md; sourceTree = "<group>"; };
 		BAAC27292B704B5200BB725E /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		BAD90EAC2B9A59E0008C5551 /* Bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bin; sourceTree = "<group>"; };
+		BAD90EAD2B9A59E7008C5551 /* Preferences */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Preferences; sourceTree = "<group>"; };
+		BAD90EAE2B9A59EC008C5551 /* Settings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Settings; sourceTree = "<group>"; };
+		BAD90EAF2B9A59F4008C5551 /* Xcode */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Xcode; sourceTree = "<group>"; };
+		BAD90EB02B9A59FD008C5551 /* Demos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Demos; sourceTree = "<group>"; };
+		BAD90EB12B9A5A02008C5551 /* Home */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Home; sourceTree = "<group>"; };
+		BAD90EB22B9A5A0B008C5551 /* todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = todo.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -21,9 +27,15 @@
 			isa = PBXGroup;
 			children = (
 				BAAC27292B704B5200BB725E /* readme.md */,
+				BAD90EB22B9A5A0B008C5551 /* todo.md */,
 				BA513A222B7041DB00A5A69C /* index.md */,
+				BAD90EAC2B9A59E0008C5551 /* Bin */,
+				BAD90EB02B9A59FD008C5551 /* Demos */,
 				BA09BAA42B70501E004DE1A0 /* Docs */,
-				BA01DB222A53326B00ADA557 /* Mac */,
+				BAD90EB12B9A5A02008C5551 /* Home */,
+				BAD90EAD2B9A59E7008C5551 /* Preferences */,
+				BAD90EAE2B9A59EC008C5551 /* Settings */,
+				BAD90EAF2B9A59F4008C5551 /* Xcode */,
 				BA01DB212A53326B00ADA557 /* Linux */,
 				BA4B13592A533336001D1E03 /* license.md */,
 				BA01DB1D2A53326B00ADA557 /* setup.sh */,
