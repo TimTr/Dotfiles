@@ -8,15 +8,15 @@ This forms the root of the GitHub Pages documentation generated for this reposit
 
 Link to the [license file at root](./license.html) is here.
 
-Trying a simple [link to root README](./readme.html) here.
-
-Link the [overview file](https://timtr.github.io/Dotfiles/Docs/overview.html).
+Trying a simple [relative link to root README](./readme.html) here.
  
-Link the [commands file](https://timtr.github.io/Dotfiles/Docs/commands.html).
+Link the [commands file](.Docs/commands.html) via relative path.
+
+Full link to the [overview file](https://timtr.github.io/Dotfiles/Docs/overview.html).
 
 Documentation root is [found here](https://timtr.github.io/Dotfiles/Docs/). 
 
-This is the main documentation for the `Dotfiles` project, beyond the [README](https://timtr.github.io/Dotfiles/) file.
+And of course the [README](https://github.com/timtr/Dotfiles/) file for `Dotfiles`.
 
 
 **Note:**  the `docs` folder must be in lower-case for GitHub Pages support, if you want to use it as the basis of docs. Capital `Docs` will fail. At present, this repository is setup to use the root of the repo for Pages docs generation, so this `index.md` file manually links to other documentation files.
