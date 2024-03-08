@@ -1,5 +1,9 @@
 # TODO Items
 
+- Insert `DOTFILES_ROOT` from initial install into the root dotfile
+    - Future runs of `dotfiles.sh` from the PATH will know Where it had been launched
+    
+- Add `~/Code` and `~/TimTr` to the root user folder aliased to Dropbox or iCloud
 - Use an indirect variable to set where the files are located (`./Dotfiles`)
 - Move everything from the `./Mac/` subfolder to the root - Linux remains
 - Drive EVERYTHING from that destination, not from the Git origin

@@ -2,6 +2,7 @@
 #
 # setup-macos.sh - the macOS version
 echo
+source "$DOTFILES_ROOT/Home/dot-functions.sh"
 
 # ==============================================================================
 # CHECK PRE-REQUISITES OF ZSH and XCODE INSTALLS
@@ -16,17 +17,12 @@ fi
 # If Xcode isn't installed, then abort the install
 if xcode-select -p &> /dev/null
 then
-  # echo "Xcode selected at: " $(xcode-select -p)
+  echo "Xcode selected at: " $(xcode-select -p)
 else
-  echo "Xcode missing" "Install Xcode, then re-run the script"
+  echo "Xcode missing!  Install Xcode, then re-run the script."
   exit 0
 fi
 echo
-# ==============================================================================
-# TODO: If setup before, prompt to continue since this wipes out current setup
-source "$DOTFILES_ROOT/Mac/Home/dot-functions.sh"
-message "dotfiles.sh -- clean setup up for macOS via ${DOTFILES_ROOT}"
-
 
 
 # ==============================================================================
