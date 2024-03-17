@@ -1,19 +1,17 @@
 # TODO Items
 
-- Use an indirect variable to set where the files are located (`./Dotfiles`)
-- Move everything from the `./Mac/` subfolder to the root - Linux remains
-- Drive EVERYTHING from that destination, not from the Git origin
-- Make sure `./Developer/Bin` is the actual driver for `dotfiles.sh`
-- Add "update" command to re-setup, but not wipe critical files
-- Use "update" behavior by default if `setup.sh` is run via PATH
+- Verify that re-running `dotfiles.sh` from anywhere resets the setup
 - Report current `git config` name/email after setup, or instruct to setup
     - Do something similar for Ruby, Homebrew, or other pieces
 - Function to delete `./DS_Store` files recursively down a folder structure 
 
 
-
 ## Done
 
+- Put Dotfiles as the source for PATH - no separate copy. This will make it easier to support putting Dotfiles at the root of a user directly by simply cloning from GitHub, which is how I expect to use Dotfiles in the future, especially on Linux.
+
+- Move everything from the `./Mac/` subfolder to the root - Linux remains
+- Add `~/Code` and `~/TimTr` to the root user folder aliased to Dropbox or iCloud
 - Rename `./Bin` back to Developer
 - Added new VSCode theme settings to `./Mac/Settings`
 - Use `setup-brew.sh` to update/upgrade if already installed (not two files)

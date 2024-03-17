@@ -1,22 +1,22 @@
 #!/usr/bin/env zsh
 #
 #  setup.sh is also understood as a startup by GitHub Codespaces and other VMs
-#
-#  TODO: add `update` or `install` check to easily update without full re-install
 
 # Get the folder in which setup.sh was run, no matter your current location.
 # This is then the root from which all further operations are run. (requires ZSH)
 export DOTFILES_ROOT=${0:a:h}
-export DOTFILES_DESTINATION=$HOME/Developer/
+echo "Setting up dotfiles PATHs to be run from " $DOTFILES_ROOT
+
 
 # This is the name of the actual file that was run (don't need it)
 # DOTFILES_SETUP_FILE=${0:a}
+# export DOTFILES_DESTINATION=$HOME/Bin/
 
 # This script will run either the Linux or macOS installer
 if [[ $OSTYPE == darwin* ]]; then
-  source $DOTFILES_ROOT/Mac/Bin/dotfiles.sh
+  source $DOTFILES_ROOT/Bin/dotfiles.sh
 else
-  source $DOTFILES_ROOT/Linux/Bin/dotfiles.sh
+  source $DOTFILES_ROOT/Linux/dotfiles.sh
 fi
 
 
