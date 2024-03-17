@@ -16,19 +16,6 @@ error ()   { printf "\r\033[00;31m ** $1\033[0m - \033[00;31m$2 \033[0m \n" }
 alert ()  { printf "\r\033[00;35m >> $1\033[0m \n" }
 bullet ()  { printf "\r\033[00;36m   ==\033[0m $1\n" }
 
-
-# ... Find all files recursively under current folder
-commands () {
-    message ".functions" "****************************************"
-    echo
-    more ~/.functions
-    
-    message ".aliases" "****************************************"
-    echo
-    more ~/.aliases
-}
-
-
 # ... Find all files recursively under current folder
 findall () {
     find ./ -name $1 -print 2> /dev/null

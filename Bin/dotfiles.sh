@@ -4,6 +4,10 @@
 echo
 source "$DOTFILES_ROOT/Home/dot-functions.sh"
 
+# DEBUG OUTPUT
+message "DOTFILES_ROOT" "$DOTFILES_ROOT"
+message "dotfiles.sh" "run location = ${0:a:h}"
+
 # ==============================================================================
 # CHECK PRE-REQUISITES OF ZSH and XCODE INSTALLS
 #
@@ -17,9 +21,9 @@ fi
 # If Xcode isn't installed, then abort the install
 if xcode-select -p &> /dev/null
 then
-  echo "Xcode selected at: " $(xcode-select -p)
+  message "Xcode selected at:" "$(xcode-select -p)"
 else
-  echo "Xcode missing!  Install Xcode, then re-run the script."
+  error "Xcode missing! Install Xcode, then re-run the script."
   exit 0
 fi
 echo
@@ -37,74 +41,70 @@ sudo chmod -R 777 ${DOTFILES_ROOT}/*    2> /dev/null
 xattr -d com.apple.quarantine ${DOTFILES_ROOT}/* 2> /dev/null
 
 
-
-
 # ==============================================================================
 message "mkdir -p" "/opt/homebrew/bin, /usr/local/bin, and $DOTFILES_DESTINATION"
 # Note that /opt/homebrew is used on Apple silicon, /usr/local is legacy Intel
 # Note the /opt/bin is used in Linux setups
 
 # Create these directories "just in case"
-sudo mkdir -p $DOTFILES_DESTINATION
 sudo mkdir -p /opt/homebrew/bin
 sudo mkdir -p /usr/local/bin
 
 # Reset ownership, note the directory name does not end in / or /*
-sudo chown -R "$USER":admin $DOTFILES_DESTINATION
 sudo chown -R "$USER":admin /opt/homebrew
 sudo chown -R "$USER":admin /usr/local/bin
 
 # Set the permissions for the folders (read for all, write for just me)
-sudo chmod 744 $DOTFILES_DESTINATION
 sudo chmod 744 /opt/homebrew/bin
 sudo chmod 744 /usr/local/bin
 
 
 # ==============================================================================
-message "Copying scripts into $DOTFILES_DESTINATION" "These scripts are now in PATH"
-# Put some files in these directories just to validate
-cp ${DOTFILES_ROOT}/readme.md $DOTFILES_DESTINATION
-
-# Don't copy with -R for the primary PATH files
-cp -R $DOTFILES_ROOT/Mac/* $DOTFILES_DESTINATION
+# TODO: No longer copying to a new Dotfiles destination. Just use this folder.
+# message "Copying scripts into $DOTFILES_DESTINATION" "These scripts are now in PATH"
+# cp -R $DOTFILES_ROOT/readme.md $DOTFILES_DESTINATION
 
 
 # ==============================================================================
 message "Installing root dotfiles" "Overwriting existing versions of these files"
-cp $DOTFILES_ROOT/Mac/Home/dot-zshrc.sh $HOME/.zshrc
-cp $DOTFILES_ROOT/Mac/Home/dot-zshenv.sh $HOME/.zshenv
-cp $DOTFILES_ROOT/Mac/Home/dot-aliases.sh $HOME/.aliases
-cp $DOTFILES_ROOT/Mac/Home/dot-functions.sh $HOME/.functions
+cp $DOTFILES_ROOT/Home/dot-zshrc.sh $HOME/.zshrc
+cp $DOTFILES_ROOT/Home/dot-zshenv.sh $HOME/.zshenv
+cp $DOTFILES_ROOT/Home/dot-aliases.sh $HOME/.aliases
+cp $DOTFILES_ROOT/Home/dot-functions.sh $HOME/.functions
 
 # Copy Git and other config files
-cp $DOTFILES_ROOT/Mac/Home/dot-gitconfig $HOME/.gitconfig
-cp $DOTFILES_ROOT/Mac/Home/dot-gitignore $HOME/.gitignore
-cp $DOTFILES_ROOT/Mac/Home/dot-vimrc $HOME/.vimrc
+cp $DOTFILES_ROOT/Home/dot-gitconfig $HOME/.gitconfig
+cp $DOTFILES_ROOT/Home/dot-gitignore $HOME/.gitignore
+cp $DOTFILES_ROOT/Home/dot-vimrc $HOME/.vimrc
 
 # Register gitignore and other git stuff
 git config --global core.excludesfile ~/.gitignore
 
 message "Installing app preferences" "Overwriting Terminal, Xcode, and other settings"
 # Copy app settings
-cp $DOTFILES_ROOT/Mac/Preferences/* $HOME/Library/Preferences/
+cp $DOTFILES_ROOT/Preferences/* $HOME/Library/Preferences/
 
 # Copy Xcode preferences
 mkdir -p $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes
-cp -R $DOTFILES_ROOT/Mac/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
-
-
-
+cp -R $DOTFILES_ROOT/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
 
 
 # ==============================================================================
-# Check if the "~/Dropbox" directory (or symlink) exists, and verify that
-# there is indeed a $HOME/Library/CloudStorage/Dropbox folder to link to
+message "Adding local settings" "Adding paths and variables to .zshenv"
+echo " " >> ~/.zshenv
+echo "# Add global DOTFILES_ROOT pointing Dotfiles install folder" >> ~/.zshenv
+echo "export DOTFILES_ROOT=$DOTFILES_ROOT" >> ~/.zshenv
+
+
+# ==============================================================================
+# Check if $HOME/Library/CloudStorage/Dropbox exists, and if so create symlinks
 if [[ -d "$HOME/Dropbox/" ]]; then
   message "~/Dropbox exists" "If symlink is incorrect, manually delete and rerun"
 else
   if [[ -d "$HOME/Library/CloudStorage/Dropbox/" ]]; then
     message "Creating ~/Dropbox" "Symlink to ~/Library/CloudStorage/Dropbox/"
     ln -s $HOME/Library/CloudStorage/Dropbox $HOME/Dropbox
+    ln -s $HOME/Library/CloudStorage/Dropbox/Code $HOME/Code
   else
     message "Dropbox skipped" "Not installed at ~/Library/CloudStorage/Dropbox/"
   fi
@@ -117,7 +117,7 @@ if [[ -f "$HOME/local.sh" ]]; then
   message "~/local.sh exists" "Delete the file then re-run to install a template version"
 else
   message "Creating ~/local.sh" "Modify this file to add GitHub and SSH tokens"
-  cp $DOTFILES_ROOT/Mac/Home/local-template.sh $HOME/local.sh
+  cp $DOTFILES_ROOT/Home/local-template.sh $HOME/local.sh
 fi
 
 
