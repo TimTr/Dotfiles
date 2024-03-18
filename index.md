@@ -10,7 +10,7 @@ Link to the [license file at root](./license.html) is here.
 
 Trying a simple [relative link to root README](./readme.html) here.
  
-Link the [commands file](/Docs/commands.html) via relative path.
+Link the [commands file](Docs/commands.html) via relative path.
 
 Full link to the [overview file](https://timtr.github.io/Dotfiles/Docs/overview.html).
 
