@@ -6,11 +6,10 @@ source "$DOTFILES_ROOT/Home/dot-functions.sh"
 
 # DEBUG OUTPUT
 message "DOTFILES_ROOT" "$DOTFILES_ROOT"
-message "dotfiles.sh" "run location = ${0:a:h}"
+#message "dotfiles.sh" "run location = ${0:a:h}"
+
 
 # ==============================================================================
-# CHECK PRE-REQUISITES OF ZSH and XCODE INSTALLS
-#
 # Require `zsh` as the default, and set the default shell if needed
 if [ $SHELL != "/bin/zsh" ]; then
   chsh -s /bin/zsh
@@ -21,31 +20,30 @@ fi
 # If Xcode isn't installed, then abort the install
 if xcode-select -p &> /dev/null
 then
-  message "Xcode selected at:" "$(xcode-select -p)"
+  message "xcode-selected -p:" "$(xcode-select -p)"
 else
   error "Xcode missing! Install Xcode, then re-run the script."
   exit 0
 fi
-echo
 
 
 # ==============================================================================
-echo "SUDO is required to ensure proper permissions and ownership"
-# read -s -k $'?Press any key to continue. Hit Control-C to abort now.\n'
-echo
+message "SUDO may be required" "Setting file permissions and ownership"
 
-sudo chown -R $USER ${DOTFILES_ROOT}/*  2> /dev/null
-sudo chmod -R 777 ${DOTFILES_ROOT}/*    2> /dev/null
+# Claim ownership of all my dotfiles
+sudo chown -R $USER $DOTFILES_ROOT     2> /dev/null
 
-# Un-set the quarantine bit for all my own script files
-xattr -d com.apple.quarantine ${DOTFILES_ROOT}/* 2> /dev/null
+# Make all directories (-type d) 755 executable, files (-type f) as 644
+find $DOTFILES_ROOT -type d -print0 | xargs -0 chmod 755
+find $DOTFILES_ROOT -type f -print0 | xargs -0 chmod 644
 
+# Make all .sh files (-type f) also executable
+find $DOTFILES_ROOT -name "*.sh" -type f -print0 | xargs -0 chmod 755
 
-# ==============================================================================
-message "mkdir -p" "/opt/homebrew/bin, /usr/local/bin, and $DOTFILES_DESTINATION"
-# Note that /opt/homebrew is used on Apple silicon, /usr/local is legacy Intel
-# Note the /opt/bin is used in Linux setups
+# Get rid of teh quarantine bit (which occasionally gets set for some reason)
+xattr -d com.apple.quarantine $DOTFILES_ROOT/* 2> /dev/null
 
+# /opt/homebrew on M1+ CPUs, /usr/local is Mac Intel, and /opt/bin on Linux
 # Create these directories "just in case"
 sudo mkdir -p /opt/homebrew/bin
 sudo mkdir -p /usr/local/bin
@@ -66,7 +64,7 @@ sudo chmod 744 /usr/local/bin
 
 
 # ==============================================================================
-message "Installing root dotfiles" "Overwriting existing versions of these files"
+message "Setup root dotfiles" "Overwriting existing files at $HOME"
 cp $DOTFILES_ROOT/Home/dot-zshrc.sh $HOME/.zshrc
 cp $DOTFILES_ROOT/Home/dot-zshenv.sh $HOME/.zshenv
 cp $DOTFILES_ROOT/Home/dot-aliases.sh $HOME/.aliases
@@ -80,7 +78,7 @@ cp $DOTFILES_ROOT/Home/dot-vimrc $HOME/.vimrc
 # Register gitignore and other git stuff
 git config --global core.excludesfile ~/.gitignore
 
-message "Installing app preferences" "Overwriting Terminal, Xcode, and other settings"
+message "Setup app preferences" "Overwriting Terminal, Xcode, and other settings"
 # Copy app settings
 cp $DOTFILES_ROOT/Preferences/* $HOME/Library/Preferences/
 
@@ -90,41 +88,12 @@ cp -R $DOTFILES_ROOT/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColor
 
 
 # ==============================================================================
-message "Adding local settings" "Adding paths and variables to .zshenv"
+message "Setup defaults" "Adding paths and variables to .zshenv"
 echo " " >> ~/.zshenv
 echo "# Add global DOTFILES_ROOT pointing Dotfiles install folder" >> ~/.zshenv
 echo "export DOTFILES_ROOT=$DOTFILES_ROOT" >> ~/.zshenv
 
-
-# ==============================================================================
-# Check if $HOME/Library/CloudStorage/Dropbox exists, and if so create symlinks
-if [[ -d "$HOME/Dropbox/" ]]; then
-  message "~/Dropbox exists" "If symlink is incorrect, manually delete and rerun"
-else
-  if [[ -d "$HOME/Library/CloudStorage/Dropbox/" ]]; then
-    message "Creating ~/Dropbox" "Symlink to ~/Library/CloudStorage/Dropbox/"
-    ln -s $HOME/Library/CloudStorage/Dropbox $HOME/Dropbox
-    ln -s $HOME/Library/CloudStorage/Dropbox/Code $HOME/Code
-  else
-    message "Dropbox skipped" "Not installed at ~/Library/CloudStorage/Dropbox/"
-  fi
-fi
-
-
-# ==============================================================================
-# Check if the "~/local.sh" file exists, and if not, copy  the stub version to user home
-if [[ -f "$HOME/local.sh" ]]; then
-  message "~/local.sh exists" "Delete the file then re-run to install a template version"
-else
-  message "Creating ~/local.sh" "Modify this file to add GitHub and SSH tokens"
-  cp $DOTFILES_ROOT/Home/local-template.sh $HOME/local.sh
-fi
-
-
-# ==============================================================================
 # Example Xcode defaults:  https://github.com/ctreffs/xcode-defaults
-message "Settings defaults" "Xcode, Terminal, and other app preferences"
-
 # Tells Xcode to never re-open last open project, regardless of OS setting
 defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
 
@@ -140,11 +109,36 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
 
 
 # ==============================================================================
-message "Restart terminal" "After restart, you can run the following commands:"
-bullet "git config --global user.name \"Your Name\""
-bullet "git config --global user.email \"youremail@yourdomain.com\""
-bullet "setup-brew.sh  <-- install or update Homebrew"
-bullet "setup-ruby.sh  <-- setup a newer version (or update) of Ruby via Homebrew"
+# Check if $HOME/Library/CloudStorage/Dropbox exists, and if so create symlinks
+if [[ -d "$HOME/Dropbox/" ]]; then
+  message "Setup ~/Dropbox (existed)" "If symlink is broken, manually delete and rerun"
+else
+  if [[ -d "$HOME/Library/CloudStorage/Dropbox/" ]]; then
+    message "Setup ~/Dropbox and ~/Code" "Symlink to ~/Library/CloudStorage/Dropbox/"
+    ln -s $HOME/Library/CloudStorage/Dropbox $HOME/Dropbox
+    ln -s $HOME/Library/CloudStorage/Dropbox/Code $HOME/Code
+  else
+    message "Dropbox not installed" "Directory not found: ~/Library/CloudStorage/Dropbox/"
+  fi
+fi
+
+
+# ==============================================================================
+# Check if the "~/local.sh" file exists, and if not, copy  the stub version to user home
+if [[ -f "$HOME/local.sh" ]]; then
+  message "Setup /local.sh (existed)" "Delete the file to re-install a template"
+else
+  message "Set ~/local.sh" "Installing file from original template in ./Dotfiles"
+  cp $DOTFILES_ROOT/Home/local-template.sh $HOME/local.sh
+fi
+
+
+# ==============================================================================
+message "Git settings" "To change: \`git config --global user.name <name>\`"
+bullet "  user.name  : $(git config --get user.name)"
+bullet "  user.email : $(git config --get user.email)"
+
+message "Restart terminal" "Optional installs: setup-brew.sh and setup-ruby.sh"
 echo
 
 exit 0

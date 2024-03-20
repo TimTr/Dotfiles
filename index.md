@@ -6,7 +6,7 @@ Edited from my iPad! Using the Files.app
 
 This forms the root of the GitHub Pages documentation generated for this repository. It will link over to files within the `./Docs` folder of this repo for the actual documentation.
 
-* Documentation root is [found here](Docs/index.html). 
+* Documentation (work in progress) [table of contents](Docs/index.html).
 * Link the [commands file](Docs/commands.html) via relative path.
 * Full link to the [overview file](Docs/overview.html).
 
