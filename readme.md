@@ -1,6 +1,6 @@
 # Dotfiles for Tim Triemstra
 
-On a Mac, first install Xcode or the command line tools, then run:
+On a Mac or Linux system, simply run:
 
 ```
     git clone https://github.com/timtr/Dotfiles.git
@@ -8,7 +8,11 @@ On a Mac, first install Xcode or the command line tools, then run:
     ./setup.sh
 ```
 
-The first install requires that you run `setup.sh` from within the local `Dotfiles` folder. Once installed, quit Terminal and relaunch. Finish install by typing:
+On a Mac, you will need to have first installed Xcode or the command line tools. The first run requires that you run `setup.sh` from within the local `Dotfiles` folder. Once installed, quit Terminal and relaunch. 
+
+Documentation [work in progress](https://timtr.github.io/Dotfiles/).
+
+You can setup other features, such as Git config or Homebrew, by typing:
 
 ```
     git config --global user.name "Your Name"
@@ -18,7 +22,7 @@ The first install requires that you run `setup.sh` from within the local `Dotfil
     setup-ruby.sh
 ```
 
-You can run `dotfiles.sh` from the PATH at any time to reset, once installed. For instance, if you want to reset the `~/local.sh` file, simply delete it, then run `dotfiles.sh`. You can also run `help.sh` for additional help once installed.
+You can then run `dotfiles.sh` from the PATH at any time to reset your config. For instance, if you want to reset the `~/local.sh` file to default config, simply delete it, then run `dotfiles.sh`. You can also run `help.sh` for additional help once installed.
 
 
 ## Overview

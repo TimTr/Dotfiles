@@ -5,7 +5,8 @@
 # Get the folder in which setup.sh was run, no matter your current location.
 # This is then the root from which all further operations are run. (requires ZSH)
 export DOTFILES_ROOT=${0:a:h}
-echo "Setting up dotfiles PATHs to be run from " $DOTFILES_ROOT
+echo
+echo "Globally setting up dotfiles to run from " $DOTFILES_ROOT
 
 
 # This is the name of the actual file that was run (don't need it)

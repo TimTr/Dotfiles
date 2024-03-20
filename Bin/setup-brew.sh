@@ -17,7 +17,7 @@ else
 
   brew update
   brew upgrade
-  brew install automake bison openssl readline libyaml gdbm libffi wget
+  brew install automake bison openssl readline libyaml gdbm libffi wget eza
 
   # Install ruby gems, specifically Jekyll for blogs
   gem update

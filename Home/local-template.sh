@@ -13,7 +13,7 @@ source $HOME/.functions
 # Only load this file once per session
 if [[ -v LOADED_LOCAL ]]; then return; fi
 export LOADED_LOCAL=true
-message "Loading ~/local.sh" "Set local Swift toolchain, keys, and passwords..."
+message "Loading ~/local.sh" "Sets local Swift toolchain, tokens, keys, and passwords"
 
 # To enable latest Swift.org toolchain in /Library/Developer/Toolchains/"
 #  export TOOLCHAINS=swift ("swift" = use Swift.org tools, empty = use Xcode)

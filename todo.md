@@ -9,7 +9,6 @@
 ## Done
 
 - Put Dotfiles as the source for PATH - no separate copy. This will make it easier to support putting Dotfiles at the root of a user directly by simply cloning from GitHub, which is how I expect to use Dotfiles in the future, especially on Linux.
-
 - Move everything from the `./Mac/` subfolder to the root - Linux remains
 - Add `~/Code` and `~/TimTr` to the root user folder aliased to Dropbox or iCloud
 - Rename `./Bin` back to Developer

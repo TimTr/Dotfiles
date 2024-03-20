@@ -27,6 +27,24 @@ autoload colors; colors;
 export CLICOLOR=1
 export LSCOLORS=gxFxCxDxdxExBxAxaxaxex
 
+## References: type "man eza_colors" for a list and instructions
+export EZA_COLORS="*.md=0:fi=92:ex=96:di=31:da=2:mp=31:"\
+"lp=33:ln=31:uu=0:gu=0:sn=0:sb=0:xx=0"
+
+# This one is good - note that "ex" is executable and overrides all other settings
+# export EZA_COLORS="*.md=94:fi=92:ex=0:di=31:da=2:mp=31:lp=33:ln=31:uu=0:gu=0:sn=0:sb=0:xx=0"
+
+# Another example
+# export EZA_COLORS="fi=38:ex=37:di=38;5;213:da=38:"\
+# "cd=38;15;225:sn=38;5;28:lp=38;05;200:"\
+# "ur=38;5;245:uw=38;5;245:ux=38;5;245:ue=38;5;245:"\
+# "gr=38;15;245:gw=38;15;245:gx=38;5;245:"\
+# "tr=38;15;245:tw=38;15;245:tx=38;5;245"\
+# "local.sh=34"
+
+
+
+
 ## Parse git branch to put into the prompt
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
