@@ -31,8 +31,6 @@ export LSCOLORS=gxFxCxDxdxExBxAxaxaxex
 export EZA_COLORS="*.md=92:fi=0:ex=96:di=34:da=2:mp=31:lp=33:ln=31:uu=0:gu=0:sn=0:sb=0:xx=0"
 
 
-
-
 ## Parse git branch to put into the prompt
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
