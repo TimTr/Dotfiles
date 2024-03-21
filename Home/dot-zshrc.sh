@@ -28,8 +28,7 @@ export CLICOLOR=1
 export LSCOLORS=gxFxCxDxdxExBxAxaxaxex
 
 ## References: type "man eza_colors" for a list and instructions
-export EZA_COLORS="*.md=0:fi=92:ex=96:di=31:da=2:mp=31:"\
-"lp=33:ln=31:uu=0:gu=0:sn=0:sb=0:xx=0"
+export EZA_COLORS="*.md=92:fi=0:ex=96:di=34:da=2:mp=31:lp=33:ln=31:uu=0:gu=0:sn=0:sb=0:xx=0"
 
 # This one is good - note that "ex" is executable and overrides all other settings
 # export EZA_COLORS="*.md=94:fi=92:ex=0:di=31:da=2:mp=31:lp=33:ln=31:uu=0:gu=0:sn=0:sb=0:xx=0"

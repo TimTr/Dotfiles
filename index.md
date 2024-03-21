@@ -19,8 +19,7 @@ This project does not really need a full set of docs. In reality, this documenta
 
 ## Table of Contents
 
-`Dotfiles` is covered by the [MIT license](./license-mit.html).
-
+`Dotfiles` is covered by the [MIT license](license.html).
 
 
 ### Credits
