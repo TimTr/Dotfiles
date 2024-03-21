@@ -9,8 +9,7 @@ This forms the root of the GitHub Pages documentation generated for this reposit
 * Documentation (work in progress) [table of contents](Docs/index.html).
 * Link the [commands file](Docs/commands.html) via relative path.
 * Full link to the [overview file](Docs/overview.html).
-
-And of course the [README](https://github.com/timtr/Dotfiles/) file for `Dotfiles`.
+* The [README](readme.md) file for these `Dotfiles`.
 
 **Note:**  the `docs` folder must be in lower-case for GitHub Pages support, if you want to use it as the basis of docs. Capital `Docs` will fail. At present, this repository is setup to use the root of the repo for Pages docs generation, so this `index.md` file manually links to other documentation files.
 
@@ -19,7 +18,7 @@ This project does not really need a full set of docs. In reality, this documenta
 
 ## Table of Contents
 
-`Dotfiles` is covered by the [MIT license](license.html).
+`Dotfiles` is covered by the [MIT license](license.md).
 
 
 ### Credits
@@ -27,4 +26,4 @@ This project does not really need a full set of docs. In reality, this documenta
 This `Dotfiles` setup is maintained by Tim Triemstra - [github.com/timtr](https://github.com/timtr)
 
 
-// end of file.
+// end of file
