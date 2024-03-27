@@ -1,6 +1,7 @@
 # TODO Items
 
-- Report current ruby, swift, python, and Homebrew versions on setup
+- Add basic support for Linux
+- Report current ruby, swift, python, and Homebrew versions on setup    
 - Function to delete `./DS_Store` files recursively down a folder structure 
 
 
