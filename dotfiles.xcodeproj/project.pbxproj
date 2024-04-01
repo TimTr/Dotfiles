@@ -28,8 +28,6 @@
 			children = (
 				BAAC27292B704B5200BB725E /* readme.md */,
 				BAD90EB22B9A5A0B008C5551 /* todo.md */,
-				BA513A222B7041DB00A5A69C /* index.md */,
-				BA4B13592A533336001D1E03 /* license.md */,
 				BAD90EAC2B9A59E0008C5551 /* Bin */,
 				BAD90EB02B9A59FD008C5551 /* Demos */,
 				BA09BAA42B70501E004DE1A0 /* Docs */,
@@ -38,6 +36,8 @@
 				BAD90EAE2B9A59EC008C5551 /* Settings */,
 				BAD90EAF2B9A59F4008C5551 /* Xcode */,
 				BA01DB212A53326B00ADA557 /* Linux */,
+				BA513A222B7041DB00A5A69C /* index.md */,
+				BA4B13592A533336001D1E03 /* license.md */,
 				BA01DB1D2A53326B00ADA557 /* setup.sh */,
 			);
 			sourceTree = "<group>";

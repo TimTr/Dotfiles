@@ -8,43 +8,29 @@ On a Mac or Linux system, simply run:
     ./setup.sh
 ```
 
-On a Mac, you will need to have first installed Xcode or the command line tools. The first run requires that you run `setup.sh` from within the local `Dotfiles` folder. Once installed, quit Terminal and relaunch. 
+Run `./setup.sh` from within the local `Dotfiles` folder for first-run install, then re-launch your terminal. On Mac, first install Xcode or the command line tools. 
 
-Documentation [work in progress](https://timtr.github.io/Dotfiles/).
+Run `dotfiles.sh` from the PATH to reset your config. For instance, if you want to reset the `~/local.sh` file to default config, simply delete it, then run `dotfiles.sh`. You can also run `help.sh` for additional help (once I build that feature).
 
-You can setup other features, such as Git config or Homebrew, by typing:
-
-```
-    git config --global user.name "Your Name"
-    git config --global user.email "youremail@yourdomain.com"
+Documentation is a work in progress. [See a preview](https://timtr.github.io/Dotfiles/):
     
-    setup-brew.sh
-    setup-ruby.sh
-```
-
-You can then run `dotfiles.sh` from the PATH at any time to reset your config. For instance, if you want to reset the `~/local.sh` file to default config, simply delete it, then run `dotfiles.sh`. You can also run `help.sh` for additional help once installed.
-
 
 ## Overview
 
-This is my personal collection of setup scripts for macOS (and soon Linux), including settings for the `zsh` shell, Terminal, Xcode, and several other tools and apps. This set will also install Ruby, along with `rbenv` as a way to control which version of Ruby should act as the system default. This is useful for tools like `jekyll`.
+This is my personal collection of setup scripts for macOS and Linux (WIP). It includes settings for `zsh`, macOS Terminal, Xcode, and other tools and apps. This set will also install Homebrew and a recent version of Ruby.
 
-The scripts are designed to work in `zsh`, although they rarely use advanced features and are likely portable to other shells. SImply run `setup.sh` to install, or re-install, at any time.
-
-The setup will create a custom folder `$HOME/bin/` that is added to the PATH variable and useful for putting random stuff in the path. For Homebrew and related tools support, it also adds `/usr/local/bin` (for Intel) and `/opt/homebrew/bin` (for Apple) to the PATH. 
-
-There are a few aliases added that make it easy to install Homebrew and other tools, rather than trying to do the installs directly from `setup.sh`. Mostly this is because the install is a multi-step process, and it is just a lot easier to run the full setup, then manually type `setup-brew.sh` when everything else looks to be working.
+The setup will assume your settings are configured directly within the `Dotfiles` folder where you cloned this repo, adding the `/Dotfiles/Bin` folder to the PATH (for instance.) It will also add `/opt/homebrew/bin` to the PATH for Homebrew support. 
 
 
 ## Features
 
 **local.sh** - Installs a file called `~/local.sh` (if doesn't exist) that you can customize with settings that do not belong checked into GitHub, for instance set certain keys, or environment variables. This is also the file to add things like feature flags during development, add a Swift toolchain, or to enable secret build settings.
 
-**reset** - use this parameter from `setup.sh` to overwrite all settings, even `~/local.sh`
+**dotfiles.sh** - run this at any time reset all settings, and recreate `~/local.sh` from the original template if you first delete that file.
 
 **ZSH settings** - sets up the prompt, `PATH`, and other basic settings. Note that `.zshenv` sets up the PATH so it works even when there is no interactive terminal session, and `.zshrc` will source this file for a consistent PATH for terminal windows.
 
-The added `~/Dropbox` symlink points to `~/Library/CloudStorage/Dropbox` if it exists
+**Dropbox** - symlink in `$HOME` points to `~/Library/CloudStorage/Dropbox` if Dropbox is installed on the computer.
 
 
 ## Using a custom Swift toolchain
@@ -54,9 +40,9 @@ You can download new Swift toolchains from [Swift.org](https://swift.org/downloa
 
 ## Demos
 
-Once installed, you can install Homebrew and run demos. For example, run `demo-homebrew.sh` from the PATH to show a Terminal screen of software being downloaded, built, installed, and erased (in a repeating loop). Hit `CONTROL-Z` to quit that demo.
+Once installed, you can install Homebrew and run demos. For example, run `demo-homebrew.sh` from the `Dotfiles/Demos` to show a Terminal screen of software being downloaded, built, installed, and erased (in a repeating loop). Hit `CONTROL-Z` to quit that demo.
 
-You can also open the `~/Developer/demo-safari-cycle.html` file to launch Safari and begin cycling through many web pages, implying a sort of automated web test harness. 
+You can also open the `Dotfiles/Demos/demo-safari-cycle.html` file to launch Safari and begin cycling through many web pages, simulating an automated web test harness. 
 
 
 ## Useful reference links

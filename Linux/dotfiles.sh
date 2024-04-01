@@ -2,13 +2,11 @@
 #
 # dotfiles.sh - the Linux version
 
-# TODO: If setup before, prompt to continue since this wipes out current setup
+# TODO: abort if git, cc, or other needed tools are not available
 source "$DOTFILES_ROOT/Linux/dot-functions.sh"
 message "dotfiles.sh -- clean setup up for macOS via ${DOTFILES_ROOT}"
 
 
-# If git and a compiler  isn't installed, then abort the install
-# TODO: check if git, cc, or other needed tools are available
 
 chown -R $USER ${DOTFILES_ROOT}/*  2> /dev/null
 chmod -R 777 ${DOTFILES_ROOT}/*    2> /dev/null

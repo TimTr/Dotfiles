@@ -58,12 +58,6 @@ sudo chmod 744 /usr/local/bin
 
 
 # ==============================================================================
-# TODO: No longer copying to a new Dotfiles destination. Just use this folder.
-# message "Copying scripts into $DOTFILES_DESTINATION" "These scripts are now in PATH"
-# cp -R $DOTFILES_ROOT/readme.md $DOTFILES_DESTINATION
-
-
-# ==============================================================================
 message "Setup root dotfiles" "Overwriting existing files at $HOME"
 cp $DOTFILES_ROOT/Home/dot-zshrc.sh $HOME/.zshrc
 cp $DOTFILES_ROOT/Home/dot-zshenv.sh $HOME/.zshenv
