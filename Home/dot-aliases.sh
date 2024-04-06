@@ -57,9 +57,9 @@ then
 else
     echo "Aliasing \`ll\` and other \`ls\` commands to use \`eza\`"
     
-    alias ll='eza --long --git --git-repos -I "Icon?" --group-directories-first --no-quotes --no-permissions --no-user'
-    alias lla='eza -a --long --git -I "Icon?" -I ".DS_Store" --group-directories-first'
-    alias llx='eza -a --long --git -I "Icon?" -I ".DS_Store" --group-directories-first -@ -Z'
+    alias ll='eza --long --sort=Name --git --git-repos -I "Icon?" --group-directories-first --no-quotes --no-permissions --no-user'
+    alias lla='eza -a --long --sort=Name --git -I "Icon?" -I ".DS_Store" --group-directories-first'
+    alias llx='eza -a --long --sort=Name --git -I "Icon?" -I ".DS_Store" --group-directories-first -@ -Z'
     alias llt='eza --tree'
 fi
 

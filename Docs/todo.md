@@ -1,14 +1,14 @@
 # TODO Items
 
-- Verify that re-running `dotfiles.sh` from anywhere resets the setup
-- Report current `git config` name/email after setup, or instruct to setup
-    - Do something similar for Ruby, Homebrew, or other pieces
+- Add basic support for Linux
+- Report current ruby, swift, python, and Homebrew versions on setup    
 - Function to delete `./DS_Store` files recursively down a folder structure 
 
 
 ## Done
 
-- Put Dotfiles as the source for PATH - no separate copy. This will make it easier to support putting Dotfiles at the root of a user directly by simply cloning from GitHub, which is how I expect to use Dotfiles in the future, especially on Linux.
+- Verify that re-running `dotfiles.sh` from anywhere resets the setup
+- Put Dotfiles as the source for PATH - no extra copy in `~/Developer`
 - Move everything from the `./Mac/` subfolder to the root - Linux remains
 - Add `~/Code` and `~/TimTr` to the root user folder aliased to Dropbox or iCloud
 - Rename `./Bin` back to Developer

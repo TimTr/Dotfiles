@@ -2,22 +2,14 @@
 #
 # dotfiles.sh - the Linux version
 
-# TODO: If setup before, prompt to continue since this wipes out current setup
-source "$DOTFILES_ROOT/Mac/Home/dot-functions.sh"
+# TODO: abort if git, cc, or other needed tools are not available
+source "$DOTFILES_ROOT/Linux/dot-functions.sh"
 message "dotfiles.sh -- clean setup up for macOS via ${DOTFILES_ROOT}"
 
 
-# If git and a compiler  isn't installed, then abort the install
-# TODO: check if git, cc, or other needed tools are available
 
-echo
-# ==============================================================================
-alert "SUDO Password Required to unsure proper permissions and ownership"
-# read -s -k $'?Press any key to continue. Hit Control-C to abort now.\n'
-echo
-
-sudo chown -R $USER ${DOTFILES_ROOT}/*  2> /dev/null
-sudo chmod -R 777 ${DOTFILES_ROOT}/*    2> /dev/null
+chown -R $USER ${DOTFILES_ROOT}/*  2> /dev/null
+chmod -R 777 ${DOTFILES_ROOT}/*    2> /dev/null
 
 # Un-set the quarantine bit for all my own script files
 xattr -d com.apple.quarantine ${DOTFILES_ROOT}/* 2> /dev/null
