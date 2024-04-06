@@ -1,15 +1,17 @@
 # TimTr Dotfiles Documentation
 
-This is the `index.md` file at root. **Update #7 March 17 4:34pm**
-
-Edited from my iPad! Using the Files.app
+This is the `index.md` file at root. **Update April 5, 2024 10:06pm**
 
 This forms the root of the GitHub Pages documentation generated for this repository. It will link over to files within the `./Docs` folder of this repo for the actual documentation.
 
-* Documentation (work in progress) [table of contents](Docs/index.html).
-* Link the [commands file](Docs/commands.html) via relative path.
-* Full link to the [overview file](Docs/overview.html).
-* The [README](readme.md) file for these `Dotfiles`.
+Documentation (work in progress) [table of contents](Docs/index.html).
+
+Link the [commands file](Docs/commands.html) via relative path.
+
+Full link to the [overview file](Docs/overview.html).
+
+The [README](readme.md) file for these `Dotfiles`.
+
 
 **Note:**  the `docs` folder must be in lower-case for GitHub Pages support, if you want to use it as the basis of docs. Capital `Docs` will fail. At present, this repository is setup to use the root of the repo for Pages docs generation, so this `index.md` file manually links to other documentation files.
 
