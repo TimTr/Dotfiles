@@ -8,7 +8,7 @@
 # ==============================================================================
 # Hard-coding the PATH in .zshenv so available even to non-interactive shells
 # Add the Homebrew paths and custom path first
-export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/Bin"
+export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/Linux"
 # WAS: export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/Developer"
 # export PATH="/opt/homebrew/bin:/usr/local/bin:/opt/bin"
 

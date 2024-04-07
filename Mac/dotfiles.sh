@@ -2,7 +2,7 @@
 #
 # setup-macos.sh - the macOS version
 echo
-source "$DOTFILES_ROOT/Home/dot-functions.sh"
+source "$DOTFILES_ROOT/Mac/dot-functions.sh"
 
 # DEBUG OUTPUT
 message "DOTFILES_ROOT" "$DOTFILES_ROOT"
@@ -59,26 +59,26 @@ sudo chmod 744 /usr/local/bin
 
 # ==============================================================================
 message "Setup root dotfiles" "Overwriting existing files at $HOME"
-cp $DOTFILES_ROOT/Home/dot-zshrc.sh $HOME/.zshrc
-cp $DOTFILES_ROOT/Home/dot-zshenv.sh $HOME/.zshenv
-cp $DOTFILES_ROOT/Home/dot-aliases.sh $HOME/.aliases
-cp $DOTFILES_ROOT/Home/dot-functions.sh $HOME/.functions
+cp $DOTFILES_ROOT/Mac/dot-zshrc.sh $HOME/.zshrc
+cp $DOTFILES_ROOT/Mac/dot-zshenv.sh $HOME/.zshenv
+cp $DOTFILES_ROOT/Mac/dot-aliases.sh $HOME/.aliases
+cp $DOTFILES_ROOT/Mac/dot-functions.sh $HOME/.functions
 
 # Copy Git and other config files
-cp $DOTFILES_ROOT/Home/dot-gitconfig $HOME/.gitconfig
-cp $DOTFILES_ROOT/Home/dot-gitignore $HOME/.gitignore
-cp $DOTFILES_ROOT/Home/dot-vimrc $HOME/.vimrc
+cp $DOTFILES_ROOT/Config/dot-gitconfig $HOME/.gitconfig
+cp $DOTFILES_ROOT/Config/dot-gitignore $HOME/.gitignore
+cp $DOTFILES_ROOT/Config/dot-vimrc $HOME/.vimrc
 
 # Register gitignore and other git stuff
 git config --global core.excludesfile ~/.gitignore
 
 message "Setup app preferences" "Overwriting Terminal, Xcode, and other settings"
 # Copy app settings
-cp $DOTFILES_ROOT/Preferences/* $HOME/Library/Preferences/
+cp $DOTFILES_ROOT/Config/Preferences/* $HOME/Library/Preferences/
 
 # Copy Xcode preferences
 mkdir -p $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes
-cp -R $DOTFILES_ROOT/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
+cp -R $DOTFILES_ROOT/Config/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
 
 
 # ==============================================================================
@@ -101,21 +101,13 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 # Set macOS to not write .DS_Store files on USB drives
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
 
-
 # ==============================================================================
-# Check if $HOME/Library/CloudStorage/Dropbox exists, and if so create symlinks
-if [[ -d "$HOME/Dropbox/" ]]; then
-  message "Setup ~/Dropbox (existed)" "If symlink is broken, manually delete and rerun"
+# Create ~/Developer folder in which to put local developer stuff, e.g. repos
+if [[ -d "$HOME/Developer/" ]]; then
+  message "~/Developer exists" "To reset, delete and rerun dotfiles.sh"
 else
-  if [[ -d "$HOME/Library/CloudStorage/Dropbox/" ]]; then
-    message "Setup ~/Dropbox and ~/Code" "Symlink to ~/Library/CloudStorage/Dropbox/"
-    ln -s $HOME/Library/CloudStorage/Dropbox $HOME/Dropbox
-    ln -s $HOME/Library/CloudStorage/Dropbox/Code $HOME/Code
-  else
-    message "Dropbox not installed" "Directory not found: ~/Library/CloudStorage/Dropbox/"
-  fi
+  message "Setup ~/Developer" "Creating new folder for local developer work"
 fi
-
 
 # ==============================================================================
 # Check if the "~/local.sh" file exists, and if not, copy  the stub version to user home
@@ -140,8 +132,21 @@ exit 0
 
 
 
-
-
+# ==============================================================================
+# NOTE: disabled the Dropbox alias setup
+#
+# Check if $HOME/Library/CloudStorage/Dropbox exists, and if so create symlinks
+#if [[ -d "$HOME/Dropbox/" ]]; then
+#  message "Setup ~/Dropbox (existed)" "If symlink is broken, manually delete and rerun"
+#else
+#  if [[ -d "$HOME/Library/CloudStorage/Dropbox/" ]]; then
+#    message "Setup ~/Dropbox and ~/Code" "Symlink to ~/Library/CloudStorage/Dropbox/"
+#    ln -s $HOME/Library/CloudStorage/Dropbox $HOME/Dropbox
+#    ln -s $HOME/Library/CloudStorage/Dropbox/Code $HOME/Code
+#  else
+#    message "Dropbox not installed" "Directory not found: ~/Library/CloudStorage/Dropbox/"
+#  fi
+#fi
 
 
 
