@@ -27,8 +27,17 @@ autoload colors; colors;
 export CLICOLOR=1
 export LSCOLORS=gxFxCxDxdxExBxAxaxaxex
 
-## References: type "man eza_colors" for a list and instructions
-export EZA_COLORS="*.md=92:fi=0:ex=96:di=34:da=2:mp=31:lp=33:ln=31:uu=0:gu=0:sn=0:sb=0:xx=0"
+## EZA color setup reference: https://the.exa.website/docs/colour-themes
+## type "man eza_colors" for a list and instructions
+## 256 color codes:  https://en.wikipedia.org/wiki/ANSI_escape_code
+## Notice how "di=38;5;nnn" - replace the "nnn" with a color code from ANSI 256
+export EZA_COLORS="*.md=92:fi=0:ex=96:di=38;5;75:da=1;30:mp=31:lp=33:ln=31:uu=0:gu=0:sn=0:sb=0:xx=0"
+
+## Prior good colors
+# export EZA_COLORS="*.md=92:fi=0:ex=96:di=34:da=2:mp=31:lp=33:ln=31:uu=0:gu=0:sn=0:sb=0:xx=0"
+
+## Testing colors
+# export EZA_COLORS="*.md=92:fi=0:ex=96:di=38;5;75:da=1;30:mp=31:lp=33:ln=31:uu=0:gu=0:sn=0:sb=0:xx=0"
 
 
 ## Parse git branch to put into the prompt
