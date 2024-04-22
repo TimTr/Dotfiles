@@ -8,32 +8,130 @@
 
 /* Begin PBXFileReference section */
 		BA01DB1D2A53326B00ADA557 /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
-		BA01DB212A53326B00ADA557 /* Linux */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Linux; sourceTree = "<group>"; };
-		BA09BAA42B70501E004DE1A0 /* Docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Docs; sourceTree = "<group>"; };
 		BA4B13592A533336001D1E03 /* license.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = license.md; sourceTree = "<group>"; };
 		BA513A222B7041DB00A5A69C /* index.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = index.md; sourceTree = "<group>"; };
+		BA6BD44F2BC1149A003A5F62 /* setup-brew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "setup-brew.sh"; sourceTree = "<group>"; };
+		BA6BD4502BC1149A003A5F62 /* setup-ruby.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "setup-ruby.sh"; sourceTree = "<group>"; };
+		BA6BD4512BC1149A003A5F62 /* clean.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = clean.sh; sourceTree = "<group>"; };
+		BA6BD4522BC1149A003A5F62 /* help.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = help.sh; sourceTree = "<group>"; };
+		BA6BD4532BC1149A003A5F62 /* dotfiles.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = dotfiles.sh; sourceTree = "<group>"; };
+		BAA4CDDF2BC24FF40090B9DB /* TimTr Grey.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Grey.xccolortheme"; sourceTree = "<group>"; };
+		BAA4CDE02BC24FF40090B9DB /* TimTr Dark.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Dark.xccolortheme"; sourceTree = "<group>"; };
+		BAA4CDE12BC24FF40090B9DB /* TimTr Lighthaus.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Lighthaus.xccolortheme"; sourceTree = "<group>"; };
+		BAA4CDE32BC250080090B9DB /* vscode-settings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "vscode-settings.json"; sourceTree = "<group>"; };
+		BAA4CDE42BC250080090B9DB /* vscode-theme-timtr.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "vscode-theme-timtr.json"; sourceTree = "<group>"; };
+		BAA4CDE52BC2500F0090B9DB /* com.googlecode.iterm2.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.googlecode.iterm2.plist; sourceTree = "<group>"; };
+		BAA4CDE62BC2500F0090B9DB /* com.apple.Terminal.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.apple.Terminal.plist; sourceTree = "<group>"; };
 		BAAC27292B704B5200BB725E /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
-		BAD90EAC2B9A59E0008C5551 /* Bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bin; sourceTree = "<group>"; };
-		BAD90EAD2B9A59E7008C5551 /* Preferences */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Preferences; sourceTree = "<group>"; };
-		BAD90EAE2B9A59EC008C5551 /* Settings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Settings; sourceTree = "<group>"; };
-		BAD90EAF2B9A59F4008C5551 /* Xcode */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Xcode; sourceTree = "<group>"; };
-		BAD90EB02B9A59FD008C5551 /* Demos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Demos; sourceTree = "<group>"; };
-		BAD90EB12B9A5A02008C5551 /* Home */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Home; sourceTree = "<group>"; };
+		BABDAC3E2BC1ECDB00DA5858 /* dot-gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = "dot-gitignore"; sourceTree = "<group>"; };
+		BABDAC3F2BC1ECDB00DA5858 /* dot-functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-functions.sh"; sourceTree = "<group>"; };
+		BABDAC402BC1ECDB00DA5858 /* local-template.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "local-template.sh"; sourceTree = "<group>"; };
+		BABDAC412BC1ECDB00DA5858 /* dot-zshenv.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-zshenv.sh"; sourceTree = "<group>"; };
+		BABDAC422BC1ECDB00DA5858 /* dot-vimrc */ = {isa = PBXFileReference; lastKnownFileType = text; path = "dot-vimrc"; sourceTree = "<group>"; };
+		BABDAC432BC1ECDB00DA5858 /* dot-aliases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-aliases.sh"; sourceTree = "<group>"; };
+		BABDAC442BC1ECDB00DA5858 /* dot-gitconfig */ = {isa = PBXFileReference; lastKnownFileType = text; path = "dot-gitconfig"; sourceTree = "<group>"; };
+		BABDAC452BC1ECDB00DA5858 /* dot-zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-zshrc.sh"; sourceTree = "<group>"; };
+		BABDAC472BC1ED2100DA5858 /* commands.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = commands.md; sourceTree = "<group>"; };
+		BABDAC482BC1ED2100DA5858 /* index.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = index.md; sourceTree = "<group>"; };
+		BABDAC492BC1ED2100DA5858 /* overview.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = overview.md; sourceTree = "<group>"; };
+		BABDAC4A2BC1ED2100DA5858 /* todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = todo.md; sourceTree = "<group>"; };
+		BABDAC4D2BC1ED4700DA5858 /* dot-zshenv.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-zshenv.sh"; sourceTree = "<group>"; };
+		BABDAC4E2BC1ED4700DA5858 /* dotfiles.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = dotfiles.sh; sourceTree = "<group>"; };
+		BABDAC4F2BC1ED4700DA5858 /* dot-zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-zshrc.sh"; sourceTree = "<group>"; };
+		BAD8D5C82BD6F41400E0077F /* dot-aliases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-aliases.sh"; sourceTree = "<group>"; };
+		BAF585262BD6F45100A2E7F1 /* dot-functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-functions.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		BA6BD44D2BC11407003A5F62 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				BAA4CDDE2BC24FE80090B9DB /* Preferences */,
+				BAA4CDDD2BC24FE10090B9DB /* Settings */,
+				BAA4CDDC2BC24FD60090B9DB /* Xcode */,
+				BABDAC3E2BC1ECDB00DA5858 /* dot-gitignore */,
+				BABDAC442BC1ECDB00DA5858 /* dot-gitconfig */,
+				BABDAC422BC1ECDB00DA5858 /* dot-vimrc */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		BAA4CDDC2BC24FD60090B9DB /* Xcode */ = {
+			isa = PBXGroup;
+			children = (
+				BAA4CDE02BC24FF40090B9DB /* TimTr Dark.xccolortheme */,
+				BAA4CDDF2BC24FF40090B9DB /* TimTr Grey.xccolortheme */,
+				BAA4CDE12BC24FF40090B9DB /* TimTr Lighthaus.xccolortheme */,
+			);
+			path = Xcode;
+			sourceTree = "<group>";
+		};
+		BAA4CDDD2BC24FE10090B9DB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BAA4CDE32BC250080090B9DB /* vscode-settings.json */,
+				BAA4CDE42BC250080090B9DB /* vscode-theme-timtr.json */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BAA4CDDE2BC24FE80090B9DB /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				BAA4CDE62BC2500F0090B9DB /* com.apple.Terminal.plist */,
+				BAA4CDE52BC2500F0090B9DB /* com.googlecode.iterm2.plist */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		BABDAC3D2BC1ECCF00DA5858 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				BA6BD4532BC1149A003A5F62 /* dotfiles.sh */,
+				BA6BD4512BC1149A003A5F62 /* clean.sh */,
+				BA6BD4522BC1149A003A5F62 /* help.sh */,
+				BA6BD44F2BC1149A003A5F62 /* setup-brew.sh */,
+				BA6BD4502BC1149A003A5F62 /* setup-ruby.sh */,
+				BABDAC432BC1ECDB00DA5858 /* dot-aliases.sh */,
+				BABDAC3F2BC1ECDB00DA5858 /* dot-functions.sh */,
+				BABDAC412BC1ECDB00DA5858 /* dot-zshenv.sh */,
+				BABDAC452BC1ECDB00DA5858 /* dot-zshrc.sh */,
+				BABDAC402BC1ECDB00DA5858 /* local-template.sh */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		BABDAC462BC1ED1800DA5858 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				BABDAC472BC1ED2100DA5858 /* commands.md */,
+				BABDAC482BC1ED2100DA5858 /* index.md */,
+				BABDAC492BC1ED2100DA5858 /* overview.md */,
+				BABDAC4A2BC1ED2100DA5858 /* todo.md */,
+			);
+			path = Docs;
+			sourceTree = "<group>";
+		};
+		BABDAC4B2BC1ED3C00DA5858 /* Linux */ = {
+			isa = PBXGroup;
+			children = (
+				BAF585262BD6F45100A2E7F1 /* dot-functions.sh */,
+				BAD8D5C82BD6F41400E0077F /* dot-aliases.sh */,
+				BABDAC4D2BC1ED4700DA5858 /* dot-zshenv.sh */,
+				BABDAC4F2BC1ED4700DA5858 /* dot-zshrc.sh */,
+				BABDAC4E2BC1ED4700DA5858 /* dotfiles.sh */,
+			);
+			path = Linux;
+			sourceTree = "<group>";
+		};
 		BAD1343E2A53323000A5A08D = {
 			isa = PBXGroup;
 			children = (
 				BAAC27292B704B5200BB725E /* readme.md */,
-				BAD90EAC2B9A59E0008C5551 /* Bin */,
-				BAD90EB02B9A59FD008C5551 /* Demos */,
-				BA09BAA42B70501E004DE1A0 /* Docs */,
-				BAD90EB12B9A5A02008C5551 /* Home */,
-				BAD90EAD2B9A59E7008C5551 /* Preferences */,
-				BAD90EAE2B9A59EC008C5551 /* Settings */,
-				BAD90EAF2B9A59F4008C5551 /* Xcode */,
-				BA01DB212A53326B00ADA557 /* Linux */,
+				BABDAC3D2BC1ECCF00DA5858 /* Mac */,
+				BABDAC4B2BC1ED3C00DA5858 /* Linux */,
+				BA6BD44D2BC11407003A5F62 /* Config */,
+				BABDAC462BC1ED1800DA5858 /* Docs */,
 				BA513A222B7041DB00A5A69C /* index.md */,
 				BA4B13592A533336001D1E03 /* license.md */,
 				BA01DB1D2A53326B00ADA557 /* setup.sh */,
