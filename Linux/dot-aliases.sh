@@ -45,15 +45,14 @@ if ! command -v eza &> /dev/null
 then
     echo "Tool \`eza\` not found. For a better \`ls\` run:  brew install eza"
     # Use 'll' to suppress the "show all" flag when listing files
-    alias ll='ls -oFGT'
+    alias ll='ls -oFG --color'
     # Use 'lla' to enable "show all" for hidden files beginning with a period
-    alias lla='ls -oAFGT'
+    alias lla='ls -oAFG --color'
     # Use 'llx' to see the most info, including extended attributes
-    alias llx='ls -o@AFGT'
+    alias llx='ls -oAFG --color'
     # Use 'llt' to see the files sorted by modification time
-    alias llt='ls -otAFGT'
-    # Make standard 'ls' look prettier, with colors and sorting
-    # alias ls='ls -FG'
+    alias llt='ls -oAFG --color'
+
 else
     echo "Aliasing \`ll\` and other \`ls\` commands to use \`eza\`"
     

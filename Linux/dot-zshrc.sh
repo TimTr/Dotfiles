@@ -25,6 +25,8 @@ autoload colors; colors;
 # Syntax coloring for ZSH is a bit different than bash
 export CLICOLOR=1
 export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
+export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=37:cd=34:su=36:sg=36;40:tw=36:ow=36"
+
 
 ## Parse git branch to put into the prompt
 parse_git_branch() {

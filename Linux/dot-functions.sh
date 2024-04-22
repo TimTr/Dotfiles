@@ -23,9 +23,4 @@ md() {
     mkdir -p "$@" && cd "$@"
 }
 
-# Delete Xcode derived data
-xcode-clean() {
-    echo "Deleting all Xcode derived data..."
-    rm -rdf ~/Library/Developer/Xcode/DerivedData/*
-}
 
