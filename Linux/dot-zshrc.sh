@@ -1,24 +1,18 @@
-# GLOBAL ENVIRONMENT VARIABLES
-# -------------------------------------
+# .zshrc - Loaded only in interactive shell sessions - Linux version
+#
+# Because this file is only loaded in interactive shell (Terminal) sessions,
+# It is perfect for setting up things like colors, etc. However, it isn't
+# the right place to setup PATH and other variables that tools may want.
+# For those global (no shell visible) cases, use the `.zshenv` file.
+# -------------------------------------------------------------
 
-#### Will need to have copied the ~/.aliases file over already.
 source $HOME/.aliases
 source $HOME/.functions
+source $HOME/.zshenv
 
-# ==============================================================================
-# Hard-coding the new binary folder to lead the PATH
-# Do NOT append the previous $PATH as this will duplicate with each script run
-export PATH="$DOTFILES_DESTINATION/Bin"
-# Add the Homebrew alternate folder to PATH
-export PATH="$PATH:/opt/homebrew/bin"
-# Add default system PATHs to the chain (these are REALLY important)
-export PATH="$PATH:/usr/local/bin:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin"
-# Add the Xcode tooling folder to PATH
-export PATH="$PATH:/Library/Apple/usr/bin"
-
-# This needs to be hard-coded into .zshrc by default
-# eval "$(rbenv init - zsh)"
-# export PATH="${HOME}/.rbenv/bin:$PATH"
+# Report tha .zshrc is loading and at what time
+TIMENOW=$(date +%d-%m-%Y" "%H:%M:%S)
+message ".zshrc" "Launched $SHELL' at ${TIMENOW}."
 
 
 # ==============================================================================
@@ -31,8 +25,17 @@ autoload colors; colors;
 # Syntax coloring for ZSH is a bit different than bash
 export CLICOLOR=1
 export LSCOLORS=gxFxCxDxbxExBxAxaxaxex
-# another example for zsh: export LSCOLORS=GxFxCxDxBxexexaxaxaxex
 
-# ... Custom prompt with newline
+## Parse git branch to put into the prompt
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+# Enable substitutions within the prompt
+setopt PROMPT_SUBST
+
+# Set the actual prompt
 NEWLINE=$'\n'
-PS1="${NEWLINE}%F{white}🐛 [%F{cyan}%~%{%F{white}%}] %{%f%}%"
+PROMPT='${NEWLINE}%F{white}% → %F{red}% %9c% %F{grey}% $(parse_git_branch) %F{white}% ${NEWLINE}↪ %f'
+
+
+## end of file.
