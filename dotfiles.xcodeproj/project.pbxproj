@@ -35,10 +35,11 @@
 		BABDAC482BC1ED2100DA5858 /* index.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = index.md; sourceTree = "<group>"; };
 		BABDAC492BC1ED2100DA5858 /* overview.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = overview.md; sourceTree = "<group>"; };
 		BABDAC4A2BC1ED2100DA5858 /* todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = todo.md; sourceTree = "<group>"; };
-		BABDAC4C2BC1ED4700DA5858 /* dot-functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-functions.sh"; sourceTree = "<group>"; };
 		BABDAC4D2BC1ED4700DA5858 /* dot-zshenv.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-zshenv.sh"; sourceTree = "<group>"; };
 		BABDAC4E2BC1ED4700DA5858 /* dotfiles.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = dotfiles.sh; sourceTree = "<group>"; };
 		BABDAC4F2BC1ED4700DA5858 /* dot-zshrc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-zshrc.sh"; sourceTree = "<group>"; };
+		BAD8D5C82BD6F41400E0077F /* dot-aliases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-aliases.sh"; sourceTree = "<group>"; };
+		BAF585262BD6F45100A2E7F1 /* dot-functions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "dot-functions.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -114,7 +115,8 @@
 		BABDAC4B2BC1ED3C00DA5858 /* Linux */ = {
 			isa = PBXGroup;
 			children = (
-				BABDAC4C2BC1ED4700DA5858 /* dot-functions.sh */,
+				BAF585262BD6F45100A2E7F1 /* dot-functions.sh */,
+				BAD8D5C82BD6F41400E0077F /* dot-aliases.sh */,
 				BABDAC4D2BC1ED4700DA5858 /* dot-zshenv.sh */,
 				BABDAC4F2BC1ED4700DA5858 /* dot-zshrc.sh */,
 				BABDAC4E2BC1ED4700DA5858 /* dotfiles.sh */,

@@ -16,11 +16,12 @@ cp $DOTFILES_ROOT/Linux/dot-zshenv.sh $HOME/.zshenv
 cp $DOTFILES_ROOT/Linux/dot-aliases.sh $HOME/.aliases
 cp $DOTFILES_ROOT/Linux/dot-functions.sh $HOME/.functions
 
-# Register gitignore and other git stuff
+# Copy over tool and app settings
 cp $DOTFILES_ROOT/Config/dot-gitconfig $HOME/.gitconfig
 cp $DOTFILES_ROOT/Config/dot-gitignore $HOME/.gitignore
 cp $DOTFILES_ROOT/Config/dot-vimrc $HOME/.vimrc
 
+# Register gitignore and other git stuff
 git config --global core.excludesfile ~/.gitignore
 
 
