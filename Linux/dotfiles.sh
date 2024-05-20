@@ -21,6 +21,8 @@ cp $DOTFILES_ROOT/Config/dot-gitconfig $HOME/.gitconfig
 cp $DOTFILES_ROOT/Config/dot-gitignore $HOME/.gitignore
 cp $DOTFILES_ROOT/Config/dot-vimrc $HOME/.vimrc
 
+echo "Empty file to silence new shell messages" >> $HOME/.hushlogin
+
 # Register gitignore and other git stuff
 git config --global core.excludesfile ~/.gitignore
 
@@ -33,7 +35,6 @@ else
   message "Creating ~/local.sh" "Modify this file to add GitHub and SSH tokens"
   cp $DOTFILES_ROOT/Linux/local-template.sh $HOME/local.sh
 fi
-
 
 
 message "Restart the terminal" "After restart, you can run the following commands:"

@@ -63,6 +63,7 @@ cp $DOTFILES_ROOT/Mac/dot-zshrc.sh $HOME/.zshrc
 cp $DOTFILES_ROOT/Mac/dot-zshenv.sh $HOME/.zshenv
 cp $DOTFILES_ROOT/Mac/dot-aliases.sh $HOME/.aliases
 cp $DOTFILES_ROOT/Mac/dot-functions.sh $HOME/.functions
+echo "Empty file to silence new shell messages" >> $HOME/.hushlogin
 
 # Copy Git and other config files
 cp $DOTFILES_ROOT/Config/dot-gitconfig $HOME/.gitconfig

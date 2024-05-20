@@ -11,8 +11,8 @@ source $HOME/.functions
 source $HOME/.zshenv
 
 # Report tha .zshrc is loading and at what time
-TIMENOW=$(date +%d-%m-%Y" "%H:%M:%S)
-message ".zshrc" "Launched $SHELL' at ${TIMENOW}."
+# TIMENOW=$(date +%d-%m-%Y" "%H:%M:%S)
+# message ".zshrc" "Launched $SHELL' at ${TIMENOW}."
 
 # Warn about installing Homebrew if it is not yet present
 which -s brew &> /dev/null
