@@ -1,17 +1,10 @@
 #!/usr/bin/env zsh
 #
-#  setup.sh is also understood as a startup by GitHub Codespaces and other VMs
+#  'setup.sh' is  understood as a startup by GitHub Codespaces and other VMs
 
-# Get the folder in which setup.sh was run, no matter your current location.
-# This is then the root from which all further operations are run. (requires ZSH)
+
+# Set Dotfiles home to be the folder in which `setup.sh` was run (requires ZSH)
 export DOTFILES_ROOT=${0:a:h}
-echo
-echo "Globally setting up dotfiles to run from " $DOTFILES_ROOT
-
-
-# This is the name of the actual file that was run (don't need it)
-# DOTFILES_SETUP_FILE=${0:a}
-# export DOTFILES_DESTINATION=$HOME/Bin/
 
 # This script will run either the Linux or macOS installer
 if [[ $OSTYPE == darwin* ]]; then
@@ -20,7 +13,6 @@ else
   source $DOTFILES_ROOT/Linux/dotfiles.sh
 fi
 
-
 exit 0
 
 
@@ -28,14 +20,15 @@ exit 0
 
 
 
-
-
-
 # ==============================================================================
-#
 #### Saved script tidbits may want later
-#
-# -----------------
+
+
+# This is the name of the actual file that was run (don't need it)
+# DOTFILES_SETUP_FILE=${0:a}
+
+
+
 # This piece of script would require that you launch the setup while
 # already located inside the ~/dotfiles folder - this isn't needed
 #
@@ -43,9 +36,9 @@ exit 0
 #   echo "ABORT" "You must run the installer from within the dotfiles folder"
 #   exit 0
 # fi
-#
-#
-# -----------------
+
+
+
 # Check if the file exists to enforce install from $HOME/dotfiles
 #
 # if [[ -f "$HOME/dotfiles/setup.sh" ]]; then
