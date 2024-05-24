@@ -4,7 +4,6 @@
 echo
 source "$DOTFILES_ROOT/Mac/dot-functions.sh"
 
-# DEBUG OUTPUT
 message "DOTFILES_ROOT" "$DOTFILES_ROOT"
 #message "dotfiles.sh" "run location = ${0:a:h}"
 
@@ -63,6 +62,7 @@ cp $DOTFILES_ROOT/Mac/dot-zshrc.sh $HOME/.zshrc
 cp $DOTFILES_ROOT/Mac/dot-zshenv.sh $HOME/.zshenv
 cp $DOTFILES_ROOT/Mac/dot-aliases.sh $HOME/.aliases
 cp $DOTFILES_ROOT/Mac/dot-functions.sh $HOME/.functions
+echo "Empty file to silence new shell messages" >> $HOME/.hushlogin
 
 # Copy Git and other config files
 cp $DOTFILES_ROOT/Config/dot-gitconfig $HOME/.gitconfig
@@ -120,14 +120,16 @@ fi
 
 
 # ==============================================================================
-message "Git settings" "To change: \`git config --global user.name <name>\`"
-bullet "  user.name  : $(git config --get user.name)"
-bullet "  user.email : $(git config --get user.email)"
-
-message "Restart terminal" "Optional installs: setup-brew.sh and setup-ruby.sh"
+message "git config --global user.name =" "$(git config --get user.name)"
+message "git config --global user.email =" "$(git config --get user.email)"
+message "Restart terminal" "Optionally run: setup-brew.sh and setup-ruby.sh"
 echo
 
 exit 0
+
+
+
+
 
 
 
