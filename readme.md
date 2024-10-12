@@ -1,6 +1,6 @@
 # Dotfiles for Tim Triemstra
 
-On a Mac or Linux system, simply run:
+To setup on Mac or Linux, type the following (assumes `zsh`):
 
 ```
     git clone https://github.com/timtr/Dotfiles.git

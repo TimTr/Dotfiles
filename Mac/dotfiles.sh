@@ -57,7 +57,7 @@ sudo chmod 744 /usr/local/bin
 
 
 # ==============================================================================
-message "Setup root dotfiles" "Overwriting existing files at $HOME"
+message "✅ Setup root dotfiles" "Overwriting existing files at $HOME"
 cp $DOTFILES_ROOT/Mac/dot-zshrc.sh $HOME/.zshrc
 cp $DOTFILES_ROOT/Mac/dot-zshenv.sh $HOME/.zshenv
 cp $DOTFILES_ROOT/Mac/dot-aliases.sh $HOME/.aliases
