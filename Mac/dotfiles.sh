@@ -4,7 +4,7 @@
 echo
 source "$DOTFILES_ROOT/Mac/dot-functions.sh"
 
-message "DOTFILES_ROOT" "$DOTFILES_ROOT"
+message "✳️ DOTFILES_ROOT" "$DOTFILES_ROOT"
 #message "dotfiles.sh" "run location = ${0:a:h}"
 
 
@@ -12,22 +12,22 @@ message "DOTFILES_ROOT" "$DOTFILES_ROOT"
 # Require `zsh` as the default, and set the default shell if needed
 if [ $SHELL != "/bin/zsh" ]; then
   chsh -s /bin/zsh
-  echo "Requires \"zsh\". Switched default shell to /bin/zsh -- re-run setup.sh file"
+  echo "❌ Requires \"zsh\". Switched default shell to /bin/zsh -- re-run setup.sh file"
   exit 0
 fi
 
 # If Xcode isn't installed, then abort the install
 if xcode-select -p &> /dev/null
 then
-  message "xcode-selected -p:" "$(xcode-select -p)"
+  message "✳️ xcode-selected -p:" "$(xcode-select -p)"
 else
-  error "Xcode missing! Install Xcode, then re-run the script."
+  error "❌ Xcode missing! Install Xcode, then re-run the script."
   exit 0
 fi
 
 
 # ==============================================================================
-message "SUDO may be required" "Setting file permissions and ownership"
+message "✳️ SUDO may be required" "Setting file permissions and ownership"
 
 # Claim ownership of all my dotfiles
 sudo chown -R $USER $DOTFILES_ROOT     2> /dev/null
@@ -72,7 +72,7 @@ cp $DOTFILES_ROOT/Config/dot-vimrc $HOME/.vimrc
 # Register gitignore and other git stuff
 git config --global core.excludesfile ~/.gitignore
 
-message "Setup app preferences" "Overwriting Terminal, Xcode, and other settings"
+message "✅ Setup app preferences" "Overwriting Terminal, Xcode, and other settings"
 # Copy app settings
 cp $DOTFILES_ROOT/Config/Preferences/* $HOME/Library/Preferences/
 
@@ -82,7 +82,7 @@ cp -R $DOTFILES_ROOT/Config/Xcode/* $HOME/Library/Developer/Xcode/UserData/FontA
 
 
 # ==============================================================================
-message "Setup defaults" "Adding paths and variables to .zshenv"
+message "✅ Setup defaults" "Adding paths and variables to .zshenv"
 echo " " >> ~/.zshenv
 echo "# Add global DOTFILES_ROOT pointing Dotfiles install folder" >> ~/.zshenv
 echo "export DOTFILES_ROOT=$DOTFILES_ROOT" >> ~/.zshenv
@@ -104,25 +104,27 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
 # ==============================================================================
 # Create ~/Developer folder in which to put local developer stuff, e.g. repos
 if [[ -d "$HOME/Developer/" ]]; then
-  message "~/Developer exists" "To reset, delete and rerun dotfiles.sh"
+  message "✳️ ~/Developer exists" "To reset, delete and rerun dotfiles.sh"
 else
-  message "Setup ~/Developer" "Creating new folder for local developer work"
+  message "✅ Setup ~/Developer" "Creating new folder for local developer work"
 fi
 
 # ==============================================================================
 # Check if the "~/local.sh" file exists, and if not, copy  the stub version to user home
 if [[ -f "$HOME/local.sh" ]]; then
-  message "Setup /local.sh (existed)" "Delete the file to re-install a template"
+  message "✳️ Setup /local.sh (existed)" "Delete the file to re-install a template"
 else
-  message "Set ~/local.sh" "Installing file from original template in ./Dotfiles"
+  message "✅ Set ~/local.sh" "Installing file from original template in ./Dotfiles"
   cp $DOTFILES_ROOT/Home/local-template.sh $HOME/local.sh
 fi
 
 
 # ==============================================================================
-message "git config --global user.name =" "$(git config --get user.name)"
-message "git config --global user.email =" "$(git config --get user.email)"
-message "Restart terminal" "Optionally run: setup-brew.sh and setup-ruby.sh"
+message "✅ git config --global user.name =" "$(git config --get user.name)"
+message "✅ git config --global user.email =" "$(git config --get user.email)"
+echo
+message "🎉 Success!" "Restart Terminal and run setup-brew.sh and setup-ruby.sh"
+
 echo
 
 exit 0
