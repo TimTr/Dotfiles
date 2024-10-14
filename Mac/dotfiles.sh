@@ -27,7 +27,7 @@ fi
 
 
 # ==============================================================================
-message "✳️ SUDO may be required" "Setting file permissions and ownership"
+message "🔐 SUDO may be required" "Setting file permissions and ownership"
 
 # Claim ownership of all my dotfiles
 sudo chown -R $USER $DOTFILES_ROOT     2> /dev/null
