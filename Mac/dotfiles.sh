@@ -112,7 +112,7 @@ fi
 # ==============================================================================
 # Check if the "~/local.sh" file exists, and if not, copy  the stub version to user home
 if [[ -f "$HOME/local.sh" ]]; then
-  message "✳️ Setup /local.sh (existed)" "Delete the file to re-install a template"
+  message "✳️ File /local.sh already exists" "Delete the file to re-install a template"
 else
   message "✅ Set ~/local.sh" "Installing file from original template in ./Dotfiles"
   cp $DOTFILES_ROOT/Home/local-template.sh $HOME/local.sh
