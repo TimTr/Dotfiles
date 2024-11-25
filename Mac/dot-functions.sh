@@ -13,6 +13,11 @@ error ()   { printf "\r\033[00;31m ** $1\033[0m - \033[00;31m$2 \033[0m \n" }
 alert ()  { printf "\r\033[00;35m >> $1\033[0m  $2\n" }
 bullet ()  { printf "\r\033[00;36m   ==\033[0m $1  $2\n" }
 
+# echo "this is ${txtbold}bold${txtnormal} but this isn't"
+txtbold=$(tput bold)
+txtnormal=$(tput sgr0)
+
+
 # ... Find all files recursively under current folder
 findall () {
     find ./ -name $1 -print 2> /dev/null
