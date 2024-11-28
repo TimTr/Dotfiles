@@ -123,7 +123,7 @@ fi
 message "✅ git config --global user.name =" "$(git config --get user.name)"
 message "✅ git config --global user.email =" "$(git config --get user.email)"
 echo
-message "🎉 Success!" "Restart Terminal and run setup-brew.sh and setup-ruby.sh"
+message "🎉 Success!" "Restart Terminal and run ${txtbold}setup-brew.sh${txtnormal} and ${txtbold}setup-ruby.sh${txtnormal}"
 
 echo
 
