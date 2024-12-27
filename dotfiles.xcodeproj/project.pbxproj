@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		BA01DB1D2A53326B00ADA557 /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
+		BA4864FF2D1E2EE9005C2C49 /* vscode-timtr-settings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "vscode-timtr-settings.json"; sourceTree = "<group>"; };
 		BA4B13592A533336001D1E03 /* license.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = license.md; sourceTree = "<group>"; };
 		BA513A222B7041DB00A5A69C /* index.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = index.md; sourceTree = "<group>"; };
 		BA6BD44F2BC1149A003A5F62 /* setup-brew.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "setup-brew.sh"; sourceTree = "<group>"; };
@@ -19,7 +20,6 @@
 		BAA4CDE02BC24FF40090B9DB /* TimTr Dark.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Dark.xccolortheme"; sourceTree = "<group>"; };
 		BAA4CDE12BC24FF40090B9DB /* TimTr Lighthaus.xccolortheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TimTr Lighthaus.xccolortheme"; sourceTree = "<group>"; };
 		BAA4CDE32BC250080090B9DB /* vscode-settings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "vscode-settings.json"; sourceTree = "<group>"; };
-		BAA4CDE42BC250080090B9DB /* vscode-theme-timtr.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "vscode-theme-timtr.json"; sourceTree = "<group>"; };
 		BAA4CDE52BC2500F0090B9DB /* com.googlecode.iterm2.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.googlecode.iterm2.plist; sourceTree = "<group>"; };
 		BAA4CDE62BC2500F0090B9DB /* com.apple.Terminal.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.apple.Terminal.plist; sourceTree = "<group>"; };
 		BAAC27292B704B5200BB725E /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
@@ -69,8 +69,8 @@
 		BAA4CDDD2BC24FE10090B9DB /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				BA4864FF2D1E2EE9005C2C49 /* vscode-timtr-settings.json */,
 				BAA4CDE32BC250080090B9DB /* vscode-settings.json */,
-				BAA4CDE42BC250080090B9DB /* vscode-theme-timtr.json */,
 			);
 			path = Settings;
 			sourceTree = "<group>";

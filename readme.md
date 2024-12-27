@@ -49,13 +49,12 @@ You can also open the `Dotfiles/Demos/demo-safari-cycle.html` file to launch Saf
 
 Documentation (or the start of docs) can be [found here](https://timtr.github.io/Dotfiles/docs/). Note that the `docs` folder must be in lower-case for GitHub Pages support. Capital `Docs` will fail.
 
-
 Which `zsh` files contain which settings: [CodeSpaces and Dotfiles](https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout)
-
 
 Docs on using `setup.sh` with [GitHub CodeSpaces and Dotfiles](https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-codespaces-for-your-account)
 
-### Order of loading
+
+### ZSH order of loading
 
 For reference, `zsh` config files are loaded in the following order:
 
@@ -65,3 +64,6 @@ For reference, `zsh` config files are loaded in the following order:
     .zprofile  -- if login (not using this file in current setup)
 ```
 
+
+
+`// end of file.`

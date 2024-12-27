@@ -12,7 +12,7 @@ message "✳️ DOTFILES_ROOT" "$DOTFILES_ROOT"
 # Require `zsh` as the default, and set the default shell if needed
 if [ $SHELL != "/bin/zsh" ]; then
   chsh -s /bin/zsh
-  echo "❌ Requires \"zsh\". Switched default shell to /bin/zsh -- re-run setup.sh file"
+  echo "❌ Set default shell to /bin/zsh and re-run setup.sh"
   exit 0
 fi
 
@@ -21,7 +21,7 @@ if xcode-select -p &> /dev/null
 then
   message "✳️ xcode-selected -p:" "$(xcode-select -p)"
 else
-  error "❌ Xcode missing! Install Xcode, then re-run the script."
+  error "❌ Install Xcode, then re-run setup.sh"
   exit 0
 fi
 
