@@ -57,6 +57,25 @@ sudo chmod 744 /usr/local/bin
 
 
 # ==============================================================================
+# Create ~/Developer folder in which to put local developer stuff, e.g. repos
+if [[ -d "$HOME/Developer/" ]]; then
+  message "    ~/Developer exists" "Use this folder for personal repositories"
+else
+  message "✅ Created ~/Developer" "New folder for local developer work"
+fi
+
+# ==============================================================================
+# Create a ~/Work folder if it doesn't exist already
+#
+if [[ -d "$HOME/Work/" ]]; then
+  message "    ~/Work exists" "Use this folder for work repositories"
+else
+  mkdir ~/Work
+  message "✅ Created ~/Work" "New folder for work repositories"
+fi
+
+
+# ==============================================================================
 message "✅ Setup root dotfiles" "Overwriting existing files at $HOME"
 cp $DOTFILES_ROOT/Mac/dot-zshrc.sh $HOME/.zshrc
 cp $DOTFILES_ROOT/Mac/dot-zshenv.sh $HOME/.zshenv
@@ -66,7 +85,7 @@ echo "Empty file to silence new shell messages" >> $HOME/.hushlogin
 
 # Copy Git and other config files
 cp $DOTFILES_ROOT/Config/dot-gitconfig $HOME/.gitconfig
-cp $DOTFILES_ROOT/Config/dot-gitconfig-work $HOME/.gitconfig-work
+cp $DOTFILES_ROOT/Config/dot-gitconfig-work $HOME/Work/.gitconfig-work
 cp $DOTFILES_ROOT/Config/dot-gitignore $HOME/.gitignore
 cp $DOTFILES_ROOT/Config/dot-vimrc $HOME/.vimrc
 
@@ -101,24 +120,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
 # Set macOS to not write .DS_Store files on USB drives
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
-
-# ==============================================================================
-# Create ~/Developer folder in which to put local developer stuff, e.g. repos
-if [[ -d "$HOME/Developer/" ]]; then
-  message "    ~/Developer exists" "Use this folder for personal repositories"
-else
-  message "✅ Created ~/Developer" "New folder for local developer work"
-fi
-
-# ==============================================================================
-# Create a ~/Work folder if it doesn't exist already
-#
-if [[ -d "$HOME/Work/" ]]; then
-  message "    ~/Work exists" "Use this folder for work repositories"
-else
-  mkdir ~/Work  
-  message "✅ Created ~/Work" "New folder for work repositories"
-fi
 
 # ==============================================================================
 # Create a symlink to Dropbox's location in CloudStore if valid
