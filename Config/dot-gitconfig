@@ -1,9 +1,8 @@
-# Updated recently
+# Global Git configuration
+
 [user]
         name = Tim Triemstra
         email = root@timtr.com
-[include]
-        path = ~/.gitconfig.local
 [color]
         diff = auto
         status = auto
@@ -16,3 +15,6 @@
         default = simple
 [credential]
 	helper = osxkeychain
+[includeIf "gitdir:~/Work/"]
+	path = ~/Work/.gitconfig-work
+
