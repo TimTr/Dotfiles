@@ -66,6 +66,7 @@ echo "Empty file to silence new shell messages" >> $HOME/.hushlogin
 
 # Copy Git and other config files
 cp $DOTFILES_ROOT/Config/dot-gitconfig $HOME/.gitconfig
+cp $DOTFILES_ROOT/Config/dot-gitconfig-work $HOME/.gitconfig-work
 cp $DOTFILES_ROOT/Config/dot-gitignore $HOME/.gitignore
 cp $DOTFILES_ROOT/Config/dot-vimrc $HOME/.vimrc
 
@@ -88,11 +89,11 @@ echo "# Add global DOTFILES_ROOT pointing Dotfiles install folder" >> ~/.zshenv
 echo "export DOTFILES_ROOT=$DOTFILES_ROOT" >> ~/.zshenv
 
 # Example Xcode defaults:  https://github.com/ctreffs/xcode-defaults
-# Tells Xcode to never re-open last open project, regardless of OS setting
+# Xcode always opens with the "Welcome to Xcode" window, not last project
 defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
 
 # Sets Xcode to show extensions for a few additional file types
-# The single-quote, comma + space format, no space at end is important!
+# FORMAT IS IMPORTANT! Use single-quote, comma + space , no space at end.
 defaults write com.apple.dt.Xcode IDEFileExtensionDisplayShowOnlyList '(c, cc, cpp, h, hpp, m, mm, gif, icns, jpeg, jpg, png, tiff, sh, md, html, css, js)'
 
 # Set macOS to not write .DS_Store files on network drives
@@ -104,9 +105,33 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
 # ==============================================================================
 # Create ~/Developer folder in which to put local developer stuff, e.g. repos
 if [[ -d "$HOME/Developer/" ]]; then
-  message "✳️ ~/Developer exists" "To reset, delete and rerun dotfiles.sh"
+  message "    ~/Developer exists" "Use this folder for personal repositories"
 else
-  message "✅ Setup ~/Developer" "Creating new folder for local developer work"
+  message "✅ Created ~/Developer" "New folder for local developer work"
+fi
+
+# ==============================================================================
+# Create a ~/Work folder if it doesn't exist already
+#
+if [[ -d "$HOME/Work/" ]]; then
+  message "    ~/Work exists" "Use this folder for work repositories"
+else
+  mkdir ~/Work  
+  message "✅ Created ~/Work" "New folder for work repositories"
+fi
+
+# ==============================================================================
+# Create a symlink to Dropbox's location in CloudStore if valid
+#
+if [[ -d "$HOME/Dropbox/" ]]; then
+  message "    ~/Dropbox alias exists" "If symlink is broken, delete and rerun"
+else
+  if [[ -d "$HOME/Library/CloudStorage/Dropbox/" ]]; then
+    message "✅ Setup ~/Dropbox" "Symlink to ~/Library/CloudStorage/Dropbox/"
+    ln -s $HOME/Library/CloudStorage/Dropbox $HOME/Dropbox
+  else
+    alert "Dropbox not installed" "Missing folder: ~/Library/CloudStorage/Dropbox/"
+  fi
 fi
 
 # ==============================================================================
@@ -118,7 +143,6 @@ else
   cp $DOTFILES_ROOT/Home/local-template.sh $HOME/local.sh
 fi
 
-
 # ==============================================================================
 message "✅ git config --global user.name =" "$(git config --get user.name)"
 message "✅ git config --global user.email =" "$(git config --get user.email)"
@@ -126,7 +150,6 @@ echo
 message "🎉 Success!" "Restart Terminal and run ${txtbold}setup-brew.sh${txtnormal} and ${txtbold}setup-ruby.sh${txtnormal}"
 
 echo
-
 exit 0
 
 

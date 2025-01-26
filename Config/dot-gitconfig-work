@@ -1,0 +1,13 @@
+# Use commit signing for work-related projects using ac-sign tool
+
+[user]
+        name = Tim Triemstra
+        email = timt@apple.com
+
+[commit]
+        gpgsign = true
+[gpg]
+        format = x509
+[gpg "x509"]
+        program = /usr/local/bin/ac-sign
+
