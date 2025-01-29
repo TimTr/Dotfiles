@@ -140,8 +140,8 @@ fi
 if [[ -f "$HOME/local.sh" ]]; then
   message "✳️ File /local.sh already exists" "Delete the file to re-install a template"
 else
-  message "✅ Set ~/local.sh" "Installing file from original template in ./Dotfiles"
-  cp $DOTFILES_ROOT/Home/local-template.sh $HOME/local.sh
+  message "✅ Installing ~/local.sh" "Creating new from ./Dotfiles/Mac/local-template.sh"
+  cp $DOTFILES_ROOT/Mac/local-template.sh $HOME/local.sh
 fi
 
 # ==============================================================================
