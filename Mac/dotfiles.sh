@@ -136,7 +136,7 @@ else
 fi
 
 # ==============================================================================
-# Check if the "~/local.sh" file exists, and if not, copy  the stub version to user home
+# Check if the ~/local.sh file exists, if not then copy the template to $HOME
 if [[ -f "$HOME/local.sh" ]]; then
   message "✳️ File /local.sh already exists" "Delete the file to re-install a template"
 else
