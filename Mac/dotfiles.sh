@@ -4,9 +4,17 @@
 echo
 source "$DOTFILES_ROOT/Mac/dot-functions.sh"
 
-message "✳️ DOTFILES_ROOT" "$DOTFILES_ROOT"
-#message "dotfiles.sh" "run location = ${0:a:h}"
+message "🔔 Environment:" "Locations being used for this install of Dotfiles"
+bullet "DOTFILES_ROOT = $DOTFILES_ROOT"
+bullet "Run location = ${0:a:h}"
 
+if xcode-select -p &> /dev/null
+then
+  bullet "xcode-select -p = $(xcode-select -p)"
+else
+  error "❌ Install Xcode, then re-run setup.sh"
+  exit 0
+fi
 
 # ==============================================================================
 # Require `zsh` as the default, and set the default shell if needed
@@ -16,18 +24,8 @@ if [ $SHELL != "/bin/zsh" ]; then
   exit 0
 fi
 
-# If Xcode isn't installed, then abort the install
-if xcode-select -p &> /dev/null
-then
-  message "✳️ xcode-selected -p:" "$(xcode-select -p)"
-else
-  error "❌ Install Xcode, then re-run setup.sh"
-  exit 0
-fi
-
-
 # ==============================================================================
-message "🔐 SUDO may be required" "Setting file permissions and ownership"
+message "🔐 SUDO required" "Creating folders, aliases, and setting file permissions"
 
 # Claim ownership of all my dotfiles
 sudo chown -R $USER $DOTFILES_ROOT     2> /dev/null
@@ -59,19 +57,42 @@ sudo chmod 744 /usr/local/bin
 # ==============================================================================
 # Create ~/Developer folder in which to put local developer stuff, e.g. repos
 if [[ -d "$HOME/Developer/" ]]; then
-  message "    ~/Developer exists" "Use this folder for personal repositories"
+  bullet "~/Developer exists. Use this folder for personal repositories"
 else
-  message "✅ Created ~/Developer" "New folder for local developer work"
+  bullet "✅ Created ~/Developer - New folder for local developer work"
 fi
 
 # ==============================================================================
 # Create a ~/Work folder if it doesn't exist already
 #
 if [[ -d "$HOME/Work/" ]]; then
-  message "    ~/Work exists" "Use this folder for work repositories"
+  bullet "~/Work exists. Use this folder for work repositories"
 else
   mkdir ~/Work
-  message "✅ Created ~/Work" "New folder for work repositories"
+  bullet "✅ Created ~/Work - New folder for work repositories"
+fi
+
+# ==============================================================================
+# Create a symlink to Dropbox's location in CloudStore if valid
+#
+if [[ -d "$HOME/Dropbox/" ]]; then
+  bullet "~/Dropbox alias exists. Delete symlink if broken, then re-run"
+else
+  if [[ -d "$HOME/Library/CloudStorage/Dropbox/" ]]; then
+    bullet "✅ Setup ~/Dropbox - Symlink to ~/Library/CloudStorage/Dropbox/"
+    ln -s $HOME/Library/CloudStorage/Dropbox $HOME/Dropbox
+  else
+    alert "Dropbox not installed" "Missing folder: ~/Library/CloudStorage/Dropbox/"
+  fi
+fi
+
+# ==============================================================================
+# Check if the ~/local.sh file exists, if not then copy the template to $HOME
+if [[ -f "$HOME/local.sh" ]]; then
+  bullet "~/local.sh file exists. Delete the file and re-run to install from template"
+else
+  bullet "✅ Installing ~/local.sh - Creating new from ./Dotfiles/Mac/local-template.sh"
+  cp $DOTFILES_ROOT/Mac/local-template.sh $HOME/local.sh
 fi
 
 
@@ -121,32 +142,10 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 # Set macOS to not write .DS_Store files on USB drives
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
 
-# ==============================================================================
-# Create a symlink to Dropbox's location in CloudStore if valid
-#
-if [[ -d "$HOME/Dropbox/" ]]; then
-  message "    ~/Dropbox alias exists" "If symlink is broken, delete and rerun"
-else
-  if [[ -d "$HOME/Library/CloudStorage/Dropbox/" ]]; then
-    message "✅ Setup ~/Dropbox" "Symlink to ~/Library/CloudStorage/Dropbox/"
-    ln -s $HOME/Library/CloudStorage/Dropbox $HOME/Dropbox
-  else
-    alert "Dropbox not installed" "Missing folder: ~/Library/CloudStorage/Dropbox/"
-  fi
-fi
 
 # ==============================================================================
-# Check if the ~/local.sh file exists, if not then copy the template to $HOME
-if [[ -f "$HOME/local.sh" ]]; then
-  message "✳️ File /local.sh already exists" "Delete the file to re-install a template"
-else
-  message "✅ Installing ~/local.sh" "Creating new from ./Dotfiles/Mac/local-template.sh"
-  cp $DOTFILES_ROOT/Mac/local-template.sh $HOME/local.sh
-fi
-
-# ==============================================================================
-message "✅ git config --global user.name =" "$(git config --get user.name)"
-message "✅ git config --global user.email =" "$(git config --get user.email)"
+message "✅ git config --global user.name" "= $(git config --get user.name)"
+message "✅ git config --global user.email" "= $(git config --get user.email)"
 echo
 message "🎉 Success!" "Restart Terminal and run ${txtbold}setup-brew.sh${txtnormal} and ${txtbold}setup-ruby.sh${txtnormal}"
 
